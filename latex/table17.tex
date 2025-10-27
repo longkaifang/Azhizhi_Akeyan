@@ -1,0 +1,180 @@
+\documentclass[letterpaper]{article} % DO NOT CHANGE THIS
+\usepackage[submission]{aaai2026}  % DO NOT CHANGE THIS
+\usepackage{times}  % DO NOT CHANGE THIS
+\usepackage{helvet}  % DO NOT CHANGE THIS
+\usepackage{courier}  % DO NOT CHANGE THIS
+\usepackage[hyphens]{url}  % DO NOT CHANGE THIS
+\usepackage{graphicx} % DO NOT CHANGE THIS
+\urlstyle{rm} % DO NOT CHANGE THIS
+\def\UrlFont{\rm}  % DO NOT CHANGE THIS
+\usepackage{natbib}  % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\usepackage{caption} % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\frenchspacing  % DO NOT CHANGE THIS
+\setlength{\pdfpagewidth}{8.5in} % DO NOT CHANGE THIS
+\setlength{\pdfpageheight}{11in} % DO NOT CHANGE THIS
+%
+% These are recommended to typeset algorithms but not required. See the subsubsection on algorithms. Remove them if you don't have algorithms in your paper.
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\usepackage{pifont} %182/183/184
+\usepackage{subcaption}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{booktabs}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{verbatim}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{colortbl}
+\usepackage{booktabs,makecell, multirow, tabularx}
+\usepackage{adjustbox}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{amsmath}
+
+\usepackage{booktabs}
+\usepackage{amssymb}
+\usepackage{bbding}
+\usepackage{pifont}
+\usepackage{wasysym}
+\usepackage{utfsym}
+\usepackage{fontawesome}
+
+\usepackage{mdframed}
+\begin{document}
+
+% %%%%%%%%%%%%%%%%%%%   MVTec 3D-AD (I-AUROC)
+%\checkmark
+%\XSolidBrush
+% \cmidrule{1-8} 横线
+
+% \usepackage{arydshln}虚线宏包  
+%\hdashline
+%\cdashline{2-3} % 第二、三列虚线
+
+%左 $\leftarrow$，右 $\rightarrow$，上 $\uparrow$，下 $\downarrow$
+
+%整行填充颜色
+%\usepackage[table]{xcolor}
+%\usepackage{colortbl}
+%\rowcolor{blue!20}
+
+%合并行和列
+%\multicolumn{2}{c|}{\multirow{2}{*}{Method}}
+%\multicolumn{2}{c|}{Method}
+
+%定义颜色
+\definecolor{color1}{RGB}{248, 244, 140}
+\cellcolor{color1}
+\definecolor{color2}{RGB}{253, 205, 154}
+\cellcolor{color2} 
+\definecolor{color3}{RGB}{245, 152, 153}
+\cellcolor{color3} 
+
+\begin{table*}[ht!]
+\centering
+\setlength{\tabcolsep}{2.8mm} %2.2mm
+\renewcommand{\arraystretch}{1}
+\adjustbox{width=1\linewidth}{
+   \begin{tabular}{c|ccc ccc ccc ccc}
+       \toprule
+                 \multirow{2}{*}{Method}
+        & \multicolumn{3}{c}{Subject 1} 
+        & \multicolumn{3}{c}{Subject 2} 
+        & \multicolumn{3}{c}{Subject 3} 
+                 \\
+%%%%%%%%%%                 
+&PSNR$\uparrow$ &SSIM$\uparrow$ &LPIPS$\downarrow$ &PSNR$\uparrow$ &SSIM$\uparrow$ &LPIPS$\downarrow$ &PSNR$\uparrow$ &SSIM$\uparrow$ &LPIPS$\downarrow$\\
+%%%%%%%%%%%%%%
+\midrule[0.5pt]     
+           RelightableHands   &\cellcolor{color1}00.0 &\cellcolor{color2}00.0 &\cellcolor{color3}00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            Ours (Physical only)   &00.0 &00.0 &00.0 &\cellcolor{color1}00.0 &\cellcolor{color2}00.0 &\cellcolor{color3}00.0 &00.0 &00.0 &00.0\\
+            Ours (Full model)   &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &\cellcolor{color1}00.0 &\cellcolor{color2}00.0 &\cellcolor{color3}00.0\\
+\midrule[0.5pt]     
+           RelightableHands   &\cellcolor{color1}00.0 &\cellcolor{color2}00.0 &\cellcolor{color3}00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            Ours (Physical only)   &00.0 &00.0 &00.0 &\cellcolor{color1}00.0 &\cellcolor{color2}00.0 &\cellcolor{color3}00.0 &00.0 &00.0 &00.0\\
+            Ours (Full model)   &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &\cellcolor{color1}00.0 &\cellcolor{color2}00.0 &\cellcolor{color3}00.0\\
+             \bottomrule
+       \end{tabular}
+   }
+   \caption{The caption results, caption results, caption results, caption results.}
+\end{table*}
+
+% 调整表格参数
+\setlength{\tabcolsep}{1.0mm}
+\renewcommand{\arraystretch}{1.1}
+% 并排放置两个表格
+\begin{table*}[htbp]
+    \centering
+    \adjustbox{width=1\linewidth}{
+    \begin{minipage}{0.50\textwidth}
+        \centering
+        \caption*{\textbf{(a) VisA}}
+        \begin{tabular}{c|c|c|ccc}
+            \toprule
+            &\multirow{2}{*}{Geometry}
+        & \multirow{2}{*}{Appearance} 
+        & \multicolumn{3}{c}{Metrics} \\
+        &&&PSNR$\uparrow$ &SSIM$\uparrow$ &LPIPS$\downarrow$\\
+\midrule
+            A&\multirow{2}{*}{Ours w/ EEM}&EyeNeRF   &\cellcolor{color1}94.07   & \cellcolor{color2}2.11   & \cellcolor{color3}0.15   \\
+            B&&Ours   &\cellcolor{color1}94.07   & \cellcolor{color2}2.11   & \cellcolor{color3}0.15   \\
+\midrule
+            C&\multirow{3}{*}{Ours w/ EEM}&EyeNeRF   & 94.07   & 2.11   & 0.15   \\
+            D&&Linear   & 94.07   & 2.11   & 0.15   \\
+            E&&Ours   &\cellcolor{color1}94.07   & \cellcolor{color2}2.11   & \cellcolor{color3}0.15\\
+\midrule
+            C&\multirow{3}{*}{Ours w/ EEM}&EyeNeRF   & 94.07   & 2.11   & 0.15   \\
+            D&&Linear   &\cellcolor{color1}94.07   & \cellcolor{color2}2.11   & \cellcolor{color3}0.15\\
+            E&&Ours   & 94.07   & 2.11   & 0.15   \\
+            \bottomrule
+        \end{tabular}
+    \end{minipage}
+    \hfill
+        \begin{minipage}{0.52\textwidth}
+        \centering
+        \caption*{\textbf{(a) VisA}}
+        \begin{tabular}{c|c|c|ccc}
+            \toprule
+            &\multirow{2}{*}{Geometry}
+        & \multirow{2}{*}{Appearance} 
+        & \multicolumn{3}{c}{Metrics} \\
+        &&&PSNR$\uparrow$ &SSIM$\uparrow$ &LPIPS$\downarrow$\\
+\midrule
+            A&\multirow{2}{*}{Ours w/ EEM}&EyeNeRF   &\cellcolor{color1}94.07   & \cellcolor{color2}2.11   & \cellcolor{color3}0.15   \\
+            B&&Ours   &\cellcolor{color1}94.07   & \cellcolor{color2}2.11   & \cellcolor{color3}0.15   \\
+\midrule
+            C&\multirow{3}{*}{Ours w/ EEM}&EyeNeRF   & 94.07   & 2.11   & 0.15   \\
+            D&&Linear   & 94.07   & 2.11   & 0.15   \\
+            E&&Ours   &\cellcolor{color1}94.07   & \cellcolor{color2}2.11   & \cellcolor{color3}0.15\\
+\midrule
+            C&\multirow{3}{*}{Ours w/ EEM}&EyeNeRF   & 94.07   & 2.11   & 0.15   \\
+            D&&Linear   &\cellcolor{color1}94.07   & \cellcolor{color2}2.11   & \cellcolor{color3}0.15\\
+            E&&Ours   & 94.07   & 2.11   & 0.15   \\
+            \bottomrule
+        \end{tabular}
+    \end{minipage}
+    }
+    \caption{Results MTAS for zero-shot setting at pixel-level for sample defect-types. The model is trained on the MVTec-AD dataset. - indicates \textbf{unseen} defect types while $\checkmark$ indicates \textbf{seen} defect types during training.}
+\end{table*}
+\end{document}

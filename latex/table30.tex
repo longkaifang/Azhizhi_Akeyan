@@ -1,0 +1,177 @@
+\documentclass[letterpaper]{article} % DO NOT CHANGE THIS
+\usepackage[submission]{aaai2026}  % DO NOT CHANGE THIS
+\usepackage{times}  % DO NOT CHANGE THIS
+\usepackage{helvet}  % DO NOT CHANGE THIS
+\usepackage{courier}  % DO NOT CHANGE THIS
+\usepackage[hyphens]{url}  % DO NOT CHANGE THIS
+\usepackage{graphicx} % DO NOT CHANGE THIS
+\urlstyle{rm} % DO NOT CHANGE THIS
+\def\UrlFont{\rm}  % DO NOT CHANGE THIS
+\usepackage{natbib}  % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\usepackage{caption} % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\frenchspacing  % DO NOT CHANGE THIS
+\setlength{\pdfpagewidth}{8.5in} % DO NOT CHANGE THIS
+\setlength{\pdfpageheight}{11in} % DO NOT CHANGE THIS
+%
+% These are recommended to typeset algorithms but not required. See the subsubsection on algorithms. Remove them if you don't have algorithms in your paper.
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\usepackage{pifont} %182/183/184
+\usepackage{subcaption}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{booktabs}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{verbatim}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{colortbl}
+\usepackage{booktabs,makecell, multirow, tabularx}
+\usepackage{adjustbox}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{amsmath}
+
+\usepackage{booktabs}
+\usepackage{amssymb}
+\usepackage{bbding}
+\usepackage{pifont}
+\usepackage{wasysym}
+\usepackage{utfsym}
+\usepackage{fontawesome}
+
+\usepackage{mdframed}
+
+\usepackage{arydshln}
+\definecolor{forestgreen}{RGB}{79,173,91}
+\definecolor{forestyellow}{RGB}{245,195,66}
+\definecolor{myblue}{rgb}{0.82, 0.94, 0.75}
+\definecolor{mygold}{rgb}{1, 0.92, 0.56}
+\definecolor{mylightblue}{rgb}{0.70, 0.83, 0.96}
+\definecolor{mylightyellow}{rgb}{0.96, 0.88, 0.49}
+\definecolor{mylightpink}{rgb}{0.93, 0.79, 0.80}
+\newcommand{\hbarthree}[3]{
+    \begin{tikzpicture}[scale=0.04, inner sep=0pt, outer sep=0pt] %baseline=(current bounding box.center),
+        \def\scaleX{0.88} % 控制横向缩放
+        % 绘制条形
+        \fill[mylightblue] (0,0) rectangle (#1*\scaleX,8);
+        \fill[mylightyellow] (#1*\scaleX,0) rectangle ({(#1+#2)*\scaleX},8);
+        \fill[mylightpink] ({(#1+#2)*\scaleX},0) rectangle ({(#1+#2+#3)*\scaleX},8);
+        % 添加标签
+        \node at ({#1*\scaleX/2}, 4) {\scriptsize #1}; %\fontsize{6}{7.2}\selectfont, \scriptsize
+        \node at ({(#1*\scaleX)+(#2*\scaleX/2)}, 4) {\scriptsize	 #2 };
+        \node at ({(#1+#2)*\scaleX+(#3*\scaleX/2)}, 4) {\scriptsize	 #3};
+    \end{tikzpicture}
+}
+\begin{document}
+
+\begin{table*}[th]
+\renewcommand\arraystretch{0.9}
+\setlength{\tabcolsep}{0.pt}
+\caption{\textbf{Response comparison on Llama2-7B }}
+\scriptsize
+\centering
+\vspace{-0.15cm}
+\begin{tabular}{cccccc}
+\toprule
+\multicolumn{1}{c}{\multirow{3}{*}{\makecell[c]{\textbf{Evaluated} \\ \textbf{Method}}}} & \multirow{3}{*}{\textbf{Opponent}} & \textbf{Anthropic-Helpful} & \textbf{Anthropic-Harmless} & \textbf{AlpacaFarm} & \textbf{PKU-SafeRLHF}\\ \cmidrule(lr){3-6} 
+\multicolumn{2}{c}{}                         & \textbf{\colorbox{mylightblue}{\ \ Win\ \ }\ /\ \colorbox{mylightyellow}{\ \ Tie\ \ }\ /\ \colorbox{mylightpink}{\ \ Lose\ \ }} & \textbf{\colorbox{mylightblue}{\ \ Win\ \ }\ /\ \colorbox{mylightyellow}{\ \ Tie\ \ }\ /\ \colorbox{mylightpink}{\ \ Lose\ \ }} & \textbf{\colorbox{mylightblue}{\ \ Win\ \ }\ /\ \colorbox{mylightyellow}{\ \ Tie\ \ }\ /\ \colorbox{mylightpink}{\ \ Lose\ \ }} & \textbf{\colorbox{mylightblue}{\ \ Win\ \ }\ /\ \colorbox{mylightyellow}{\ \ Tie\ \ }\ /\ \colorbox{mylightpink}{\ \ Lose\ \ }}\\ 
+\midrule
+\multirow{7}{*}{\ \makecell{InfoRM}\ } & \raisebox{2.5pt}[0pt][0pt]{\ Standard RM\ } & \hbarthree{58.5}{27.6}{13.9} & \hbarthree{63.6}{28.8}{7.6} & \hbarthree{55.1}{29.3}{15.6} & \hbarthree{65.1}{27.7}{7.2} \\
+& \raisebox{2.5pt}[0pt][0pt]{\ Standard RM w/ KL\ } & \hbarthree{64.4}{25.7}{9.9} & \hbarthree{34.9}{36.7}{28.4} & \hbarthree{45.2}{34.9}{19.9} & \hbarthree{39.6}{35.8}{24.6} \\
+& \raisebox{2.5pt}[0pt][0pt]{\ Ensemble RM (Mean)\ } & \hbarthree{49.2}{35.5}{15.3} & \hbarthree{54.3}{33.9}{11.8} & \hbarthree{43.2}{35.6}{21.2} & \hbarthree{57.9}{31.7}{10.4} \\
+& \raisebox{2.5pt}[0pt][0pt]{\ Ensemble RM (WCO)\ } & \hbarthree{44.0}{38.3}{17.7} & \hbarthree{49.1}{34.6}{16.3} & \hbarthree{37.5}{38.7}{23.8} & \hbarthree{50.8}{33.8}{15.4} \\ 
+& \raisebox{2.5pt}[0pt][0pt]{\ Ensemble RM (UWO)\ } & \hbarthree{48.7}{35.7}{15.6} & \hbarthree{53.6}{33.3}{13.1} & \hbarthree{40.3}{36.1}{23.6} & \hbarthree{54.2}{32.6}{13.2} \\ 
+& \raisebox{2.5pt}[0pt][0pt]{\ WARM\ } & \hbarthree{61.1}{26.6}{12.3} & \hbarthree{56.5}{32.6}{10.9} & \hbarthree{48.3}{33.7}{18} & \hbarthree{59.8}{30.2}{10.0} \\ \cmidrule(lr){1-6}
+\multirow{10}{*}{\ \makecell{InfoRM \\ w/ IBL}\ } & \raisebox{2.5pt}[0pt][0pt]{\ Standard RM\ } & \hbarthree{59.8}{29.3}{10.9} & \hbarthree{65.8}{27.8}{6.4} & \hbarthree{56.0}{32.5}{11.5} & \hbarthree{67.4}{26.3}{6.3} \\
+& \raisebox{2.5pt}[0pt][0pt]{\ Standard RM w/ KL\ } & \hbarthree{66.3}{24.1}{9.6} & \hbarthree{42.8}{41.1}{16.1} & \hbarthree{45.5}{37.1}{17.4} & \hbarthree{47.3}{40.1}{12.6} \\
+& \raisebox{2.5pt}[0pt][0pt]{\ Ensemble RM (Mean)\ } & \hbarthree{50.9}{35.5}{13.6} & \hbarthree{57.2}{32.3}{10.5} & \hbarthree{43.8}{37.8}{18.4} & \hbarthree{59.5}{29.9}{10.6} \\
+& \raisebox{2.5pt}[0pt][0pt]{\ Ensemble RM (WCO)\ } & \hbarthree{45.5}{37.8}{16.7} & \hbarthree{51.3}{33.8}{14.9} & \hbarthree{38.1}{40.1}{21.8} & \hbarthree{53.1}{35.9}{11.0} \\
+& \raisebox{2.5pt}[0pt][0pt]{\ Ensemble RM (UWO)\ } & \hbarthree{50.3}{33.8}{15.9} & \hbarthree{56.5}{32.7}{10.8} & \hbarthree{41.2}{39.6}{19.2} & \hbarthree{57.9}{31.4}{10.7} \\ 
+& \raisebox{2.5pt}[0pt][0pt]{\ WARM\ } 
+& \hbarthree{61.8}{27.6}{10.6} & \hbarthree{59.2}{30.9}{9.9} & \hbarthree{49.4}{36.8}{13.8} & \hbarthree{61.5}{29.3}{9.2} \\ \noalign{\vskip -0.5pt} \cdashline{2-6} \noalign{\vskip 1.5pt} %\noalign{\vskip -2pt} \cmidrule(lr){2-6} \noalign{\vskip -2pt}
+& \raisebox{2.5pt}[0pt][0pt]{\ InfoRM\ } & \hbarthree{28.2}{47.6}{24.2} & \hbarthree{39.2}{44.5}{16.3} & \hbarthree{28.6}{43.8}{27.6} & \hbarthree{41.3}{40.6}{18.1} \\ 
+& \raisebox{2.5pt}[0pt][0pt]{\ InfoRM w/ KL\ } & \hbarthree{57.0}{30.0}{13.0} & \hbarthree{30.0}{45.8}{24.2} & \hbarthree{40.6}{40.8}{18.6} & \hbarthree{31.5}{41.2}{27.3} \\ 
+\bottomrule \end{tabular} \end{table*}
+
+\begin{table*}[th]
+\renewcommand\arraystretch{0.9}
+\setlength{\tabcolsep}{0.pt}
+\caption{\textbf{Response comparison on Mistral-7B under GPT-4 evaluation} between RLHF models trained with different RMs and RL regularization strategies, showing that InfoRM and IBL consistently deliver superior RLHF performance.}
+\scriptsize
+\centering
+\vspace{-0.15cm}
+\begin{tabular}{cccccc}
+\toprule
+\multicolumn{1}{c}{\multirow{3}{*}{\makecell[c]{\textbf{Evaluated} \\ \textbf{Method}}}} & \multirow{3}{*}{\textbf{Opponent}} & \textbf{Anthropic-Helpful} & \textbf{Anthropic-Harmless} & \textbf{AlpacaFarm} & \textbf{PKU-SafeRLHF}\\ \cmidrule(lr){3-6} 
+\multicolumn{2}{c}{}                         & \textbf{\colorbox{mylightblue}{\ \ Win\ \ }\ /\ \colorbox{mylightyellow}{\ \ Tie\ \ }\ /\ \colorbox{mylightpink}{\ \ Lose\ \ }} & \textbf{\colorbox{mylightblue}{\ \ Win\ \ }\ /\ \colorbox{mylightyellow}{\ \ Tie\ \ }\ /\ \colorbox{mylightpink}{\ \ Lose\ \ }} & \textbf{\colorbox{mylightblue}{\ \ Win\ \ }\ /\ \colorbox{mylightyellow}{\ \ Tie\ \ }\ /\ \colorbox{mylightpink}{\ \ Lose\ \ }} & \textbf{\colorbox{mylightblue}{\ \ Win\ \ }\ /\ \colorbox{mylightyellow}{\ \ Tie\ \ }\ /\ \colorbox{mylightpink}{\ \ Lose\ \ }}\\ \midrule
+\multirow{7}{*}{\ \makecell{InfoRM}\ } & \raisebox{2.5pt}[0pt][0pt]{\ Standard RM\ } & \hbarthree{75.5}{15.9}{8.6} & \hbarthree{68.6}{21.9}{9.5} & \hbarthree{64.4}{23.6}{12.0} & \hbarthree{74.5}{17.6}{7.9} \\
+& \raisebox{2.5pt}[0pt][0pt]{\ Standard RM w/ KL\ } & \hbarthree{70.5}{20.4}{9.1} & \hbarthree{37.6}{29.5}{32.9} & \hbarthree{61.5}{25.1}{13.4} & \hbarthree{39.6}{28.4}{32.0} \\
+& \raisebox{2.5pt}[0pt][0pt]{\ Ensemble RM (Mean)\ } & \hbarthree{40.3}{39.5}{20.2} & \hbarthree{45.6}{26.3}{28.1} & \hbarthree{38.8}{40.4}{20.8} & \hbarthree{50.5}{25.7}{23.8} \\
+& \raisebox{2.5pt}[0pt][0pt]{\ Ensemble RM (WCO)\ } & \hbarthree{55.5}{28.5}{16.0} & \hbarthree{56.8}{23.1}{20.1} & \hbarthree{51.7}{30.1}{18.2} & \hbarthree{57.6}{22.3}{20.1} \\ 
+& \raisebox{2.5pt}[0pt][0pt]{\ Ensemble RM (UWO)\ } & \hbarthree{49.7}{30.7}{19.6} & \hbarthree{52.7}{25.9}{21.4} & \hbarthree{46.5}{34.0}{19.5} & \hbarthree{54.0}{23.1}{22.9} \\ 
+& \raisebox{2.5pt}[0pt][0pt]{\ WARM\ } & \hbarthree{59.8}{25.3}{14.9} & \hbarthree{59.3}{22.6}{18.1} & \hbarthree{56.0}{28.7}{15.3} & \hbarthree{61.6}{19.4}{19.0} \\ \cmidrule(lr){1-6}
+\multirow{10}{*}{\ \makecell{InfoRM \\ w/ IBL}\ } & \raisebox{2.5pt}[0pt][0pt]{\ Standard RM\ } & \hbarthree{80.9}{11.3 }{ 7.8} & \hbarthree{80.5}{11.9 }{ 7.6} & \hbarthree{66.8}{21.3}{11.9} & \hbarthree{82.4}{10.6 }{ 7.0} \\
+& \raisebox{2.5pt}[0pt][0pt]{\ Standard RM w/ KL\ } & \hbarthree{76.1}{15.1}{8.8} & \hbarthree{45.2}{34.6}{20.2} & \hbarthree{65.9}{22.1}{12.0} & \hbarthree{49.3}{27.5}{23.2} \\
+& \raisebox{2.5pt}[0pt][0pt]{\ Ensemble RM (Mean)\ } & \hbarthree{47.5}{36.3}{16.2} & \hbarthree{50.4}{30.3}{19.3} & \hbarthree{42.0}{39.1}{18.9} & \hbarthree{52.9}{24.3}{22.8} \\
+& \raisebox{2.5pt}[0pt][0pt]{\ Ensemble RM (WCO)\ } & \hbarthree{61.9}{23.8}{14.3} & \hbarthree{62.2}{23.7}{14.1} & \hbarthree{55.6}{28.1}{16.3} & \hbarthree{65.0}{16.7}{18.3} \\ 
+& \raisebox{2.5pt}[0pt][0pt]{\ Ensemble RM (UWO)\ } & \hbarthree{56.1}{28.3}{15.6} & \hbarthree{59.4}{25.1}{15.5} & \hbarthree{50.5}{32.3}{17.2} & \hbarthree{60.6}{18.6}{20.8} \\ 
+& \raisebox{2.5pt}[0pt][0pt]{\ WARM\ } & \hbarthree{64.5}{22.5}{13.0} & \hbarthree{65.8}{20.9}{13.3} & \hbarthree{66.0}{26.7}{7.3} & \hbarthree{68.9}{15.9}{15.2} \\ \noalign{\vskip -0.5pt} \cdashline{2-6} \noalign{\vskip 1.5pt} %\noalign{\vskip -2pt} \cmidrule(lr){2-6} \noalign{\vskip -2pt}
+& \raisebox{2.5pt}[0pt][0pt]{\ InfoRM\ } & \hbarthree{31.5}{49.1}{19.4} & \hbarthree{42.0}{37.7}{20.3} & \hbarthree{30.7}{45.8}{23.5} & \hbarthree{45.4}{30.5}{24.1} \\ 
+& \raisebox{2.5pt}[0pt][0pt]{\ InfoRM w/ KL\ } & \hbarthree{50.7}{33.4}{15.9} & \hbarthree{33.3}{39.5}{27.2} & \hbarthree{44.8}{37.5}{17.7} & \hbarthree{36.7}{35.1}{28.2} \\ 
+\bottomrule
+\end{tabular}
+\label{tab:main_elo_mistral3}
+\end{table*}
+
+\begin{table*}[th]
+\renewcommand\arraystretch{0.9}
+\setlength{\tabcolsep}{0.pt}
+\caption{\textbf{Response comparison on Qwen2.5-7B under GPT-4 evaluation} between RLHF models trained with different RMs and RL regularization strategies, showing that InfoRM and IBL consistently deliver superior RLHF performance.}
+\scriptsize
+\centering
+\vspace{-0.15cm}
+\begin{tabular}{cccccc}
+\toprule
+\multicolumn{1}{c}{\multirow{3}{*}{\makecell[c]{\textbf{Evaluated} \\ \textbf{Method}}}} & \multirow{3}{*}{\textbf{Opponent}} & \textbf{Anthropic-Helpful} & \textbf{Anthropic-Harmless} & \textbf{AlpacaFarm} & \textbf{PKU-SafeRLHF}\\ \cmidrule(lr){3-6} 
+\multicolumn{2}{c}{}                         & \textbf{\colorbox{mylightblue}{\ \ Win\ \ }\ /\ \colorbox{mylightyellow}{\ \ Tie\ \ }\ /\ \colorbox{mylightpink}{\ \ Lose\ \ }} & \textbf{\colorbox{mylightblue}{\ \ Win\ \ }\ /\ \colorbox{mylightyellow}{\ \ Tie\ \ }\ /\ \colorbox{mylightpink}{\ \ Lose\ \ }} & \textbf{\colorbox{mylightblue}{\ \ Win\ \ }\ /\ \colorbox{mylightyellow}{\ \ Tie\ \ }\ /\ \colorbox{mylightpink}{\ \ Lose\ \ }} & \textbf{\colorbox{mylightblue}{\ \ Win\ \ }\ /\ \colorbox{mylightyellow}{\ \ Tie\ \ }\ /\ \colorbox{mylightpink}{\ \ Lose\ \ }}\\ \midrule
+\multirow{7}{*}{\ \makecell{InfoRM}\ } & \raisebox{2.5pt}[0pt][0pt]{\ Standard RM\ } & \hbarthree{71.1}{15.5}{13.4} & \hbarthree{69.7}{24.4}{5.9} & \hbarthree{70.6}{17.6}{11.8} & \hbarthree{73.3}{21.6}{5.1} \\
+& \raisebox{2.5pt}[0pt][0pt]{\ Standard RM w/ KL\ } & \hbarthree{62.1}{23.2}{14.7} & \hbarthree{29.7}{32.5}{37.8} & \hbarthree{44.8}{35.7}{19.5} & \hbarthree{31.5}{33.0}{35.5} \\
+& \raisebox{2.5pt}[0pt][0pt]{\ Ensemble RM (Mean)\ } & \hbarthree{34.8}{43.2}{22.0} & \hbarthree{49.6}{30.5}{19.9} & \hbarthree{33.2}{42.5}{24.3} & \hbarthree{52.7}{30.1}{17.2} \\
+& \raisebox{2.5pt}[0pt][0pt]{\ Ensemble RM (WCO)\ } & \hbarthree{46.2}{36.2}{17.6} & \hbarthree{53.1}{29.5}{17.4} & \hbarthree{42.6}{37.2}{20.2} & \hbarthree{55.4}{27.8}{16.8} \\ 
+& \raisebox{2.5pt}[0pt][0pt]{\ Ensemble RM (UWO)\ } & \hbarthree{44.9}{35.5}{19.6} & \hbarthree{53.2}{30.1}{16.7} & \hbarthree{42.1}{37.5}{20.4} & \hbarthree{55.9}{28.4}{15.7} \\ 
+& \raisebox{2.5pt}[0pt][0pt]{\ WARM\ } & \hbarthree{58.2}{26.7}{15.1} & \hbarthree{57.8}{27.9}{14.3} & \hbarthree{51.1}{32.7}{16.2} & \hbarthree{61.9}{23.7}{14.4} \\ \cmidrule(lr){1-6}
+\multirow{10}{*}{\ \makecell{InfoRM \\ w/ IBL}\ } & \raisebox{2.5pt}[0pt][0pt]{\ Standard RM\ } & \hbarthree{73.9}{15.7 }{10.4} & \hbarthree{77.1}{18.6 }{4.3} & \hbarthree{71.1}{20.0}{8.9} & \hbarthree{78.9}{16.9 }{ 4.2} \\
+& \raisebox{2.5pt}[0pt][0pt]{\ Standard RM w/ KL\ } & \hbarthree{64.8}{23.9}{11.3} & \hbarthree{33.9}{39.0}{27.1} & \hbarthree{48.2}{34.9}{16.9} & \hbarthree{35.5}{43.9}{20.6} \\
+& \raisebox{2.5pt}[0pt][0pt]{\ Ensemble RM (Mean)\ } & \hbarthree{38.1}{42.0}{19.9} & \hbarthree{53.6}{31.7}{14.7} & \hbarthree{35.5}{44.0}{20.5} & \hbarthree{56.8}{26.9}{16.3} \\
+& \raisebox{2.5pt}[0pt][0pt]{\ Ensemble RM (WCO)\ } & \hbarthree{50.2}{33.5}{16.3} & \hbarthree{57.6}{29.1}{13.3} & \hbarthree{45.1}{37.5}{17.4} & \hbarthree{60.7}{23.8}{15.5} \\ 
+& \raisebox{2.5pt}[0pt][0pt]{\ Ensemble RM (UWO)\ } & \hbarthree{49.0}{34.1}{16.9} & \hbarthree{58.3}{29.1}{12.6} & \hbarthree{44.6}{37.8}{17.6} & \hbarthree{60.8}{23.9}{15.3} \\ 
+& \raisebox{2.5pt}[0pt][0pt]{\ WARM\ } & \hbarthree{60.6}{26.7}{12.7} & \hbarthree{62.5}{26.3}{11.2} & \hbarthree{57.1}{32.4}{10.5} & \hbarthree{66.4}{21.7}{11.9} \\ \noalign{\vskip -0.5pt} \cdashline{2-6} \noalign{\vskip 1.5pt} %\noalign{\vskip -2pt} \cmidrule(lr){2-6} \noalign{\vskip -2pt}
+& \raisebox{2.5pt}[0pt][0pt]{\ InfoRM\ } & \hbarthree{31.5}{40.4}{28.1} & \hbarthree{34.8}{45.6}{19.6} & \hbarthree{34.2}{44.8}{21.0} & \hbarthree{36.4}{45.4}{18.2} \\ 
+& \raisebox{2.5pt}[0pt][0pt]{\ InfoRM w/ KL\ } & \hbarthree{51.2}{31.8}{17.0} & \hbarthree{31.6}{40.9}{27.5} & \hbarthree{42.7}{36.5}{20.8} & \hbarthree{34.0}{44.3}{21.7} \\ 
+\bottomrule
+\end{tabular}
+\label{tab:main_elo_qwen2.5}
+\end{table*}
+
+\end{document}

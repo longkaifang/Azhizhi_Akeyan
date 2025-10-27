@@ -1,0 +1,147 @@
+\documentclass[letterpaper]{article} % DO NOT CHANGE THIS
+\usepackage[submission]{aaai2026}  % DO NOT CHANGE THIS
+\usepackage{times}  % DO NOT CHANGE THIS
+\usepackage{helvet}  % DO NOT CHANGE THIS
+\usepackage{courier}  % DO NOT CHANGE THIS
+\usepackage[hyphens]{url}  % DO NOT CHANGE THIS
+\usepackage{graphicx} % DO NOT CHANGE THIS
+\urlstyle{rm} % DO NOT CHANGE THIS
+\def\UrlFont{\rm}  % DO NOT CHANGE THIS
+\usepackage{natbib}  % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\usepackage{caption} % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\frenchspacing  % DO NOT CHANGE THIS
+\setlength{\pdfpagewidth}{8.5in} % DO NOT CHANGE THIS
+\setlength{\pdfpageheight}{11in} % DO NOT CHANGE THIS
+%
+% These are recommended to typeset algorithms but not required. See the subsubsection on algorithms. Remove them if you don't have algorithms in your paper.
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\usepackage{pifont} %182/183/184
+\usepackage{subcaption}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{booktabs}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{verbatim}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{colortbl}
+\usepackage{booktabs,makecell, multirow, tabularx}
+\usepackage{adjustbox}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{amsmath}
+
+\usepackage{booktabs}
+\usepackage{amssymb}
+\usepackage{bbding}
+\usepackage{pifont}
+\usepackage{wasysym}
+\usepackage{utfsym}
+\usepackage{fontawesome}
+
+\usepackage{mdframed}
+\begin{document}
+
+% %%%%%%%%%%%%%%%%%%%   Eyecandies (I-AUROC)
+\begin{table*}[ht!]
+\centering
+%\footnotesize
+%\tiny
+%\Large
+\setlength{\tabcolsep}{2.8mm} %2.2mm
+\renewcommand{\arraystretch}{1}
+\adjustbox{width=1\linewidth}{
+   \begin{tabular}{ccc ccc ccc}
+       \toprule
+                \multirow{2}{*}{Datasets}
+                &\multirow{1}{*}{RegAd}
+                &\multirow{1}{*}{AnomalyGPT} 
+                &\multirow{1}{*}{FastRecon} 
+                &\multirow{1}{*}{FastRecon+} 
+                &\multirow{1}{*}{WinCLIP} 
+                &\multirow{1}{*}{APRIL-GAN} 
+                &\multirow{1}{*}{PromptAD} 
+                &\cellcolor{gray!20}\multirow{1}{*}{DictAS}
+                 \\
+%%%%%%%%%%                 
+                 &(ECCV 22)  &(AAAI 24)  &ICCV 23  &CVPR 23  &CVPR 23&CVPR 23  &CVPR 24  &\cellcolor{gray!20}Ours     \\
+%%%%%%%%%%%%%% RGB数据
+\midrule[0.5pt] 
+\multicolumn{8}{c}{{\textbf{Industrial Dataset (AUROC, PRO, AP)}}}\\
+\midrule[0.5pt]     
+           MVTecAD  &(00.0,00.0,00.0) &(00.0,00.0,\textcolor{blue}{00.0}) &(00.0,00.0,00.0) &(\textcolor{blue}{00.0},00.0,00.0) &(\textcolor{blue}{00.0},00.0,00.0) &(00.0,\textcolor{red}{00.0},00.0) &(00.0,00.0,00.0)&\cellcolor{gray!20}(00.0,00.0,00.0)  \\ 
+           MVTecAD  &(00.0,00.0,00.0) &(00.0,00.0,\textcolor{blue}{00.0}) &(00.0,00.0,00.0) &(\textcolor{blue}{00.0},00.0,00.0) &(\textcolor{blue}{00.0},00.0,00.0) &(00.0,\textcolor{red}{00.0},00.0) &(00.0,00.0,00.0)&\cellcolor{gray!20}(00.0,00.0,00.0)  \\ 
+           MVTecAD  &(00.0,00.0,00.0) &(00.0,00.0,\textcolor{blue}{00.0}) &(00.0,00.0,00.0) &(\textcolor{blue}{00.0},00.0,00.0) &(\textcolor{blue}{00.0},00.0,00.0) &(00.0,\textcolor{red}{00.0},00.0) &(00.0,00.0,00.0)&\cellcolor{gray!20}(00.0,00.0,00.0)  \\ 
+           MVTecAD  &(00.0,00.0,00.0) &(00.0,00.0,\textcolor{blue}{00.0}) &(00.0,00.0,00.0) &(\textcolor{blue}{00.0},00.0,00.0) &(\textcolor{blue}{00.0},00.0,00.0) &(00.0,\textcolor{red}{00.0},00.0) &(00.0,00.0,00.0)&\cellcolor{gray!20}(00.0,00.0,00.0)  \\ 
+           MVTecAD  &(00.0,00.0,00.0) &(00.0,00.0,\textcolor{blue}{00.0}) &(00.0,00.0,00.0) &(\textcolor{blue}{00.0},00.0,00.0) &(\textcolor{blue}{00.0},00.0,00.0) &(00.0,\textcolor{red}{00.0},00.0) &(00.0,00.0,00.0)&\cellcolor{gray!20}(00.0,00.0,00.0)  \\ 
+           MVTecAD  &(00.0,00.0,00.0) &(00.0,00.0,\textcolor{blue}{00.0}) &(00.0,00.0,00.0) &(\textcolor{blue}{00.0},00.0,00.0) &(\textcolor{blue}{00.0},00.0,00.0) &(00.0,\textcolor{red}{00.0},00.0) &(00.0,00.0,00.0)&\cellcolor{gray!20}(00.0,00.0,00.0)  \\ 
+           \midrule[0.5pt] 
+\multicolumn{8}{c}{{\textbf{Medical Dataset (AUROC, PRO, AP)}}}\\
+\midrule[0.5pt]     
+           MVTecAD  &(00.0,00.0,00.0) &(00.0,00.0,\textcolor{blue}{00.0}) &(00.0,00.0,00.0) &(\textcolor{blue}{00.0},00.0,00.0) &(\textcolor{blue}{00.0},00.0,00.0) &(00.0,\textcolor{red}{00.0},00.0) &(00.0,00.0,00.0)&\cellcolor{gray!20}(00.0,00.0,00.0)  \\ 
+           MVTecAD  &(00.0,00.0,00.0) &(00.0,00.0,\textcolor{blue}{00.0}) &(00.0,00.0,00.0) &(\textcolor{blue}{00.0},00.0,00.0) &(\textcolor{blue}{00.0},00.0,00.0) &(00.0,\textcolor{red}{00.0},00.0) &(00.0,00.0,00.0)&\cellcolor{gray!20}(00.0,00.0,00.0)  \\ 
+             \bottomrule
+       \end{tabular}
+   }
+   \caption{The red/blue indicates the best/second-best results.}
+\end{table*}
+
+
+% %%%%%%%%%%%%%%%%%%%   Eyecandies (I-AUROC)
+\begin{table*}[ht!]
+\centering
+%\footnotesize
+%\tiny
+%\Large
+\setlength{\tabcolsep}{2.8mm} %2.2mm
+\renewcommand{\arraystretch}{1}
+\adjustbox{width=1\linewidth}{
+   \begin{tabular}{ccc ccc}
+       \toprule
+                \multirow{2}{*}{Method}
+                &\multirow{2}{*}{Backbone}
+                &\multirow{2}{*}{Resolution} 
+                &\multirow{1}{*}{GPU cost} 
+                &\multirow{1}{*}{Times} 
+                &\multirow{2}{*}{AP(\%)} 
+                 \\
+%%%%%%%%%%                 
+                 &  &  &(GB)  &(ms) 23  &     \\
+%%%%%%%%%%%%%% RGB数据
+\midrule[0.5pt]     
+           Method1  &ResNet18 &224*224 &17.9 &5701.4 &46.5$\pm$ 1.2  \\ 
+           Method1  &ResNet18 &224*224 &17.9 &5701.4 &46.5$\pm$ 1.2  \\ 
+           Method1  &ResNet18 &224*224 &17.9 &5701.4 &46.5$\pm$ 1.2  \\ 
+           Method1  &ResNet18 &224*224 &17.9 &5701.4 &46.5$\pm$ 1.2  \\ 
+           Method1  &ResNet18 &224*224 &17.9 &5701.4 &46.5$\pm$ 1.2  \\ 
+           Method1  &ResNet18 &224*224 &17.9 &5701.4 &46.5$\pm$ 1.2  \\ 
+           \midrule[0.5pt] 
+           \cellcolor{gray!20}Ours  &\cellcolor{gray!20}ResNet18 &\cellcolor{gray!20}224*224 &\cellcolor{gray!20}17.9 &\cellcolor{gray!20}5701.4 &\cellcolor{gray!20}46.5$\pm$ 1.2  \\ 
+             \bottomrule
+       \end{tabular}
+   }
+   \caption{The red/blue indicates the best/second-best results.}
+\end{table*}
+
+\end{document}

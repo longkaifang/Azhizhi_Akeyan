@@ -1,0 +1,137 @@
+\documentclass[letterpaper]{article} % DO NOT CHANGE THIS
+\usepackage[submission]{aaai2026}  % DO NOT CHANGE THIS
+\usepackage{times}  % DO NOT CHANGE THIS
+\usepackage{helvet}  % DO NOT CHANGE THIS
+\usepackage{courier}  % DO NOT CHANGE THIS
+\usepackage[hyphens]{url}  % DO NOT CHANGE THIS
+\usepackage{graphicx} % DO NOT CHANGE THIS
+\urlstyle{rm} % DO NOT CHANGE THIS
+\def\UrlFont{\rm}  % DO NOT CHANGE THIS
+\usepackage{natbib}  % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\usepackage{caption} % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\frenchspacing  % DO NOT CHANGE THIS
+\setlength{\pdfpagewidth}{8.5in} % DO NOT CHANGE THIS
+\setlength{\pdfpageheight}{11in} % DO NOT CHANGE THIS
+%
+% These are recommended to typeset algorithms but not required. See the subsubsection on algorithms. Remove them if you don't have algorithms in your paper.
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\usepackage{pifont} %182/183/184
+\usepackage{subcaption}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{booktabs}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{verbatim}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{colortbl}
+\usepackage{booktabs,makecell, multirow, tabularx}
+\usepackage{adjustbox}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{amsmath}
+
+\usepackage{booktabs}
+\usepackage{amssymb}
+\usepackage{bbding}
+\usepackage{pifont}
+\usepackage{wasysym}
+\usepackage{utfsym}
+\usepackage{fontawesome}
+
+\usepackage{mdframed}
+\newcommand{\Claudeemoji}{\includegraphics[height=1.3\fontcharht\font`\B]{image/Claude.png}}
+\newcommand{\Qwenemoji}{\includegraphics[height=1.3\fontcharht\font`\B]{image/Qwen.png}}
+\newcommand{\Googleemoji}{\includegraphics[height=1.3\fontcharht\font`\B]{image/google.png}}
+\newcommand{\Openaiemoji}{\includegraphics[height=1.2\fontcharht\font`\B]{image/OpenAI.png}}
+\newcommand{\pixtralemoji}{\includegraphics[height=1.3\fontcharht\font`\B]{image/pixtral.png}}
+\newcommand{\llamaemoji}{\includegraphics[height=1.0\fontcharht\font`\B]{image/meta.png}}
+\newcommand{\glmemoji}{\includegraphics[height=1.2\fontcharht\font`\B]{image/chatglm.png}}
+\newcommand{\factemoji}{\includegraphics[height=1.6\fontcharht\font`\B]{image/woodpecker.png}}
+\definecolor{color_gray}{RGB}{229,229,229}
+\definecolor{color_blue}{RGB}{252,182,165}
+\definecolor{color_pink}{RGB}{255,217,178}
+\definecolor{color_yellow}{RGB}{255,255,204}
+\definecolor{color_blue1}{RGB}{135, 206, 235}
+\cellcolor{color_blue} 
+\cellcolor{color_pink} 
+\cellcolor{color_yellow} 
+\cellcolor{blue!8}
+\begin{document}
+
+\begin{table*}[t]
+\centering
+\scalebox{0.8}{
+\begin{tabular}{@{}l|ccccccccc|ccc@{}}
+\toprule
+\multirow{2}{*}{Model (Target LLM)} & \multicolumn{3}{c}{\cellcolor{color_blue}Complex Claim} & \multicolumn{3}{c}{\cellcolor{color_pink}Fake News} & \multicolumn{3}{c|}{\cellcolor{color_yellow} Social Rumor} & \multicolumn{3}{c}{\cellcolor{blue!8}Overall} \\ %\cmidrule(lr){2-4} \cmidrule(lr){5-7} \cmidrule(lr){8-10} \cmidrule(lr){11-13}
+& \cellcolor{color_blue}\textit{IMR}$\downarrow$       & \cellcolor{color_blue}\textit{JFR}$\downarrow$       & \cellcolor{color_blue}\textit{Grade}$\uparrow$     & \textit{\cellcolor{color_pink}IMR}$\downarrow$      & \textit{\cellcolor{color_pink}JFR}$\downarrow$     & \textit{\cellcolor{color_pink}Grade}$\uparrow$   & \textit{\cellcolor{color_yellow} IMR}$\downarrow$       & \textit{\cellcolor{color_yellow} JFR}$\downarrow$       & \textit{\cellcolor{color_yellow} Grade}$\uparrow$     & \textit{\cellcolor{blue!8}IMR}$\downarrow$     & \textit{\cellcolor{blue!8}JFR}$\downarrow$     & \textit{\cellcolor{blue!8}Grade}$\uparrow$   \\ \midrule
+\pixtralemoji{}~Mistral-7B             & 60.21     & 25.62          & 3.98      & 47.50    & 19.58        & 4.87    & 59.05     & 39.52          & 3.97      & 54.79   & 23.34        & 4.34    \\ 
+\llamaemoji{}~Llama2-7B              & 46.67     & 19.79     & 4.85      & 32.73    & 18.18   & 5.54    & 62.86     & 26.67     & 3.89      & 45.49   & 20.68   & 4.88    \\
+\llamaemoji{}~Llama2-13B             & 65.67     & 21.66     & 3.71      & 55.33    & 16.67   & 4.42    & 48.10     & 20.48     & 4.78      & 57.28   & 19.50   & 4.25    \\
+\llamaemoji{}~Llama3-8B              & 39.79     & 12.09     & 5.19      & 33.75    & 17.28   & 5.51    & 46.25     & 19.18     & 4.83      & 38.67   & 15.60   & 5.25    \\
+\llamaemoji{}~Llama3.1-8B            & 55.83     & 21.46     & 4.36      & 36.39    & 12.78   & 5.60    & 47.62     & 12.86     & 5.00      & 47.52   & 16.77   & 4.91    \\
+\llamaemoji{}~Llama3.1-70B           & 41.56     & 14.22     & 5.34      & 25.00    & 11.88   & 6.42    & 38.33     & 10.00     & 5.55      & 34.10   & 12.38   & 5.83    \\
+\Qwenemoji{}~Qwen2.5-7B             & 38.97     & 9.74     & 5.38      & 21.54    & 8.20   & 6.58    & 36.67     & 5.42     & 5.68      & 31.76   & 8.14   & 5.91    \\
+\Qwenemoji{}~Qwen2.5-72B            & \underline{22.08}     & \underline{5.41}     & \underline{6.62}      & \textbf{10.42}    & \textbf{1.46}   & \textbf{7.67}    & \underline{15.00}     & 3.75     & {7.28}      & \underline{16.00}   & \textbf{3.50}   & \underline{7.17}    \\
+\glmemoji{}\hspace{0.13em}GLM4-9B          & 52.73     & 16.36     & 4.76      & 51.67    & 14.00   & 4.93    & 50.00     & 15.24     & 5.00      & 51.67   & 15.24   & 4.88    \\
+\Googleemoji{}~Gemma2-9B          & 41.67     & 28.00     & 4.84      & 35.48    & 28.11   & 5.13    & 44.07     & 23.31     & 4.74      & 39.70   & 26.78   & 4.94    \\
+\Googleemoji{}~Gemini-Pro             & 30.21     & 11.87     & 5.98      & 19.39    & 5.76   & 6.59    & 32.86     & 5.72     & 5.78      & 27.25   & 8.62   & 6.14    \\
+\Claudeemoji{}~Claude3.5-Sonnet      & 32.71     & 9.37     & 6.16      & 15.00    & \underline{2.33}   & \underline{7.41}    & 18.57     & \underline{3.33}     & \underline{7.31}      & 24.34   & {5.96}   & 6.78    \\
+\cellcolor{gray!20}\Openaiemoji{}~GPT-4o                 & \textbf{\cellcolor{gray!20}14.05}     & \textbf{\cellcolor{gray!20}4.34}          & \textbf{\cellcolor{gray!20}6.78}      & \underline{\cellcolor{gray!20}10.56}    & \cellcolor{gray!20}4.93        & \cellcolor{gray!20}7.26    & \textbf{\cellcolor{gray!20}10.48}     & \textbf{\cellcolor{gray!20}1.41}          & \textbf{\cellcolor{gray!20}7.62}      & \textbf{\cellcolor{gray!20}12.02}   & \underline{\cellcolor{gray!20}3.55}        & \textbf{\cellcolor{gray!20}7.21}    \\
+\bottomrule
+\end{tabular}}
+\vspace{-0.2cm}
+\caption{The fact-checking performance of different LLMs audited by \textsc{Fact-Audit}. Metrics include \textit{IMR} (\%), \textit{JFR} (\%), and \textit{Grade}, where \textit{IMR} indicates the insight mastery rate of fact-checking limitations, \textit{JFR} means the flaw rate of the justifications provided by LLMs. The best and second performance are in bold and underlined, respectively.}
+\vspace{-0.4cm}
+\end{table*}
+
+\begin{table*}[t]
+\centering
+\scalebox{0.8}{
+\begin{tabular}{@{}l|ccccccccc|ccc@{}}
+\toprule
+\multirow{2}{*}{Model (Target LLM)} & \multicolumn{3}{c}{Complex Claim} & \multicolumn{3}{c}{Fake News} & \multicolumn{3}{c|}{Social Rumor} & \multicolumn{3}{c}{Overall} \\ \cmidrule(lr){2-4} \cmidrule(lr){5-7} \cmidrule(lr){8-10} \cmidrule(lr){11-13}
+&\textit{IMR}$\downarrow$       & \textit{JFR}$\downarrow$       & \textit{Grade}$\uparrow$     & \textit{IMR}$\downarrow$      & \textit{JFR}$\downarrow$     & \textit{Grade}$\uparrow$   & \textit{IMR}$\downarrow$       & \textit{JFR}$\downarrow$       & \textit{Grade}$\uparrow$     & \textit{IMR}$\downarrow$     & \textit{JFR}$\downarrow$     & \textit{Grade}$\uparrow$   \\ \midrule
+\pixtralemoji{}~Mistral-7B             & 60.21     & 25.62          & 3.98      & 47.50    & 19.58        & 4.87    & 59.05     & 39.52          & 3.97      & 54.79   & 23.34        & 4.34    \\ 
+\llamaemoji{}~Llama2-7B              & 46.67     & 19.79     & 4.85      & 32.73    & 18.18   & 5.54    & 62.86     & 26.67     & 3.89      & 45.49   & 20.68   & 4.88    \\
+\llamaemoji{}~Llama2-13B             & 65.67     & 21.66     & 3.71      & 55.33    & 16.67   & 4.42    & 48.10     & 20.48     & 4.78      & 57.28   & 19.50   & 4.25    \\
+\llamaemoji{}~Llama3-8B              & 39.79     & 12.09     & 5.19      & 33.75    & 17.28   & 5.51    & 46.25     & 19.18     & 4.83      & 38.67   & 15.60   & 5.25    \\
+\llamaemoji{}~Llama3.1-8B            & 55.83     & 21.46     & 4.36      & 36.39    & 12.78   & 5.60    & 47.62     & 12.86     & 5.00      & 47.52   & 16.77   & 4.91    \\
+\llamaemoji{}~Llama3.1-70B           & 41.56     & 14.22     & 5.34      & 25.00    & 11.88   & 6.42    & 38.33     & 10.00     & 5.55      & 34.10   & 12.38   & 5.83    \\
+\Qwenemoji{}~Qwen2.5-7B             & 38.97     & 9.74     & 5.38      & 21.54    & 8.20   & 6.58    & 36.67     & 5.42     & 5.68      & 31.76   & 8.14   & 5.91    \\
+\Qwenemoji{}~Qwen2.5-72B            & \underline{22.08}     & \underline{5.41}     & \underline{6.62}      & \textbf{10.42}    & \textbf{1.46}   & \textbf{7.67}    & \underline{15.00}     & 3.75     & {7.28}      & \underline{16.00}   & \textbf{3.50}   & \underline{7.17}    \\
+\glmemoji{}\hspace{0.13em}GLM4-9B          & 52.73     & 16.36     & 4.76      & 51.67    & 14.00   & 4.93    & 50.00     & 15.24     & 5.00      & 51.67   & 15.24   & 4.88    \\
+\Googleemoji{}~Gemma2-9B          & 41.67     & 28.00     & 4.84      & 35.48    & 28.11   & 5.13    & 44.07     & 23.31     & 4.74      & 39.70   & 26.78   & 4.94    \\
+\Googleemoji{}~Gemini-Pro             & 30.21     & 11.87     & 5.98      & 19.39    & 5.76   & 6.59    & 32.86     & 5.72     & 5.78      & 27.25   & 8.62   & 6.14    \\
+\Claudeemoji{}~Claude3.5-Sonnet      & 32.71     & 9.37     & 6.16      & 15.00    & \underline{2.33}   & \underline{7.41}    & 18.57     & \underline{3.33}     & \underline{7.31}      & 24.34   & {5.96}   & 6.78    \\
+\Openaiemoji{}~GPT-4o                 & \textbf{14.05}     & \textbf{4.34}          & \textbf{6.78}      & \underline{10.56}    & 4.93        & 7.26    & \textbf{10.48}     & \textbf{1.41}          & \textbf{7.62}      & \textbf{12.02}   & \underline{3.55}        & \textbf{7.21}    \\
+\bottomrule
+\end{tabular}}
+\vspace{-0.2cm}
+\caption{The fact-checking performance of different LLMs audited by \textsc{Fact-Audit}. Metrics include \textit{IMR} (\%), \textit{JFR} (\%), and \textit{Grade}, where \textit{IMR} indicates the insight mastery rate of fact-checking limitations, \textit{JFR} means the flaw rate of the justifications provided by LLMs. The best and second performance are in bold and underlined, respectively.}
+\label{tab:main_results}
+\vspace{-0.4cm}
+\end{table*}
+\end{document}

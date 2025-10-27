@@ -1,0 +1,265 @@
+\documentclass[letterpaper]{article} % DO NOT CHANGE THIS
+\usepackage[submission]{aaai2026}  % DO NOT CHANGE THIS
+\usepackage{times}  % DO NOT CHANGE THIS
+\usepackage{helvet}  % DO NOT CHANGE THIS
+\usepackage{courier}  % DO NOT CHANGE THIS
+\usepackage[hyphens]{url}  % DO NOT CHANGE THIS
+\usepackage{graphicx} % DO NOT CHANGE THIS
+\urlstyle{rm} % DO NOT CHANGE THIS
+\def\UrlFont{\rm}  % DO NOT CHANGE THIS
+\usepackage{natbib}  % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\usepackage{caption} % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\frenchspacing  % DO NOT CHANGE THIS
+\setlength{\pdfpagewidth}{8.5in} % DO NOT CHANGE THIS
+\setlength{\pdfpageheight}{11in} % DO NOT CHANGE THIS
+%
+% These are recommended to typeset algorithms but not required. See the subsubsection on algorithms. Remove them if you don't have algorithms in your paper.
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\usepackage{pifont} %182/183/184
+\usepackage{subcaption}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{booktabs}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{verbatim}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{colortbl}
+\usepackage{booktabs,makecell, multirow, tabularx}
+\usepackage{adjustbox}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{amsmath}
+
+\usepackage{booktabs}
+\usepackage{amssymb}
+\usepackage{bbding}
+\usepackage{pifont}
+\usepackage{wasysym}
+\usepackage{utfsym}
+\usepackage{fontawesome}
+
+\usepackage{mdframed}
+\begin{document}
+\definecolor{color1}{RGB}{134, 148, 142}
+\definecolor{color2}{RGB}{243, 245, 244}
+\definecolor{color3}{RGB}{232, 235, 234}
+\definecolor{color4}{RGB}{134, 148, 142}
+\cellcolor{color1} 
+\cellcolor{color2} 
+\cellcolor{color3} 
+\cellcolor{color4} 
+
+\begin{table*}[ht!]
+\centering
+%\footnotesize
+%\tiny
+%\Large
+\setlength{\tabcolsep}{2.8mm} %2.2mm
+\renewcommand{\arraystretch}{1}
+\adjustbox{width=1\linewidth}{
+   \begin{tabular}{ccccc ccccc ccccc  ccccc}
+       \toprule
+\multicolumn{20}{c}{Languages}\\
+                 \multirow{1}{*}{\textbf{Model}}
+                 & \multirow{1}{*}{\textbf{Avg}}
+                &\multirow{1}{*}{\textbf{Var}}
+                &\multirow{1}{*}{as} 
+                &\multirow{1}{*}{cs} 
+                &\multirow{1}{*}{de} 
+                &\multirow{1}{*}{el} 
+                &\multirow{1}{*}{cs} 
+                &\multirow{1}{*}{fa} 
+                &\multirow{1}{*}{fr} 
+                &\multirow{1}{*}{he} 
+                &\multirow{1}{*}{hi}
+                 &\multirow{1}{*}{id}
+                 &\multirow{1}{*}{el} 
+                &\multirow{1}{*}{cs} 
+                &\multirow{1}{*}{fa} 
+                &\multirow{1}{*}{fr} 
+                &\multirow{1}{*}{he} 
+                &\multirow{1}{*}{hi}
+                 &\multirow{1}{*}{id}\\
+%%%%%%%%%%                 
+%%%%%%%%%%%%%% RGB数据
+ 
+    \includegraphics[width=0.5cm]{image/mouse.png}method1  &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color2} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color3} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color3} 00.0 &\cellcolor{color3} 00.0 &\cellcolor{color1} 00.0
+    &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0\\
+        \includegraphics[width=0.5cm]{image/dog.png}method1  &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color2} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color3} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0
+    &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0\\
+        \includegraphics[width=0.5cm]{image/mouse.png}method1  &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color2} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color3} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0
+    &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0\\
+    \includegraphics[width=0.5cm]{image/duck.png}method1  &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color2} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color3} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color3} 00.0 &\cellcolor{color3} 00.0 &\cellcolor{color1} 00.0
+    &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0\\
+        \includegraphics[width=0.5cm]{image/cat.png}method1  &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color2} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color3} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0
+    &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0\\
+        \includegraphics[width=0.5cm]{image/mouse.png}method1  &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color2} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color3} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0
+    &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0\\
+    \includegraphics[width=0.5cm]{image/mouse.png}method1  &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color2} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color3} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color3} 00.0 &\cellcolor{color3} 00.0 &\cellcolor{color1} 00.0
+    &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0\\
+        \includegraphics[width=0.5cm]{image/mouse.png}method1  &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color2} 00.0 &\cellcolor{color2} 00.0 &\cellcolor{color2} 00.0 &\cellcolor{color1} 00.0
+    &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0\\
+        \includegraphics[width=0.5cm]{image/mouse.png}method1  &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0
+    &\cellcolor{color2} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0 &\cellcolor{color1} 00.0\\
+             \bottomrule
+       \end{tabular}
+   }
+   \caption{The red/blue indicates the best/second-best results.}
+\end{table*}
+
+
+
+
+
+
+
+
+
+\begin{table}[ht!]
+\centering
+%\footnotesize
+%\tiny
+%\Large
+\setlength{\tabcolsep}{2.8mm} %2.2mm
+\renewcommand{\arraystretch}{1}
+\adjustbox{width=1\linewidth}{
+   \begin{tabular}{c|c|ccc}
+       \toprule
+        \multirow{2}{*}{Train}
+        &\multirow{2}{*}{Target}
+        &\multicolumn{3}{c}{Pixel-Level}
+                 \\
+%%%%%%%%%%  $\rightarrow$} $\downarrow$
+\cmidrule{3-5}
+                &  &I-AUROC  &F1-score  &AP\\
+%%%%%%%%%%%%%% RGB数据
+\midrule[0.5pt]     
+           \multirow{4}{*}{MVtec-AD}&Visa &00.0 &00.0 &00.0  \\
+           &MPDD &00.0 &00.0 &00.0  \\
+           &MPDD &00.0 &00.0 &00.0  \\
+           &MPDD &00.0 &00.0 &00.0  \\
+\midrule[0.5pt] 
+           \multirow{2}{*}{MVtec-AD}&Visa &00.0 &00.0 &00.0  \\
+           &MPDD &00.0 &00.0 &00.0  \\
+\midrule[0.5pt] 
+           \multirow{2}{*}{MVtec-AD}&Visa &00.0 &00.0 &00.0  \\
+           &MPDD &00.0 &00.0 &00.0  \\
+\midrule[0.5pt] 
+           \multirow{2}{*}{MVtec-AD}&Visa &00.0 &00.0 &00.0  \\
+           &MPDD &00.0 &00.0 &00.0  \\
+             \bottomrule
+       \end{tabular}
+   }
+   \caption{The red/blue indicates the best/second-best results.}
+\end{table}
+
+
+\begin{table}[ht!]
+\centering
+%\footnotesize
+%\tiny
+%\Large
+\setlength{\tabcolsep}{2.8mm} %2.2mm
+\renewcommand{\arraystretch}{1}
+\adjustbox{width=1\linewidth}{
+   \begin{tabular}{c|c|c|ccc|cc}
+       \toprule
+       \multicolumn{3}{c|}{ZSAD}
+        &\multicolumn{3}{c|}{Pixel-Level}
+        &\multicolumn{2}{c}{Image-Level}
+                 \\
+%%%%%%%%%%  $\rightarrow$} $\downarrow$
+\cmidrule{1-8}
+                Dataset &Method &Venue  &AUROC  &F1-score  &AP &AUROC &AP\\
+%%%%%%%%%%%%%% RGB数据
+\midrule[0.5pt] 
+           \multirow{8}{*}{MVtec-AD} &CLIP &ICML21 &00.0 &00.0 &00.0 &00.0 &00.0 \\
+           &CLIP &ICML21 &00.0 &00.0 &00.0 &00.0 &00.0  \\
+           &CLIP &ICML21 &00.0 &00.0 &00.0 &00.0 &00.0 \\
+           &CLIP &ICML21 &00.0 &00.0 &00.0 &00.0 &00.0  \\
+           &CLIP &ICML21 &00.0 &00.0 &00.0 &00.0 &00.0 \\
+           &CLIP &ICML21 &00.0 &00.0 &00.0 &00.0 &00.0  \\
+\cmidrule{2-8}
+           &Ours &ICML21 &00.0 &00.0 &00.0 &00.0 &00.0 \\
+           &Ours &ICML21 &00.0 &00.0 &00.0 &00.0 &00.0  \\
+\midrule[0.5pt] 
+           \multirow{8}{*}{MVtec-AD} &CLIP &ICML21 &00.0 &00.0 &00.0 &00.0 &00.0 \\
+           &CLIP &ICML21 &00.0 &00.0 &00.0 &00.0 &00.0  \\
+           &CLIP &ICML21 &00.0 &00.0 &00.0 &00.0 &00.0 \\
+           &CLIP &ICML21 &00.0 &00.0 &00.0 &00.0 &00.0  \\
+           &CLIP &ICML21 &00.0 &00.0 &00.0 &00.0 &00.0 \\
+           &CLIP &ICML21 &00.0 &00.0 &00.0 &00.0 &00.0  \\
+\cmidrule{2-8}
+           &Ours &ICML21 &00.0 &00.0 &00.0 &00.0 &00.0 \\
+           &Ours &ICML21 &00.0 &00.0 &00.0 &00.0 &00.0  \\
+             \bottomrule
+       \end{tabular}
+   }
+   \caption{The red/blue indicates the best/second-best results.}
+\end{table}
+
+
+% 调整表格参数
+\setlength{\tabcolsep}{3.8mm}
+\renewcommand{\arraystretch}{1.1}
+% 并排放置两个表格
+\begin{table}[htbp]
+    \centering
+    \adjustbox{width=1\linewidth}{
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \caption*{\textbf{(a) VisA}}
+        \begin{tabular}{cc|ccc}
+            \toprule
+            &Defects & AUROC & F1-Score & AP \\
+            \midrule
+            -&Extra    & 94.07   & 2.11   & 0.15   \\
+         -&Stuck    & 91.54   & 10.51 & 7.76   \\
+            \checkmark&Bent    & 96.53   & 6.07   & 7.74   \\
+            \checkmark&Hole    & 99.55   & 12.64 & 25.19 \\
+            \bottomrule
+        \end{tabular}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \caption*{\textbf{(b) Real-IAD}}
+        \begin{tabular}{cc|ccc}
+            \toprule
+            &Defects & AUROC & F1-Score & AP \\
+            \midrule
+            -&Pit        & 97.08   & 6.15   & 1.01   \\
+            -&Contamin.  & 90.03   & 6.12   & 1.86   \\
+            \checkmark&Scratch    & 92.63   & 4.37   & 2.96   \\
+            \checkmark&Damage     & 96.61   & 6.31   & 9.75   \\
+            \bottomrule
+        \end{tabular}
+    \end{minipage}
+    }
+    \caption{Results MTAS for zero-shot setting at pixel-level for sample defect-types. The model is trained on the MVTec-AD dataset. - indicates \textbf{unseen} defect types while $\checkmark$ indicates \textbf{seen} defect types during training.}
+\end{table}
+
+
+\end{document}

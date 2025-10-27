@@ -1,0 +1,183 @@
+\documentclass[letterpaper]{article} % DO NOT CHANGE THIS
+\usepackage[submission]{aaai2026}  % DO NOT CHANGE THIS
+\usepackage{times}  % DO NOT CHANGE THIS
+\usepackage{helvet}  % DO NOT CHANGE THIS
+\usepackage{courier}  % DO NOT CHANGE THIS
+\usepackage[hyphens]{url}  % DO NOT CHANGE THIS
+\usepackage{graphicx} % DO NOT CHANGE THIS
+\urlstyle{rm} % DO NOT CHANGE THIS
+\def\UrlFont{\rm}  % DO NOT CHANGE THIS
+\usepackage{natbib}  % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\usepackage{caption} % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\frenchspacing  % DO NOT CHANGE THIS
+\setlength{\pdfpagewidth}{8.5in} % DO NOT CHANGE THIS
+\setlength{\pdfpageheight}{11in} % DO NOT CHANGE THIS
+%
+% These are recommended to typeset algorithms but not required. See the subsubsection on algorithms. Remove them if you don't have algorithms in your paper.
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\usepackage{pifont} %182/183/184
+\usepackage{subcaption}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{booktabs}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{verbatim}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{colortbl}
+\usepackage{booktabs,makecell, multirow, tabularx}
+\usepackage{adjustbox}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{amsmath}
+
+\usepackage{booktabs}
+\usepackage{amssymb}
+\usepackage{bbding}
+\usepackage{pifont}
+\usepackage{wasysym}
+\usepackage{utfsym}
+\usepackage{fontawesome}
+
+\usepackage{mdframed}
+\usepackage{arydshln}
+\begin{document}
+
+% %%%%%%%%%%%%%%%%%%%   MVTec 3D-AD (I-AUROC)
+%\checkmark
+%\XSolidBrush
+% \cmidrule{1-8} 横线
+
+% \usepackage{arydshln}虚线宏包  
+%\hdashline
+%\cdashline{2-3} % 第二、三列虚线
+
+%左 $\leftarrow$，右 $\rightarrow$，上 $\uparrow$，下 $\downarrow$
+
+%整行填充颜色
+%\usepackage[table]{xcolor}
+%\usepackage{colortbl}
+%\rowcolor{blue!20}
+
+%合并行和列
+%\multicolumn{2}{c|}{\multirow{2}{*}{Method}}
+%\multicolumn{2}{c|}{Method}
+
+%定义颜色
+% \definecolor{color1}{RGB}{229,229,229}
+% \cellcolor{color1} 
+
+\begin{table*}[ht!]
+\centering
+\setlength{\tabcolsep}{2.8mm} %2.2mm
+\renewcommand{\arraystretch}{1}
+\adjustbox{width=1\linewidth}{
+   \begin{tabular}{ccccc ccccc cccc}
+   \multicolumn{14}{c}{Map-free Dataset}\\
+       \toprule
+                 &\multirow{2}{*}{}
+                 & & \multirow{2}{*}{}
+                &&\multicolumn{2}{c}{VCRE}
+                &&\multicolumn{2}{c}{Median Errors}
+                &&\multicolumn{1}{c}{Matching}
+                &&\multicolumn{1}{c}{Estimates}\\
+%%%%%%%%%%
+\cmidrule{6-7} \cmidrule{9-10} \cmidrule{12-12} \cmidrule{14-14} 
+                &&& &&AUC  &Prec. (\%)  &&  Rep. (px)  &Trans. (m) / Rot. (°)  &  &Time (ms)  &   &(\%)\\
+%%%%%%%%%%%%%%
+\midrule[0.5pt] 
+\multicolumn{5}{c}{SIFT}&00.0 &00.0&&00.0 &00.0/00.0 &&00.0 &&00.0\\
+\multicolumn{5}{c}{SIFT}&00.0 &00.0&&00.0 &00.0/00.0 &&00.0 &&00.0\\
+\midrule[0.5pt]  
+\multicolumn{2}{c}{\multirow{9}{*}{\rotatebox{90}{\makecell{Depth+Overlap+Pose \\ Supervision}}}}
+            &Sparse Features  & &  & && && && && \\
+\cmidrule{3-3}
+            &&DISK && &00.0&00.0 & &00.0&00.0/00.00& &00.0& &00.0\\
+&&DDeDoDe  && &00.0&00.0 & &00.0&00.0/00.00& &00.0& &00.0 \\
+&&SuperPoint - SuperGlue  && &00.0&00.0 & &00.0&00.0/00.00& &00.0& &00.0 \\
+&&DISK - LightGlue  && &00.0&00.0 & &00.0&00.0/00.00& &00.0& &00.0 \\
+&&Dense Features & &  & && && && && \\
+\cmidrule{3-3}
+&&DISK  && &00.0&00.0 & &00.0&00.0/00.00& &00.0& &00.0 \\
+&&DISK  && &00.0&00.0 & &00.0&00.0/00.00& &00.0& &00.0 \\
+&&DISK  && &00.0&00.0 & &00.0&00.0/00.00& &00.0& &00.0 \\
+\midrule[0.5pt]  
+\multicolumn{2}{c}{\multirow{9}{*}{\rotatebox{90}{\makecell{Depth+Overlap+Pose \\ Supervision}}}}
+            &Sparse Features  & &  & && && && && \\
+\cmidrule{3-3}
+            &&DISK && &00.0&00.0 & &00.0&00.0/00.00& &00.0& &00.0\\
+&&DDeDoDe  && &00.0&00.0 & &00.0&00.0/00.00& &00.0& &00.0 \\
+&&SuperPoint - SuperGlue  && &00.0&00.0 & &00.0&00.0/00.00& &00.0& &00.0 \\
+&&DISK - LightGlue  && &00.0&00.0 & &00.0&00.0/00.00& &00.0& &00.0 \\
+\cdashline{3-14}
+&&Dense Features & &  & && && && && \\
+\cmidrule{3-3}
+&&DISK  && &00.0&00.0 & &00.0&00.0/00.00& &00.0& &00.0 \\
+&&DISK  && &00.0&00.0 & &00.0&00.0/00.00& &00.0& &00.0 \\
+&&DISK  && &00.0&00.0 & &00.0&00.0/00.00& &00.0& &00.0 \\
+       \end{tabular}
+   }
+   \caption{The caption results, caption results, caption results, caption results.}
+\end{table*}
+
+\begin{table}[ht!]
+\centering
+\setlength{\tabcolsep}{2.8mm} %2.2mm
+\renewcommand{\arraystretch}{1}
+\adjustbox{width=1\linewidth}{
+   \begin{tabular}{ccccc ccccc cccc}
+   \multicolumn{14}{c}{Map-free Dataset}\\
+       \toprule
+                 &&\multicolumn{2}{c}{VCRE}
+                &&\multicolumn{2}{c}{Median Errors}\\
+%%%%%%%%%%
+\cmidrule{3-
+4} \cmidrule{6-7}
+                &&AUC  &Prec. (\%)  &&  Rep. (px)  &Trans. (m) / Rot. (°)     \\
+%%%%%%%%%%%%%%
+\midrule[0.5pt] 
+Sparse Features  & &  & && &\\
+\cmidrule{1-1}
+            DISK & &00.0&00.0 & &00.0&00.0/00.00\\
+DDeDoDe  & &00.0&00.0 & &00.0&00.0/00.00\\
+SuperPoint - SuperGlue  & &00.0&00.0 & &00.0&00.0/00.00 \\
+DISK - LightGlue  & &00.0&00.0 & &00.0&00.0/00.00 \\
+\midrule[0.5pt] 
+Dense Features &   & && & \\
+\cmidrule{1-1}
+DISK  &&00.0&00.0 & &00.0&00.0/00.00 \\
+DISK  & &00.0&00.0 & &00.0&00.0/00.00 \\
+DISK  & &00.0&00.0 & &00.0&00.0/00.00 \\
+\midrule[0.5pt] 
+Dense Features &   & && &\\
+\cmidrule{1-1}
+DISK  &&00.0&00.0 & &00.0&00.0/00.00 \\
+DISK  & &00.0&00.0 & &00.0&00.0/00.00 \\
+DISK  & &00.0&00.0 & &00.0&00.0/00.00 \\
+
+       \end{tabular}
+   }
+   \caption{The caption results, caption results, caption results, caption results.}
+\end{table}
+\end{document}

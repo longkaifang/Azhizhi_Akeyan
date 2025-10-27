@@ -1,0 +1,189 @@
+\documentclass[letterpaper]{article} % DO NOT CHANGE THIS
+\usepackage[submission]{aaai2026}  % DO NOT CHANGE THIS
+\usepackage{times}  % DO NOT CHANGE THIS
+\usepackage{helvet}  % DO NOT CHANGE THIS
+\usepackage{courier}  % DO NOT CHANGE THIS
+\usepackage[hyphens]{url}  % DO NOT CHANGE THIS
+\usepackage{graphicx} % DO NOT CHANGE THIS
+\urlstyle{rm} % DO NOT CHANGE THIS
+\def\UrlFont{\rm}  % DO NOT CHANGE THIS
+\usepackage{natbib}  % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\usepackage{caption} % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\frenchspacing  % DO NOT CHANGE THIS
+\setlength{\pdfpagewidth}{8.5in} % DO NOT CHANGE THIS
+\setlength{\pdfpageheight}{11in} % DO NOT CHANGE THIS
+%
+% These are recommended to typeset algorithms but not required. See the subsubsection on algorithms. Remove them if you don't have algorithms in your paper.
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\usepackage{pifont} %182/183/184
+\usepackage{subcaption}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{booktabs}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{verbatim}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{colortbl}
+\usepackage{booktabs,makecell, multirow, tabularx}
+\usepackage{adjustbox}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{amsmath}
+
+\usepackage{booktabs}
+\usepackage{amssymb}
+\usepackage{bbding}
+\usepackage{pifont}
+\usepackage{wasysym}
+\usepackage{utfsym}
+\usepackage{fontawesome}
+
+\usepackage{mdframed}
+\begin{document}
+
+% %%%%%%%%%%%%%%%%%%%颜色定义
+\definecolor{color_gray}{RGB}{229,229,229}
+\definecolor{color_blue}{RGB}{252,182,165}
+\definecolor{color_pink}{RGB}{255,217,178}
+\definecolor{color_yellow}{RGB}{255,255,204}
+\definecolor{color_blue1}{RGB}{135, 206, 235}
+\cellcolor{color_blue} \cellcolor{color_pink} \cellcolor{color_yellow} \cellcolor{blue!8}
+
+\definecolor{secondcolor}{RGB}{189,215,238}
+\definecolor{firstcolor}{RGB}{255,153,153}
+\newcommand{\firstcolor}[1]{\cellcolor[rgb]{1,.60,.60}{#1}}
+\newcommand{\secondcolor}[1]{\cellcolor[rgb]{.741,.843,.933}{#1}}
+% %%%%%%%%%%%%%%%%%%%
+\begin{table*}[ht!]
+\centering
+\setlength{\tabcolsep}{2.8mm} %2.2mm
+\renewcommand{\arraystretch}{1}
+\adjustbox{width=1\linewidth}{
+   \begin{tabular}{ccccc ccccc cc}
+       \toprule
+            \multicolumn{6}{c}{Infrared-visible Image Fusion on MSRS Dataset}
+            &\multicolumn{6}{c}{Infrared-visible Image Fusion on FMB Dataset}\\
+%%%%%%%%%%                 
+                &EN $\uparrow$ &SF $\uparrow$ &SCD $\uparrow$  &Q$^{AB/F}$ $\uparrow$  &SSIM $\uparrow$  &  &EN $\uparrow$ &SF $\uparrow$ &SCD $\uparrow$  &Q$^{AB/F}$ $\uparrow$  &SSIM $\uparrow$  \\
+%%%%%%%%%%                 
+\midrule[0.5pt]  
+TarDAL&\cellcolor{color_blue}00.0 &\cellcolor{blue!8}00.0 &00.0 &00.0 &00.0 &TarDAL &00.0 &\cellcolor{blue!8}00.0 &00.0 &\cellcolor{color_blue}00.0 &\cellcolor{color_blue}00.0 \\
+TarDAL&\cellcolor{color_blue}00.0 &\cellcolor{blue!8}00.0 &00.0 &00.0 &00.0 &TarDAL &00.0 &\cellcolor{blue!8}00.0 &00.0 &\cellcolor{color_blue}00.0 &\cellcolor{color_blue}00.0 \\
+TarDAL&\cellcolor{color_blue}00.0 &\cellcolor{blue!8}00.0 &00.0 &00.0 &00.0 &TarDAL &00.0 &\cellcolor{blue!8}00.0 &00.0 &\cellcolor{color_blue}00.0 &\cellcolor{color_blue}00.0 \\
+TarDAL&\cellcolor{color_blue}00.0 &\cellcolor{blue!8}00.0 &00.0 &00.0 &00.0 &TarDAL &00.0 &\cellcolor{blue!8}00.0 &00.0 &\cellcolor{color_blue}00.0 &\cellcolor{color_blue}00.0 \\
+TarDAL&\cellcolor{color_blue}00.0 &\cellcolor{blue!8}00.0 &00.0 &00.0 &00.0 &TarDAL &00.0 &\cellcolor{blue!8}00.0 &00.0 &\cellcolor{color_blue}00.0 &\cellcolor{color_blue}00.0 \\
+TarDAL&\cellcolor{color_blue}00.0 &\cellcolor{blue!8}00.0 &00.0 &00.0 &00.0 &TarDAL &00.0 &\cellcolor{blue!8}00.0 &00.0 &\cellcolor{color_blue}00.0 &\cellcolor{color_blue}00.0 \\
+\toprule
+            \multicolumn{6}{c}{Infrared-visible Image Fusion on MSRS Dataset}
+            &\multicolumn{6}{c}{Infrared-visible Image Fusion on FMB Dataset}\\
+%%%%%%%%%%                 
+                &EN $\uparrow$ &SF $\uparrow$ &SCD $\uparrow$  &Q$^{AB/F}$ $\uparrow$  &SSIM $\uparrow$  &  &EN $\uparrow$ &SF $\uparrow$ &SCD $\uparrow$  &Q$^{AB/F}$ $\uparrow$  &SSIM $\uparrow$  \\
+%%%%%%%%%%%%%% 
+\midrule[0.5pt]  
+TarDAL&\cellcolor{color_blue}00.0 &\cellcolor{blue!8}00.0 &00.0 &00.0 &00.0 &TarDAL &00.0 &\cellcolor{blue!8}00.0 &00.0 &\cellcolor{color_blue}00.0 &\cellcolor{color_blue}00.0 \\
+TarDAL&\cellcolor{color_blue}00.0 &\cellcolor{blue!8}00.0 &00.0 &00.0 &00.0 &TarDAL &00.0 &\cellcolor{blue!8}00.0 &00.0 &\cellcolor{color_blue}00.0 &\cellcolor{color_blue}00.0 \\
+TarDAL&\cellcolor{color_blue}00.0 &\cellcolor{blue!8}00.0 &00.0 &00.0 &00.0 &TarDAL &00.0 &\cellcolor{blue!8}00.0 &00.0 &\cellcolor{color_blue}00.0 &\cellcolor{color_blue}00.0 \\
+TarDAL&\cellcolor{color_blue}00.0 &\cellcolor{blue!8}00.0 &00.0 &00.0 &00.0 &TarDAL &00.0 &\cellcolor{blue!8}00.0 &00.0 &\cellcolor{color_blue}00.0 &\cellcolor{color_blue}00.0 \\
+TarDAL&\cellcolor{color_blue}00.0 &\cellcolor{blue!8}00.0 &00.0 &00.0 &00.0 &TarDAL &00.0 &\cellcolor{blue!8}00.0 &00.0 &\cellcolor{color_blue}00.0 &\cellcolor{color_blue}00.0 \\
+TarDAL&\cellcolor{color_blue}00.0 &\cellcolor{blue!8}00.0 &00.0 &00.0 &00.0 &TarDAL &00.0 &\cellcolor{blue!8}00.0 &00.0 &\cellcolor{color_blue}00.0 &\cellcolor{color_blue}00.0 \\
+             \bottomrule
+       \end{tabular}
+   }
+   \caption{The red/blue indicates the best/second-best results.}
+\end{table*}
+
+
+\begin{table*}[ht!]
+\centering
+\setlength{\tabcolsep}{2.8mm} %2.2mm
+\renewcommand{\arraystretch}{1}
+\adjustbox{width=1\linewidth}{
+   \begin{tabular}{ccccccccccccc}
+       \toprule
+                 \multirow{3}{*}{}
+                 &\multicolumn{5}{c}{Semantic Segmentation}&
+                 &\multicolumn{5}{c}{Object Detection}\\
+\cmidrule{2-6}\cmidrule{8-12}
+%%%%%%%%%%%%%%
+                 &\multicolumn{2}{c}{MSRS}
+                 &
+                 &\multicolumn{2}{c}{FMB}
+                 &
+                 &\multicolumn{2}{c}{M3FD}
+                 &
+                 &\multicolumn{2}{c}{LLVIP}\\
+\cmidrule{2-3}\cmidrule{5-6} \cmidrule{8-9}\cmidrule{11-12}
+                 Methods&mAcc& mIoU&& mAcc&mIoU&&mAP50&mAP75&& AP50&AP75\\
+%%%%%%%%%%%%%% 
+\midrule[0.5pt]      
+Infared&\cellcolor{blue!8}00.0 &\cellcolor{color_blue}00.0& &00.0 &00.0& &00.0 &\cellcolor{color_blue}00.0 &&00.0 &00.0\\
+Infared&\cellcolor{blue!8}00.0 &\cellcolor{color_blue}00.0& &00.0 &00.0& &00.0 &\cellcolor{color_blue}00.0 &&00.0 &00.0\\
+Infared&\cellcolor{blue!8}00.0 &\cellcolor{color_blue}00.0& &00.0 &00.0& &00.0 &\cellcolor{color_blue}00.0 &&00.0 &00.0\\
+Infared&\cellcolor{blue!8}00.0 &\cellcolor{color_blue}00.0& &00.0 &00.0& &00.0 &\cellcolor{color_blue}00.0 &&00.0 &00.0\\
+Infared&\cellcolor{blue!8}00.0 &\cellcolor{color_blue}00.0& &00.0 &00.0& &00.0 &\cellcolor{color_blue}00.0 &&00.0 &00.0\\
+Infared&\cellcolor{blue!8}00.0 &\cellcolor{color_blue}00.0& &00.0 &00.0& &00.0 &\cellcolor{color_blue}00.0 &&00.0 &00.0\\
+Infared&\cellcolor{blue!8}00.0 &\cellcolor{color_blue}00.0& &00.0 &00.0& &00.0 &\cellcolor{color_blue}00.0 &&00.0 &00.0\\
+ \bottomrule
+       \end{tabular}
+   }
+   \caption{The red/blue indicates the best/second-best results.}
+\end{table*}
+
+\begin{table*}[t]
+	\centering
+	\caption{Quantitative comparison of Infrared-visible image fusion. The \colorbox{firstcolor}{red} and \colorbox{secondcolor}{blue} markers represent the best and second-best values.}
+    \vspace{-0.5em}
+	\label{tab:fusion}%
+	\resizebox{\linewidth}{!}{
+		\begin{tabular}{lcccccclcccccc}
+			\toprule
+			\multicolumn{7}{c}{\textbf{Infrared-visible Image Fusion on MSRS~\cite{DBLP:journals/inffus/TangYZJM22} Dataset}}                              &                              \multicolumn{7}{c}{\textbf{Infrared-visible Image Fusion on FMB~\cite{Liu_2023_ICCV} Dataset}}                               \\
+			&  EN $\uparrow$   &   SF $\uparrow$   &  SCD $\uparrow$   &  VIF $\uparrow$  & $Q^{AB/F}$$\uparrow$  & SSIM  $\uparrow$  &                                        &  EN $\uparrow$   &   SF $\uparrow$   &  SCD $\uparrow$   &  VIF $\uparrow$  & $Q^{AB/F}$$\uparrow$  & SSIM  $\uparrow$   \\ \midrule
+            TarDAL~\cite{DBLP:conf/cvpr/LiuFHWLZL22}    & 5.28 & 5.98  & 0.71 & 0.21 & 0.18 & 0.47 & TarDAL~\cite{DBLP:conf/cvpr/LiuFHWLZL22} & 6.63 & 6.94  & 1.03 & 0.28 & 0.29 &\secondcolor{0.74} \\
+            SegMIF~\cite{Liu_2023_ICCV}    & 5.95 & 11.10 & 1.57 & 0.44 & 0.63 & 0.55 & SegMIF~\cite{Liu_2023_ICCV} &\secondcolor{6.83} & 13.69 &\secondcolor{1.72} & 0.39 & 0.65 & 0.60\\
+            MURF~\cite{xu2023murf}      & 5.04 & 10.49 & 1.02 & 0.22 & 0.37 & 0.60 & MURF~\cite{xu2023murf} & 6.37 & 13.88 & 1.34 & 0.22 & 0.37 & 0.68\\
+            EMMA~\cite{zhao2024equivariant}      & 6.73 & \firstcolor{11.56} &\secondcolor{1.62} &\secondcolor{0.49} &\secondcolor{0.64} &\secondcolor{0.70} & EMMA~\cite{zhao2024equivariant} & 6.77 & \firstcolor{15.00} & 1.50 &\secondcolor{0.42} &\secondcolor{0.65} & 0.72\\
+
+            DCINN~\cite{wang2024general}     & 6.00 & 10.51 & 1.49 & 0.41 & 0.57 & 0.52 & DCINN~\cite{wang2024general} & 6.47 & 11.47 & 1.39 & 0.38 & 0.59 & 0.74\\
+            MRFS~\cite{zhang2024mrfs}      & \firstcolor{7.00} & 8.86  & 1.42 & 0.37 & 0.49 & 0.55 & MRFS~\cite{zhang2024mrfs} & 6.78 & 12.42 & 1.24 & 0.38 & 0.62 & 0.73\\
+            TIMFusion~\cite{liu2024task} & 6.27 & 9.67  & 1.34 & 0.32 & 0.48 & {0.68} & TIMFusion~\cite{liu2024task} & 6.51 & 12.23 & 1.24 & 0.35 & 0.59 & 0.73\\
+            TDFusion (Ours)  &\secondcolor{6.74} &\secondcolor{11.30} & \firstcolor{1.86} & \firstcolor{0.50}& \firstcolor{0.67} & \firstcolor{0.70} & TDFusion (Ours)  & \firstcolor{6.86} &\secondcolor{14.16} & \firstcolor{1.76} & \firstcolor{0.43} & \firstcolor{0.68} & \firstcolor{0.75}\\
+			\midrule
+			\multicolumn{7}{c}{\textbf{Infrared-visible Image Fusion on M3FD~\cite{DBLP:conf/cvpr/LiuFHWLZL22} Dataset}}                                      &                                            \multicolumn{7}{c}{\textbf{Infrared-visible Image Fusion on LLVIP~\cite{jia2021llvip} Dataset}}                                            \\
+			&  EN $\uparrow$   &   SF $\uparrow$   &  SCD $\uparrow$   &  VIF $\uparrow$  & $Q^{AB/F}$$\uparrow$  & SSIM  $\uparrow$  &                                        &  EN $\uparrow$   &   SF $\uparrow$   &  SCD $\uparrow$   &  VIF $\uparrow$  & $Q^{AB/F}$$\uparrow$  & SSIM  $\uparrow$
+            \\ \midrule
+            TarDAL~\cite{DBLP:conf/cvpr/LiuFHWLZL22}    & 6.87 & 7.63  & 1.29 & 0.27 & 0.30 & 0.71 & TarDAL~\cite{DBLP:conf/cvpr/LiuFHWLZL22}    & 6.32 & 7.42  & 1.04 & 0.27 & 0.22 & 0.58 \\
+            SegMIF~\cite{Liu_2023_ICCV}    & 6.85 & {14.14} &\secondcolor{1.72} & 0.37 &\secondcolor{0.60} & 0.59 & SegMIF~\cite{Liu_2023_ICCV}    & 6.68 &\secondcolor{15.46} & 1.38 & 0.40 &\secondcolor{0.66} & 0.57 \\
+            MURF~\cite{xu2023murf}      & 6.50 & 12.55 & 1.46 & 0.21 & 0.32 & 0.64 & MURF~\cite{xu2023murf}      & 6.13 & 15.08 & 0.96 & 0.21 & 0.31 & 0.57 \\
+            EMMA~\cite{zhao2024equivariant}      & 6.92 & \firstcolor{15.23} & 1.49 &\secondcolor{0.38} & 0.59 & 0.69 & EMMA~\cite{zhao2024equivariant}      &\secondcolor{7.35} & 15.37 &\secondcolor{1.57} &\secondcolor{0.41} & 0.64 &\secondcolor{0.66} \\
+            DCINN~\cite{wang2024general}     & 6.59 & 11.21 & 1.46 & 0.34 & 0.51 &\secondcolor{0.72} & DCINN~\cite{wang2024general}     & 6.98 & 13.34 & 1.43 & 0.38 & 0.52 & 0.64 \\
+            MRFS~\cite{zhang2024mrfs}      &\secondcolor{6.94} & 12.07 & 1.26 & 0.34 & 0.55 & 0.70 & MRFS~\cite{zhang2024mrfs}      & 6.83 & 11.04 & 1.23 & 0.31 & 0.42 & 0.64 \\
+            TIMFusion~\cite{liu2024task} & 6.75 & 12.31 & 1.37 & 0.35 & 0.53 & 0.70 & TIMFusion~\cite{liu2024task} & 6.58 & 13.52 & 1.14 & 0.33 & 0.46 & 0.64 \\
+            TDFusion (Ours)  & \firstcolor{6.99} &\secondcolor{14.49} & \firstcolor{1.83} & \firstcolor{0.41} & \firstcolor{0.65} & \firstcolor{0.72} & TDFusion (Ours)  & \firstcolor{7.36} & \firstcolor{16.38} & \firstcolor{1.75} & \firstcolor{0.46} & \firstcolor{0.70} & \firstcolor{0.67}\\
+            \bottomrule
+	\end{tabular}}
+\end{table*}%
+
+\end{document}

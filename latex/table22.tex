@@ -1,0 +1,303 @@
+\documentclass[letterpaper]{article} % DO NOT CHANGE THIS
+\usepackage[submission]{aaai2026}  % DO NOT CHANGE THIS
+\usepackage{times}  % DO NOT CHANGE THIS
+\usepackage{helvet}  % DO NOT CHANGE THIS
+\usepackage{courier}  % DO NOT CHANGE THIS
+\usepackage[hyphens]{url}  % DO NOT CHANGE THIS
+\usepackage{graphicx} % DO NOT CHANGE THIS
+\urlstyle{rm} % DO NOT CHANGE THIS
+\def\UrlFont{\rm}  % DO NOT CHANGE THIS
+\usepackage{natbib}  % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\usepackage{caption} % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\frenchspacing  % DO NOT CHANGE THIS
+\setlength{\pdfpagewidth}{8.5in} % DO NOT CHANGE THIS
+\setlength{\pdfpageheight}{11in} % DO NOT CHANGE THIS
+%
+% These are recommended to typeset algorithms but not required. See the subsubsection on algorithms. Remove them if you don't have algorithms in your paper.
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\usepackage{pifont} %182/183/184
+\usepackage{subcaption}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{booktabs}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{verbatim}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{colortbl}
+\usepackage{booktabs,makecell, multirow, tabularx}
+\usepackage{adjustbox}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{amsmath}
+
+\usepackage{booktabs}
+\usepackage{amssymb}
+\usepackage{bbding}
+\usepackage{pifont}
+\usepackage{wasysym}
+\usepackage{utfsym}
+\usepackage{fontawesome}
+
+\usepackage{mdframed}
+
+\usepackage{color}
+\definecolor{bblue}{RGB}{0,30,95}
+\definecolor{rred}{RGB}{190,0,0}
+\definecolor{mygray}{gray}{.9}
+\definecolor{ggray}{RGB}{127,127,127}
+\usepackage{colortbl} % background color for table -> \rowcolor \columncolor
+\usepackage{multirow}
+\makeatletter
+\newcommand{\thickhline}{%
+    \noalign {\ifnum 0=`}\fi \hrule height 1pt
+    \futurelet \reserved@a \@xhline
+}
+\makeatother
+
+
+\begin{document}
+
+% %%%%%%%%%%%%%%%%%%%   MVTec 3D-AD (I-AUROC)
+%\checkmark  \Checkmark
+%\XSolidBrush
+% \cmidrule{1-8} 横线
+
+% \usepackage{arydshln}虚线宏包  
+%\hdashline
+%\cdashline{2-3} % 第二、三列虚线
+
+%左 $\leftarrow$，右 $\rightarrow$，上 $\uparrow$，下 $\downarrow$
+
+%整行填充颜色
+%\usepackage[table]{xcolor}
+%\usepackage{colortbl}
+%\rowcolor{blue!20}
+
+%合并行和列
+%\multicolumn{2}{c|}{\multirow{2}{*}{Method}}
+%\multicolumn{2}{c|}{Method}
+
+%定义颜色
+% \definecolor{color1}{RGB}{229,229,229}
+% \cellcolor{color1} 
+%定义字体
+% \newcommand{\zzz}[1]{{\color{color1} #1}}
+
+\begin{table*}[t]
+\centering
+        \resizebox{1\textwidth}{!}{
+		\setlength\tabcolsep{2.5pt}
+		\renewcommand\arraystretch{1.0}
+\begin{tabular}{c||cccccc|cccccc|cccccc}
+\hline \thickhline
+\rowcolor{mygray}
+~ &  \multicolumn{18}{c}{REVERIE} \\
+\cline{2-19}
+\rowcolor{mygray}
+~ &  \multicolumn{6}{c|}{\textit{val} \textit{seen}} & \multicolumn{6}{c|}{\textit{val} \textit{unseen}} & \multicolumn{6}{c}{\textit{test} \textit{unseen}} \\
+
+\cline{2-19}
+\rowcolor{mygray}
+
+\multirow{-3}{*}{Models} &\small{TL$\downarrow$} &\small{OSR$\uparrow$} &\small{SR$\uparrow$} &\small{SPL$\uparrow$} &\small{RGS$\uparrow$} &\small{RGSPL$\uparrow$} &\small{TL$\downarrow$} &\small{OSR$\uparrow$} &\small{SR$\uparrow$} &\small{SPL$\uparrow$} &\small{RGS$\uparrow$} &\small{RGSPL$\uparrow$} &\small{TL$\downarrow$} &\small{OSR$\uparrow$} &\small{SR$\uparrow$} &\small{SPL$\uparrow$} &\small{RGS$\uparrow$} &\small{RGSPL$\uparrow$}\\
+\hline
+\hline
+
+RCM~\cite{wang2019reinforced}    &10.70 &29.44 &23.33 &21.82 &16.23 &15.36    &11.98 &14.23 &9.29  &6.97  &4.89  &3.89      &10.60 &11.68 &7.84  &6.67  &3.67  &3.14  \\
+
+FAST-MATTN~\cite{qi2020reverie}  &16.35 &55.17 &50.53 &45.50 &31.97 &29.66    &45.28 &28.20 &14.40 &7.19  &7.84  &4.67      &39.05 &30.63 &19.88 &11.61 &11.28 &6.08  \\
+SIA~\cite{lin2021scene}          &13.61 &65.85 &61.91 &57.08 &45.96 &42.65    &41.53 &44.67 &31.53 &16.28 &22.41 &11.56     &48.61 &44.56 &30.80 &14.85 &19.02 &9.20  \\
+RecBERT~\cite{Hong0QOG21}        &13.44 &53.90 &51.79 &47.96 &38.23 &35.61    &16.78 &35.02 &30.67 &24.90 &18.77 &15.27     &15.86 &32.91 &29.61 &23.99 &16.50 &13.51 \\
+Airbert~\cite{GuhurTCLS21}       &15.16 &48.98 &47.01 &42.34 &32.75 &30.01    &18.71 &34.51 &27.89 &21.88 &18.23 &14.18     &17.91 &34.20 &30.28 &23.61 &16.83 &13.28 \\
+HAMT~\cite{ChenGSL21}            &12.79 &47.65 &43.29 &40.19 &27.20 &25.18    &14.08 &36.84 &32.95 &30.20 &18.92 &17.28     &13.62 &33.41 &30.40 &26.67 &14.88 &13.08 \\
+HOP~\cite{qiao2022hop}           &13.80 &54.88 &53.76 &47.19 &38.65 &33.85    &16.46 &36.24 &31.78 &26.11 &18.85 &15.73     &16.38 &33.06 &30.17 &24.34 &17.69 &14.34 \\
+TD-STP~\cite{zhao2022target}    &$-$ &$-$ &$-$ &$-$ &$-$ &$-$      &$-$ &39.48 &34.88 &27.32 &21.16 &16.56         &$-$ &40.26 &35.89 &27.51 &19.88 &15.40\\
+DUET~\cite{ChenGTSL22}           &13.86 &73.86 &71.75 &63.94 &57.41 &51.14    &22.11 &51.07 &46.98 &33.73 &32.15 &23.03     &21.30 &56.91 &52.51 &36.06 &31.88 &22.06 \\ 
+LANA~\cite{wang2023lana}         &15.91 &74.28 &71.94 &62.77 &59.02 &50.34    &23.18 &52.97 &48.31 &33.86 &32.86 &22.77     &18.83 &57.20 &51.72 &36.45 &32.95 &22.85\\
+\hline
+\textbf{Ours}                    &15.26 &\textbf{78.36} &\textbf{76.18} &\textbf{66.69} &\textbf{61.56} &\textbf{54.02}    &24.71 &\textbf{58.05} &\textbf{52.12} &\textbf{35.59} &\textbf{35.36} &\textbf{24.24}     &22.90 &\textbf{62.83} &\textbf{56.45} &\textbf{38.70} &\textbf{33.15} &\textbf{22.34} \\
+\hline
+\end{tabular}
+}
+	\vspace*{-3pt}
+\captionsetup{font=small}
+	\caption{\small{Quantitative comparison results on REVERIE~\cite{qi2020reverie}. `$-$': unavailable statistics. See \S\ref{sec:VLN} for more details.}}
+    \label{table:REVERIE}
+\vspace*{-2pt}
+\end{table*}
+
+\begin{table}[t]
+\centering
+        \resizebox{0.49\textwidth}{!}{
+		\setlength\tabcolsep{2.5pt}
+		\renewcommand\arraystretch{1.0}
+\begin{tabular}{c||cccc|cccc}
+\hline \thickhline
+\rowcolor{mygray}
+~ &  \multicolumn{8}{c}{R2R} \\
+\cline{2-9}
+\rowcolor{mygray}
+~ & \multicolumn{4}{c|}{\textit{val} \textit{unseen}} & \multicolumn{4}{c}{\textit{test} \textit{unseen}} \\
+% \noalign{\smallskip}
+% \hline
+\cline{2-9}
+\rowcolor{mygray}
+% \noalign{\smallskip}
+\multirow{-3}{*}{Models} &TL$\downarrow$ &NE$\downarrow$ &SR$\uparrow$ &SPL$\uparrow$ &TL$\downarrow$ &NE$\downarrow$ &SR$\uparrow$ &SPL$\uparrow$\\
+\hline
+\hline
+Seq2Seq~\cite{AndersonWTB0S0G18}  &8.39    &7.81 &22 &$-$    &8.13  &7.85 &20 &18 \\
+SF~\cite{FriedHCRAMBSKD18}        &$-$     &6.62 &35 &$-$    &14.82 &6.62 &35 &28 \\
+EnvDrop~\cite{TanYB19}            &10.70   &5.22 &52 &48     &11.66 &5.23 &51 &47 \\
+AuxRN~\cite{zhu2020vision}        &$-$     &5.28 &55 &50     &$-$   &5.15 &55 &51 \\
+PREVALENT~\cite{HaoLLCG20}        &10.19   &4.71 &58 &53     &10.51 &5.30 &54 &51 \\
+RelGraph~\cite{hong2020language}  &9.99    &4.73 &57 &53     &10.29 &4.75 &55 &52 \\
+Active Perception~\cite{wang2020active}   &20.60   &4.36 &58 &40     &21.60 &4.33 &60 &41\\
+RecBERT~\cite{Hong0QOG21}         &12.01   &3.93 &63 &57     &12.35 &4.09 &63 &57 \\
+HAMT~\cite{ChenGSL21}             &11.46   &2.29 &66 &61     &12.27 &3.93 &65 &60 \\
+SOAT~\cite{moudgil2021soat}       &12.15   &4.28 &59 &53     &12.26 &4.49 &58 &53 \\
+EGP~\cite{deng2020evolving}       &$-$     &4.83 &56 &44     &$-$   &5.34 &53 &42 \\
+GBE~\cite{zhu2021soon}            &$-$     &5.20 &54 &43     &$-$   &5.18 &53 &43 \\
+SSM~\cite{wang2021structured}     &20.7    &4.32 &62 &45     &20.4  &4.57 &61 &46 \\
+CCC~\cite{wang2022counterfactual} &$-$     &5.20 &50 &46     &$-$   &5.30 &51 &48 \\
+HOP~\cite{qiao2022hop}            &12.27   &3.80 &64 &57     &12.68 &3.83 &64 &59 \\
+LANA~\cite{wang2023lana}          &12.0 &$-$ &68 &62      &12.6  &$-$ &65 &60\\
+TD-STP~\cite{zhao2022target}    &$-$  &3.22 &70 &63      &$-$ &3.73 &67 &61\\
+DUET~\cite{ChenGTSL22}            &13.94   &3.31 &72 &60     &14.73 &3.65 &69 &59 \\ \hline
+\textbf{Ours}                     &14.90   &\textbf{2.89} &\textbf{74} &\textbf{62}    &14.86 &\textbf{3.19} &\textbf{73} &\textbf{62} \\
+\hline
+\end{tabular}
+}
+	\vspace*{-6pt}
+\captionsetup{font=small}
+	\caption{\small{Quantitative results on R2R~\cite{AndersonWTB0S0G18} (more details in \S\ref{sec:VLN}).}}
+    \label{table:R2R}
+\vspace*{-1pt}
+\end{table}
+
+
+\begin{table}[t]
+\centering
+        \resizebox{0.45\textwidth}{!}{
+		\setlength\tabcolsep{6.5pt}
+		\renewcommand\arraystretch{1.0}
+\begin{tabular}{c||ccccc}
+\hline \thickhline
+\rowcolor{mygray}
+~ & \multicolumn{5}{c}{R4R \textit{val} \textit{unseen}}  \\
+% \noalign{\smallskip}
+% \hline
+\cline{2-6}
+\rowcolor{mygray}
+% \noalign{\smallskip}
+\multirow{-2}{*}{Models}    &NE$\downarrow$ &SR$\uparrow$ &CLS$\uparrow$ &nDTW$\uparrow$ &SDTW$\uparrow$ \\
+\hline
+\hline
+SF~\cite{FriedHCRAMBSKD18}        &8.47    &24   &30   &$-$   &$-$  \\
+RCM~\cite{wang2019reinforced}     &$-$     &29   &35   &30    &13   \\
+EGP~\cite{deng2020evolving}       &8.00    &30   &44   &37    &18   \\
+SSM~\cite{wang2021structured}     &8.27    &32   &53   &39    &19   \\
+RelGraph~\cite{hong2020language}  &7.43    &36   &41   &47    &34   \\
+RecBERT~\cite{Hong0QOG21}         &6.67    &44   &51   &45    &30   \\
+HAMT~\cite{ChenGSL21}             &6.09    &45   &58   &50    &32   \\
+LANA~\cite{wang2023lana}          &$-$      &43  &60  &52 &32\\
+\hline
+\textbf{Ours}                     &6.12    &\textbf{47}   &59   &\textbf{53}    &\textbf{34}   \\
+\hline
+\end{tabular}
+}
+	\vspace*{-4pt}
+\captionsetup{font=small}
+	\caption{\small{Quantitative results on R4R~\cite{jain2019stay} (more details in \S\ref{sec:VLN}).}}
+    \label{table:R4R}
+\vspace*{-4pt}
+\end{table}
+
+\begin{table}[t]
+    \begin{center}
+            \resizebox{0.48\textwidth}{!}{
+            \setlength\tabcolsep{6.5pt}
+            \renewcommand\arraystretch{1.05}
+    \begin{tabular}{c|c|ccc|cc}
+    % \hline\noalign{\smallskip}
+    \hline \thickhline
+    \rowcolor{mygray}
+    &  & \multicolumn{3}{c|}{REVERIE} & \multicolumn{2}{c}{R2R} \\
+    % \noalign{\smallskip}
+    % \hline
+    \cline{3-7}
+    \rowcolor{mygray}
+    % \noalign{\smallskip}
+    \multicolumn{1}{c|}{\multirow{-2}{*}{\scriptsize{$\#$}}} &\multicolumn{1}{c|}{\multirow{-2}{*}{Models}}         &{SR}$\uparrow$ &SPL$\uparrow$ &{RGS}$\uparrow$ &{SR}$\uparrow$ &SPL$\uparrow$\\
+    \hline
+    \hline
+    1 &Basic agent~\cite{ChenGTSL22}                    &46.98  &33.73  &32.15  &71.52 &60.36  \\ \hline
+    2 &BEV Branch                                       &39.03  &25.73  &25.09  &65.56 &52.21  \\
+    3 &$\bm {w/o.}$ detection                           &49.25  &32.44  &33.21  &72.65 &60.20  \\
+    4 &Full model                                       &\textbf{52.12} &\textbf{35.59} &\textbf{35.36} &\textbf{73.73} &\textbf{62.33}  \\ \hline
+    \end{tabular}
+    }
+    \end{center}
+        \vspace*{-13pt}
+    \captionsetup{font=small}
+	\caption{\small{Ablation study of overall design on \textit{val} \textit{unseen} of REVERIE~\cite{qi2020reverie} and R2R~\cite{AndersonWTB0S0G18}. See \S\ref{ablation} for more details.}}
+    \label{table:Component}
+    \vspace*{-1pt}
+\end{table}
+
+\begin{table}[t]
+    \begin{center}
+            \resizebox{0.48\textwidth}{!}{
+            \setlength\tabcolsep{10pt}
+            \renewcommand\arraystretch{1.05}
+    \begin{tabular}{l|c|ccc|cc}
+    % \hline\noalign{\smallskip}
+    \hline \thickhline
+    \rowcolor{mygray}
+    & &\multicolumn{3}{c|}{REVERIE} &\multicolumn{2}{c}{R2R}  \\
+    % \noalign{\smallskip}
+    % \hline
+    \cline{3-7}
+    \rowcolor{mygray}
+    % \noalign{\smallskip}
+    \multicolumn{1}{c|}{\multirow{-2}{*}{\scriptsize{$\#$}}} &\multicolumn{1}{c|}{\multirow{-2}{*}{$\lvert{{\Omega}^{\rm{n}}}\rvert$}}  &{SR}$\uparrow$ &SPL$\uparrow$ &{RGS}$\uparrow$ &{SR}$\uparrow$ &SPL$\uparrow$ \\
+    \hline
+    \hline
+                               1       &4    &51.33  &34.34  &34.86  &72.89 &62.07  \\
+                               2       &9    &\textbf{52.12} &\textbf{35.59} &\textbf{35.36} &\textbf{73.73} &\textbf{62.33}  \\
+                               3       &16   &51.71  &34.11  &34.54  &73.26 &61.99  \\
+    \hline
+    \end{tabular}
+    }
+    \end{center}
+        \vspace*{-14pt}
+    \captionsetup{font=small}
+	\caption{\small{Ablation study of node embeddings on \textit{val} \textit{unseen} of REVERIE~\cite{qi2020reverie} and R2R~\cite{AndersonWTB0S0G18}. See \S\ref{ablation} for more details.}}
+    \label{table:neighborhood}
+    \vspace*{-5pt}
+\end{table}
+
+
+\end{document}

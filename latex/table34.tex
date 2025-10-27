@@ -1,0 +1,155 @@
+\documentclass[letterpaper]{article} % DO NOT CHANGE THIS
+\usepackage[submission]{aaai2026}  % DO NOT CHANGE THIS
+\usepackage{times}  % DO NOT CHANGE THIS
+\usepackage{helvet}  % DO NOT CHANGE THIS
+\usepackage{courier}  % DO NOT CHANGE THIS
+\usepackage[hyphens]{url}  % DO NOT CHANGE THIS
+\usepackage{graphicx} % DO NOT CHANGE THIS
+\urlstyle{rm} % DO NOT CHANGE THIS
+\def\UrlFont{\rm}  % DO NOT CHANGE THIS
+\usepackage{natbib}  % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\usepackage{caption} % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\frenchspacing  % DO NOT CHANGE THIS
+\setlength{\pdfpagewidth}{8.5in} % DO NOT CHANGE THIS
+\setlength{\pdfpageheight}{11in} % DO NOT CHANGE THIS
+%
+% These are recommended to typeset algorithms but not required. See the subsubsection on algorithms. Remove them if you don't have algorithms in your paper.
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\usepackage{pifont} %182/183/184
+\usepackage{subcaption}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{booktabs}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{verbatim}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{colortbl}
+\usepackage{booktabs,makecell, multirow, tabularx}
+\usepackage{adjustbox}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{amsmath}
+
+\usepackage{booktabs}
+\usepackage{amssymb}
+\usepackage{bbding}
+\usepackage{pifont}
+\usepackage{wasysym}
+\usepackage{utfsym}
+\usepackage{fontawesome}
+
+\usepackage{mdframed}
+\begin{document}
+
+
+\begin{table*}[t]
+    \centering
+    \caption{Evaluation results on our multiturn datasets. Green zone:  }
+    \label{tab:results}
+    \resizebox{1.0\textwidth}{!}{
+    \begin{tabular}{r|ccc|rcc|ccc}
+        \toprule 
+        & \multicolumn{3}{c|}{\doct} 
+        & \multicolumn{3}{c|}{\codet}
+        & \multicolumn{3}{c}{\mathct} \\
+& BLEU $\uparrow$  & \#Tokens$(k)\downarrow$ & ITR $\uparrow$
+& PR $\uparrow$ & \#Tokens$(k)\downarrow$ & ITR $\uparrow$ 
+& ACC $\uparrow$ & \#Tokens$(k)\downarrow$ & ITR $\uparrow$ \\
+        \hline
+\cellcolor{green!5} Base & \cellcolor{green!5} 32.2 
+& \cellcolor{green!5} 2.49& \cellcolor{green!5} 46.0 & \cellcolor{green!5} 9.3 & \cellcolor{green!5} 1.59 
+& \cellcolor{green!5} 22.0& \cellcolor{green!5} 11.0
+& \cellcolor{green!5} 3.40 & \cellcolor{green!5} 44.0 \\
+\cellcolor{green!5} Proactive Base  & \cellcolor{green!5} 35.0 
+& \cellcolor{green!5} 2.18 & \cellcolor{green!5} 62.0 
+& \cellcolor{green!5} 11.0& \cellcolor{green!5} 1.51
+& \cellcolor{green!5} 33.7& \cellcolor{green!5} 12.5
+ & \cellcolor{green!5} 2.90 & \cellcolor{green!5} 46.0 \\
+        \hline
+\cellcolor{orange!12}SFT& \cellcolor{orange!12} 35.2
+& \cellcolor{orange!12} 2.21 & \cellcolor{orange!12} 68.0 
+& \cellcolor{orange!12} 11.7 & \cellcolor{orange!12} 1.35 
+& \cellcolor{orange!12} 42.0& \cellcolor{orange!12} 13.5
+& \cellcolor{orange!12} 2.88 & \cellcolor{orange!12} 58.0 \\
+\cellcolor{orange!12} PPO & \cellcolor{orange!12} 38.5 
+& \cellcolor{orange!12} 2.00 & \cellcolor{orange!12} 78.0 
+& \cellcolor{orange!12} 14.0& \cellcolor{orange!12} 1.35 
+& \cellcolor{orange!12} 40.7& \cellcolor{orange!12} 13.0
+& \cellcolor{orange!12} 2.59 & \cellcolor{orange!12} 52.0 \\
+\cellcolor{orange!12} Offline DPO& \cellcolor{orange!12} 36.4 
+& \cellcolor{orange!12} 2.15 & \cellcolor{orange!12} 82.0 
+& \cellcolor{orange!12} 12.3& \cellcolor{orange!12} 1.35
+& \cellcolor{orange!12} 46.7& \cellcolor{orange!12} 15.5 
+& \cellcolor{orange!12} 2.40 & \cellcolor{orange!12} 50.0 \\
+\cellcolor{orange!12} Online DPO& \cellcolor{orange!12} 36.8 & \cellcolor{orange!12} 2.00 & \cellcolor{orange!12} 92.0 
+& \cellcolor{orange!12} 13.0 & \cellcolor{orange!12} 1.31& \cellcolor{orange!12} 52.0 & \cellcolor{orange!12} 16.5& \cellcolor{orange!12} 2.37 & \cellcolor{orange!12} 60.0 \\ \hline
+\cellcolor{red!16} Rel. Improv. & \cellcolor{red!16} 5.14\% 
+& \cellcolor{red!16} 8.25\%& \cellcolor{red!16} 48.3\% 
+ & \cellcolor{red!16} 18.2\%& \cellcolor{red!16} 13.2\%
+& \cellcolor{red!16} 54.3\%& \cellcolor{red!16} 32.0\% 
+& \cellcolor{red!16} 18.3\% & \cellcolor{red!16} 36.4\% \\
+\hline \hline \end{tabular} } \end{table*} 
+
+
+\begin{table*}[t]
+  \centering
+  \caption{ with Selected Works. (1) Task-Agnostic, assessing whether the approach applies across diverse domains rather than being task-specific; (2) Versatile Interaction, evaluating its ability to support diverse strategies for intent discovery and efficient task completion beyond predefined behaviors; (3) User-Centric, determining whether engagement, efficiency, and intent discovery are explicitly considered; and (4) Causal \& Objective-Aligne}
+  \label{tab:contribution}
+  \vspace{-7pt}
+  \resizebox{1.0\textwidth}{!}{%
+  \begin{tabular}{lcccc}
+    \toprule
+    & Task-Agnostic & Versatile Interaction & User-Centric & Causal \& Objective-Aligned Reward\\
+     % & Task-Agnostic & Broad Interaction Types & User-Centric Design & Causal and Objective-Aligned Reward \\
+     \midrule
+     \small  ClarifyGPT~\cite{clarifygpt}
+     & \large \textcolor{purple}{\ding{55}} 
+     & \large\textcolor{purple}{\ding{55}} 
+     & \large\textcolor{purple}{\ding{55}}
+     & \large \textcolor{purple}{-}\\
+     \small  STaR-GATE~\cite{star_gate}
+     & \large\textcolor{teal}{\ding{52}}
+     & \large\textcolor{purple}{\ding{55}}
+     & \large\textcolor{purple}{\ding{55}}
+     & \large\textcolor{purple}{-}\\
+     \small MTPO~\citep{multiturn_rlhf}
+     & \large\textcolor{teal}{\ding{52}}
+     & \large\textcolor{teal}{\ding{52}}
+     & \large\textcolor{purple}{\ding{55}}
+     & \large\textcolor{purple}{\ding{55}}\\
+     \name
+     &\large\textcolor{teal}{\ding{52}}
+     &\large\textcolor{teal}{\ding{52}}
+     &\large\textcolor{teal}{\ding{52}}
+     &\large\textcolor{teal}{\ding{52}}\\
+    \bottomrule
+  \end{tabular}
+  }
+  \vspace{-5pt}
+\end{table*}
+
+
+
+\end{document}

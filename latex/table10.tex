@@ -1,0 +1,162 @@
+\documentclass[letterpaper]{article} % DO NOT CHANGE THIS
+\usepackage[submission]{aaai2026}  % DO NOT CHANGE THIS
+\usepackage{times}  % DO NOT CHANGE THIS
+\usepackage{helvet}  % DO NOT CHANGE THIS
+\usepackage{courier}  % DO NOT CHANGE THIS
+\usepackage[hyphens]{url}  % DO NOT CHANGE THIS
+\usepackage{graphicx} % DO NOT CHANGE THIS
+\urlstyle{rm} % DO NOT CHANGE THIS
+\def\UrlFont{\rm}  % DO NOT CHANGE THIS
+\usepackage{natbib}  % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\usepackage{caption} % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\frenchspacing  % DO NOT CHANGE THIS
+\setlength{\pdfpagewidth}{8.5in} % DO NOT CHANGE THIS
+\setlength{\pdfpageheight}{11in} % DO NOT CHANGE THIS
+%
+% These are recommended to typeset algorithms but not required. See the subsubsection on algorithms. Remove them if you don't have algorithms in your paper.
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\usepackage{pifont} %182/183/184
+\usepackage{subcaption}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{booktabs}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{verbatim}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{colortbl}
+\usepackage{booktabs,makecell, multirow, tabularx}
+\usepackage{adjustbox}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{amsmath}
+
+\usepackage{booktabs}
+\usepackage{amssymb}
+\usepackage{bbding}
+\usepackage{pifont}
+\usepackage{wasysym}
+\usepackage{utfsym}
+\usepackage{fontawesome}
+
+\usepackage{mdframed}
+\begin{document}
+
+% %%%%%%%%%%%%%%%%%%%   MVTec 3D-AD (I-AUROC)
+\begin{table*}[ht!]
+\centering
+%\footnotesize
+%\tiny
+%\Large
+\setlength{\tabcolsep}{2.8mm} %2.2mm
+\renewcommand{\arraystretch}{1}
+\adjustbox{width=1\linewidth}{
+   \begin{tabular}{cc|c|cc|ccccccc}
+       \toprule
+                 \multirow{1}{*}{Method}
+                 & \multirow{1}{*}{Modality}
+                 & \multirow{1}{*}{MTL}
+                &\multirow{1}{*}{mAP(val)}
+                &\multirow{1}{*}{ NDS(val)} 
+                &\multirow{1}{*}{Drivable} 
+                &\multirow{1}{*}{ Ped.Cross} 
+                &\multirow{1}{*}{Walkway} 
+                &\multirow{1}{*}{StopLine} 
+                &\multirow{1}{*}{ Carpark} 
+                 &\multirow{1}{*}{Divider}
+                 &\multirow{1}{*}{ Mean}\\
+%%%%%%%%%%%%%% RGB数据
+\midrule[0.5pt]      
+PointPillars(Langetal.2019)  &L+C &\XSolidBrush &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+CenterPoint(Yin,Zhou,andKrahenbuhl2021)  &C &\checkmark &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+PointPillars(Langetal.2019)  &L+C &\checkmark &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+\midrule[0.5pt]      
+PointPillars(Langetal.2019)  &L+C &\XSolidBrush &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+CenterPoint(Yin,Zhou,andKrahenbuhl2021)  &C &\checkmark &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+PointPillars(Langetal.2019)  &L+C &\checkmark &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+\midrule[0.5pt]      
+PointPillars(Langetal.2019)  &L+C &\XSolidBrush &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+CenterPoint(Yin,Zhou,andKrahenbuhl2021)  &C &\checkmark &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+PointPillars(Langetal.2019)  &L+C &\checkmark &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+PointPillars(Langetal.2019)  &L+C &\XSolidBrush &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+CenterPoint(Yin,Zhou,andKrahenbuhl2021)  &C &\checkmark &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+\cellcolor{gray!20}PointPillars(Langetal.2019)  &\cellcolor{gray!20}L+C &\cellcolor{gray!20}\checkmark &\cellcolor{gray!20}00.0 \cellcolor{gray!20}&\cellcolor{gray!20}00.0 &\cellcolor{gray!20}00.0 &\cellcolor{gray!20}00.0 &\cellcolor{gray!20}00.0 &\cellcolor{gray!20}00.0 &\cellcolor{gray!20}00.0 &\cellcolor{gray!20}00.0 &\cellcolor{gray!20}00.0\\
+ \bottomrule
+       \end{tabular}
+   }
+   \caption{The red/blue indicates the best/second-best results.}
+\end{table*}
+
+\begin{table*}[ht!]
+\centering
+%\footnotesize
+%\tiny
+%\Large
+\setlength{\tabcolsep}{2.8mm} %2.2mm
+\renewcommand{\arraystretch}{1}
+\adjustbox{width=1\linewidth}{
+   \begin{tabular}{c|ccc|c|cccccccccc}
+       \toprule
+                 \multirow{4}{*}{}
+                 & \multirow{4}{*}{}
+                 & \multirow{4}{*}{}
+                &\multirow{4}{*}{}
+                &\multirow{4}{*}{} 
+                &\multirow{4}{*}{ \rotatebox{90}{barrier}} 
+                &\multirow{4}{*}{ \rotatebox{90}{pedestrian}} 
+                &\multirow{4}{*}{ \rotatebox{90}{barrier}} 
+                &\multirow{4}{*}{ \rotatebox{90}{barrier}} 
+                &\multirow{4}{*}{ \rotatebox{90}{barrier}} 
+                &\multirow{4}{*}{ \rotatebox{90}{barrier}} 
+                &\multirow{4}{*}{ \rotatebox{90}{barrier}} 
+                &\multirow{4}{*}{ \rotatebox{90}{barrier}} 
+                &\multirow{4}{*}{ \rotatebox{90}{barrier}}
+                &\multirow{4}{*}{ \rotatebox{90}{barrier}}\\
+%%%%%%%%%%%%%%
+                 &&&&&&&&&&&&&&\\
+                 &&&&&&&&&&&&&&\\
+                 Method&MTL&Input&Suround&\cellcolor{gray!20}mIoU&&&&&&&&&&\\
+%%%%%%%%%%%%%% RGB数据
+\midrule[0.5pt]      
+PointPillars  &\checkmark  &C &\XSolidBrush &\cellcolor{gray!20}00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0&00.0 &00.0 &00.0\\
+CenterPoint  &\checkmark  &C\&D &\XSolidBrush &\cellcolor{gray!20}00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0&00.0 &00.0 &00.0\\
+PointPillars  &\checkmark  &C &\XSolidBrush &\cellcolor{gray!20}00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0&00.0 &00.0 &00.0\\
+CenterPoint  &\checkmark  &C\&D &\XSolidBrush &\cellcolor{gray!20}00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0&00.0 &00.0 &00.0\\
+PointPillars  &\checkmark  &C &\XSolidBrush &\cellcolor{gray!20}00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0&00.0 &00.0 &00.0\\
+CenterPoint  &\checkmark  &C\&D &\XSolidBrush &\cellcolor{gray!20}00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0&00.0 &00.0 &00.0\\
+\midrule[0.5pt]  
+\cellcolor{gray!20}PointPillars  &\cellcolor{gray!20}\checkmark  &\cellcolor{gray!20}C &\cellcolor{gray!20}\XSolidBrush &\cellcolor{gray!20}00.0 &\cellcolor{gray!20}00.0 &\cellcolor{gray!20}00.0 &\cellcolor{gray!20}00.0 &\cellcolor{gray!20}00.0 &\cellcolor{gray!20}00.0 &\cellcolor{gray!20}00.0 &\cellcolor{gray!20}00.0
+&\cellcolor{gray!20}00.0 &\cellcolor{gray!20}00.0 &\cellcolor{gray!20}00.0\\
+\cellcolor{gray!20}PointPillars  &\cellcolor{gray!20}\checkmark  &\cellcolor{gray!20}C &\cellcolor{gray!20}\XSolidBrush &\cellcolor{gray!20}00.0 &\cellcolor{gray!20}00.0 &\cellcolor{gray!20}00.0 &\cellcolor{gray!20}00.0 &\cellcolor{gray!20}00.0 &\cellcolor{gray!20}00.0 &\cellcolor{gray!20}00.0 &\cellcolor{gray!20}00.0
+&\cellcolor{gray!20}00.0 &\cellcolor{gray!20}00.0 &\cellcolor{gray!20}00.0\\
+ \bottomrule
+       \end{tabular}
+   }
+   \caption{The red/blue indicates the best/second-best results.}
+\end{table*}
+
+
+
+
+\end{document}

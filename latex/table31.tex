@@ -1,0 +1,528 @@
+\documentclass[letterpaper]{article} % DO NOT CHANGE THIS
+\usepackage[submission]{aaai2026}  % DO NOT CHANGE THIS
+\usepackage{times}  % DO NOT CHANGE THIS
+\usepackage{helvet}  % DO NOT CHANGE THIS
+\usepackage{courier}  % DO NOT CHANGE THIS
+\usepackage[hyphens]{url}  % DO NOT CHANGE THIS
+\usepackage{graphicx} % DO NOT CHANGE THIS
+\urlstyle{rm} % DO NOT CHANGE THIS
+\def\UrlFont{\rm}  % DO NOT CHANGE THIS
+\usepackage{natbib}  % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\usepackage{caption} % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\frenchspacing  % DO NOT CHANGE THIS
+\setlength{\pdfpagewidth}{8.5in} % DO NOT CHANGE THIS
+\setlength{\pdfpageheight}{11in} % DO NOT CHANGE THIS
+%
+% These are recommended to typeset algorithms but not required. See the subsubsection on algorithms. Remove them if you don't have algorithms in your paper.
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\usepackage{pifont} %182/183/184
+\usepackage{subcaption}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{booktabs}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{verbatim}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{colortbl}
+\usepackage{booktabs,makecell, multirow, tabularx}
+\usepackage{adjustbox}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{amsmath}
+
+\usepackage{booktabs}
+\usepackage{amssymb}
+\usepackage{bbding}
+\usepackage{pifont}
+\usepackage{wasysym}
+\usepackage{utfsym}
+\usepackage{fontawesome}
+
+\usepackage{mdframed}
+
+% define color
+
+
+\definecolor{placeholdertxt}{RGB}{255,209,227}
+
+
+\newcommand{\scott}[1]{\textcolor{red}{\{#1\}}}
+
+\newcommand{\placeholderTxt}[1]{\textcolor{placeholdertxt}{\em \{#1\}}}
+
+
+
+\newcommand{\paratitle}[1]{\vspace{1.5ex}\noindent \textbf{#1}}
+\newcommand{\tbcenter}[1]{\multicolumn{1}{|c|}{#1}}
+\newcommand{\mysubsubsec}[1]{\noindent$\bullet$~\textbf{#1}}
+\definecolor{myblue}{RGB}{52,218,247}
+\definecolor{myred}{RGB}{255,90,90}
+\definecolor{mypink}{RGB}{239,43,159}
+\definecolor{myupdate}{RGB}{254,243,222}
+\definecolor{myfrozen}{RGB}{237,255,255}
+\definecolor{ired}{RGB}{229,72,72}
+\definecolor{igreen}{RGB}{80,219,144}
+\definecolor{nmblue}{RGB}{216,234,247}
+
+
+\definecolor{linkred}{RGB}{255,0,49}
+
+\definecolor{textred}{RGB}{255,242,234}
+\definecolor{imageblue}{RGB}{224,250,255}
+\definecolor{videogreen}{RGB}{214,250,232}
+
+
+
+\definecolor{mheadertgreen}{RGB}{76,175,185}
+\definecolor{lightgreen}{RGB}{237,246,247}
+
+
+
+\definecolor{lightgray}{RGB}{242,242,242}
+\definecolor{lightgraygrey}{RGB}{240,240,240}
+\definecolor{deepgray}{RGB}{196,196,196}
+
+
+
+\definecolor{mydeepblue}{RGB}{188,252,216}
+\definecolor{mypinky}{RGB}{255,149,211}
+
+
+
+
+\definecolor{bg-tb-heavey-nlp}{RGB}{214,255,232}
+\definecolor{bg-tb-light-nlp}{RGB}{237,252,247}
+
+\definecolor{bg-tb-heavey-vision}{RGB}{255,242,227}
+% \definecolor{bg-tb-light-vision}{RGB}{255,250,247}
+\definecolor{bg-tb-light-vision}{RGB}{255,250,247}
+
+\definecolor{bg-tb-heavey-video}{RGB}{219,247,255}
+\definecolor{bg-tb-light-video}{RGB}{240,252,252}
+
+\definecolor{bg-tb-heavey-audio}{RGB}{240,219,255}
+\definecolor{bg-tb-light-audio}{RGB}{250,245,252}
+
+\definecolor{bg-tb-heavey-3D}{RGB}{255,229,229}
+\definecolor{bg-tb-light-3D}{RGB}{255,245,245}
+
+
+
+\definecolor{greenCom}{RGB}{3,214,131}
+\definecolor{blueGen}{RGB}{0,160,216}
+\definecolor{redNLP}{RGB}{250,59,59}
+
+
+
+\begin{document}
+
+% %%%%%%%%%%%%%%%%%%%   MVTec 3D-AD (I-AUROC
+%\checkmark  \Checkmark
+%\XSolidBrush
+% \cmidrule{1-8} 横线
+
+% \usepackage{arydshln}虚线宏包  
+%\hdashline
+%\cdashline{2-3} % 第二、三列虚线
+
+%左 $\leftarrow$，右 $\rightarrow$，上 $\uparrow$，下 $\downarrow$
+
+%整行填充颜色
+%\usepackage[table]{xcolor}
+%\usepackage{colortbl}
+%\rowcolor{blue!20}
+
+%合并行和列
+%\multicolumn{2}{c|}{\multirow{2}{*}{Method}}
+%\multicolumn{2}{c|}{Method}
+
+%定义颜色
+% \definecolor{color1}{RGB}{229,229,229}
+% \cellcolor{color1} 
+%定义字体
+% \newcommand{\zzz}[1]{{\color{color1} #1}}
+
+{
+\begin{table*}[t!]
+\centering
+  \fontsize{7.5}{8}\selectfont 
+  \setlength{\tabcolsep}{1.5mm}
+\caption{
+Performance of part of multimodal generalists on image generation skills.
+}
+\vspace{-2mm}
+\label{tab:main-overall-results-image-gen}
+\begin{tabular}{p{2cm} cccccccc cc ccc}
+\toprule
+\rowcolor{bg-tb-heavey-vision} & \multicolumn{8}{c}{\bf \textcolor{blueGen}{Image Generation Skill (Avg within each \#I-G Group)}} & \multicolumn{2}{c}{\bf Task Completion} & \multicolumn{3}{c}{\bf Level Score on Image} \\ 
+\rowcolor{bg-tb-heavey-vision} & \bf\#1 & \bf\#2 & \bf\#3 & \bf\#4 & \bf\#5 & \bf\#6 & \bf\#7 & \bf\#8 &  
+ &  &  &  &  \\
+\rowcolor{bg-tb-heavey-vision} \multicolumn{1}{c}{\multirow{-3}{*}{\bf  Model}}  & \bf \#9 & \bf\#10 & \bf\#11 & \bf\#12 & \bf\#13 & \bf\#14 & \bf\#15 &  & 
+\multicolumn{1}{c}{\multirow{-2}{*}{\parbox{1.2cm}{\#Supported Task}}} & \multicolumn{1}{c}{\multirow{-2}{*}{\parbox{1.2cm}{\#Winning-Specialist}}} & \multicolumn{1}{c}{\multirow{-2}{*}{Level-2}}  & \multicolumn{1}{c}{\multirow{-2}{*}{Level-3}}  & \multicolumn{1}{c}{\multirow{-2}{*}{Level-4}}  \\
+
+  \midrule
+
+\rowcolor{bg-tb-light-vision} & 18.70 & 45.40 & 33.77 & 16.30 & 4.86 & 24.00 & 99.29 & 15.06 &  &  &  &  &  \\
+\rowcolor{bg-tb-light-vision} \multirow{-2}{*}{\bf SoTA Specialist} & 53.16 & 16.47 & 25.33 & 43.93 & 20.35 & 67.44 & 36.11 &  & \multirow{-2}{*}{/} & \multirow{-2}{*}{/} & \multirow{-2}{*}{/} & \multirow{-2}{*}{/} & \multirow{-2}{*}{/} \\
+\midrule\midrule
+
+\multirow{2}{*}{SEED-LLaMA-14B} & 127.10 & 0.00 & 37.10 & 7.51 & 127.42 & 98.33 & 0.00 & 0.00 & \multirow{2}{*}{35 (77.8\%)} & \multirow{2}{*}{0 (0.0\%)} & \multirow{2}{*}{26.81} & \multirow{2}{*}{3.49} & \multirow{2}{*}{0.00} \\
+&30.18 & 87.90 & 14.58 & 175.33 & 0.00 & 51.82 & 62.60 &  &  &  &  & & \\
+\addlinespace[4pt]
+\rowcolor{bg-tb-light-vision} & 93.52 & 0.00 & 34.85 & 8.53 & 101.80 & 81.95 & 0.00 & 0.00 &  &  &  &  &  \\
+\rowcolor{bg-tb-light-vision} \multirow{-2}{*}{Emu2-32B}  &  40.51 & 118.55 & 15.43 & 154.26 & 0.00 & 57.09 & 58.17 &   & \multirow{-2}{*}{34 (75.6\%)} & \multirow{-2}{*}{2 (4.4\%)} & \multirow{-2}{*}{30.90 } & \multirow{-2}{*}{ 5.18} & \multirow{-2}{*}{1.25 } \\
+\addlinespace[4pt]
+\multirow{2}{*}{AnyGPT} &  158.21 & 0.00 & 40.47 & 10.30 & 117.21 & 115.91 & 0.00 & 0.00 & \multirow{2}{*}{36 (80.0\%)} & \multirow{2}{*}{0 (0.0\%)} & \multirow{2}{*}{23.10} & \multirow{2}{*}{1.29} & \multirow{2}{*}{0.00} \\
+& 28.88 & 108.06 & 14.91 & 193.39 & 0.00 & 53.02 & 64.21 &  &  &  &  & & \\
+\addlinespace[4pt]
+\rowcolor{bg-tb-light-vision} &79.79 & 0.00 & 31.35 & 11.87 & 149.78 & 59.23 & 0.00 & 0.00 &  &  &  &  &  \\
+\rowcolor{bg-tb-light-vision} \multirow{-2}{*}{LaVIT-V2 (7B)}& 46.40 & 89.78 & 15.79 & 161.54 & 0.00 & 50.18 & 51.68 & &  \multirow{-2}{*}{36 (80.0\%)} & \multirow{-2}{*}{0 (0.0\%)} & \multirow{-2}{*}{29.50} & \multirow{-2}{*}{3.71 } & \multirow{-2}{*}{0.00 } \\
+\addlinespace[4pt]
+\multirow{2}{*}{NExT-GPT-V1.5} & 49.71 & 0.00 & 6.00 & 3.91 & 75.71 & 41.20 & 0.00 & 47.30 &  \multirow{2}{*}{41 (91.1\%)} & \multirow{2}{*}{0 (0.0\%)} & \multirow{2}{*}{18.69} & \multirow{2}{*}{3.24} & \multirow{2}{*}{0.00} \\
+ & 28.19 & 86.45 & 6.53 & 53.42 & 12.45 & 38.98 & 72.72  &  &  &  &  & & \\
+\addlinespace[4pt]
+\rowcolor{bg-tb-light-vision}  & 19.78 & 0.00 & 21.17 & 7.45 & 32.15 & 35.33 & 86.53 & 23.47 &  &  &  &  &  \\
+\rowcolor{bg-tb-light-vision} \multirow{-2}{*}{Vitron-V1} &  37.88 & 24.89 & 17.95 & 31.04 & 0.00 & 48.30 & 58.87 & &  \multirow{-2}{*}{42 (93.3\%)} & \multirow{-2}{*}{3 (6.7\%)} & \multirow{-2}{*}{30.13 } & \multirow{-2}{*}{7.65 } & \multirow{-2}{*}{4.59 } \\
+\addlinespace[4pt]
+
+ \bottomrule
+\end{tabular}%
+\end{table*}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%第二个表
+
+% {
+\begin{table*}[t!]
+\centering
+\caption{
+Performance of multimodal generalists on video comprehension and generation skills.
+}
+\label{tab:main-overall-results-video}
+\fontsize{7.5}{8}\selectfont 
+\setlength{\tabcolsep}{1mm}
+\vspace{-2mm}
+\begin{tabular}{p{2cm} cccccccccc cc ccc}
+\toprule
+\rowcolor{bg-tb-heavey-video} & \multicolumn{10}{c}{\bf \textcolor{greenCom}{Video Comprehension Skill (Avg within each \#V-C Group)}} & \multicolumn{2}{c}{\bf Task Completion} & \multicolumn{3}{c}{\bf Level Score on Video} \\ 
+\rowcolor{bg-tb-heavey-video} & \bf\#1 & \bf\#2 & \bf\#3 & \bf\#4 & \bf\#5 & \bf\#6 & \bf\#7 & \bf\#8 & \bf\#9 & \bf\#10 & 
+ &  &  &  &  \\
+\rowcolor{bg-tb-heavey-video} \multicolumn{1}{c}{\multirow{-3}{*}{\bf  Model}}  & \bf \#11 & \bf\#12 & \bf\#13 & \bf\#14 & \bf\#15 & \bf\#16 & \bf\#17 & \bf\#18 & \bf\#19 & \bf\#20 & 
+\multicolumn{1}{c}{\multirow{-2}{*}{\parbox{1.2cm}{\#Supported Task}}} & \multicolumn{1}{c}{\multirow{-2}{*}{\parbox{1.2cm}{\#Win-over-Specialist}}} & \multicolumn{1}{c}{\multirow{-2}{*}{Level-2}}  & \multicolumn{1}{c}{\multirow{-2}{*}{Level-3}}  & \multicolumn{1}{c}{\multirow{-2}{*}{Level-4}}  \\
+
+\midrule
+
+
+\rowcolor{bg-tb-light-video} & 37.43 & 49.64 & 21.31 & 23.06 & 81.85 & 85.43 & 54.53 & 64.83 & 40.65 & 30.80 &  &  &  &  &  \\
+\rowcolor{bg-tb-light-video} \multirow{-2}{*}{\bf SoTA Specialist} & 45.84 & 13.92 & 0.14 & 48.06 & 68.96 & 63.62 & 77.02 & 75.08 & 37.20 & 44.00 & \multirow{-2}{*}{/} & \multirow{-2}{*}{/} & \multirow{-2}{*}{/} & \multirow{-2}{*}{/} & \multirow{-2}{*}{/} \\
+
+
+\midrule\midrule
+
+\multirow{2}{*}{ InternVL-2.5-8B} & 33.15 & 27.54 & 14.51 & 18.83 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 &0.00 &  &  &  &  &  \\
+& 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 4.85 & \multirow{-2}{*}{55 (43.7\%)} & \multirow{-2}{*}{5 (4.0\%)} & \multirow{-2}{*}{5.76} & \multirow{-2}{*}{1.24} & \multirow{-2}{*}{0.00} \\
+
+\addlinespace[4pt]
+
+
+\rowcolor{bg-tb-light-video} & 37.03 & 32.01 & 18.71 & 21.57 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 &0.00 &  &  &  &  &  \\
+\rowcolor{bg-tb-light-video} \multirow{-2}{*}{ InternVL-2.5-26B} & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 5.30 & \multirow{-2}{*}{55 (43.7\%)} & \multirow{-2}{*}{26 (20.6\%)} & \multirow{-2}{*}{6.70} & \multirow{-2}{*}{3.76} & \multirow{-2}{*}{0.00} \\
+
+\addlinespace[4pt]
+
+\multirow{2}{*}{ Qwen2-VL-72B} & 38.22 & 32.32 & 19.35 & 22.70 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 &0.00 &  &  &  &  &  \\
+& 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 5.70 & \multirow{-2}{*}{55 (43.7\%)} & \multirow{-2}{*}{22 (17.5\%)} & \multirow{-2}{*}{6.89} & \multirow{-2}{*}{5.22} & \multirow{-2}{*}{0.00} \\
+
+\addlinespace[4pt]
+
+\rowcolor{bg-tb-light-video} & 21.50 & 18.90 & 12.10 & 12.10 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 &0.00 &  &  &  &  &  \\
+\rowcolor{bg-tb-light-video} \multirow{-2}{*}{ DeepSeek-VL-2} & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 3.20 & \multirow{-2}{*}{55 (43.7\%)} & \multirow{-2}{*}{5 (4.0\%)} & \multirow{-2}{*}{3.98} & \multirow{-2}{*}{0.64} & \multirow{-2}{*}{0.00} \\
+
+
+
+\multirow{2}{*}{\parbox{2cm}{LLaVA-One-Vision-72B}} & 31.20 & 31.30 & 19.10 & 10.60 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 &0.00 &  &  &  &  &  \\
+& 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 1.70 & \multirow{-2}{*}{56 (44.4\%)} & \multirow{-2}{*}{21 (16.7\%)} & \multirow{-2}{*}{5.83} & \multirow{-2}{*}{3.75} & \multirow{-2}{*}{0.00} \\
+
+\addlinespace[4pt]
+
+\rowcolor{bg-tb-light-video}  & 33.19 & 25.11 & 16.75 & 8.67 & 0.00 & 0.00 & 0.00 & 71.03 & 50.95 &0.00 &  &  &  &  &  \\
+\rowcolor{bg-tb-light-video} \multirow{-2}{*}{ Sa2VA-8B} & 0.00 & 60.28 & 0.00 & 0.00 & 19.85 & 37.83 & 46.36 & 42.58 & 48.02 & 1.48 & \multirow{-2}{*}{91 (72.2\%)} & \multirow{-2}{*}{32 (25.4\%)} & \multirow{-2}{*}{8.31} & \multirow{-2}{*}{4.38} & \multirow{-2}{*}{0.00} \\
+
+\addlinespace[4pt]
+
+\multirow{2}{*}{ Sa2VA-26B} & 35.33 & 26.33 & 17.58 & 10.39 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 &0.00 &  &  &  &  &  \\
+& 0.00 & 0.00 & 0.00 & 0.00 & 28.41 & 38.91 & 47.10 & 43.12 & 48.42 & 1.70 & \multirow{-2}{*}{81 (64.3\%)} & \multirow{-2}{*}{27 (21.4\%)} & \multirow{-2}{*}{8.81} & \multirow{-2}{*}{4.58} & \multirow{-2}{*}{0.00} \\
+
+\addlinespace[4pt]
+
+\rowcolor{bg-tb-light-video} & 32.68 & 26.45 & 13.55 & 17.62 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 &0.00 &  &  &  &  &  \\
+\rowcolor{bg-tb-light-video} \multirow{-2}{*}{ CoLVA-4B}  & 0.00 & 0.00 & 0.00 & 0.00 & 45.81 & 0.00 & 0.00 & 0.00 & 0.00 & 4.23 & \multirow{-2}{*}{63 (50.0\%)} & \multirow{-2}{*}{8 (6.3\%)} & \multirow{-2}{*}{4.78} & \multirow{-2}{*}{1.24} & \multirow{-2}{*}{0.00} \\
+
+\addlinespace[4pt]
+
+\multirow{2}{*}{ InternVL-2-8B} & 32.69 & 27.09 & 14.24 & 17.61 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & &  &  &  &  \\
+& 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 4.85 & \multirow{-2}{*}{55 (43.7\%)} & \multirow{-2}{*}{0 (0.0\%)} & \multirow{-2}{*}{5.64} & \multirow{-2}{*}{0.46} & \multirow{-2}{*}{0.00} \\
+
+\addlinespace[4pt]
+
+\rowcolor{bg-tb-light-video} & 36.14 & 26.25 & 15.89 & 15.53 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 &0.00 &  &  &  &  &  \\
+\rowcolor{bg-tb-light-video} \multirow{-2}{*}{ Long-LLaVA-9B} & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 4.20 & \multirow{-2}{*}{54 (42.9\%)} & \multirow{-2}{*}{22 (17.5\%)} & \multirow{-2}{*}{5.84} & \multirow{-2}{*}{3.81} & \multirow{-2}{*}{0.00} \\
+
+
+
+\Xhline{1.5pt}
+% \toprule
+\end{tabular}%
+{
+\fontsize{7.5}{8}\selectfont 
+\setlength{\tabcolsep}{2.2mm}
+\begin{tabular}{p{2cm} cccccccccc cc ccc}
+% \toprule
+
+
+\addlinespace[4pt]
+\rowcolor{bg-tb-heavey-video} & \multicolumn{6}{c}{\bf \textcolor{blueGen}{Video Generation Skill (Avg within each \#V-G Group)}} & \multicolumn{2}{c}{\bf Task Completion} & \multicolumn{3}{c}{\bf Level Score on Video} \\ 
+
+\rowcolor{bg-tb-heavey-video} \multicolumn{1}{c}{\multirow{-2}{*}{\bf  Model}}  & \bf\#1 & \bf\#2 & \bf\#3 & \bf\#4 & \bf\#5 & \bf\#6  & 
+\multirow{1}{*}{\parbox{1.6cm}{\#Task-Supprt}} & \multirow{1}{*}{\parbox{1.6cm}{\#Win-Spclst}} & \multirow{1}{*}{Level-2}  & \multirow{1}{*}{Level-3}  & \multirow{1}{*}{Level-4}  \\
+
+\midrule
+
+  
+\rowcolor{bg-tb-light-video} \multirow{1}{*}{\bf SoTA Specialist} & 69.09 & 55.79 & 88.94 & 62.90 & 37.79 & 51.46 & \multirow{1}{*}{/} & \multirow{1}{*}{/} & \multirow{1}{*}{/} & \multirow{1}{*}{/} & \multirow{1}{*}{/} \\
+
+\midrule\midrule
+
+
+\multirow{1}{*}{ VidAgent} & 52.42 & 47.73 & 88.84 & 63.61 & 0.00 & 0.00 & 30 (65.2\%) & 0 (0.0\%) & 25.00 & 0.00 & 0.00 \\
+\addlinespace[4pt]
+
+
+\rowcolor{bg-tb-light-video} \multirow{1}{*}{ LM4LV} & 0.00 & 0.00 & 0.00 & 0.00 & 25.90 & 5.93 & 8 (17.4\%) & 0 (0.0\%) & 6.74 & 0.00 & 0.00 \\
+\addlinespace[4pt]
+
+
+\multirow{1}{*}{ NExT-GPT-V1.5} & 26.78 & 6.72 & 130.22 & 16.03 & 0.08 & 0.06 & 40 (87.0\%) & 0 (0.0\%) & 8.34 & 0.71 & 0.00 \\
+\addlinespace[4pt]
+
+\rowcolor{bg-tb-light-video} \multirow{1}{*}{ Vitron-V1} & 36.74 & 19.32 & 116.31 & 25.09 & 0.08 & 0.06 & 40 (87.0\%) & 0 (0.0\%) & 18.72 & 3.04 & 0.00 \\
+
+
+\bottomrule
+\end{tabular}%
+}
+\vspace{-3mm}
+\end{table*}
+% }
+
+%%%%%%%%%%%%%%%%%%%
+{
+\begin{table*}[t!]
+\centering
+  \fontsize{7.5}{8}\selectfont 
+  \setlength{\tabcolsep}{1mm}
+\caption{
+Performance of multimodal generalists on audio comprehension and generation skills.
+}
+\vspace{-2mm}
+\label{tab:main-overall-results-audio}
+\begin{tabular}{p{2.2cm} ccccccccc cc ccc}
+\toprule
+\rowcolor{bg-tb-heavey-audio} & \multicolumn{9}{c}{\bf \textcolor{greenCom}{Audio Comprehension Skill (Avg within each \#A-C Group)}} & \multicolumn{2}{c}{\bf Task Completion} & \multicolumn{3}{c}{\bf Level Score on Audio} \\ 
+
+\rowcolor{bg-tb-heavey-audio} \multicolumn{1}{c}{\multirow{-2}{*}{\bf  Model}}  &  \bf\#1 & \bf\#2 & \bf\#3 & \bf\#4 & \bf\#5 & \bf\#6 & \bf\#7 & \bf\#8 & \bf\#9  & 
+\multirow{1}{*}{\parbox{1.6cm}{\#Task-Supprt}} & \multirow{1}{*}{\parbox{1.6cm}{\#Win-Spclst}} & \multirow{-1}{*}{Level-2}  & \multirow{-1}{*}{Level-3}  & \multirow{-1}{*}{Level-4}  \\
+  \midrule
+
+\rowcolor{bg-tb-light-audio} \multirow{-1}{*}{\bf SoTA Specialist} & 87.27 & 79.08 & 70.62 & 79.00 & 71.87 & 62.90 & 58.70 & 77.90 & 78.07 & / & / & / & / & / \\
+
+\midrule\midrule
+
+
+\multirow{1}{*}{ Qwen-Audio-Chat} & 56.93 & 68.77 & 76.80 & 37.70 & 47.71 & 19.79 & 56.44 & 85.15 & 78.50 & 30 (100.0\%) & 6 (25.0\%) & 28.39 & 10.57 & 0.00 \\
+\addlinespace[4pt]
+
+
+\rowcolor{bg-tb-light-audio} \multirow{1}{*}{ Qwen2-Audio-Instruct} & 72.65 & 74.80 & 61.40 & 36.80 & 45.82 & 13.45 & 61.68 & 78.95 & 67.99 & 24 (100.0\%) & 6 (25.0\%) & 28.61 & 8.53 & 0.00 \\
+\addlinespace[4pt]
+
+\multirow{1}{*}{ GAMA} & 57.00 & 64.20 & 68.00 & 53.20 & 18.43 & 26.95 & 48.85 & 85.55 & 61.80 & 23 (95.8\%) & 4 (16.7\%) & 26.35 & 7.15 & 0.00 \\
+\addlinespace[4pt]
+
+\rowcolor{bg-tb-light-audio} \multirow{1}{*}{ Pengi} & 52.88 & 60.07 & 56.70 & 36.78 & 19.77 & 19.55 & 42.95 & 77.40 & 61.17 & 23 (95.8\%) & 1 (4.2\%) & 23.29 & 1.74 & 0.00 \\
+\addlinespace[4pt]
+ 
+
+\multirow{1}{*}{ SALMONN-13B} & 67.89 & 56.33 & 67.80 & 29.45 & 24.67 & 19.36 & 43.95 & 76.55 & 56.67 & 23 (95.8\%) & 2 (8.3\%) & 23.95 & 3.61 & 0.00 \\
+\addlinespace[4pt]
+
+
+\rowcolor{bg-tb-light-audio} \multirow{1}{*}{ WavLLM} & 64.45 & 41.07 & 71.20 & 30.08 & 31.30 & 26.55 & 45.75 & 61.40 & 64.57 & 24 (100.0\%) & 2 (8.3\%) & 23.49 & 3.28 & 0.00 \\
+\addlinespace[4pt]
+
+
+\multirow{1}{*}{ NExT-GPT-V1.5} & 43.23 & 29.13 & 65.80 & 26.70 & 14.47 & 25.65 & 47.95 & 70.20 & 69.43 & 24 (100.0\%) & 0 (0.0\%) & 25.05 & 1.34 & 0.00 \\
+\addlinespace[4pt]
+
+
+\rowcolor{bg-tb-light-audio} \multirow{1}{*}{ PandaGPT (13B)} & 41.80 & 20.23 & 45.20 & 20.98 & 8.47 & 20.50 & 42.25 & 54.80 & 65.83 & 24 (100.0\%) & 0 (0.0\%) & 16.98 & 0.65 & 0.00 \\
+\addlinespace[4pt]
+
+\multirow{1}{*}{ ModaVerse-7b-v0} & 34.10 & 16.37 & 32.80 & 15.20 & 6.60 & 8.90 & 35.05 & 49.20 & 60.13 & 23 (95.8\%) & 0 (0.0\%) & 26.10 & 1.14 & 0.00 \\
+\addlinespace[4pt]
+ 
+\rowcolor{bg-tb-light-audio} \multirow{1}{*}{ Any-GPT} & 44.50 & 32.13 & 63.40 & 48.08 & 16.27 & 36.40 & 52.65 & 67.95 & 44.63 & 23 (95.8\%) & 1 (4.2\%) & 29.06 & 3.29 & 0.00 \\
+\addlinespace[4pt]
+
+\multirow{1}{*}{ Unified-io-2-XXL} & 30.15 & 27.60 & 56.10 & 28.58 & 15.47 & 38.35 & 38.70 & 63.50 & 60.63 & 24 (100.0\%) & 0 (0.0\%) & 25.63 & 1.01 & 0.00 \\
+\addlinespace[4pt]
+
+\Xhline{1.5pt}
+% \toprule
+\end{tabular}%
+{
+\fontsize{7.5}{8}\selectfont 
+\setlength{\tabcolsep}{0.7mm}
+\begin{tabular}{p{2cm} ccccccccccc cc ccc}
+% \toprule
+
+\addlinespace[2pt]
+
+ \rowcolor{bg-tb-heavey-audio} & \multicolumn{11}{c}{\bf \textcolor{blueGen}{Audio Generation Skill (Avg within each \#A-G Group)}} & \multicolumn{2}{c}{\bf Task Completion} & \multicolumn{3}{c}{\bf Level Score on Audio} \\ 
+
+\rowcolor{bg-tb-heavey-audio} \multicolumn{1}{c}{\multirow{-2}{*}{\bf  Model}}  &  \bf\#1 & \bf\#2 & \bf\#3 & \bf\#4 & \bf\#5 & \bf\#6 & \bf\#7 & \bf\#8 & \bf\#9 & \bf\#10 & \bf\#11 & 
+\multirow{1}{*}{\parbox{1.6cm}{\#Task-Supprt}} & \multirow{1}{*}{\parbox{1.6cm}{\#Win-Spclst}} & \multirow{1}{*}{Level-2}  & \multirow{1}{*}{Level-3}  & \multirow{1}{*}{Level-4}  \\
+  \midrule
+
+\rowcolor{bg-tb-light-audio} \multirow{1}{*}{\bf SoTA Specialist} & 31.50 & 3.82 & 3.64 & 4.68 & 41.54 & 51.40 & 11.52 & 6.80 & 8.33 & 22.88 & 20.33 & \multirow{1}{*}{/} & \multirow{1}{*}{/} & \multirow{1}{*}{/} & \multirow{1}{*}{/} & \multirow{1}{*}{/} \\
+
+\midrule\midrule
+
+
+\rowcolor{bg-tb-light-audio} \multirow{1}{*}{Unified-io-2-XXL} & 18.36 & 2.03 & 5.11 & 40.52 & 16.41 & 24.31 & 16.97 & 86.23 & 94.52 & 0.25 & 2.24 & 17 (85.0\%) & 0 (0.0\%) & 25.63 & 1.01 & 0.00 \\
+\addlinespace[4pt]
+ 
+\multirow{1}{*}{Any-GPT} & 23.50 & 3.24 & 4.57 & 33.58 & 13.38 & 14.05 & 27.49 & 45.36 & 83.89 & 0.25 & 2.47 & 17 (85.0\%) & 1 (5.0\%) & 29.06 & 3.29 & 0.00 \\
+\addlinespace[4pt]
+
+\rowcolor{bg-tb-light-audio} \multirow{1}{*}{NExT-GPT-V1.5} & 13.60 & 1.15 & 4.07 & 50.51 & 34.51 & 1.35 & 12.36 & 96.70 & 99.23 & 0.25 & 7.77 & 17 (85.0\%) & 1 (5.0\%) & 25.05 & 1.34 & 0.00 \\
+\addlinespace[4pt]
+
+\multirow{1}{*}{AudioGPT} & 0.50 & 1.32 & 4.61 & 23.10 & 29.48 & 0.00 & 0.00 & 46.30 & 79.98 & 0.25 & 0.00 & 13 (65.0\%) & 1 (5.0\%) & 8.80 & 3.02 & 0.00 \\
+\addlinespace[4pt]
+
+\rowcolor{bg-tb-light-audio} \multirow{1}{*}{SpeechGPT} & 0.10 & 2.79 & 4.44 & 32.35 & 0.00 & 0.00 & 0.00 & 30.24 & 85.54 & 0.25 & 0.00 & 11 (55.0\%) & 0 (0.0\%) & 7.22 & 0.00 & 0.00 \\
+\addlinespace[4pt]
+
+\multirow{1}{*}{ModaVerse} & 12.30 & 1.15 & 4.29 & 50.50 & 28.99 & 1.05 & 16.45 & 100.00 & 100.00 & 0.25 & 4.17 & 17 (85.0\%) & 2 (10.0\%) & 26.10 & 1.14 & 0.00 \\
+
+
+
+\bottomrule
+\end{tabular}%
+}
+% \vspace{-3mm}
+\end{table*}
+}
+
+%%%%%%%%%%%%%%%%%%%%%
+{
+\begin{table*}[t!]
+\centering
+  \fontsize{7.5}{8}\selectfont 
+  \setlength{\tabcolsep}{0.4mm}
+\caption{
+Performance of multimodal generalists on 3D comprehension and generation skills.
+}
+\vspace{-2mm}
+\label{tab:main-overall-results-3D}
+\begin{tabular}{p{2cm} ccccccccccccc cc ccc}
+\toprule
+\rowcolor{bg-tb-heavey-3D} & \multicolumn{13}{c}{\bf \textcolor{greenCom}{3D Comprehension Skill (Avg within each \#D-C Group)}} & \multicolumn{2}{c}{\bf Task Completion} & \multicolumn{3}{c}{\bf Level Score on 3D} \\ 
+
+\rowcolor{bg-tb-heavey-3D} \multicolumn{1}{c}{\multirow{-2}{*}{\bf  Model}}  & \bf\#1 & \bf\#2 & \bf\#3 & \bf\#4 & \bf\#5 & \bf\#6 & \bf\#7 & \bf\#8 & \bf\#9 & \bf\#10 & \bf\#11 & \bf\#12 & \bf\#13 & 
+\multirow{1}{*}{\parbox{1.6cm}{\#Task-Supprt}} & \multirow{1}{*}{\parbox{1.6cm}{\#Win-Spclst}} & \multirow{-1}{*}{Level-2}  & \multirow{-1}{*}{Level-3}  & \multirow{-1}{*}{Level-4}  \\
+  \midrule
+
+\rowcolor{bg-tb-light-3D} \multirow{1}{*}{\bf SoTA Specialist} & 96.24 & 98.35 & 97.78 & 78.50 & 70.02 & 81.20 & 55.00 & 88.28 & 75.20 & 9.96 & 68.52 & 47.14 & 22.30 & \multirow{1}{*}{/} & \multirow{1}{*}{/} & \multirow{1}{*}{/} & \multirow{1}{*}{/} & \multirow{1}{*}{/} \\
+
+\midrule\midrule
+
+
+\multirow{1}{*}{3D-VisTA} & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 46.37 & 0.00 & 7 (23.3\%) & 2 (6.7\%) & 5.41 & 1.07 & 0.00 \\
+\addlinespace[2pt]
+
+\rowcolor{bg-tb-light-3D} \multirow{1}{*}{PointLLM-7B} & 46.16 & 7.50 & 72.86 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 &0.00 &  0.00 & 0.00 & 0.00 & 0.00 & 8 (26.7\%) & 0 (0.0\%) & 6.53 & 0.00 & 0.00 \\
+\addlinespace[2pt]
+
+\multirow{1}{*}{PointLLM-13B} & 48.79 & 10.00 & 78.14 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 &0.00 &  9 (30.0\%) & 0 (0.0\%) & 7.00 & 0.00 & 0.00 \\
+\addlinespace[2pt]
+
+\rowcolor{bg-tb-light-3D} \multirow{1}{*}{3D-LLM} & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 46.34 & 0.00 & 7 (23.3\%) & 1 (3.3\%) & 5.41 & 1.38 & 0.00 \\
+\addlinespace[2pt]
+
+\multirow{1}{*}{AvatarGPT} & 0.00 &  0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 12.70 & 1 (3.3\%) & 0 (0.0\%) & 0.21 & 0.21 & 0.00 \\
+\addlinespace[2pt]
+
+\Xhline{1.5pt}
+\end{tabular}%
+{
+\fontsize{7.5}{8}\selectfont 
+\setlength{\tabcolsep}{0.9mm}
+\begin{tabular}{p{2.2cm} ccccccccc cc ccc}
+
+\addlinespace[2pt]
+
+ \rowcolor{bg-tb-heavey-3D} & \multicolumn{9}{c}{\bf \textcolor{blueGen}{3D Generation Skill (Avg within each \#D-G Group)}} & \multicolumn{2}{c}{\bf Task Completion} & \multicolumn{3}{c}{\bf Level Score on 3D} \\ 
+
+\rowcolor{bg-tb-heavey-3D} \multicolumn{1}{c}{\multirow{-2}{*}{\bf  Model}}  & \bf\#1 & \bf\#2 & \bf\#3 & \bf\#4 & \bf\#5 & \bf\#6 & \bf\#7 & \bf\#8 & \bf\#9  & 
+\multirow{1}{*}{\parbox{1.6cm}{\#Task-Supprt}} & \multirow{1}{*}{\parbox{1.6cm}{\#Win-Spclst}} & \multirow{1}{*}{Level-2}  & \multirow{1}{*}{Level-3}  & \multirow{1}{*}{Level-4}  \\
+  \midrule
+
+\rowcolor{bg-tb-light-3D} \multirow{1}{*}{\bf SoTA Specialist} & 0.22 & 7.12E-5 & 24.42 & 25.69 & 78.06 & 83.64 & 6540.02 & 6540.02 & 0.23 & \multirow{1}{*}{/} & \multirow{1}{*}{/} & \multirow{1}{*}{/} & \multirow{1}{*}{/} & \multirow{1}{*}{/} \\
+
+\midrule\midrule
+
+
+\multirow{1}{*}{MotionGPT-T5} & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.51 & 1 (4.5\%) & 0 (0.0\%) & 0.00 & 0.00 & 0.00 \\
+\addlinespace[2pt]
+
+\rowcolor{bg-tb-light-3D} \multirow{1}{*}{MotionGPT-LLaMA} & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.60 & 1 (4.5\%) & 0 (0.0\%) & 0.00 & 0.00 & 0.00 \\
+\addlinespace[2pt]
+
+\multirow{1}{*}{LLaMA-Mesh} & 0.00 & 0.00 & 0.00 & 17.55 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 1 (4.5\%) & 0 (0.0\%) & 1.60 & 0.00 & 0.00 \\
+\addlinespace[2pt]
+
+
+\bottomrule
+\end{tabular}%
+}
+\vspace{-3mm}
+\end{table*}
+}
+
+
+
+\end{document}

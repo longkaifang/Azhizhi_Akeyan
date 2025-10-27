@@ -1,0 +1,251 @@
+\documentclass[letterpaper]{article} % DO NOT CHANGE THIS
+\usepackage[submission]{aaai2026}  % DO NOT CHANGE THIS
+\usepackage{times}  % DO NOT CHANGE THIS
+\usepackage{helvet}  % DO NOT CHANGE THIS
+\usepackage{courier}  % DO NOT CHANGE THIS
+\usepackage[hyphens]{url}  % DO NOT CHANGE THIS
+\usepackage{graphicx} % DO NOT CHANGE THIS
+\urlstyle{rm} % DO NOT CHANGE THIS
+\def\UrlFont{\rm}  % DO NOT CHANGE THIS
+\usepackage{natbib}  % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\usepackage{caption} % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\frenchspacing  % DO NOT CHANGE THIS
+\setlength{\pdfpagewidth}{8.5in} % DO NOT CHANGE THIS
+\setlength{\pdfpageheight}{11in} % DO NOT CHANGE THIS
+%
+% These are recommended to typeset algorithms but not required. See the subsubsection on algorithms. Remove them if you don't have algorithms in your paper.
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\usepackage{pifont} %182/183/184
+\usepackage{subcaption}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{booktabs}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{verbatim}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{colortbl}
+\usepackage{booktabs,makecell, multirow, tabularx}
+\usepackage{adjustbox}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{amsmath}
+
+\usepackage{booktabs}
+\usepackage{amssymb}
+\usepackage{bbding}
+\usepackage{pifont}
+\usepackage{wasysym}
+\usepackage{utfsym}
+\usepackage{fontawesome}
+
+\usepackage{mdframed}
+\begin{document}
+
+
+\definecolor{mygray}{gray}{0.9}
+%%%%table1
+\begin{table*}[h]
+\centering
+\small
+\begin{tabular}{c|l|cccc!{\vrule width \lightrulewidth}cc|c} 
+\toprule
+\multirow{2}{*}{\textbf{\makecell[c]{Backbones}}} 
+& \multirow{2}{*}{\textbf{Methods}} 
+& \multicolumn{4}{c!{\vrule width \lightrulewidth}}{\textbf{Rubric Grading}} 
+& \multicolumn{2}{c|}{\textbf{Verifiability}} 
+& \multirow{2}{*}{\textbf{ROUGE-1}} 
+\\
+\cmidrule(lr){3-6} \cmidrule(lr){7-8}
+& & \textbf{Relevance} & \textbf{Breadth} & \textbf{Interest Level} & \textbf{Organization} 
+  & \textbf{CR} & \textbf{CP} 
+  & 
+\\
+\cmidrule{1-9}
+
+\multirow{6}{*}{\textbf{Qwen-2.5}}
+& oRAG           & 3.91 & 4.08 & 3.96 & 3.63  &   00.00     &    00.00    &  00.00      \\
+& STORM          & 4.10 & 4.19 & 4.21 & 3.89  &   00.00     &    00.00    &  00.00       \\
+& Co-STORM       & 4.26 & 4.22 & 4.30 & 4.07  &   00.00     &    00.00    &  00.00       \\
+& OmniThink      & 4.31 & 4.38 & 4.33 & 4.15 &   00.00     &    00.00    &  00.00       \\
+& \cellcolor{mygray}{Our}     
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+\\
+\cmidrule{1-9}
+
+\multirow{6}{*}{\textbf{GPT-4}}
+& oRAG           & 3.97 & 4.10 & 4.12 & 3.72  &   00.00     &    00.00    &  00.00       \\
+& STORM          & 4.16 & 4.23 & 4.33 & 4.01  &   00.00     &    00.00    &  00.00       \\
+& Co-STORM       & 4.34 & 4.28 & 4.42 & 4.10  &   00.00     &    00.00    &  00.00      \\
+& OmniThink      & 4.37 &4.43 & 4.45 & 4.19  &   00.00     &    00.00    &  00.00         \\
+& \cellcolor{mygray}{Our}     
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+\\
+\cmidrule{1-9}
+
+\multirow{6}{*}{\textbf{GPT-4o}}
+& oRAG           & 4.02 & 4.10 & 4.18 & 3.81 &   00.00     &    00.00    &  00.00       \\
+& STORM          & 4.18 & 4.29 & 4.35 & 4.07  &   00.00     &    00.00    &  00.00       \\
+& Co-STORM       & 4.37 & 4.26 & 4.46 & 4.25  &   00.00     &    00.00    &  00.00       \\
+& OmniThink      & 4.40 & 4.50 & 4.51 & 4.23  &   00.00     &    00.00    &  00.00        \\
+& \cellcolor{mygray}{our}     
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+\\
+\cmidrule{1-9}
+
+\multirow{6}{*}{\textbf{DeepSeek-R1}}
+& oRAG           & 4.03 & 4.08 & 4.17 & 3.86  &   00.00     &    00.00    &  00.00       \\
+& STORM          & 4.19 & 4.27 & 4.30 & 4.08  &   00.00     &    00.00    &  00.00       \\
+& Co-STORM       & 4.34 & 4.29 & 4.37 & 4.21  &   00.00     &    00.00    &  00.00       \\
+& OmniThink      & 4.37 & 4.42 & 4.48 & 4.18  &   00.00     &    00.00    &  00.00      \\
+& \cellcolor{mygray}{Our}     
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+\\
+\bottomrule
+\end{tabular}
+\caption{Results of.}
+\label{tab:main}
+\end{table*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%        table2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{color_blue}{RGB}{135, 206, 235}
+\definecolor{color_pink}{RGB}{252,182,165}
+\definecolor{color_org}{RGB}{255,217,178}
+\definecolor{color_yellow}{RGB}{255,255,204}
+\begin{table*}[h]
+\centering
+\small
+\begin{tabular}{clcccc!{\vrule width \lightrulewidth}c|c} 
+\toprule
+\multirow{2}{*}{\textbf{\makecell[c]{Backbones}}} 
+& \multirow{2}{*}{\textbf{Methods}} 
+& \multicolumn{4}{c!{\vrule width \lightrulewidth}}{\textbf{Rubric Grading}} 
+& \multirow{2}{*}{\textbf{ROUGE-1}} 
+& \multirow{2}{*}{\textbf{ROUGE-1}} 
+\\
+\cmidrule(lr){3-6} 
+& & \textbf{Relevance} & \textbf{Breadth} & \textbf{Interest Level} & \textbf{Organization} 
+  &  
+  & 
+\\
+\cmidrule{1-8}
+\multicolumn{8}{c}{\cellcolor{color_blue}{\textbf{Conversational Models}}}\\
+\cmidrule{1-8}
+
+\multirow{6}{*}{\textbf{GPT-4o}}
+& oRAG           & 3.91 & 4.08 & 3.96 & 3.63  &   00.00     &    00.00          \\
+& STORM          & 4.10 & 4.19 & 4.21 & 3.89  &   00.00     &    00.00           \\
+& Co-STORM       & 4.26 & 4.22 & 4.30 & 4.07  &   00.00     &    00.00          \\
+& OmniThink      & 4.31 & 4.38 & 4.33 & 4.15 &   00.00     &    00.00          \\
+& \cellcolor{mygray}{Our}                   
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+\\
+\cmidrule{1-8}
+
+\multirow{6}{*}{\textbf{Qwen-Plus}}
+& oRAG           & 3.97 & 4.10 & 4.12 & 3.72  &   00.00     &    00.00          \\
+& STORM          & 4.16 & 4.23 & 4.33 & 4.01  &   00.00     &    00.00          \\
+& Co-STORM       & 4.34 & 4.28 & 4.42 & 4.10  &   00.00     &    00.00          \\
+& OmniThink      & 4.37 &4.43 & 4.45 & 4.19  &   00.00     &    00.00           \\
+& \cellcolor{mygray}{Our}                 
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+\\
+
+\cmidrule{1-8}
+\multicolumn{8}{c}{\cellcolor{color_org}{\textbf{Reasoning Models}}}\\
+\cmidrule{1-8}
+
+\multirow{6}{*}{\textbf{O1-preview}}
+& oRAG           & 4.02 & 4.10 & 4.18 & 3.81 &   00.00     &    00.00          \\
+& STORM          & 4.18 & 4.29 & 4.35 & 4.07  &   00.00     &    00.00          \\
+& Co-STORM       & 4.37 & 4.26 & 4.46 & 4.25  &   00.00     &    00.00          \\
+& OmniThink      & 4.40 & 4.50 & 4.51 & 4.23  &   00.00     &    00.00           \\
+& \cellcolor{mygray}{our}     
+                  
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+\\
+\cmidrule{1-8}
+
+\multirow{6}{*}{\textbf{DeepSeek-R1}}
+& oRAG           & 4.03 & 4.08 & 4.17 & 3.86  &   00.00     &    00.00           \\
+& STORM          & 4.19 & 4.27 & 4.30 & 4.08  &   00.00     &    00.00           \\
+& Co-STORM       & 4.34 & 4.29 & 4.37 & 4.21  &   00.00     &    00.00           \\
+& OmniThink      & 4.37 & 4.42 & 4.48 & 4.18  &   00.00     &    00.00          \\
+& \cellcolor{mygray}{Our}     
+                 
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+                 & \cellcolor{mygray}{\textbf{0.00}} 
+\\
+\bottomrule
+\end{tabular}
+\caption{Results of.}
+\label{tab:main}
+\end{table*}
+
+\end{document}

@@ -1,0 +1,161 @@
+\documentclass[letterpaper]{article} % DO NOT CHANGE THIS
+\usepackage[submission]{aaai2026}  % DO NOT CHANGE THIS
+\usepackage{times}  % DO NOT CHANGE THIS
+\usepackage{helvet}  % DO NOT CHANGE THIS
+\usepackage{courier}  % DO NOT CHANGE THIS
+\usepackage[hyphens]{url}  % DO NOT CHANGE THIS
+\usepackage{graphicx} % DO NOT CHANGE THIS
+\urlstyle{rm} % DO NOT CHANGE THIS
+\def\UrlFont{\rm}  % DO NOT CHANGE THIS
+\usepackage{natbib}  % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\usepackage{caption} % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\frenchspacing  % DO NOT CHANGE THIS
+\setlength{\pdfpagewidth}{8.5in} % DO NOT CHANGE THIS
+\setlength{\pdfpageheight}{11in} % DO NOT CHANGE THIS
+%
+% These are recommended to typeset algorithms but not required. See the subsubsection on algorithms. Remove them if you don't have algorithms in your paper.
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\usepackage{pifont} %182/183/184
+\usepackage{subcaption}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{booktabs}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{verbatim}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{colortbl}
+\usepackage{booktabs,makecell, multirow, tabularx}
+\usepackage{adjustbox}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{amsmath}
+
+\usepackage{booktabs}
+\usepackage{amssymb}
+\usepackage{bbding}
+\usepackage{pifont}
+\usepackage{wasysym}
+\usepackage{utfsym}
+\usepackage{fontawesome}
+
+\usepackage{mdframed}
+\begin{document}
+
+% %%%%%%%%%%%%%%%%%%%   MVTec 3D-AD (I-AUROC)
+%\checkmark  \Checkmark
+%\XSolidBrush
+% \cmidrule{1-8} 横线
+
+% \usepackage{arydshln}虚线宏包  
+%\hdashline
+%\cdashline{2-3} % 第二、三列虚线
+
+%左 $\leftarrow$，右 $\rightarrow$，上 $\uparrow$，下 $\downarrow$
+
+%整行填充颜色
+%\usepackage[table]{xcolor}
+%\usepackage{colortbl}
+%\rowcolor{blue!20}
+
+%合并行和列
+%\multicolumn{2}{c|}{\multirow{2}{*}{Method}}
+%\multicolumn{2}{c|}{Method}
+
+%定义颜色
+% \definecolor{color1}{RGB}{229,229,229}
+% \cellcolor{color1} 
+%定义字体
+% \newcommand{\zzz}[1]{{\color{color1} #1}}
+
+\begin{table*}[ht!]
+\centering
+\setlength{\tabcolsep}{2.8mm} %2.2mm
+\renewcommand{\arraystretch}{1}
+\adjustbox{width=1\linewidth}{
+   \begin{tabular}{ll|cc|cc|cc}
+       \toprule
+                \multicolumn{2}{l|}{\multirow{2}{*}{Method}} 
+                &\multirow{2}{*}{$A_p$} 
+                &\multirow{2}{*}{$A_r$} 
+                &\multicolumn{2}{c|}{Training} 
+                &\multicolumn{2}{c}{Inference}
+                  \\
+%%%%%%%%%%                 
+  &  &  &  &T  &M  &T  &M    \\
+%%%%%%%%%%%%%%
+\midrule[0.5pt]     
+           \multirow{3}{*}{PEFT}  &Adapter (Pfeiffer et al., 2021) &\XSolidBrush  &\Checkmark &\textcolor{green}{$\Downarrow$ Low} &\textcolor{red}{$\Downarrow$ High} &= &=\\
+            &LoRA (Hu et al., 2022)  &\Checkmark &\XSolidBrush  &\textcolor{red}{$\Downarrow$ High} &\textcolor{green}{$\Downarrow$ Low} &\textcolor{red}{$\Downarrow$ High} &\textcolor{red}{$\Downarrow$ High}\\
+           & AdaLoRA (Zhang et al., 2023b) &\XSolidBrush  &\Checkmark &\textcolor{green}{$\Downarrow$ Low} &\textcolor{green}{$\Downarrow$ Low} &\textcolor{red}{$\Downarrow$ High} &\textcolor{red}{$\Downarrow$ High}\\
+\midrule[0.5pt]     
+           \multirow{4}{*}{PEFT}  &Adapter (Pfeiffer et al., 2021) &\XSolidBrush  &\Checkmark &\textcolor{green}{$\Downarrow$ Low} &\textcolor{red}{$\Downarrow$ High} &= &=\\
+            &LoRA (Hu et al., 2022)  &\Checkmark &\XSolidBrush  &\textcolor{red}{$\Downarrow$ High} &\textcolor{green}{$\Downarrow$ Low} &\textcolor{red}{$\Downarrow$ High} &\textcolor{red}{$\Downarrow$ High}\\
+           & AdaLoRA (Zhang et al., 2023b) &\XSolidBrush  &\Checkmark &\textcolor{green}{$\Downarrow$ Low} &\textcolor{green}{$\Downarrow$ Low} &\textcolor{red}{$\Downarrow$ High} &\textcolor{red}{$\Downarrow$ High}\\
+           & AdaLoRA (Zhang et al., 2023b) &\XSolidBrush  &\Checkmark &\textcolor{green}{$\Downarrow$ Low} &\textcolor{green}{$\Downarrow$ Low} &\textcolor{red}{$\Downarrow$ High} &\textcolor{red}{$\Downarrow$ High}\\
+\midrule[0.5pt]     
+           \multirow{3}{*}{PEFT}  &Adapter (Pfeiffer et al., 2021) &\XSolidBrush  &\Checkmark &\textcolor{green}{$\Downarrow$ Low} &\textcolor{red}{$\Downarrow$ High} &= &=\\
+            &LoRA (Hu et al., 2022)  &\Checkmark &\XSolidBrush  &\textcolor{red}{$\Downarrow$ High} &\textcolor{green}{$\Downarrow$ Low} &\textcolor{red}{$\Downarrow$ High} &\textcolor{red}{$\Downarrow$ High}\\
+           & AdaLoRA (Zhang et al., 2023b) &\XSolidBrush  &\Checkmark &\textcolor{green}{$\Downarrow$ Low} &\textcolor{green}{$\Downarrow$ Low} &\textcolor{red}{$\Downarrow$ High} &\textcolor{red}{$\Downarrow$ High}\\
+             \bottomrule
+       \end{tabular}
+   }
+   \caption{The caption results, caption results, caption results, caption results.}
+\end{table*}
+
+\begin{table*}[ht!]
+\centering
+\setlength{\tabcolsep}{2.8mm} %2.2mm
+\renewcommand{\arraystretch}{1}
+\adjustbox{width=1\linewidth}{
+   \begin{tabular}{ll|rrrr|rrrr}
+       \toprule           
+%%%%%%%%%%%%%%
+Model&Method&MNLI&SST2&SQuAD v2&CNN/DM&Train Time($\Downarrow$)&Train Mem($\Downarrow$)&Inf Time($\Downarrow$)&Inf Mem($\Downarrow$)\\
+\midrule[0.5pt]  
+\multirow{6}{*}{RoBERTa$_{base}$}     
+            &FT &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 \\
+            &LoRA &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 \\
+\cmidrule{2-10}
+             &LoRA+Prune &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+&Prune+Distill &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+&LoRA+Prune+Distill &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+\cmidrule{2-10}
+&APT &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+\midrule[0.5pt]  
+\multirow{6}{*}{RoBERTa$_{base}$}     
+            &FT &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 \\
+            &LoRA &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 \\
+\cmidrule{2-10}
+&LoRA+Prune &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+\cmidrule{2-10}
+&APT &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+             \bottomrule
+       \end{tabular}
+   }
+   \caption{The caption results, caption results, caption results, caption results.}
+\end{table*}
+
+
+\end{document}

@@ -1,0 +1,185 @@
+\documentclass[letterpaper]{article} % DO NOT CHANGE THIS
+\usepackage[submission]{aaai2026}  % DO NOT CHANGE THIS
+\usepackage{times}  % DO NOT CHANGE THIS
+\usepackage{helvet}  % DO NOT CHANGE THIS
+\usepackage{courier}  % DO NOT CHANGE THIS
+\usepackage[hyphens]{url}  % DO NOT CHANGE THIS
+\usepackage{graphicx} % DO NOT CHANGE THIS
+\urlstyle{rm} % DO NOT CHANGE THIS
+\def\UrlFont{\rm}  % DO NOT CHANGE THIS
+\usepackage{natbib}  % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\usepackage{caption} % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\frenchspacing  % DO NOT CHANGE THIS
+\setlength{\pdfpagewidth}{8.5in} % DO NOT CHANGE THIS
+\setlength{\pdfpageheight}{11in} % DO NOT CHANGE THIS
+%
+% These are recommended to typeset algorithms but not required. See the subsubsection on algorithms. Remove them if you don't have algorithms in your paper.
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\usepackage{pifont} %182/183/184
+\usepackage{subcaption}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{booktabs}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{verbatim}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{colortbl}
+\usepackage{booktabs,makecell, multirow, tabularx}
+\usepackage{adjustbox}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{amsmath}
+
+\usepackage{booktabs}
+\usepackage{amssymb}
+\usepackage{bbding}
+\usepackage{pifont}
+\usepackage{wasysym}
+\usepackage{utfsym}
+\usepackage{fontawesome}
+
+\usepackage{mdframed}
+\usepackage{arydshln}
+\begin{document}
+
+% %%%%%%%%%%%%%%%%%%%   MVTec 3D-AD (I-AUROC)
+%\checkmark  \Checkmark
+%\XSolidBrush
+% \cmidrule{1-8} 横线
+
+% \usepackage{arydshln}虚线宏包  
+%\hdashline
+%\cdashline{2-3} % 第二、三列虚线
+
+%左 $\leftarrow$，右 $\rightarrow$，上 $\uparrow$，下 $\downarrow$
+
+%整行填充颜色
+%\usepackage[table]{xcolor}
+%\usepackage{colortbl}
+%\rowcolor{blue!20}
+
+%合并行和列
+%\multicolumn{2}{c|}{\multirow{2}{*}{Method}}
+%\multicolumn{2}{c|}{Method}
+
+%定义颜色
+% \definecolor{color1}{RGB}{229,229,229}
+% \cellcolor{color1} 
+%定义字体
+% \newcommand{\zzz}[1]{{\color{color1} #1}}
+\definecolor{myblue}{RGB}{52,218,247}
+\definecolor{myred}{RGB}{255,90,90}
+\definecolor{mypink}{RGB}{239,43,159}
+\definecolor{myupdate}{RGB}{254,243,222}
+\definecolor{myfrozen}{RGB}{237,255,255}
+\definecolor{ired}{RGB}{229,72,72}
+\definecolor{igreen}{RGB}{80,219,144}
+\definecolor{ired}{RGB}{247,142,142}
+\definecolor{bluei}{RGB}{218,232,252}
+\newcommand{\freeze}{\raisebox{0pt}{\includegraphics[width=0.8em]{image/frozen.png}}}
+\newcommand{\update}{\raisebox{0pt}{\includegraphics[width=0.8em]{image/fire.png}}}
+\begin{table*}[!t]
+\centering
+\fontsize{8}{11}\selectfont
+\setlength{\tabcolsep}{3mm}
+\caption{
+Summary of NExT-GPT system configuration.
+Only 1\% of parameters need updating during fine-tuning.
+}
+\vspace{1mm}
+\label{tab:configuration}
+\begin{tabular}{lcccccccccc}
+\hline
+\multirow{2}{*}{ }& \multicolumn{2}{c}{\bf Encoder}& \multicolumn{2}{c}{\bf Input Projection} & \multicolumn{2}{c}{\bf LLM}& \multicolumn{2}{c}{\bf Output Projection}&  \multicolumn{2}{c}{\bf Diffusion} \\ 
+\cmidrule(r){2-3} \cmidrule(r){4-5}  \cmidrule(r){6-7}  \cmidrule(r){8-9}  \cmidrule(r){10-11} 
+& Name & Param & Name & Param & Name & Param & Name & Param & Name & Param \\
+\hline
+\multirow{1}{*}{\textbf{Text}}  &	{---}  & {---}  &	{---} & {---}  & \cellcolor{myfrozen}  & \cellcolor{myfrozen}  & {---}  & {---}  &	{---} & {---}	 \\
+\multirow{1}{*}{\textbf{Image}}  & \cellcolor{myfrozen}  & \cellcolor{myfrozen} & \cellcolor{myupdate} & \cellcolor{myupdate}  & \cellcolor{myfrozen} Vicuna  & \cellcolor{myfrozen} 7B\freeze& \cellcolor{myupdate}Transformer & \cellcolor{myupdate}31M\update	 &	\cellcolor{myfrozen}SD 	& \cellcolor{myfrozen}1.3B\freeze	 \\
+\multirow{1}{*}{\textbf{Audio}} & \cellcolor{myfrozen}& \cellcolor{myfrozen} & \cellcolor{myupdate}  & \cellcolor{myupdate}  & \multicolumn{1}{r}{\cellcolor{myfrozen} \tiny{(LoRA} }&\multicolumn{1}{l}{\cellcolor{myfrozen} \tiny{33M\update)}}&	\cellcolor{myupdate}Transformer& \cellcolor{myupdate}31M\update  &	\cellcolor{myfrozen}AudioLDM	& \cellcolor{myfrozen}975M\freeze \\
+\multirow{1}{*}{\textbf{Video}} & \multirow{-3}{*}{\cellcolor{myfrozen}ImageBind} & \multirow{-3}{*}{\cellcolor{myfrozen}1.2B\freeze} & \multirow{-3}{*}{\cellcolor{myupdate}Grouping} & \multirow{-3}{*}{\cellcolor{myupdate}28M\update}  & \cellcolor{myfrozen}&\cellcolor{myfrozen} & \cellcolor{myupdate}Transformer &  \cellcolor{myupdate}32M\update & \cellcolor{myfrozen}Zeroscope	& \cellcolor{myfrozen}1.8B\freeze\\
+\hline
+\end{tabular}
+\vspace{-4mm}
+\end{table*}
+
+\begin{table*}[!th]
+\centering
+\fontsize{8}{11}\selectfont
+\setlength{\tabcolsep}{1.5mm}
+\caption{
+\label{tab:image_perp}
+Zero-shot evaluation of image captioning with CIDEr ($\uparrow$) score on NoCaps \cite{AgrawalAD0CJ0BP19}, Flickr 30K \citep{YoungLHH14} and COCO \citep{KarpathyF17}, and image question answering on VQA$^{v2}$ 
+ \cite{GoyalKSBP17}, VizWiz \cite{Gurari0SGLGLB18} and OKVQA \cite{MarinoRFM19}, and two evaluation-only benchmarks, MMB  \cite{abs-2307-06281} and SEED \citep{abs-2307-16125}. 
+ The best results are marked in bold, and the second ones are underlined.
+}
+\vspace{1mm}
+\begin{tabular}{lccccccccc}
+\hline
+\bf \multirow{2}{*}{Model} & \multirow{2}{*}{ \bf Version} &  \multicolumn{3}{c}{\bf Image Captioning} & \multicolumn{3}{c}{\bf Image Question Answering} & \multicolumn{2}{c}{\bf Comprehensive} \\
+\cmidrule(r){3-5} \cmidrule(r){6-8} \cmidrule(r){9-10}
+& & \bf NoCaps & \bf Flickr 30K & \bf COCO & \bf  VQA$^{v2}$  & \bf VizWiz & \bf  OKVQA   & \bf MMB & \bf SEED\\
+\hline
+InstructBLIP \citep{abs-2305-06500} & Vicuna-7B &  \underline{123.1} & 82.4 & 102.2 & - & 33.4 & 33.9 & 36.0 & -  \\
+LLaVA \citep{abs-2304-08485} & LLaMA-2-7B-Chat & 120.7 & \underline{82.7} & - & - & - & -  & 36.2 & -\\
+mPLUG-Owl \citep{abs-2304-14178} & LLaMA-7B &  117.0 & 80.3 & \underline{119.3} & - & 39.0 & -  & 46.6 & \underline{34.0}\\
+Emu \citep{abs-2307-05222}  & LLaMA-7B   & - & - & 117.7  & 40.0 &  35.4 &  34.7 & - & - \\
+DREAMLLM \citep{abs-2309-11499} & Vicuna-7B   & - & - & 115.4 & 56.6 & 45.8  & 44.3 & 49.9 & - \\
+Video-LLaVA \citep{abs-2311-10122} & Vicuna-7B & - & - & - & \textbf{74.7} & \underline{48.1} & - & \textbf{60.9} & -\\
+\cdashline{1-10}
+\rowcolor{bluei} NExT-GPT  & Vicuna-7B &   \bf 123.7 & \bf 84.5 & \bf 124.9  & \underline{66.7} & \textbf{48.4} & \textbf{52.1} & \underline{58.0} & \textbf{57.5}\\
+\hline
+\end{tabular}
+\vspace{-3mm}
+\end{table*}
+
+\begin{table*}[!th]
+\centering
+\fontsize{8}{11}\selectfont
+\setlength{\tabcolsep}{1.5mm}
+\caption{
+\label{tab:video_audio_perp}
+Comparison of video reasoning tasks on MSRVTT \citep{XuMYR16}, MSVD-QA and MSRVTT-QA \cite{XuZX0Z0Z17} and NExTQA \cite{XiaoSYC21}, and the audio captioning task on AudioCaps \citep{KimKLK19}. Scores with $*$ means being fine-tuned on the training dataset.
+}
+\vspace{1mm}
+\begin{tabular}{lcccccc}
+\hline
+\bf \multirow{2}{*}{Model} & \multirow{2}{*}{ \bf Version} &  \bf Video Captioning & \multicolumn{3}{c}{\bf Video Question Answering} & \bf Audio Captioning \\
+\cmidrule(r){3-3} \cmidrule(r){4-6} \cmidrule(r){7-7}
+& & \bf  MSR-VTT & \bf MSVD-QA & \bf MSRVTT-QA & \bf  NExTQA  & \bf AudioCaps \\
+\hline
+Codi \citep{abs-2305-11846} & - & \underline{74.4}$^*$ & - & - & - & \underline{78.9}$^*$ \\
+UIO-2XXL \citep{abs-2312-17172} & 6.8B & 48.8$^*$ &  41.5 &  52.1 & - & 48.9$^*$  \\
+Video-LLaMA \cite{abs-2306-02858} &  LLaMA-7B & - & 51.6 & -  & \underline{29.6} & - \\
+Video-LLaVA \citep{abs-2311-10122} & Vicuna-7B & - & \textbf{70.7} & \underline{59.2} & - & -\\
+Emu \citep{abs-2307-05222}  & LLaMA-7B   & - & 32.4 & 14.0  &  6.8 &  -  \\
+\cdashline{1-7}
+\rowcolor{bluei} NExT-GPT  & Vicuna-7B &   \bf \textbf{76.2}$^*$ & \underline{64.5 }& \textbf{61.4 } & \textbf{50.7} & \textbf{81.3}$^*$  \\
+\hline
+\end{tabular}
+\vspace{-3mm}
+\end{table*}
+
+\end{document}

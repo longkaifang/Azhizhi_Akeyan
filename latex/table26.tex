@@ -1,0 +1,145 @@
+\documentclass[letterpaper]{article} % DO NOT CHANGE THIS
+\usepackage[submission]{aaai2026}  % DO NOT CHANGE THIS
+\usepackage{times}  % DO NOT CHANGE THIS
+\usepackage{helvet}  % DO NOT CHANGE THIS
+\usepackage{courier}  % DO NOT CHANGE THIS
+\usepackage[hyphens]{url}  % DO NOT CHANGE THIS
+\usepackage{graphicx} % DO NOT CHANGE THIS
+\urlstyle{rm} % DO NOT CHANGE THIS
+\def\UrlFont{\rm}  % DO NOT CHANGE THIS
+\usepackage{natbib}  % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\usepackage{caption} % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\frenchspacing  % DO NOT CHANGE THIS
+\setlength{\pdfpagewidth}{8.5in} % DO NOT CHANGE THIS
+\setlength{\pdfpageheight}{11in} % DO NOT CHANGE THIS
+%
+% These are recommended to typeset algorithms but not required. See the subsubsection on algorithms. Remove them if you don't have algorithms in your paper.
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\usepackage{pifont} %182/183/184
+\usepackage{subcaption}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{booktabs}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{verbatim}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{colortbl}
+\usepackage{booktabs,makecell, multirow, tabularx}
+\usepackage{adjustbox}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{amsmath}
+
+\usepackage{booktabs}
+\usepackage{amssymb}
+\usepackage{bbding}
+\usepackage{pifont}
+\usepackage{wasysym}
+\usepackage{utfsym}
+\usepackage{fontawesome}
+\usepackage{mdframed}
+
+\usepackage{arydshln}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\definecolor{mylightblue}{rgb}{0.68, 0.85, 0.9}
+\definecolor{mywheat}{rgb}{0.96, 0.87, 0.7}
+\begin{document}
+
+\begin{table*}[t]
+    \centering
+    % \renewcommand{\arraystretch}{1.1}
+    \resizebox{15cm}{!}{
+    \begin{tabular}{l c cccccccccccc}
+        \toprule
+          \multirow{2}{*}{\bf Models}& \multirow{2}{*}{\bf Settings}& \multicolumn{4}{c}{\bf Level 1} & \multicolumn{4}{c}{\bf Level 2} & \multicolumn{4}{c}{\bf Level 3}\\
+           \cmidrule(lr){3-6} \cmidrule(lr){7-10}  \cmidrule(lr){11-14}
+          & & ${\rm P}(t)$  & ${\rm AC}(t)$ & ${\rm R}(t)$ & ${\rm Acc}(t)$ & ${\rm P}(t)$  & ${\rm AC}(t)$ & ${\rm R}(t)$ & ${\rm Acc}(t)$ & ${\rm P}(t)$  & ${\rm AC}(t)$ & ${\rm R}(t)$ & ${\rm Acc}(t)$ \\
+         \midrule \multicolumn{14}{c}{\textbf{Airline}} \\
+         \midrule
+           \multirow{2}{*}{Llama-3.1 70B} & 0-shot & 1.000 & 0.764 & 0.558 & 0.01 & 1.000 & 0.732 & 0.535 & 0.01 & 1.000 & 0.752 & 0.578 & 0.00 \\
+           & 1-shot & 1.000 & 0.809 & 0.787 & 0.17 & 1.000 & 0.827 & 0.801 & 0.07 & 1.000 & 0.769 & 0.815 & 0.01 \\
+           \hdashline
+           \multirow{2}{*}{Qwen-2.5 72B} & 0-shot & 1.000 & 0.636 & 0.586 & 0.01 & 1.000 & 0.627 & 0.554 & 0.01 & 1.000 & 0.588 & 0.544 & 0.00 \\
+           & 1-shot & 1.000 & 0.836 & 0.908 & 0.19 & 1.000 & 0.818 & \colorbox{mylightblue}{0.901} & 0.10 & 1.000 & 0.801 & 0.904 & 0.01 \\
+           \hdashline
+           \multirow{2}{*}{Llama-3.1 405B} & 0-shot & 1.000 & 0.854 & 0.604 & 0.03 & 1.000 & 0.844 & 0.587 & 0.06 & 1.000 & 0.845 & 0.570 & 0.01 \\
+           & 1-shot & 1.000 & 0.919 & \colorbox{mywheat}{\textbf{0.921}} & 0.32 & 1.000 & 0.897 & \colorbox{mywheat}{\textbf{0.905}} & 0.16 & 1.000 & 0.870 & \colorbox{mywheat}{\textbf{0.946}} & 0.04 \\
+           \hdashline
+           \multirow{2}{*}{Claude-3.5 Sonnet} & 0-shot & 1.000 & 0.930 & 0.702 & 0.04 & 1.000 & 0.876 & 0.669 & 0.00 & 1.000 & 0.888 & 0.646 & 0.01 \\
+           & 1-shot & 1.000 & 0.960 & 0.871 & 0.29 & 1.000 & \colorbox{mywheat}{\textbf{0.966}} & 0.822 & 0.30 & 1.000 & \colorbox{mywheat}{\textbf{0.972}} & 0.718 & 0.11 \\
+           \hdashline
+           \multirow{2}{*}{GPT-4o} & 0-shot & 1.000 & 0.862 & 0.616 & 0.02 & 1.000 & 0.868 & 0.578 & 0.00 & 1.000 & 0.813 & 0.548 & 0.00 \\
+           & 1-shot & 1.000 & 0.922 & 0.885 & 0.32 & 1.000 & 0.875 & 0.853 & 0.16 & 1.000 & 0.835 & 0.798 & 0.05 \\
+           \hdashline
+           \multirow{2}{*}{o1-preview} & 0-shot & 1.000 & \colorbox{mylightblue}{0.968} & 0.888 & \colorbox{mylightblue}{0.54} & 1.000 & 0.950 & 0.881 & \colorbox{mylightblue}{0.37} & 1.000 & 0.958 & 0.855 & \colorbox{mylightblue}{0.21} \\
+           & 1-shot & 1.000 & \colorbox{mywheat}{\textbf{0.971}} & \colorbox{mylightblue}{0.911} & \colorbox{mywheat}{\textbf{0.63}} & 1.000 & \colorbox{mylightblue}{0.963} & \colorbox{mylightblue}{0.901} & \colorbox{mywheat}{\textbf{0.55}} & 1.000 & \colorbox{mylightblue}{0.961} & \colorbox{mylightblue}{0.929} & \colorbox{mywheat}{\textbf{0.46}} \\
+           \midrule \multicolumn{14}{c}{\textbf{NBA Transaction}} \\
+         \midrule
+           \multirow{2}{*}{Llama-3.1 70B} & 0-shot & 0.579 & -- & 0.428 & 0.40 & 0.498 & -- & 0.246 & 0.36 & 0.540 & -- & 0.250 & 0.22 \\
+           & 1-shot & 0.560 & -- & \colorbox{mywheat}{\textbf{0.565}} & 0.49 & 0.466 & -- & 0.386 & 0.25 & 0.578 & -- & \colorbox{mylightblue}{0.438} & 0.26 \\
+           \hdashline
+           \multirow{2}{*}{Qwen-2.5 72B} & 0-shot & 0.556 & -- & 0.409 & 0.44 & 0.537 & -- & 0.339 & \colorbox{mylightblue}{0.43} & 0.592 & -- & 0.305 & \colorbox{mywheat}{\textbf{0.30}} \\
+           & 1-shot & 0.595 & -- & 0.526 & 0.53 & 0.495 & -- & 0.378 & 0.35 & 0.574 & -- & 0.327 & 0.17 \\
+           \hdashline
+           \multirow{2}{*}{Llama-3.1 405B} & 0-shot & 0.581 & -- & 0.419 & 0.49 & 0.577 & -- & 0.323 & 0.30 & 0.561 & -- & 0.297 & \colorbox{mylightblue}{0.28} \\
+           & 1-shot & 0.608 & -- & \colorbox{mylightblue}{0.550} & \colorbox{mylightblue}{0.56} & 0.559 & -- & \colorbox{mylightblue}{0.439} & 0.29 & 0.575 & -- & \colorbox{mywheat}{\textbf{0.461}} & 0.10 \\
+           \hdashline
+           \multirow{2}{*}{Claude-3.5 Sonnet} & 0-shot & 0.660 & -- & 0.457 & 0.38 & 0.630 & -- & 0.373 & 0.40 & 0.588 & -- & 0.292 & \colorbox{mylightblue}{0.28} \\
+           & 1-shot & 0.676 & -- & 0.528 & \colorbox{mywheat}{\textbf{0.58}} & 0.676 & -- & 0.410 & \colorbox{mywheat}{\textbf{0.47}} & 0.650 & -- & 0.371 & 0.26 \\
+           \hdashline
+           \multirow{2}{*}{GPT-4o} & 0-shot & 0.650 & -- & 0.446 & 0.40 & 0.570 & -- & 0.327 & 0.26 & 0.603 & -- & 0.291 & 0.24 \\
+           & 1-shot & 0.616 & -- & 0.506 & 0.40 & 0.597 & -- & 0.392 & 0.28 & 0.569 & -- & 0.318 & 0.20 \\
+           \hdashline
+           \multirow{2}{*}{o1-preview} & 0-shot & \colorbox{mywheat}{\textbf{0.742}} & -- & 0.502 & 0.44 & \colorbox{mylightblue}{0.707} & -- & 0.430 & \colorbox{mywheat}{\textbf{0.47}} & \colorbox{mywheat}{\textbf{0.747}} & -- & 0.415 & 0.24 \\
+           & 1-shot & \colorbox{mylightblue}{0.731} & -- & \colorbox{mywheat}{\textbf{0.565}} & \colorbox{mywheat}{\textbf{0.58}} & \colorbox{mywheat}{\textbf{0.715}} & -- & \colorbox{mywheat}{\textbf{0.512}} & 0.40 & \colorbox{mylightblue}{0.724} & -- & 0.413 & 0.20 \\
+           \midrule \multicolumn{14}{c}{\textbf{Tax}} \\
+         \midrule
+           \multirow{2}{*}{Llama-3.1 70B} & 0-shot & 1.000 & 0.834 & 0.989 & 0.01 & 1.000 & 0.767 & 0.918 & 0.00 & 1.000 & 0.745 & 0.852 & 0.00 \\
+           & 1-shot & 1.000 & 0.923 & 0.998 & 0.11 & 1.000 & 0.895 & 0.941 & 0.00 & 1.000 & 0.873 & 0.910 & 0.00 \\
+           \hdashline
+           \multirow{2}{*}{Qwen-2.5 72B} & 0-shot & 1.000 & 0.888 & 0.998 & 0.10 & 1.000 & 0.835 & 0.944 & 0.01 & 1.000 & 0.785 & 0.903 & 0.00 \\
+           & 1-shot & 1.000 & 0.931 & \colorbox{mywheat}{\textbf{1.000}} & 0.17 & 1.000 & 0.919 & 0.934 & 0.00 & 1.000 & 0.921 & 0.868 & 0.00 \\
+           \hdashline
+           \multirow{2}{*}{Llama-3.1 405B} & 0-shot & 1.000 & 0.923 & \colorbox{mylightblue}{0.999} & 0.16 & 1.000 & 0.876 & 0.964 & 0.02 & 1.000 & 0.797 & 0.926 & 0.00 \\
+           & 1-shot & 1.000 & 0.941 & \colorbox{mywheat}{\textbf{1.000}} & 0.24 & 1.000 & 0.914 & 0.958 & 0.03 & 1.000 & 0.873 & 0.880 & 0.00 \\
+           \hdashline
+           \multirow{2}{*}{Claude-3.5 Sonnet} & 0-shot & 1.000 & 0.964 & \colorbox{mywheat}{\textbf{1.000}} & 0.32 & 1.000 & 0.934 & 0.940 & 0.02 & 1.000 & 0.887 & 0.866 & 0.00 \\
+           & 1-shot & 1.000 & 0.979 & \colorbox{mywheat}{\textbf{1.000}} & 0.64 & 1.000 & 0.954 & 0.969 & 0.16 & 1.000 & 0.895 & 0.888 & 0.00 \\
+\hdashline
+\multirow{2}{*}{GPT-4o} & 0-shot & 1.000 & 0.965 & \colorbox{mywheat}{\textbf{1.000}} & 0.42 & 1.000 & 0.951 & 0.957 & 0.07 & 1.000 & \colorbox{mylightblue}{0.945} & 0.908 & 0.00 \\
+& 1-shot & 1.000 & 0.975 & \colorbox{mywheat}{\textbf{1.000}} & 0.57 & 1.000 & \colorbox{mywheat}{\textbf{0.975}} & 0.944 & 0.07 & 1.000 & \colorbox{mywheat}{\textbf{0.982}} & 0.893 & 0.00 \\
+\hdashline
+\multirow{2}{*}{o1-preview} & 0-shot & 1.000 & \colorbox{mylightblue}{0.992} & \colorbox{mywheat}{\textbf{1.000}} & \colorbox{mywheat}{\textbf{0.72}} & 1.000 & 0.945 & \colorbox{mylightblue}{0.981} & \colorbox{mylightblue}{0.28} & 1.000 & 0.914 & \colorbox{mywheat}{\textbf{0.976}} & \colorbox{mylightblue}{0.19} \\
+& 1-shot & 1.000 & \colorbox{mywheat}{\textbf{0.994}} & \colorbox{mywheat}{\textbf{1.000}} & \colorbox{mylightblue}{0.68} & 1.000 & \colorbox{mylightblue}{0.960} & \colorbox{mywheat}{\textbf{0.994}} & \colorbox{mywheat}{\textbf{0.33}} & 1.000 & 0.894 & \colorbox{mylightblue}{0.939} & \colorbox{mywheat}{\textbf{0.24}} \\
+\bottomrule
+\end{tabular}}
+    \vspace{-4pt}
+    \caption{Main problem-wise evaluation results on airline, NBA, and tax domains.}
+\end{table*}
+
+\end{document}

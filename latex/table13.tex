@@ -1,0 +1,152 @@
+\documentclass[letterpaper]{article} % DO NOT CHANGE THIS
+\usepackage[submission]{aaai2026}  % DO NOT CHANGE THIS
+\usepackage{times}  % DO NOT CHANGE THIS
+\usepackage{helvet}  % DO NOT CHANGE THIS
+\usepackage{courier}  % DO NOT CHANGE THIS
+\usepackage[hyphens]{url}  % DO NOT CHANGE THIS
+\usepackage{graphicx} % DO NOT CHANGE THIS
+\urlstyle{rm} % DO NOT CHANGE THIS
+\def\UrlFont{\rm}  % DO NOT CHANGE THIS
+\usepackage{natbib}  % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\usepackage{caption} % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\frenchspacing  % DO NOT CHANGE THIS
+\setlength{\pdfpagewidth}{8.5in} % DO NOT CHANGE THIS
+\setlength{\pdfpageheight}{11in} % DO NOT CHANGE THIS
+%
+% These are recommended to typeset algorithms but not required. See the subsubsection on algorithms. Remove them if you don't have algorithms in your paper.
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\usepackage{pifont} %182/183/184
+\usepackage{subcaption}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{booktabs}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{verbatim}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{colortbl}
+\usepackage{booktabs,makecell, multirow, tabularx}
+\usepackage{adjustbox}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{amsmath}
+
+\usepackage{booktabs}
+\usepackage{amssymb}
+\usepackage{bbding}
+\usepackage{pifont}
+\usepackage{wasysym}
+\usepackage{utfsym}
+\usepackage{fontawesome}
+
+\usepackage{mdframed}
+\usepackage[table]{xcolor}
+\usepackage{colortbl}
+%\rowcolor{blue!20}
+\begin{document}
+
+% %%%%%%%%%%%%%%%%%%%   MVTec 3D-AD (I-AUROC)
+% \checkmark \Checkmark
+% \XSolidBrush  \XSolidBrush
+% \cmidrule{1-8} 横线
+
+% \usepackage{arydshln}虚线宏包  
+%\hdashline
+%\cdashline{2-3} % 第二、三列虚线
+
+%左 $\leftarrow$，右 $\rightarrow$，上 $\uparrow$，下 $\downarrow$
+
+%整行填充颜色
+%\usepackage[table]{xcolor}
+%\usepackage{colortbl}
+%\rowcolor{blue!20}
+
+%合并行和列
+%\multicolumn{2}{c|}{\multirow{2}{*}{Method}}
+
+%定义颜色
+%\definecolor{color_gray}{RGB}{229,229,229}
+%\cellcolor{color_blue} 
+
+\begin{table*}[ht!]
+\centering
+\setlength{\tabcolsep}{2.8mm} %2.2mm
+\renewcommand{\arraystretch}{1}
+\adjustbox{width=1\linewidth}{
+   \begin{tabular}{clcc ccc ccc ccc c}
+       \toprule               
+&Properties &Sintel& Sceneflow  & CREStereo  &IRS  & TartanAir  &FallingThings  &UnrealStereo4K  & Spring  &FSD (Ours) \\
+%%%%%%%%%%%%%%
+\midrule[0.5pt]  
+\multirow{5}{*}{\rotatebox{90}{RGB}}     &Flying Objects  &\textcolor{red}{\XSolidBrush} &\Checkmark &\textcolor{green}{\Checkmark} &\textcolor{red}{\XSolidBrush} &\textcolor{red}{\XSolidBrush} &\textcolor{red}{\XSolidBrush} &\textcolor{red}{\XSolidBrush} &\textcolor{red}{\XSolidBrush} &\textcolor{green}{\Checkmark} \\
+&Indoor  &\textcolor{red}{\XSolidBrush} &\Checkmark &\textcolor{green}{\Checkmark} &\textcolor{red}{\XSolidBrush} &\textcolor{red}{\XSolidBrush} &\textcolor{red}{\XSolidBrush} &\textcolor{red}{\XSolidBrush} &\textcolor{red}{\XSolidBrush} &\textcolor{green}{\Checkmark} \\
+&Outdoor  &\textcolor{red}{\XSolidBrush} &\Checkmark &\textcolor{green}{\Checkmark} &\textcolor{red}{\XSolidBrush} &\textcolor{red}{\XSolidBrush} &\textcolor{red}{\XSolidBrush} &\textcolor{red}{\XSolidBrush} &\textcolor{red}{\XSolidBrush} &\textcolor{green}{\Checkmark} \\
+&Driving  &\textcolor{red}{\XSolidBrush} &\Checkmark &\textcolor{green}{\Checkmark} &\textcolor{red}{\XSolidBrush} &\textcolor{red}{\XSolidBrush} &\textcolor{red}{\XSolidBrush} &\textcolor{red}{\XSolidBrush} &\textcolor{red}{\XSolidBrush} &\textcolor{green}{\Checkmark} \\
+&Movie  &\textcolor{red}{\XSolidBrush} &\Checkmark &\textcolor{green}{\Checkmark} &\textcolor{red}{\XSolidBrush} &\textcolor{red}{\XSolidBrush} &\textcolor{red}{\XSolidBrush} &\textcolor{red}{\XSolidBrush} &\textcolor{red}{\XSolidBrush} &\textcolor{Yellow}{\Checkmark} \\
+\rowcolor{gray!20}\multicolumn{2}{c}{Simulator}&Blender&Blender&Blender&Unreal Engine&Unreal Engine&Unreal Engine&Unreal Engine&Blender&NVIDIA Omniverse\\
+\multicolumn{2}{c}{Rendering Realism}&\textcolor{green}{High}&\textcolor{green}{High}&\textcolor{red}{Low}&\textcolor{Yellow}{High}&\textcolor{red}{Low}&\textcolor{green}{High}&\textcolor{green}{High}&\textcolor{Yellow}{High}&\textcolor{red}{Low}\\
+\rowcolor{gray!20}\multicolumn{2}{c}{Simulator}&Blender&Blender&Blender&Unreal Engine&Unreal Engine&Unreal Engine&Unreal Engine&Blender&NVIDIA Omniverse\\
+\multicolumn{2}{c}{Rendering Realism}&\textcolor{green}{High}&\textcolor{green}{High}&\textcolor{red}{Low}&\textcolor{Yellow}{High}&\textcolor{red}{Low}&\textcolor{green}{High}&\textcolor{green}{High}&\textcolor{Yellow}{High}&\textcolor{red}{Low}\\
+\rowcolor{gray!20}\multicolumn{2}{c}{Simulator}&Blender&Blender&Blender&Unreal Engine&Unreal Engine&Unreal Engine&Unreal Engine&Blender&NVIDIA Omniverse\\
+\multicolumn{2}{c}{\multirow{2}{*}{Camera Params}}&\multirow{2}{*}{Constant}&\multirow{2}{*}{Constant}&\multirow{2}{*}{Constant}&\multirow{2}{*}{Constant}&\multirow{2}{*}{Constant}&\multirow{2}{*}{Constant}&\multirow{2}{*}{Constant}&Constant baseline&Varying baseline\\
+&&&&&&&&&varying intrinsics&and intrinsics\\
+             \bottomrule
+       \end{tabular}
+   }
+   \caption{The caption results, caption results, caption results, caption results.}
+\end{table*}
+
+\begin{table}[ht!]
+\centering
+%\footnotesize
+%\tiny
+%\Large
+\setlength{\tabcolsep}{2.8mm} %2.2mm
+\renewcommand{\arraystretch}{1}
+\adjustbox{width=1\linewidth}{
+   \begin{tabular}{lcc ccc ccc ccc c}
+       \toprule               
+Method &Zero-Shot&  BP-0.5 & BP-1.0 &EPE&EPE\\
+%%%%%%%%%%%%%%
+\midrule[0.5pt]  GMStereo&\textcolor{red}{\XSolidBrush} &0.00&0.00&0.00&0.00\\
+HITNet&\textcolor{red}{\XSolidBrush} &0.00&0.00&0.00&0.00\\
+EAI-Stereo&\textcolor{red}{\XSolidBrush} &0.00&0.00&0.00&0.00\\
+RAFT-Stereo&\textcolor{red}{\XSolidBrush} &0.00&0.00&0.00&0.00\\
+GMStereo&\textcolor{red}{\XSolidBrush} &0.00&0.00&0.00&0.00\\
+CREStereo&\textcolor{red}{\XSolidBrush} &0.00&0.00&0.00&0.00\\
+IGEV-Stereo&\textcolor{red}{\XSolidBrush} &0.00&0.00&0.00&0.00\\
+CroCo-Stereo&\textcolor{red}{\XSolidBrush} &0.00&0.00&0.00&0.00\\
+MoCha-Stereo&\textcolor{red}{\XSolidBrush} &0.00&0.00&0.00&0.00\\
+Selective-IGEV&\textcolor{red}{\XSolidBrush} &0.00&0.00&0.00&0.00\\
+\rowcolor{green!10}Ours (finetuned)&\textcolor{red}{\XSolidBrush} &0.00&0.00&0.00&0.00\\
+\midrule[0.5pt] 
+\rowcolor{green!10}Ours&\textcolor{green}{\Checkmark} &0.00&0.00&0.00&0.00\\
+             \bottomrule
+       \end{tabular}
+   }
+   \caption{The caption results, caption results, caption results, caption results.}
+\end{table}
+\end{document}
+
+%&\textcolor{green}{\Checkmark}

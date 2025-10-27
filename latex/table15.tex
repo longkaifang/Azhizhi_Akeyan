@@ -1,0 +1,183 @@
+\documentclass[letterpaper]{article} % DO NOT CHANGE THIS
+\usepackage[submission]{aaai2026}  % DO NOT CHANGE THIS
+\usepackage{times}  % DO NOT CHANGE THIS
+\usepackage{helvet}  % DO NOT CHANGE THIS
+\usepackage{courier}  % DO NOT CHANGE THIS
+\usepackage[hyphens]{url}  % DO NOT CHANGE THIS
+\usepackage{graphicx} % DO NOT CHANGE THIS
+\urlstyle{rm} % DO NOT CHANGE THIS
+\def\UrlFont{\rm}  % DO NOT CHANGE THIS
+\usepackage{natbib}  % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\usepackage{caption} % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\frenchspacing  % DO NOT CHANGE THIS
+\setlength{\pdfpagewidth}{8.5in} % DO NOT CHANGE THIS
+\setlength{\pdfpageheight}{11in} % DO NOT CHANGE THIS
+%
+% These are recommended to typeset algorithms but not required. See the subsubsection on algorithms. Remove them if you don't have algorithms in your paper.
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\usepackage{pifont} %182/183/184
+\usepackage{subcaption}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{booktabs}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{verbatim}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{colortbl}
+\usepackage{booktabs,makecell, multirow, tabularx}
+\usepackage{adjustbox}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{amsmath}
+
+\usepackage{booktabs}
+\usepackage{amssymb}
+\usepackage{bbding}
+\usepackage{pifont}
+\usepackage{wasysym}
+\usepackage{utfsym}
+\usepackage{fontawesome}
+
+\usepackage{mdframed}
+\begin{document}
+
+% %%%%%%%%%%%%%%%%%%%   MVTec 3D-AD (I-AUROC)
+%\checkmark
+%\XSolidBrush
+% \cmidrule{1-8} 横线
+
+% \usepackage{arydshln}虚线宏包  
+%\hdashline
+%\cdashline{2-3} % 第二、三列虚线
+
+%左 $\leftarrow$，右 $\rightarrow$，上 $\uparrow$，下 $\downarrow$
+
+%整行填充颜色
+%\usepackage[table]{xcolor}
+%\usepackage{colortbl}
+%\rowcolor{blue!20}
+
+%合并行和列
+%\multicolumn{2}{c|}{\multirow{2}{*}{Method}}
+%\multicolumn{2}{c|}{Method}
+
+\frenchspacing
+%定义颜色
+\definecolor{color1}{RGB}{250, 237, 196}
+\cellcolor{color1} 
+\definecolor{color2}{RGB}{245, 196, 196}
+\cellcolor{color2} 
+\begin{table*}[ht!]
+\centering
+\setlength{\tabcolsep}{2.8mm} %2.2mm
+\renewcommand{\arraystretch}{1}
+\adjustbox{width=1\linewidth}{
+   \begin{tabular}{ll cccccc cccccc cccccc}
+       \toprule
+         \multirow{2}{*}{Dataset}
+                &\multirow{2}{*}{Method}
+                &\multicolumn{3}{c}{Scale-invariant RMSE $\downarrow$}
+                 &\multicolumn{3}{c}{Angular Error $\downarrow$}
+                  &\multicolumn{3}{c}{Normalized RMSE $\downarrow$}\\
+%%%%%%%%%%                 
+            &&Diffuse  &Matte  &Mirror  &Diffuse  &Matte  &Mirror  &Diffuse  &Matte  &Mirror\\
+%%%%%%%%%%%%%%
+\midrule[0.5pt]       
+           Laval Indoor  &StyleLight (reported by the paper) &00.0 &00.0 &00.0&00.0 &00.0 &00.0 &00.0&00.0 &00.0\\
+\midrule[0.5pt] 
+\multirow{5}{*}{Laval Indoor}&StyleLight (reported by the paper) &00.0 &00.0 &00.0&00.0 &00.0 &00.0 &\cellcolor{color1}00.0&00.0 &00.0\\
+&StyleLight  &00.0 &00.0 &00.0&\cellcolor{color1}00.0 &00.0 &00.0 &00.0&00.0 &00.0\\
+&StyleLight  &\cellcolor{color1}00.0 &00.0 &00.0&00.0 &00.0 &00.0 &00.0&00.0 &00.0\\
+&StyleLight  &00.0 &00.0 &\cellcolor{color1}00.0&00.0 &00.0 &00.0 &00.0&00.0 &00.0\\
+&StyleLight  &00.0 &00.0 &00.0&00.0 &00.0 &00.0 &00.0&00.0 &00.0\\
+\midrule[0.5pt] 
+\multirow{5}{*}{Laval Indoor}&StyleLight (reported by the paper) &00.0 &00.0 &00.0&00.0 &00.0 &00.0 &\cellcolor{color2}00.0&00.0 &00.0\\
+&StyleLight  &00.0 &00.0 &00.0&00.0 &00.0 &\cellcolor{color2}00.0 &00.0&\cellcolor{color2}00.0 &00.0\\
+&StyleLight  &\cellcolor{color2}00.0 &00.0 &00.0&00.0 &00.0 &00.0 &00.0&00.0 &00.0\\
+&StyleLight  &00.0 &00.0 &00.0&00.0 &00.0 &00.0 &\cellcolor{color2}00.0&00.0 &00.0\\
+&StyleLight  &00.0 &\cellcolor{color1}00.0 &00.0&00.0 &00.0 &00.0 &00.0&00.0 &00.0\\
+             \bottomrule
+       \end{tabular}
+   }
+   \caption{The caption results, caption results, caption results, caption results.}
+\end{table*}
+
+
+\begin{table}[ht!]
+\centering
+\setlength{\tabcolsep}{2.8mm} %2.2mm
+\renewcommand{\arraystretch}{1}
+\adjustbox{width=1\linewidth}{
+   \begin{tabular}{ll cccccc cccccc cccccc}
+       \toprule
+         \multirow{2}{*}{Dataset}
+        &\multirow{2}{*}{Method}
+        &\multirow{2}{*}{si-RMSE$\downarrow$}
+        &Angular$\downarrow$&Normalized$\downarrow$\\
+%%%%%%%%%%                 
+            &&&Error  &RMSE      \\
+%%%%%%%%%%%%%%
+\midrule[0.5pt]       
+           Diffuse  &StyleLight  &00.0&00.0 &00.0\\
+          &  StyleLight  &\cellcolor{color1}00.0&00.0 &\cellcolor{color1}00.0\\
+           Diffuse  &StyleLight  &00.0&00.0 &00.0\\
+          &  StyleLight  &00.0&00.0 &\cellcolor{color1}00.0\\
+               Diffuse  &StyleLight  &00.0&00.0 &00.0\\
+          &  StyleLight  &00.0&00.0 &00.0\\
+             \bottomrule
+       \end{tabular}
+   }
+   \caption{The caption results, caption results, caption results, caption results.}
+\end{table}
+
+
+\begin{table}[]
+\centering
+\small
+\begin{tabular}{
+    c@{\hspace{5pt}}
+    c@{\hspace{5pt}}
+    c@{\hspace{5pt}}
+    c@{\hspace{5pt}}
+    c@{\hspace{5pt}}
+    c
+}
+\toprule
+\textbf{\begin{tabular}[c]{@{}c@{}}\textbf{\#Iterations}\\ \textbf{($k$)}\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\textbf{\#Balls}\\ \textbf{($N$)}\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\textbf{Time}\\ \textbf{(mins)}\end{tabular}} & \textbf{si-RMSE} $\downarrow$ & \begin{tabular}[c]{@{}c@{}}\textbf{Angular}\\ \textbf{Error}\end{tabular} $\downarrow$ & \begin{tabular}[c]{@{}c@{}}\textbf{Normalized}\\ \textbf{RMSE}\end{tabular} $\downarrow$ \\
+\midrule
+1 & 5  & 2.5 & 0.631 & 5.367 & 0.416\\
+  & 15 & 7.5 & 0.615 & 5.229 & 0.410\\
+  & \textcolor{teal}{30} & \textcolor{teal}{15}  & \textcolor{teal}{0.609} & \textcolor{teal}{5.210} & \textcolor{teal}{0.405}\\
+\hline
+2 & 5  & 5  & 0.634 & 5.393 & 0.417\\
+  & 15 & 15 & 0.615 & 5.263 & 0.409\\
+  & \textcolor{Orchid}{30} & \textcolor{Orchid}{30} & \textcolor{Orchid}{0.607} & \textcolor{Orchid}{5.248} & \textcolor{Orchid}{0.403}\\
+\bottomrule
+\end{tabular}
+\caption{Ablation study on the number of iterations $k$ and balls $N$. We report running time and quality metrics on 200 mirror balls in the validation set. See Figure \ref{fig:ablation_inpainting_ball_iteration} for qualitative results.}
+ \label{tab:plot_time_accuracy}
+\end{table}
+
+\end{document}

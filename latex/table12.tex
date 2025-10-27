@@ -1,0 +1,220 @@
+\documentclass[letterpaper]{article} % DO NOT CHANGE THIS
+\usepackage[submission]{aaai2026}  % DO NOT CHANGE THIS
+\usepackage{times}  % DO NOT CHANGE THIS
+\usepackage{helvet}  % DO NOT CHANGE THIS
+\usepackage{courier}  % DO NOT CHANGE THIS
+\usepackage[hyphens]{url}  % DO NOT CHANGE THIS
+\usepackage{graphicx} % DO NOT CHANGE THIS
+\urlstyle{rm} % DO NOT CHANGE THIS
+\def\UrlFont{\rm}  % DO NOT CHANGE THIS
+\usepackage{natbib}  % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\usepackage{caption} % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\frenchspacing  % DO NOT CHANGE THIS
+\setlength{\pdfpagewidth}{8.5in} % DO NOT CHANGE THIS
+\setlength{\pdfpageheight}{11in} % DO NOT CHANGE THIS
+%
+% These are recommended to typeset algorithms but not required. See the subsubsection on algorithms. Remove them if you don't have algorithms in your paper.
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\usepackage{pifont} %182/183/184
+\usepackage{subcaption}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{booktabs}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{verbatim}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{colortbl}
+\usepackage{booktabs,makecell, multirow, tabularx}
+\usepackage{adjustbox}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{amsmath}
+
+\usepackage{booktabs}
+\usepackage{amssymb}
+\usepackage{bbding}
+\usepackage{pifont}
+\usepackage{wasysym}
+\usepackage{utfsym}
+\usepackage{fontawesome}
+
+\usepackage{mdframed}
+\usepackage{arydshln}
+\usepackage{makecell}
+\usepackage[table]{xcolor}
+\usepackage{colortbl}
+
+\definecolor{mygray}{gray}{0.9}
+\definecolor{mygreen}{RGB}{93,174,86}
+\definecolor{darkgreen}{rgb}{0.0, 0.5, 0.0}
+\definecolor{darkred}{rgb}{1.0, 0.0, 0.0}
+
+
+\begin{document}
+
+\begin{table*}[h]
+    \centering
+        \caption{Comparison of different MLLMs and FarSight across all image benchmarks. Notably, in the Hallucination Benchmark, lower scores on CHAIR$_{I}$ and CHAIR$_{S}$ indicate better performance, while higher scores are preferable for other metrics.}
+    \vspace{-0.15cm}
+    \footnotesize
+    \resizebox{\textwidth}{!}{
+   \setlength{\tabcolsep}{2pt}  % Further
+   \setlength{\extrarowheight}{0pt}
+   \renewcommand{\arraystretch}{1.1} 
+    \begin{tabular}{l|| c c c | c c | c c c c c}
+         \midrule
+        \rowcolor{mygray}
+            \multicolumn{1}{l||}{\cellcolor{mygray}} & \multicolumn{3}{c|}{\cellcolor{mygray}\textbf{Comprehensive Benchmark}} & \multicolumn{2}{c|}{\cellcolor{mygray}\textbf{General VQA}} & \multicolumn{5}{c}{\cellcolor{mygray}\textbf{Hallucination Benchmark}} \\
+        \cline{2-11}
+        \rowcolor{mygray}
+\multicolumn{1}{l||}{\multirow{-2}{*}{\cellcolor{mygray}\textbf{Method}}} & \textbf{MMBench $\uparrow$} & \textbf{LLaVA$^{\mathrm{W}}$} & \textbf{MM-Vet$\uparrow$} & \textbf{VizWiz$\uparrow$} & \textbf{SQA$\uparrow$} & \textbf{CHAIR$_{S}$ $\downarrow$} & \textbf{CHAIR$_{I}$ $\downarrow$} & \textbf{POPE-R$\uparrow$} & \textbf{POPE-P$\uparrow$} & \textbf{POPE-A$\uparrow$} \\
+        \midrule
+        LLaVA-1.5 & 64.3 & 72.5 & 30.5 & 48.5 & 64.5 & 48.0 & 13.9 & 87.0 & 82.8 & 76.6 \\
+        +ICD & 63.1 & 69.7 & 30.4 & 46.9 & 62.8 & 47.7 & 13.6 & 87.9 & 84.0 & 80.2 \\
+        +VCD & 63.9 & 70.9 & 29.5 & 43.4 & 63.3 & 46.8 & 13.2 & 87.0 & 83.5 & 78.1 \\
+        +OPERA & 64.4 & 72.0 & 31.4 & 50.0 & 64.9 & 45.2 & 12.7 & 88.8 & 82.8 & 79.2\\
+        \rowcolor{gray!20} \textbf{+ FarSight (Ours)} & 66.0~\color{blue!60}{({+1.7})} & 74.7~\color{blue!60}{({+2.2})} & 32.5~\color{blue!60}{({+2.0})} & 50.8 ~\color{blue!60}{({+2.3})}& 67.4~\color{blue!60}{({+2.9})} &  41.6~\color{blue!60}{({+6.4})} & 13.2~\color{blue!60}{({+0.7})} & 90.5~\color{blue!60}{({+3.5})} & 86.1~\color{blue!60}{({+3.3})} & 80.4~\color{blue!60}{({+3.8})} \\
+        \cdashline{1-11}
+        InstructBLIP & 43.4 & 58.2 & 25.6 & 33.4 & 62.1 & 55.6 & 24.2 & 88.7 & 81.3 & 74.4 \\
+        \rowcolor{gray!20} \textbf{+ FarSight (Ours)} & 46.5~\color{blue!60}{({+3.1})} & 61.0~\color{blue!60}{({+2.8})} & 27.8~\color{blue!60}{({+2.2})} & 36.0 ~\color{blue!60}{({+2.6})}& 63.4~\color{blue!60}{({+1.3})} & 51.8~\color{blue!60}{({+3.8})} & 23.0~\color{blue!60}{({+1.2})} & 89.5~\color{blue!60}{({+0.8})} & 85.8~\color{blue!60}{({+4.5})} & 76.7~\color{blue!60}{({+2.3})} \\
+
+        Video-LLaVA  & 60.9 & 73.1 & 32.0 & 48.1 & 64.6 & 50.2 & 15.6 & 81.6 & 85.3 & 86.2 \\
+        \rowcolor{gray!20} \textbf{+ FarSight (Ours)} & 62.8~\color{blue!60}{({+1.9})} & 74.5~\color{blue!60}{({+1.4})} & 32.8~\color{blue!60}{({+0.8})} & 50.3~\color{blue!60}{({+2.2})} & 66.2~\color{blue!60}{({+1.6})} & 44.8~\color{blue!60}{({+5.4})} & 12.9~\color{blue!60}{({+2.7})} & 83.2~\color{blue!60}{({+1.6})} & 85.8~\color{blue!60}{({+0.5})} & 87.1~\color{blue!60}{({+0.9})} \\
+
+        Chat-UniVi & 56.3 & 70.4 & 28.3 & 46.9 & 59.9 & 52.3 &  16.7 & 85.1 & 69.5 & 64.4 \\
+        \rowcolor{gray!20} \textbf{+ FarSight (Ours)} & 59.8~\color{blue!60}{({+3.5})} & 72.6 ~\color{blue!60}{({+2.2})}& 30.7~\color{blue!60}{({+2.4})} & 48.2~\color{blue!60}{({+1.3})} & 62.4~\color{blue!60}{({+2.5})} & 48.9~\color{blue!60}{({+3.4})} & 15.2~\color{blue!60}{({+1.5})} & 87.4~\color{blue!60}{({+2.3})} & 69.7~\color{blue!60}{({+0.2})} & 65.3~\color{blue!60}{({+0.9})} \\
+        \midrule
+    \end{tabular}}
+    % \vspace{-0.1cm}
+    \label{image_result}
+\end{table*}
+
+
+
+
+
+
+
+%定义颜色
+\definecolor{mycolor}{RGB}{178, 189, 234}
+\cellcolor{mycolor} 
+\begin{table*}[ht!]
+\centering
+\setlength{\tabcolsep}{2.8mm} %2.2mm
+\renewcommand{\arraystretch}{1}
+\adjustbox{width=1\linewidth}{
+   \begin{tabular}{l||ccc|cc|ccccc}
+       \toprule
+\multirow{2}{*}{\cellcolor{mycolor}\raisebox{1ex}{Method}}
+&\multicolumn{3}{c|}{\cellcolor{mycolor}Comprehensive Benchmark } &\multicolumn{2}{c|}{\cellcolor{mycolor}Comprehensive Benchmark } &\multicolumn{5}{c}{\cellcolor{mycolor}Comprehensive Benchmark }  \\
+%%%%%%%%%%                 
+\cellcolor{mycolor}&\cellcolor{mycolor}MMBench$\uparrow$ &\cellcolor{mycolor}LLaVA$^W$ &\cellcolor{mycolor}MM-Vet$\uparrow$  &\cellcolor{mycolor}VizWiz$\uparrow$  &\cellcolor{mycolor}SQA$\uparrow$  &\cellcolor{mycolor}LLaVA$_S\downarrow$  &\cellcolor{mycolor}CHAIR$_I\downarrow$  &\cellcolor{mycolor}POPE-R$\uparrow$ &\cellcolor{mycolor}POPE-P$\uparrow$  &\cellcolor{mycolor}POPE-A$\uparrow$  \\
+%%%%%%%%%%%%%%
+\midrule[0.5pt]     
+           LLaVA-1.5  &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            +ICD   &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            +VCD   &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            +OPERA    &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            \cellcolor{gray!20}\textbf{+ FarSight (Ours)}  &\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7}) &\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0(\textcolor{blue}{+1.7})\\
+            \hdashline
+            +OPERA    &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            \cellcolor{gray!20}\textbf{+ FarSight (Ours)}  &\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7}) &\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0(\textcolor{blue}{+1.7})\\
+            \hdashline
+            +OPERA    &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            \cellcolor{gray!20}\textbf{+ FarSight (Ours)}  &\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7}) &\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0(\textcolor{blue}{+1.7})\\
+            \hdashline
+            +OPERA    &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            \cellcolor{gray!20}\textbf{+ FarSight (Ours)}  &\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7}) &\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0(\textcolor{blue}{+1.7})\\
+             \bottomrule
+       \end{tabular}
+   }
+   \caption{The caption results, caption results, caption results, caption results.}
+\end{table*}
+
+
+\begin{table*}[ht!]
+\centering
+\setlength{\tabcolsep}{2.8mm} %2.2mm
+\renewcommand{\arraystretch}{1}
+\adjustbox{width=1\linewidth}{
+   \begin{tabular}{l||ccc|cc|ccccc}
+       \toprule
+\rowcolor{gray!20}\multirow{2}{*}{\raisebox{1ex}{Method}}
+&\multicolumn{3}{c|}{Comprehensive Benchmark } &\multicolumn{2}{c|}{Comprehensive Benchmark } &\multicolumn{5}{c}{Comprehensive Benchmark }  \\
+%%%%%%%%%%                 
+\rowcolor{gray!20}&MMBench$\uparrow$ &LLaVA$^W$ &MM-Vet$\uparrow$  &VizWiz$\uparrow$  &SQA$\uparrow$  &LLaVA$_S\downarrow$  &CHAIR$_I\downarrow$  &POPE-R$\uparrow$ &POPE-P$\uparrow$  &POPE-A$\uparrow$  \\
+%%%%%%%%%%%%%%
+\midrule[0.5pt]     
+           LLaVA-1.5  &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            +ICD   &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            +VCD   &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            +OPERA    &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            \cellcolor{gray!20}\textbf{+ FarSight (Ours)}  &\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7}) &\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0(\textcolor{blue}{+1.7})\\
+            \hdashline
+            +OPERA    &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            \cellcolor{gray!20}\textbf{+ FarSight (Ours)}  &\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7}) &\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0(\textcolor{blue}{+1.7})\\
+            \hdashline
+            +OPERA    &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            \cellcolor{gray!20}\textbf{+ FarSight (Ours)}  &\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7}) &\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0(\textcolor{blue}{+1.7})\\
+            \hdashline
+            +OPERA    &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            \cellcolor{gray!20}\textbf{+ FarSight (Ours)}  &\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7}) &\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0 (\textcolor{blue}{+1.7})&\cellcolor{gray!20}00.0(\textcolor{blue}{+1.7})\\
+             \bottomrule
+       \end{tabular}
+   }
+   \caption{The caption results, caption results, caption results, caption results.}
+\end{table*}
+
+
+\begin{table*}[ht!]
+\centering
+\setlength{\tabcolsep}{2.8mm} %2.2mm
+\renewcommand{\arraystretch}{1}
+\adjustbox{width=1\linewidth}{
+   \begin{tabular}{l||cc|cc|cccccc}
+       \toprule
+\rowcolor{gray!20}\multirow{2}{*}{\raisebox{1ex}{Method}}
+&\multicolumn{2}{c|}{Comprehensive Benchmark } &\multicolumn{2}{c|}{Comprehensive Benchmark } &\multicolumn{5}{c}{Comprehensive Benchmark }  \\
+%%%%%%%%%%                 
+\rowcolor{gray!20} &LLaVA$^W$ &MM-Vet$\uparrow$  &VizWiz$\uparrow$  &SQA$\uparrow$  &LLaVA$_S\downarrow$  &CHAIR$_I\downarrow$  &POPE-R$\uparrow$ &POPE-P$\uparrow$  &POPE-A$\uparrow$  \\
+%%%%%%%%%%%%%%
+\midrule[0.5pt]     
+           LLaVA-1.5  &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 \\
+            \rowcolor{gray!20}+ICD   &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 \\
+            +VCD   &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 \\
+            \rowcolor{gray!20}+OPERA    &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 \\
+           LLaVA-1.5  &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 \\
+            \rowcolor{gray!20}+ICD   &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 \\
+            +VCD   &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 \\
+            \rowcolor{gray!20}+OPERA    &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 \\
+             \bottomrule
+       \end{tabular}
+   }
+   \caption{The caption results, caption results, caption results, caption results.}
+\end{table*}
+
+
+
+\end{document}

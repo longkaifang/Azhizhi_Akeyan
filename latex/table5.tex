@@ -1,0 +1,164 @@
+\documentclass[letterpaper]{article} % DO NOT CHANGE THIS
+\usepackage[submission]{aaai2026}  % DO NOT CHANGE THIS
+\usepackage{times}  % DO NOT CHANGE THIS
+\usepackage{helvet}  % DO NOT CHANGE THIS
+\usepackage{courier}  % DO NOT CHANGE THIS
+\usepackage[hyphens]{url}  % DO NOT CHANGE THIS
+\usepackage{graphicx} % DO NOT CHANGE THIS
+\urlstyle{rm} % DO NOT CHANGE THIS
+\def\UrlFont{\rm}  % DO NOT CHANGE THIS
+\usepackage{natbib}  % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\usepackage{caption} % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\frenchspacing  % DO NOT CHANGE THIS
+\setlength{\pdfpagewidth}{8.5in} % DO NOT CHANGE THIS
+\setlength{\pdfpageheight}{11in} % DO NOT CHANGE THIS
+%
+% These are recommended to typeset algorithms but not required. See the subsubsection on algorithms. Remove them if you don't have algorithms in your paper.
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\usepackage{pifont} %182/183/184
+\usepackage{subcaption}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{booktabs}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{verbatim}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{colortbl}
+\usepackage{booktabs,makecell, multirow, tabularx}
+\usepackage{adjustbox}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{amsmath}
+
+\usepackage{booktabs}
+\usepackage{amssymb}
+\usepackage{bbding}
+\usepackage{pifont}
+\usepackage{wasysym}
+\usepackage{utfsym}
+\usepackage{fontawesome}
+
+\usepackage{mdframed}
+\begin{document}
+
+% %%%%%%%%%%%%%%%%%%%  
+\begin{table*}[htbp]
+    \centering
+    \begin{minipage}[t]{0.28\textwidth}
+        \centering
+        \caption*{(a) MVTec AD}
+        \begin{tabular}{@{}lccc@{}}
+            \toprule
+            Method & I-AUROC & P-AUROC \\
+            \midrule
+            RD++  & 99.44 & 98.25  \\
+            DMAD  & 99.50 & 98.21  \\
+            GLAD  & 99.30 & 98.62  \\
+            ReConPatch & 99.56 & 98.18 \\
+            RealNet  & 99.65 & 99.0 \\
+            ReContrast  & 99.46 & 98.41  \\
+            \midrule
+            \cellcolor{gray!20}\textbf{UniNet (Ours)} & \cellcolor{gray!20}\textbf{99.90} & \cellcolor{gray!20}98.81 \\
+            \bottomrule
+        \end{tabular}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.28\textwidth}
+        \centering
+        \caption*{(b) BTAD}
+        \begin{tabular}{@{}lcc@{}}
+            \toprule
+            Method & I-AUROC & P-AUROC \\
+            \midrule
+            PatchCore  & 93.13 & 97.27 \\
+            RD++  & 95.63 & 97.41 \\
+            PyramidFlow  & 95.83 & 97.70 \\
+            ReConPatch  & 95.80 & 97.47 \\
+            RealNet  & 96.07 & 97.90 \\
+            ReContrast  & 95.06 & 97.50 \\
+            \midrule
+        \cellcolor{gray!20}\textbf{UniNet (Ours)} & \cellcolor{gray!20}95.76 & \cellcolor{gray!20}95.55 \\
+            \bottomrule
+        \end{tabular}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.28\textwidth}
+        \centering
+        \caption*{(c) MVTec 3D-AD}
+        \begin{tabular}{@{}lcc@{}}
+            \toprule
+            Method & I-AUROC & PRO \\
+            \midrule
+            PatchCore  & 81.14 & 91.03 \\
+            AST  & 88.00 & -- \\
+            M3DM  & 85.03 & 94.22 \\
+            Shape-Guided & 81.51 & 93.30 \\
+            BTF & 78.52 & 87.63 \\
+            ReContrast & 88.63 & 95.20 \\
+            \midrule
+            \cellcolor{gray!20}\textbf{UniNet (Ours)} & \cellcolor{gray!20}\textbf{97.73} & \cellcolor{gray!20}\textbf{97.70} \\
+            \bottomrule
+        \end{tabular}
+    \end{minipage}
+    \caption{Quantitative results on industrial datasets, including (a) MVTec AD, (b) BTAD, and (c) MVTec 3D-AD. We report the Image-level AUROC (I-AUROC), Pixel-level AUROC (P-AUROC), and PRO. Best and second-best results are highlighted in red and blue, respectively.}
+    \label{tab:results}
+\end{table*}
+
+
+\begin{table*}[ht!]
+\centering
+%\footnotesize
+%\tiny
+%\Large
+\setlength{\tabcolsep}{2.8mm} %2.2mm
+\renewcommand{\arraystretch}{1}
+\adjustbox{width=1\linewidth}{
+   \begin{tabular}{l|ccc| ccc| ccc}
+       \toprule
+                 \multirow{1}{*}{Dataset $\rightarrow$}
+                &\multicolumn{3}{c|}{APTOS}
+                &\multicolumn{3}{c|}{OCT2017}
+                &\multicolumn{3}{c}{ISIC2018}
+                 \\
+%%%%%%%%%%  
+\cmidrule{1-10}
+                 Mehthod $\downarrow$ &I-AUROC  &F1  &ACC &I-AUROC  &F1  &ACC&I-AUROC  &F1  &ACC   \\
+%%%%%%%%%%%%%% RGB数据
+\midrule[0.5pt]     
+           method1  &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 \\
+            method2  &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 \\
+            method3  &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 \\
+            method2  &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 \\
+            method3  &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 \\
+\cmidrule{1-10}
+            \cellcolor{gray!20}ours  &\cellcolor{gray!20}\textcolor{red}{00.0} &\cellcolor{gray!20}\textcolor{red}{00.0} &\cellcolor{gray!20}\textcolor{blue}{00.0} &\cellcolor{gray!20}00.0 &\cellcolor{gray!20}00.0 &\cellcolor{gray!20}00.0 &\cellcolor{gray!20}00.0 &\cellcolor{gray!20}00.0 &\cellcolor{gray!20}00.0 \\
+             \bottomrule
+       \end{tabular}
+   }
+   \caption{The red/blue indicates the best/second-best results.}
+\end{table*}
+
+
+\end{document}

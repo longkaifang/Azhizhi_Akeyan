@@ -1,0 +1,246 @@
+\documentclass[letterpaper]{article} % DO NOT CHANGE THIS
+\usepackage[submission]{aaai2026}  % DO NOT CHANGE THIS
+\usepackage{times}  % DO NOT CHANGE THIS
+\usepackage{helvet}  % DO NOT CHANGE THIS
+\usepackage{courier}  % DO NOT CHANGE THIS
+\usepackage[hyphens]{url}  % DO NOT CHANGE THIS
+\usepackage{graphicx} % DO NOT CHANGE THIS
+\urlstyle{rm} % DO NOT CHANGE THIS
+\def\UrlFont{\rm}  % DO NOT CHANGE THIS
+\usepackage{natbib}  % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\usepackage{caption} % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\frenchspacing  % DO NOT CHANGE THIS
+\setlength{\pdfpagewidth}{8.5in} % DO NOT CHANGE THIS
+\setlength{\pdfpageheight}{11in} % DO NOT CHANGE THIS
+%
+% These are recommended to typeset algorithms but not required. See the subsubsection on algorithms. Remove them if you don't have algorithms in your paper.
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\usepackage{pifont} %182/183/184
+\usepackage{subcaption}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{booktabs}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{verbatim}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{colortbl}
+\usepackage{booktabs,makecell, multirow, tabularx}
+\usepackage{adjustbox}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{amsmath}
+
+\usepackage{booktabs}
+\usepackage{amssymb}
+\usepackage{bbding}
+\usepackage{pifont}
+\usepackage{wasysym}
+\usepackage{utfsym}
+\usepackage{fontawesome}
+
+\usepackage{mdframed}
+\usepackage{arydshln}
+\begin{document}
+
+% %%%%%%%%%%%%%%%%%%%   MVTec 3D-AD (I-AUROC)
+% %%%%%%%%%%%%%%%%%%%   MVTec 3D-AD (I-AUROC)
+\begin{table*}[ht!]
+\centering
+%\footnotesize
+%\tiny
+%\Large
+\setlength{\tabcolsep}{2.8mm} %2.2mm
+\renewcommand{\arraystretch}{1}
+\adjustbox{width=1\linewidth}{
+   \begin{tabular}{lc cccc cccc cccc ccccccc}
+       \toprule
+                 \multicolumn{2}{l}{\multirow{2}{*}{Metric}}
+                 & \multicolumn{2}{c}{CoNLL-2014 }&
+                 & \multicolumn{2}{c}{BN-10GEC}&
+                 & \multicolumn{2}{c}{NE-Fluency}&
+                 & \multicolumn{2}{c}{E-Minimal}&
+                 & \multicolumn{2}{c}{E-Fluency}&
+                 & \multicolumn{2}{c}{NE-Minimal}&
+                 &\multirow{2}{*}{Impr}\\
+%%%%%%%%%%  
+\cmidrule{3-4} \cmidrule{6-7} \cmidrule{9-10} \cmidrule{12-13} \cmidrule{15-16} \cmidrule{18-19}
+                & &EW&TS& &EW&TS&&EW&TS&&EW&TS&&EW&TS&&EW&TS&\\
+%%%%%%%%%%%%%% RGB数据
+\midrule[0.5pt]  
+\multirow{2}{*}{M$^2$}     
+           &$\beta$  &00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0\\
+           &$\gamma$  &00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0\\
+\hdashline
+\multirow{2}{*}{GLEU}     
+           &$\beta$  &00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0\\
+           &$\gamma$  &00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0\\
+\hdashline
+\multirow{2}{*}{ERRANT}     
+           &$\beta$  &00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0\\
+&$\gamma$  &00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0\\
+\hdashline
+\multirow{2}{*}{PT-M$^2$}     
+           &$\beta$  &00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0\\
+           &$\gamma$  &00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0\\
+\hdashline
+\multirow{2}{*}{CLEME-dep}     
+           &$\beta$  &00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0\\
+           &$\gamma$  &00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0\\
+\hdashline
+\multirow{2}{*}{CLEME-ind}     
+           &$\beta$  &00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0\\
+           &$\gamma$  &00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0\\
+\hdashline
+\multirow{2}{*}{CLEME2.0-dep (Ours)}     
+           &$\beta$  &00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0\\
+           &$\gamma$  &00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0\\
+\hdashline
+\multirow{2}{*}{CLEME2.0-ind (Ours)}     
+           &$\beta$  &00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0\\
+           &$\gamma$  &00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0\\
+\hdashline
+\multirow{2}{*}{CLEME2.0-sim-dep (Ours)}     
+           &$\beta$  &00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0\\
+           &$\gamma$  &00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0\\
+\hdashline
+\multirow{2}{*}{CLEME2.0-sim-ind (Ours) }     
+           &$\beta$  &00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0\\
+           &$\gamma$  &00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0 &00.0 &&00.0\\
+             \bottomrule
+       \end{tabular}
+   }
+   \caption{The red/blue indicates the best/second-best results.}
+\end{table*}
+
+
+\begin{table*}[ht!]
+\centering
+%\footnotesize
+%\tiny
+%\Large
+\setlength{\tabcolsep}{2.8mm} %2.2mm
+\renewcommand{\arraystretch}{1}
+\adjustbox{width=1\linewidth}{
+   \begin{tabular}{cc|cccc|cc|cc|cc|cc}
+       \toprule
+                 \multicolumn{2}{c|}{\multirow{2}{*}{Method}}
+                 & \multicolumn{2}{c}{iTransformer}
+                 & \multicolumn{2}{c|}{+ Ours}
+                 & \multicolumn{2}{c|}{w/o Backbone}
+                 & \multicolumn{2}{c|}{w/o Attention}
+                 & \multicolumn{2}{c|}{w/o Quantile}
+                 & \multicolumn{2}{c}{w/o Adaptive}\\
+%%%%%%%%%%                 
+                & &MSE&MAE &MSE&MAE&MSE&MAE&MSE&MAE&MSE&MAE&MSE&MAE \\
+%%%%%%%%%%%%%% RGB数据
+\midrule[0.5pt]  
+\multirow{4}{*}{\rotatebox{90}{RGB}}     
+           &method2  &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            &method2  &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            &method3  &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            &method3  &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+\midrule[0.5pt]  
+\multirow{4}{*}{\rotatebox{90}{RGB}}     
+           &method2  &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            &method2  &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            &method3  &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            &method3  &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+\midrule[0.5pt]  
+\multirow{4}{*}{\rotatebox{90}{RGB}}     
+           &method2  &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            &method2  &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            &method3  &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            &method3  &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+\midrule[0.5pt] 
+\multicolumn{2}{c|}{AVG}  &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+             \bottomrule
+       \end{tabular}
+   }
+   \caption{The red/blue indicates the best/second-best results.}
+\end{table*}
+
+
+
+% %%%%%%%%%%%%%%%%%%%   MVTec 3D-AD (I-AUROC)
+\begin{table*}[ht!]
+\centering
+%\footnotesize
+%\tiny
+%\Large
+\setlength{\tabcolsep}{2.8mm} %2.2mm
+\renewcommand{\arraystretch}{1}
+\adjustbox{width=1\linewidth}{
+   \begin{tabular}{cc|cccc|cccc|cccc|c}
+       \toprule
+                 \multicolumn{2}{c|}{\multirow{2}{*}{Method}}
+                 & \multicolumn{2}{c}{iTransformer}
+                 & \multicolumn{2}{c|}{+ Ours}
+                 & \multicolumn{2}{c}{iTransformer}
+                 & \multicolumn{2}{c|}{+ Ours}
+                 & \multicolumn{2}{c}{iTransformer}
+                 & \multicolumn{2}{c|}{+ Ours}
+                 &\multirow{2}{*}{Impr}\\
+%%%%%%%%%%                 
+                & &MSE&MAE &MSE&MAE&MSE&MAE&MSE&MAE&MSE&MAE&MSE&MAE \\
+%%%%%%%%%%%%%% RGB数据
+\midrule[0.5pt]  
+\multirow{4}{*}{\rotatebox{90}{RGB}}     
+           &method2  &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &\multirow{4}{*}{0.00}\\
+            &method2  &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            &method3  &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            &method3  &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+\midrule[0.5pt]  
+\multirow{4}{*}{\rotatebox{90}{RGB}}     
+           &method2  &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &\multirow{4}{*}{0.00}\\
+            &method2  &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            &method3  &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            &method3  &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+\midrule[0.5pt]  
+\multirow{4}{*}{\rotatebox{90}{RGB}}     
+           &method2  &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &\multirow{4}{*}{0.00}\\
+            &method2  &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            &method3  &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            &method3  &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\ 
+\midrule[0.5pt] 
+\multirow{4}{*}{\rotatebox{90}{RGB}}     
+           &method2  &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &\multirow{4}{*}{0.00}\\
+            &method2  &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            &method3  &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            &method3  &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\ 
+\midrule[0.5pt] 
+\multirow{4}{*}{\rotatebox{90}{RGB}}     
+           &method2  &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &\multirow{4}{*}{0.00}\\
+            &method2  &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            &method3  &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            &method3  &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\ 
+\midrule[0.5pt] 
+\multicolumn{2}{c|}{AVG}  &\multicolumn{4}{c|}{00.0} &\multicolumn{4}{c|}{00.0}&\multicolumn{4}{c|}{00.0}&0.00\\
+             \bottomrule
+       \end{tabular}
+   }
+   \caption{The red/blue indicates the best/second-best results.}
+\end{table*}
+
+\end{document}

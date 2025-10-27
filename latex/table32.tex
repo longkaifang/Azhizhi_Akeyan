@@ -1,0 +1,301 @@
+\documentclass[letterpaper]{article} % DO NOT CHANGE THIS
+\usepackage[submission]{aaai2026}  % DO NOT CHANGE THIS
+\usepackage{times}  % DO NOT CHANGE THIS
+\usepackage{helvet}  % DO NOT CHANGE THIS
+\usepackage{courier}  % DO NOT CHANGE THIS
+\usepackage[hyphens]{url}  % DO NOT CHANGE THIS
+\usepackage{graphicx} % DO NOT CHANGE THIS
+\urlstyle{rm} % DO NOT CHANGE THIS
+\def\UrlFont{\rm}  % DO NOT CHANGE THIS
+\usepackage{natbib}  % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\usepackage{caption} % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\frenchspacing  % DO NOT CHANGE THIS
+\setlength{\pdfpagewidth}{8.5in} % DO NOT CHANGE THIS
+\setlength{\pdfpageheight}{11in} % DO NOT CHANGE THIS
+%
+% These are recommended to typeset algorithms but not required. See the subsubsection on algorithms. Remove them if you don't have algorithms in your paper.
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\usepackage{pifont} %182/183/184
+\usepackage{subcaption}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{booktabs}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{verbatim}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{colortbl}
+\usepackage{booktabs,makecell, multirow, tabularx}
+\usepackage{adjustbox}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{amsmath}
+
+\usepackage{booktabs}
+\usepackage{amssymb}
+\usepackage{bbding}
+\usepackage{pifont}
+\usepackage{wasysym}
+\usepackage{utfsym}
+\usepackage{fontawesome}
+
+\usepackage{mdframed}
+
+% define color
+
+\newcommand{\languagelogo}{\raisebox{-0pt}{\includegraphics[width=0.9em]{image/language.png}}\xspace\xspace}
+
+\newcommand{\imagelogo}{\raisebox{-0pt}{\includegraphics[width=0.9em]{image/image.png}}\xspace\xspace}
+
+\newcommand{\videologo}{\raisebox{-0pt}{\includegraphics[width=0.9em]{image/video.png}}\xspace\xspace}
+
+\newcommand{\championlogo}{\raisebox{-0pt}{\includegraphics[width=0.9em]{image/trophy.png}}\xspace\xspace}
+
+\newcommand{\silverlogo}{\raisebox{-0pt}{\includegraphics[width=0.9em]{image/silver-cup.png}}\xspace\xspace}
+
+\newcommand{\bronzelogo}{\raisebox{-0pt}{\includegraphics[width=0.9em]{image/bronze-cup.png}}\xspace\xspace}
+
+\definecolor{placeholdertxt}{RGB}{255,209,227}
+
+
+\newcommand{\scott}[1]{\textcolor{red}{\{#1\}}}
+
+\newcommand{\placeholderTxt}[1]{\textcolor{placeholdertxt}{\em \{#1\}}}
+
+
+
+\newcommand{\paratitle}[1]{\vspace{1.5ex}\noindent \textbf{#1}}
+\newcommand{\tbcenter}[1]{\multicolumn{1}{|c|}{#1}}
+\newcommand{\mysubsubsec}[1]{\noindent$\bullet$~\textbf{#1}}
+\definecolor{myblue}{RGB}{52,218,247}
+\definecolor{myred}{RGB}{255,90,90}
+\definecolor{mypink}{RGB}{239,43,159}
+\definecolor{myupdate}{RGB}{254,243,222}
+\definecolor{myfrozen}{RGB}{237,255,255}
+\definecolor{ired}{RGB}{229,72,72}
+\definecolor{igreen}{RGB}{80,219,144}
+\definecolor{nmblue}{RGB}{216,234,247}
+
+
+\definecolor{linkred}{RGB}{255,0,49}
+
+\definecolor{textred}{RGB}{255,242,234}
+\definecolor{imageblue}{RGB}{224,250,255}
+\definecolor{videogreen}{RGB}{214,250,232}
+
+
+
+\definecolor{mheadertgreen}{RGB}{76,175,185}
+\definecolor{lightgreen}{RGB}{237,246,247}
+
+
+
+\definecolor{lightgray}{RGB}{242,242,242}
+\definecolor{lightgraygrey}{RGB}{240,240,240}
+\definecolor{deepgray}{RGB}{196,196,196}
+
+
+
+\definecolor{mydeepblue}{RGB}{188,252,216}
+\definecolor{mypinky}{RGB}{255,149,211}
+
+\usepackage{longtable}
+
+
+\definecolor{bg-tb-heavey-nlp}{RGB}{214,255,232}
+\definecolor{bg-tb-light-nlp}{RGB}{237,252,247}
+
+\definecolor{bg-tb-heavey-vision}{RGB}{255,242,227}
+% \definecolor{bg-tb-light-vision}{RGB}{255,250,247}
+\definecolor{bg-tb-light-vision}{RGB}{255,250,247}
+
+\definecolor{bg-tb-heavey-video}{RGB}{219,247,255}
+\definecolor{bg-tb-light-video}{RGB}{240,252,252}
+
+\definecolor{bg-tb-heavey-audio}{RGB}{240,219,255}
+\definecolor{bg-tb-light-audio}{RGB}{250,245,252}
+
+\definecolor{bg-tb-heavey-3D}{RGB}{255,229,229}
+\definecolor{bg-tb-light-3D}{RGB}{255,245,245}
+
+
+
+\definecolor{greenCom}{RGB}{3,214,131}
+\definecolor{blueGen}{RGB}{0,160,216}
+\definecolor{redNLP}{RGB}{250,59,59}
+
+
+
+\begin{document}
+
+\begin{table}[!h]
+\centering
+\fontsize{8.5}{12}\selectfont 
+\setlength{\tabcolsep}{1.2mm}
+\caption{Leaderboard of multimodal generalists (MLLMs) at level-4, where \textcolor{greenCom}{\underline{C}omprehension} and \textcolor{blueGen}{\underline{G}eneration}.
+}
+\label{tab:ranking-level-4}
+\begin{tabular}{p{4.2cm} cccccccc}
+\hline
+\multirow{2}{*}{\textbf{Model}} & \multirow{2}{*}{\textbf{Modality}} &\multirow{2}{*}{\textbf{Paradigm}} & \multicolumn{5}{c}{\textbf{Level 4 Score}} & \multirow{2}{*}{\textbf{Ranking}} \\
+\cmidrule{4-8}
+& & & \textbf{of Image}	& \textbf{of Video}	& 	\textbf{of Audio}	& 	\textbf{of 3D}	& \textbf{of Overall} & \\
+\hline
+
+\rowcolor{bg-tb-light-video} Mini-Gemini & \languagelogo \imagelogo & \textcolor{greenCom}{C}+\textcolor{blueGen}{G} & 6.23 & 0.00 & 0.00 & 0.00 & 1.56  & 1\championlogo\\
+Vitron-V1 & \languagelogo \imagelogo \videologo & \textcolor{greenCom}{C}+\textcolor{blueGen}{G} & 4.59  & 0.00  & 0.00  & 0.00  & 1.15  & 2\silverlogo \\
+\rowcolor{bg-tb-light-video} Emu2-37B & \languagelogo \imagelogo & \textcolor{greenCom}{C}+\textcolor{blueGen}{G} & 1.25  & 0.00  & 0.00  & 0.00  & 0.31  & 3\bronzelogo \\
+
+\hline
+\end{tabular}
+\end{table}
+
+{
+\begin{table*}[t!]
+\centering
+  \fontsize{7.5}{8}\selectfont 
+  \setlength{\tabcolsep}{1.4mm}
+\caption{
+Performance of generalists on language-related (NLP) skills.
+}
+\vspace{-2mm}
+\label{tab:main-overall-results-nlp}
+\begin{tabular}{p{2.2cm} ccccccccccc cc c}
+\toprule
+\rowcolor{bg-tb-heavey-nlp} & \multicolumn{11}{c}{\bf \textcolor{redNLP}{Language Skill (Avg within each \#L Group)}} & \multicolumn{2}{c}{\bf Task Completion} & \multicolumn{1}{c}{\bf Level Score} \\ 
+\rowcolor{bg-tb-heavey-nlp} & \bf  \#1 & \bf\#2 & \bf\#3 & \bf\#4 & \bf\#5 & \bf\#6 & \bf\#7 & \bf\#8 & \bf\#9 & \bf\#10 & \bf\#11 & 
+ &  &  \\
+\rowcolor{bg-tb-heavey-nlp} \multicolumn{1}{c}{\multirow{-3}{*}{\bf  Model}}  & \bf\#12 & \bf\#13 & \bf\#14 & \bf\#15 & \bf\#16 & \bf\#17 & \bf\#18 & \bf\#19 & \bf\#20 & \bf\#21  & \bf  \#22 & 
+\multicolumn{1}{c}{\multirow{-2}{*}{\parbox{1.2cm}{\#Supported Task}}} & \multicolumn{1}{c}{\multirow{-2}{*}{\parbox{1.2cm}{\#Win-over-Specialist}}} & \multirow{-2}{*}{Level-5}  \\
+
+
+
+  \midrule
+
+\rowcolor{bg-tb-light-nlp} & 62.62 	&	86.23 	&	76.78 	&	71.00 	&	58.02 	&	62.80 	&	75.11 	&	77.84 	&	79.70 	&	71.91 	&	28.27  & \multirow{2}{*}{/} & \multirow{2}{*}{/} & \multirow{2}{*}{/}  \\
+\rowcolor{bg-tb-light-nlp} \multirow{-2}{*}{\bf SoTA Specialist} & 86.95 	&	0.31 	&	94.40 	&	91.41 	&	86.05 	&	86.03 	&	84.72 	&	83.67 	&	58.61 	&	77.73 	&	92.38  &  &  &  \\
+
+
+
+\midrule\midrule
+
+\multirow{2}{*}{\parbox{2cm}{Meta-Llama-3.1-8B-Instruct}} & 39.75 	&	56.76 	&	54.21 	&	60.52 	&	20.01 	&	37.17 	&	36.23 	&	29.12 	&	53.23 	&	44.49 	&	14.80  & \multirow{2}{*}{113 (98.3\%)} & \multirow{2}{*}{0 (0.0\%)} & \multirow{2}{*}{0.00} \\
+ &  45.34 	&	7.95 	&	76.40 	&	51.80 	&	65.90 	&	41.10 	&	24.49 	&	30.70 	&	8.08 	&	32.40 	&	54.35  &  &  &  \\
+\addlinespace[4pt]
+ 
+
+
+\rowcolor{bg-tb-light-nlp} & 28.97 	&	33.24 	&	37.24 	&	46.10 	&	19.39 	&	27.84 	&	18.85 	&	35.88 	&	27.85 	&	38.51 	&	13.93   &   &  &  \\
+\rowcolor{bg-tb-light-nlp} \multirow{-2}{*}{ChatGLM-6b}  & 42.84 	&	10.91 	&	41.80 	&	45.81 	&	24.50 	&	16.45 	&	0.12 	&	8.41 	&	2.70 	&	23.80 	&	45.37  & \multirow{-2}{*}{96 (83.5\%)} & \multirow{-2}{*}{0 (0.0\%)} & \multirow{-2}{*}{0.00} \\
+\addlinespace[4pt]
+
+
+
+\multirow{2}{*}{Vicuna-7b-v1.5} & 24.78 	&	11.18 	&	33.44 	&	41.19 	&	4.51 	&	13.25 	&	19.94 	&	35.27 	&	54.81 	&	40.58 	&	5.06    & \multirow{2}{*}{72 (62.6\%)} & \multirow{2}{*}{0 (0.0\%)} & \multirow{2}{*}{0.00} \\
+& 43.98 	&	11.41 	&	0.00 	&	0.00 	&	0.00 	&	0.96 	&	0.07 	&	0.47 	&	0.00 	&	23.13 	&	15.40  &  &  &   \\
+\addlinespace[4pt]
+
+
+\rowcolor{bg-tb-light-nlp} & 36.79 	&	58.36 	&	49.91 	&	56.80 	&	21.38 	&	37.12 	&	32.03 	&	42.11 	&	55.79 	&	42.07 	&	15.56  &  &  &  \\
+\rowcolor{bg-tb-light-nlp} \multirow{-2}{*}{Falcon3-7B-Instruct} & 48.15 	&	5.15 	&	88.80 	&	85.89 	&	45.65 	&	42.86 	&	27.64 	&	34.22 	&	11.19 	&	39.80 	&	58.75  & \multirow{-2}{*}{112 (97.4\%)} & \multirow{-2}{*}{0 (0.0\%)} & \multirow{-2}{*}{0.00} \\
+\addlinespace[4pt]
+
+
+\multirow{2}{*}{\parbox{2cm}{Ministral-8B-Instruct-2410}} & 41.74 	&	54.21 	&	49.53 	&	51.92 	&	39.32 	&	40.49 	&	13.00 	&	22.86 	&	56.87 	&	43.46 	&	13.73  &\multirow{2}{*}{112 (97.4\%)} & \multirow{2}{*}{0 (0.0\%)} & \multirow{2}{*}{0.00} \\
+& 23.39 	&	11.08 	&	84.80 	&	72.60 	&	56.70 	&	37.14 	&	6.28 	&	31.38 	&	9.37 	&	25.53 	&	40.44  &  &  &  \\
+\addlinespace[4pt]
+
+
+\rowcolor{bg-tb-light-nlp} & 41.73 	&	60.54 	&	55.39 	&	60.51 	&	20.53 	&	39.83 	&	22.45 	&	43.57 	&	62.52 	&	42.03 	&	15.29  &   &  &  \\
+\rowcolor{bg-tb-light-nlp} \multirow{-2}{*}{Yi-Lightning} & 52.68 	&	5.37 	&	72.60 	&	56.24 	&	64.75 	&	43.59 	&	28.27 	&	42.84 	&	25.34 	&	29.27 	&	60.49  &\multirow{-2}{*}{113 (98.3\%)} & \multirow{-2}{*}{0 (0.0\%)} & \multirow{-2}{*}{0.00}  \\
+\addlinespace[4pt]
+
+
+\hline
+
+
+\multirow{2}{*}{GPT-4V} & 27.55 	&	62.40 	&	34.57 	&	32.55 	&	14.43 	&	27.84 	&	27.79 	&	36.07 	&	65.36 	&	42.11 	&	13.96  & \multirow{2}{*}{113 (98.3\%)} & \multirow{2}{*}{0 (0.0\%)} & \multirow{2}{*}{0.00} \\
+& 44.56 	&	3.16 	&	86.20 	&	83.23 	&	65.10 	&	53.82 	&	54.14 	&	45.45 	&	33.86 	&	26.46 	&	24.24  &  &  &  \\
+\addlinespace[4pt]
+
+\rowcolor{bg-tb-light-nlp} & 26.25 	&	62.57 	&	33.98 	&	31.50 	&	16.20 	&	26.26 	&	27.14 	&	36.64 	&	66.86 	&	42.69 	&	14.49  & &  &   \\
+\rowcolor{bg-tb-light-nlp} \multirow{-2}{*}{GPT-4o}  & 46.41 	&	2.58 	&	85.40 	&	86.30 	&	67.50 	&	56.10 	&	57.42 	&	46.97 	&	39.52 	&	32.07 	&	28.50  &  \multirow{-2}{*}{113 (98.3\%)} & \multirow{-2}{*}{0 (0.0\%)} & \multirow{-2}{*}{0.00} \\
+\addlinespace[4pt]
+
+
+\multirow{2}{*}{Emu2-32B} & 32.91 	&	45.43 	&	47.04 	&	39.56 	&	27.74 	&	31.24 	&	39.04 	&	41.72 	&	45.48 	&	46.35 	&	13.05   & \multirow{2}{*}{113 (98.3\%)} & \multirow{2}{*}{0 (0.0\%)} & \multirow{2}{*}{0.00} \\
+& 50.15 	&	9.53 	&	57.54 	&	48.78 	&	43.76 	&	36.67 	&	19.84 	&	24.01 	&	13.78 	&	26.47 	&	31.72  &  &  &   \\
+\addlinespace[4pt]
+
+
+\rowcolor{bg-tb-light-nlp} & 29.97 	&	44.39 	&	55.55 	&	20.36 	&	40.49 	&	57.93 	&	49.85 	&	48.73 	&	27.03 	&	56.76 	&	10.37  &  &  &   \\
+\rowcolor{bg-tb-light-nlp} \multirow{-2}{*}{DeepSeek-VL-7B} & 79.68 	&	83.00 	&	62.20 	&	50.60 	&	62.30 	&	46.87 	&	4.12 	&	28.46 	&	8.11 	&	31.80 	&	40.97  & \multirow{-2}{*}{114 (99.1\%)} & \multirow{-2}{*}{0 (0.0\%)} & \multirow{-2}{*}{0.00} \\
+\addlinespace[4pt]
+
+
+\multirow{2}{*}{Qwen2-VL-7B} & 23.91 	&	27.51 	&	37.68 	&	46.40 	&	17.84 	&	20.96 	&	36.25 	&	29.29 	&	35.42 	&	35.58 	&	12.62  & \multirow{2}{*}{94 (81.7\%)} & \multirow{2}{*}{0 (0.0\%)} & \multirow{2}{*}{0.00} \\
+& 37.23 	&	6.48 	&	64.00 	&	37.00 	&	3.50 	&	20.50 	&	0.24 	&	4.87 	&	6.00 	&	20.87 	&	21.79  &  &  &  \\
+\addlinespace[4pt]
+
+
+\rowcolor{bg-tb-light-nlp} & 50.44 	&	41.98 	&	54.55 	&	61.13 	&	29.87 	&	56.99 	&	35.24 	&	43.27 	&	55.23 	&	41.49 	&	17.73  & &  & \\
+\rowcolor{bg-tb-light-nlp} \multirow{-2}{*}{\parbox{2cm}{LLaVA-One-Vision-72B}} & 43.81 	&	3.55 	&	84.80 	&	10.43 	&	59.35 	&	34.91 	&	42.94 	&	28.63 	&	19.26 	&	52.20 	&	71.95  &  \multirow{-2}{*}{110 (95.7\%)} & \multirow{-2}{*}{0 (0.0\%)} & \multirow{-2}{*}{0.00} \\
+\addlinespace[4pt]
+
+
+\multirow{2}{*}{InternVL2.5-8B} & 42.93 	&	47.76 	&	59.54 	&	31.17 	&	42.86 	&	32.72 	&	50.98 	&	43.02 	&	30.85 	&	51.23 	&	9.07  & \multirow{2}{*}{114 (99.1\%)} & \multirow{2}{*}{0 (0.0\%)} & \multirow{2}{*}{0.00}  \\
+ & 71.96 	&	75.20 	&	55.40 	&	68.40 	&	56.75 	&	55.60 	&	22.12 	&	36.48 	&	9.80 	&	32.13 	&	53.67  &  &  &  \\
+\addlinespace[4pt]
+
+\rowcolor{bg-tb-light-nlp} & 26.50 	&	49.49 	&	34.81 	&	39.62 	&	17.83 	&	33.14 	&	20.63 	&	38.44 	&	48.90 	&	38.10 	&	6.30  &   &  &  \\
+\rowcolor{bg-tb-light-nlp} \multirow{-2}{*}{Long-llava} & 48.44 	&	11.40 	&	68.60 	&	41.70 	&	52.65 	&	31.42 	&	2.33 	&	21.52 	&	7.40 	&	29.47 	&	42.07  &\multirow{-2}{*}{107 (93.0\%)} & \multirow{-2}{*}{0 (0.0\%)} & \multirow{-2}{*}{0.00}  \\
+\addlinespace[4pt]
+
+\multirow{2}{*}{NExT-GPT-V1.5} & 20.66 	&	22.42 	&	32.55 	&	39.51 	&	4.19 	&	16.47 	&	16.49 	&	32.67 	&	51.49 	&	37.73 	&	5.06 & \multirow{2}{*}{79 (68.7\%)} & \multirow{2}{*}{0 (0.0\%)} & \multirow{2}{*}{0.00}  \\
+& 42.09 	&	1.06 	&	68.90 	&	43.20 	&	28.78 	&	9.24 	&	4.44 	&	6.16 	&	7.22 	&	24.17 	&	18.86  &  &  &   \\
+\addlinespace[4pt]
+
+\rowcolor{bg-tb-light-nlp} & 18.11 	&	32.55 	&	26.54 	&	25.19 	&	8.80 	&	18.85 	&	11.68 	&	15.89 	&	21.64 	&	23.56 	&	4.80  &  &  &   \\
+\rowcolor{bg-tb-light-nlp} \multirow{-2}{*}{SEED-LLaMA-13B} & 20.84 	&	11.16 	&	13.20 	&	34.80 	&	28.98 	&	19.93 	&	2.59 	&	10.31 	&	2.10 	&	12.07 	&	12.41  & \multirow{-2}{*}{109 (94.8\%)} & \multirow{-2}{*}{0 (0.0\%)} & \multirow{-2}{*}{0.00}  \\
+\addlinespace[4pt]
+
+\multirow{2}{*}{LLaMA-Mesh} & 29.34 	&	16.70 	&	47.05 	&	56.85 	&	5.09 	&	14.85 	&	21.27 	&	39.24 	&	57.40 	&	40.65 	&	4.93  & \multirow{2}{*}{84 (73.0\%)} & \multirow{2}{*}{0 (0.0\%)} & \multirow{2}{*}{0.00}  \\
+& 44.19 	&	11.41 	&	0.00 	&	0.00 	&	0.00 	&	1.50 	&	0.65 	&	0.56 	&	0.01 	&	23.13 	&	21.57  &  &  &  \\
+\addlinespace[4pt]
+
+
+\rowcolor{bg-tb-light-nlp} & 28.17 	&	15.73 	&	40.98 	&	45.15 	&	3.71 	&	10.99 	&	25.97 	&	43.03 	&	35.22 	&	36.14 	&	10.42  &   &  &  \\
+\rowcolor{bg-tb-light-nlp} \multirow{-2}{*}{MiniGPT4-LLaMA2} & 42.56 	&	7.46 	&	0.00 	&	0.00 	&	0.00 	&	2.08 	&	6.36 	&	4.52 	&	0.00 	&	17.55 	&	21.23  &\multirow{-2}{*}{84 (73.0\%)} & \multirow{-2}{*}{0 (0.0\%)} & \multirow{-2}{*}{0.00}  \\
+
+
+\bottomrule
+\end{tabular}%
+\vspace{-3mm}
+\end{table*}
+}
+
+
+
+
+\end{document}

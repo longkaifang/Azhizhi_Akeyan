@@ -1,0 +1,127 @@
+\documentclass[letterpaper]{article} % DO NOT CHANGE THIS
+\usepackage[submission]{aaai2026}  % DO NOT CHANGE THIS
+\usepackage{times}  % DO NOT CHANGE THIS
+\usepackage{helvet}  % DO NOT CHANGE THIS
+\usepackage{courier}  % DO NOT CHANGE THIS
+\usepackage[hyphens]{url}  % DO NOT CHANGE THIS
+\usepackage{graphicx} % DO NOT CHANGE THIS
+\urlstyle{rm} % DO NOT CHANGE THIS
+\def\UrlFont{\rm}  % DO NOT CHANGE THIS
+\usepackage{natbib}  % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\usepackage{caption} % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\frenchspacing  % DO NOT CHANGE THIS
+\setlength{\pdfpagewidth}{8.5in} % DO NOT CHANGE THIS
+\setlength{\pdfpageheight}{11in} % DO NOT CHANGE THIS
+%
+% These are recommended to typeset algorithms but not required. See the subsubsection on algorithms. Remove them if you don't have algorithms in your paper.
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\usepackage{pifont} %182/183/184
+\usepackage{subcaption}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{booktabs}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{verbatim}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{colortbl}
+\usepackage{booktabs,makecell, multirow, tabularx}
+\usepackage{adjustbox}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{amsmath}
+
+\usepackage{booktabs}
+\usepackage{amssymb}
+\usepackage{bbding}
+\usepackage{pifont}
+\usepackage{wasysym}
+\usepackage{utfsym}
+\usepackage{fontawesome}
+
+\usepackage{mdframed}
+\usepackage[table]{xcolor}
+\usepackage{colortbl}
+\begin{document}
+
+% %%%%%%%%%%%%%%%%%%%   MVTec 3D-AD (I-AUROC)
+%\checkmark 
+%\XSolidBrush
+% \cmidrule{1-8} 横线
+
+% \usepackage{arydshln}虚线宏包  
+%\hdashline
+%\cdashline{2-3} % 第二、三列虚线
+
+%左 $\leftarrow$，右 $\rightarrow$，上 $\uparrow$，下 $\downarrow$
+
+%整行填充颜色
+%\usepackage[table]{xcolor}
+%\usepackage{colortbl}
+%\rowcolor{blue!20}
+
+%合并行和列
+%\multicolumn{2}{c|}{\multirow{2}{*}{Method}}
+%\multicolumn{2}{c|}{Method}
+
+%定义颜色
+\definecolor{color1}{RGB}{247, 232, 207}
+\definecolor{color2}{RGB}{0, 166, 79}
+\definecolor{color3}{RGB}{232, 150, 122}
+\cellcolor{color1} 
+%定义字体
+\newcommand{\zza}[1]{{\color{color2} #1}}
+\newcommand{\zzb}[1]{{\color{color3} #1}}
+\begin{table*}[ht!]
+\centering
+\setlength{\tabcolsep}{2.8mm} %2.2mm
+\renewcommand{\arraystretch}{1}
+\adjustbox{width=1\linewidth}{
+   \begin{tabular}{lcccc cc|ccc}
+       \toprule
+\rowcolor{color1}\textbf{Agent or Swarm}&\textbf{DA} &\textbf{GQ} &\textbf{WS}  &\textbf{FA}  &\textbf{CA}  &\textbf{Decision Strategy } &\textbf{Accuracy}  &\textbf{Best}  &\textbf{Duration (s)} \\
+%%%%%%%%%%%%%%
+\midrule[0.5pt]  
+      \textbf{(A)} Agent: IO & \zza{\Checkmark} &\zzb{\XSolidBrush} &\zza{\Checkmark} &\zzb{\XSolidBrush}  &\zza{\Checkmark} &N/A &00.0\zza{$\pm0.00$} &00.0\% &$\sim$ 00.0\\
+    \rowcolor{gray!20}\textbf{(B)} Agent: COT$_{web}$  &\zzb{\XSolidBrush} &\zza{\Checkmark} &\zzb{\XSolidBrush}  &\zza{\Checkmark}  &\zzb{\XSolidBrush} &N/A &00.0\zza{$\pm0.00$} &00.0\% &$\sim$ 00.0\\
+      \textbf{(A)} Agent: IO & \zza{\Checkmark} &\zzb{\XSolidBrush} &\zza{\Checkmark} &\zzb{\XSolidBrush}  &\zza{\Checkmark} &N/A &00.0\zza{$\pm0.00$} &00.0\% &$\sim$ 00.0\\
+    \rowcolor{gray!20}\textbf{(B)} Agent: COT$_{web}$  &\zzb{\XSolidBrush} &\zza{\Checkmark} &\zzb{\XSolidBrush}  &\zza{\Checkmark}  &\zzb{\XSolidBrush} &N/A &00.0\zza{$\pm0.00$} &00.0\% &$\sim$ 00.0\\
+\midrule[0.5pt]  
+      \textbf{(A)} Agent: IO & \zza{\Checkmark} &\zzb{\XSolidBrush} &\zza{\Checkmark} &\zzb{\XSolidBrush}  &\zza{\Checkmark} &N/A &00.0\zza{$\pm0.00$} &00.0\% &$\sim$ 00.0\\
+      \textbf{(A)} Agent: IO & \zza{\Checkmark} &\zzb{\XSolidBrush} &\zza{\Checkmark} &\zzb{\XSolidBrush}  &\zza{\Checkmark} &N/A &00.0\zza{$\pm0.00$} &00.0\% &$\sim$ 00.0\\
+      \textbf{(A)} Agent: IO & \zza{\Checkmark} &\zzb{\XSolidBrush} &\zza{\Checkmark} &\zzb{\XSolidBrush}  &\zza{\Checkmark} &N/A &00.0\zza{$\pm0.00$} &00.0\% &$\sim$ 00.0\\
+      \rowcolor{gray!20}\textbf{(B)} Agent: COT$_{web}$  &\zzb{\XSolidBrush} &\zza{\Checkmark} &\zzb{\XSolidBrush}  &\zza{\Checkmark}  &\zzb{\XSolidBrush} &N/A &00.0\zza{$\pm0.00$} &00.0\% &$\sim$ 00.0\\
+      \rowcolor{gray!20}\textbf{(B)} Agent: COT$_{web}$  &\zzb{\XSolidBrush} &\zza{\Checkmark} &\zzb{\XSolidBrush}  &\zza{\Checkmark}  &\zzb{\XSolidBrush} &N/A &00.0\zza{$\pm0.00$} &00.0\% &$\sim$ 00.0\\
+      \rowcolor{gray!20}\textbf{(B)} Agent: COT$_{web}$  &\zzb{\XSolidBrush} &\zza{\Checkmark} &\zzb{\XSolidBrush}  &\zza{\Checkmark}  &\zzb{\XSolidBrush} &N/A &00.0\zza{$\pm0.00$} &00.0\% &$\sim$ 00.0\\
+\midrule[0.5pt]  
+      \textbf{(A)} Agent: IO & \zza{\Checkmark} &\zzb{\XSolidBrush} &\zza{\Checkmark} &\zzb{\XSolidBrush}  &\zza{\Checkmark} &N/A &00.0\zza{$\pm0.00$} &00.0\% &$\sim$ 00.0\\
+    \rowcolor{gray!20}\textbf{(B)} Agent: COT$_{web}$  &\zzb{\XSolidBrush} &\zza{\Checkmark} &\zzb{\XSolidBrush}  &\zza{\Checkmark}  &\zzb{\XSolidBrush} &N/A &00.0\zza{$\pm0.00$} &00.0\% &$\sim$ 00.0\\
+    \midrule[0.5pt]  
+\multicolumn{7}{l|}{(M) Human }&00.0&00.0&00.0\\
+             \bottomrule
+       \end{tabular}
+   }
+   \caption{The caption results, caption results, caption results, caption results.}
+\end{table*}
+\end{document}

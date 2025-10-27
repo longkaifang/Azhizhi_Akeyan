@@ -1,0 +1,160 @@
+\documentclass[letterpaper]{article} % DO NOT CHANGE THIS
+\usepackage[submission]{aaai2026}  % DO NOT CHANGE THIS
+\usepackage{times}  % DO NOT CHANGE THIS
+\usepackage{helvet}  % DO NOT CHANGE THIS
+\usepackage{courier}  % DO NOT CHANGE THIS
+\usepackage[hyphens]{url}  % DO NOT CHANGE THIS
+\usepackage{graphicx} % DO NOT CHANGE THIS
+\urlstyle{rm} % DO NOT CHANGE THIS
+\def\UrlFont{\rm}  % DO NOT CHANGE THIS
+\usepackage{natbib}  % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\usepackage{caption} % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\frenchspacing  % DO NOT CHANGE THIS
+\setlength{\pdfpagewidth}{8.5in} % DO NOT CHANGE THIS
+\setlength{\pdfpageheight}{11in} % DO NOT CHANGE THIS
+%
+% These are recommended to typeset algorithms but not required. See the subsubsection on algorithms. Remove them if you don't have algorithms in your paper.
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\usepackage{pifont} %182/183/184
+\usepackage{subcaption}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{booktabs}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{verbatim}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{colortbl}
+\usepackage{booktabs,makecell, multirow, tabularx}
+\usepackage{adjustbox}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{amsmath}
+
+\usepackage{booktabs}
+\usepackage{amssymb}
+\usepackage{bbding}
+\usepackage{pifont}
+\usepackage{wasysym}
+\usepackage{utfsym}
+\usepackage{fontawesome}
+
+\usepackage{mdframed}
+\usepackage[table]{xcolor}
+\usepackage{colortbl}
+
+
+\begin{document}
+
+% %%%%%%%%%%%%%%%%%%%   MVTec 3D-AD (I-AUROC)
+%\checkmark
+%\XSolidBrush
+% \cmidrule{1-8} 横线
+
+% \usepackage{arydshln}虚线宏包  
+%\hdashline
+%\cdashline{2-3} % 第二、三列虚线
+
+%左 $\leftarrow$，右 $\rightarrow$，上 $\uparrow$，下 $\downarrow$
+
+%整行填充颜色
+%\usepackage[table]{xcolor}
+%\usepackage{colortbl}
+%\rowcolor{blue!20}
+
+%合并行和列
+%\multicolumn{2}{c|}{\multirow{2}{*}{Method}}
+%\multicolumn{2}{c|}{Method}
+
+%定义颜色
+\definecolor{color1}{RGB}{193, 203, 215}
+\cellcolor{color1} 
+
+\begin{table*}[htb!]
+\centering
+\caption{{Comparisons of 30\% compression on \textsc{Llama}-2 70B using 128 wikitext-2 samples for calibration.}\label{tbl:large_model}}
+\setlength\extrarowheight{7pt}
+\renewcommand{\arraystretch}{1.35} 
+\resizebox{1\linewidth}{!}{
+\begin{tabular}{l|c|ccccccccccc|c}
+\midrule[1pt]
+\multicolumn{1}{c|}{\Large \textbf{Method}} &{\color{Red} \Large $\downarrow$} \Large \textbf{WikitText-2} &{\color{Green} \Large $\uparrow$} \Large \textbf{ARC-e} & \Large \textbf{ARC-c} & \Large \textbf{PIQA} & \Large \textbf{WinoG.} & \Large \textbf{HellaS.} & \Large \textbf{BoolQ} & \Large \textbf{OBQA} & \Large \textbf{MathQA} & \Large \textbf{MMLU-ml} & \Large \textbf{COPA} & \Large \textbf{Lamb.} & {\color{Green} \Large $\uparrow$} \Large \textbf{Average.} \\ \midrule[1pt]
+\Large Dense \textsc{llama}-2 70B & \Large 3.12 & \Large 80.98 & \Large 57.25 & \Large 82.75 & \Large 77.90 & \Large 83.83 & \Large 83.79 & \Large 48.80 & \Large 38.42 & \Large 42.86 & \Large 94.00 & \Large 79.60 & \Large 70.02 \\ 
+\cmidrule[1pt]{1-14} 
+\Large SliceGPT & \Large 5.76 & \Large 67.05 & \Large 42.06 & \Large 67.52 & \Large 71.11 & \Large 55.57 & \Large 41.56 & \Large 40.20 & \Large 27.87 & \Large 32.14 & \Large 82.00 & \Large 52.03 & \Large 52.65 \\ 
+\Large ShortGPT & \Large 66.33 & \Large 60.65 & \Large {34.47} & \Large {72.74} & \Large 64.01 & \Large {63.80} & \Large 66.88 & \Large 34.40 & \Large 23.05 & \Large 31.25 & \Large 75.00 & \Large 27.01 & \Large 48.06\\ 
+\Large SLEB & \Large 5.54 & \Large 71.97 & \Large 44.20 & \Large \underline{77.74} & \Large 69.38 & \Large {73.54} & \Large {67.25} & \Large 41.80 & \Large 27.47 & \Large {32.15} & \Large {88.00} & \Large 64.22 & \Large 59.79 \\ \cmidrule[1pt]{1-14} 
+\rowcolor{blue!5!white}
+\Large \locogpt + OWL sparsity & \Large \bf 4.67 & \Large {76.01} & \Large {50.34} & \Large 74.70 & \Large {72.85} & \Large 72.43 & \Large {69.88} & \Large {44.20} & \Large {32.26} & \Large \bf 44.64 & \Large 87.00 & \Large {69.61} & \Large {63.08} \\
+\rowcolor{blue!5!white}
+\Large \locogpt + our sparsity & \Large \underline{4.89} & \Large \underline{77.69} & \Large \underline{50.94} & \Large {77.53} & \Large \underline{76.87} & \Large \underline{78.16} & \Large \underline{74.71} & \Large \underline{45.60} & \Large \bf 35.04 & \Large \underline{42.86} & \Large \underline{89.00} & \Large \bf 72.17 & \Large \underline{65.51} \\
+\midrule[1pt]
+\rowcolor{blue!12!white}
+\Large \locogpt + our sparsity + Alpaca & \Large {5.73} & \Large \bf{78.57} & \Large \bf 51.54 & \Large \bf{80.85} & \Large \bf 77.19 & \Large \bf 79.60 & \Large \bf{82.81} & \Large \bf 46.40 & \Large \underline{32.83} & \Large {40.18} & \Large \bf 94.00 & \Large \underline{70.72} & \Large \bf 66.79 \\
+\midrule[1pt]
+\end{tabular}}
+\end{table*}
+
+\begin{table}[!htbp]
+\centering
+    \caption{{Compression computations for calibration set of size 128 in WikiText2.}\label{tbl:compute_appen}}
+\setlength\extrarowheight{2pt}
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+\resizebox{1\linewidth}{!}{
+\begin{tabular}{c|ll|ll|ll}
+\midrule[1pt]
+\multirow{2}{*}{\textbf{Model}} & \multicolumn{2}{c|}{\textbf{LoCoGPT}}                 & \multicolumn{2}{c|}{\textbf{SliceGPT }\cite{ashkboos2024slicegpt}}                & \multicolumn{2}{c}{\textbf{LLM surgeon }\cite{van2023llm}}                \\
+                           & \multicolumn{1}{c|}{Time} & \multicolumn{1}{c|}{GPUs} & \multicolumn{1}{c|}{Time} & \multicolumn{1}{c|}{GPUs} & \multicolumn{1}{c|}{Time}    & \multicolumn{1}{c}{GPUs} \\ \midrule[1pt]
+\textsc{Llama-2} 7B                  & \multicolumn{1}{l|}{4h09m}     & 1xA100 80GB               & \multicolumn{1}{l|}{0h26m}     & 1xA100 80GB               & \multicolumn{1}{l|}{17h08m}  & 4xH100 80GB              \\ \midrule
+\textsc{Llama-2} 13B                 & \multicolumn{1}{l|}{8h26m}     & 1xA100 80GB               & \multicolumn{1}{l|}{0h45m}     & 1xA100 80GB               & \multicolumn{1}{l|}{1d9h26m} & 8xH100 80GB              \\ \midrule[1pt]
+\end{tabular}
+}
+\end{table}
+
+\begin{table*}[t!]
+\centering
+\caption{{Zero-shot task performance degradation of \textsc{Llama}-2 7B, calibrated with 128 samples from the Alpaca dataset, evaluated across a broader set of tasks.}\label{tbl:diverse_7b}}
+\setlength\extrarowheight{5pt}
+\resizebox{1\linewidth}{!}{
+\begin{tabular}{lccccccccccc}
+\midrule
+\textbf{Method} & \textbf{BoolQ} & \textbf{PIQA} & \textbf{HellaS.} & \textbf{WinoG.} & \textbf{ARC-e} & \textbf{ARC-c} & \textbf{OBQA} & \textbf{COPA} & \textbf{Lamb.} & \textbf{MMLU-ml} & \textbf{Average} \\ \midrule
+Dense& 77.68\% & 79.05\% & 76.00\% & 68.98\% & 74.58\%&46.33\% & 44.22\% & 87.00\% & 73.86\% & 39.29\% & 66.70\% \\ \midrule
+SliceGPT \citep{ashkboos2024slicegpt} & 61.99\% & 68.55\% & 48.69\% & 59.75\% & 59.69\%&34.47\% & 31.40\% & 75.00\% & 21.02\% & 23.21\% & 48.08\% \\ 
+\midrule
+ShortGPT \citep{men2024shortgpt} & 62.17\% & 64.48\% & 56.15\% & 64.33\% & 48.70\% & 32.59\% & 32.80\% & 79.00\% & 29.03\% & 24.11\% & 49.34\% \\ \midrule
+\rowcolor{blue!12!white}\locogpt (ours) & \bf 69.76\% & \bf 73.34\% & \bf 65.90\% & \bf 66.22\% & \bf 65.49\% & \bf 39.16\% & \bf 39.00\% & \bf 87.00\% & \bf 57.07\% & \bf 32.14\% & \bf 59.51\% \\
+\midrule
+\midrule
+$\Delta$ SliceGPT  & -15.69\% & -10.50\% & -27.31\% & -9.23\% & -17.89\% & -11.86\% & -12.80\% & -12.00\% & -52.84\% & -16.08\% & -18.62\% \\ \midrule
+ $\Delta$ ShortGPT& -15.51\% & -14.57\% & -19.85\% & -4.65\% & -25.88\% & -13.74\% & -11.40\% & -8.00\% & -44.83\% & -15.18\% & -17.36\% \\ 
+\rowcolor{blue!12!white}$\Delta$ \locogpt (ours) & -7.92\% & -5.71\% & -10.10\% & -2.76\% & -9.09\% & -7.17\% & -5.20\% & 0\% & -16.79\% & -7.15\% & -7.19\% \\
+\midrule
+\end{tabular}
+}
+\end{table*}
+
+
+\end{document}

@@ -1,0 +1,393 @@
+\documentclass[letterpaper]{article} % DO NOT CHANGE THIS
+\usepackage[submission]{aaai2026}  % DO NOT CHANGE THIS
+\usepackage{times}  % DO NOT CHANGE THIS
+\usepackage{helvet}  % DO NOT CHANGE THIS
+\usepackage{courier}  % DO NOT CHANGE THIS
+\usepackage[hyphens]{url}  % DO NOT CHANGE THIS
+\usepackage{graphicx} % DO NOT CHANGE THIS
+\urlstyle{rm} % DO NOT CHANGE THIS
+\def\UrlFont{\rm}  % DO NOT CHANGE THIS
+\usepackage{natbib}  % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\usepackage{caption} % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\frenchspacing  % DO NOT CHANGE THIS
+\setlength{\pdfpagewidth}{8.5in} % DO NOT CHANGE THIS
+\setlength{\pdfpageheight}{11in} % DO NOT CHANGE THIS
+%
+% These are recommended to typeset algorithms but not required. See the subsubsection on algorithms. Remove them if you don't have algorithms in your paper.
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\usepackage{pifont} %182/183/184
+\usepackage{subcaption}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{booktabs}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{verbatim}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{colortbl}
+\usepackage{booktabs,makecell, multirow, tabularx}
+\usepackage{adjustbox}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{amsmath}
+
+\usepackage{booktabs}
+\usepackage{amssymb}
+\usepackage{bbding}
+\usepackage{pifont}
+\usepackage{wasysym}
+\usepackage{utfsym}
+\usepackage{fontawesome}
+
+\usepackage{mdframed}
+
+\usepackage{graphicx}
+\definecolor{linkcolor}{RGB}{255,0,0}
+\definecolor{urlcolor}{RGB}{255,105,180}
+\definecolor{citecolor}{RGB}{66,168,235}
+%\hypersetup{colorlinks=true,linkcolor=linkcolor,urlcolor=urlcolor}
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{52}\xspace}%
+\newcommand{\xmark}{\ding{56}\xspace}%
+% \usepackage{titlesec}
+% \usepackage{caption}  % 引入caption包
+% % 设置表格标题和表格之间的间距
+\captionsetup[table]{skip=5pt}  
+\captionsetup[figure]{skip=5pt} 
+% \setlength{\parskip}{2pt}  % 设置段落之间的间距为10pt
+% \setlength{\parindent}{0pt}  % 设置段落不缩进
+% \setlength{\baselineskip}{18pt}  % 设置章节标题的行间距
+  % \setlength{\parskip}{0.05cm}  % 设置段落间距为0.3厘米
+
+
+
+\definecolor{cvprblue}{rgb}{0.21,0.49,0.74}
+\definecolor{Light}{rgb}{0.99, 0.92, 0.95}
+\definecolor{codered}{rgb}{0.98,0.49,0.72}
+\begin{document}
+
+% %%%%%%%%%%%%%%%%%%%   MVTec 3D-AD (I-AUROC)
+%\checkmark  \Checkmark
+%\XSolidBrush
+% \cmidrule{1-8} 横线
+
+% \usepackage{arydshln}虚线宏包  
+%\hdashline
+%\cdashline{2-3} % 第二、三列虚线
+
+%左 $\leftarrow$，右 $\rightarrow$，上 $\uparrow$，下 $\downarrow$
+
+%整行填充颜色
+%\usepackage[table]{xcolor}
+%\usepackage{colortbl}
+%\rowcolor{blue!20}
+
+%合并行和列
+%\multicolumn{2}{c|}{\multirow{2}{*}{Method}}
+%\multicolumn{2}{c|}{Method}
+
+%定义颜色
+% \definecolor{color1}{RGB}{229,229,229}
+% \cellcolor{color1} 
+%定义字体
+% \newcommand{\zzz}[1]{{\color{color1} #1}}
+
+\begin{table}[!t]
+\centering
+\caption{Comparison of \textbf{computational cost} and \textbf{memory usage}.}
+\label{table:comparison of computational}
+\fontsize{11}{14}\selectfont{
+\resizebox{0.95\linewidth}{!}{
+\begin{tabular}{c|cc}
+\toprule[1.5pt]
+           & \multicolumn{2}{c}{Number of multiplicaiton and addition}          \\ \midrule
+Calculation & \multicolumn{1}{c|}{Vanilla Self Attention} & \textbf{INP-Guided Attention} \\ \midrule
+$A_{l}=Q_{l}(K_{l})^{T}$      & \multicolumn{1}{c|}{943 496 960}            & \textbf{7 220 640}            \\ \midrule
+${f_{\mathcal{D}}^{l-1}}'=A_{l}V_{l}$        & \multicolumn{1}{c|}{943 509 504}            & \textbf{6 623 232}            \\ \midrule
+ & \multicolumn{2}{c}{Memory usage (MB)}                                         \\ \midrule
+$Q_l$/$K_l$/$V_l$/$A_l$    & \multicolumn{1}{c|}{2.30/2.30/2.30/2.34}                & 2.30/\textbf{0.018}/\textbf{0.018}/\textbf{0.018}              \\ \bottomrule[1.5pt]
+\end{tabular}}}
+\vspace{-3mm}
+\end{table}
+
+\begin{table*}[!ht]
+\centering
+\caption{\textbf{Multi-class} anomaly detection performance on different AD datasets. The best in \textbf{bold}, the
+second-highest is \underline{underlined}.}
+\label{table:multi-class-main-performance}
+\fontsize{10}{14}\selectfont{
+\resizebox{\textwidth}{!}
+{\begin{tabular}{c|cccccc}
+\toprule[1.5pt]
+Dataset~$\rightarrow$    & \multicolumn{2}{c|}{MVTec-AD~\cite{MVTec-AD}}                                                     & \multicolumn{2}{c|}{VisA~\cite{VisA}}                                                         & \multicolumn{2}{c}{Real-IAD~\cite{real-iad}}         \\ \midrule
+Metric~$\rightarrow$     & \multicolumn{6}{c}{Image-level(I-AUROC/I-AP/I-F1\_max)\hspace{10mm}Pixel-level(P-AUROC/P-AP/P-F1\_max/AUPRO)}                                                                                                                        \\  \cmidrule{2-7}
+Method~$\downarrow$     & Image-level    & \multicolumn{1}{c|}{Pixel-level}                                 & Image-level    & \multicolumn{1}{c|}{Pixel-level}                                 & Image-level    & Pixel-level         \\ 
+\midrule
+RD4AD~\cite{RD4AD}  & 94.6/96.5/95.2 & \multicolumn{1}{c|}{96.1/48.6/53.8/91.1}   & 92.4/92.4/89.6 & \multicolumn{1}{c|}{98.1/38.0/42.6/91.8} & 82.4/79.0/73.9 & 97.3/25.0/32.7/89.6 \\
+UniAD~\cite{uniad}      & 96.5/98.8/96.2 & \multicolumn{1}{c|}{96.8/43.4/49.5/90.7} & 88.8/90.8/85.8 & \multicolumn{1}{c|}{98.3/33.7/39.0/85.5}  & 83.0/80.9/74.3 & 97.3/21.1/29.2/86.7 \\
+SimpleNet~\cite{liu2023simplenet}   & 95.3/98.4/95.8 & \multicolumn{1}{c|}{96.9/45.9/49.7/86.5}                         & 87.2/87.0/81.8 & \multicolumn{1}{c|}{96.8/34.7/37.8/81.4}                         & 57.2/53.4/61.5 & 75.7/2.8/6.5/39.0   \\
+DeSTSeg~\cite{zhang2023destseg}    & 89.2/95.5/91.6 & \multicolumn{1}{c|}{93.1/54.3/50.9/64.8}                         & 88.9/89.0/85.2 & \multicolumn{1}{c|}{96.1/39.6/43.4/67.4}                         & 82.3/79.2/73.2 & 94.6/37.9/41.7/40.6 \\
+DiAD~\cite{diad}      & 97.2/99.0/96.5 & \multicolumn{1}{c|}{96.8/52.6/55.5/90.7}                         & 86.8/88.3/85.1 & \multicolumn{1}{c|}{96.0/26.1/33.0/75.2} & 75.6/66.4/69.9 & 88.0/2.9/7.1/58.1   \\
+MambaAD~\cite{he2024mambaad}    & 98.6/99.6/97.8 & \multicolumn{1}{c|}{97.7/56.3/59.2/93.1} & 94.3/94.5/89.4 & \multicolumn{1}{c|}{98.5/39.4/44.0/91.0}                         & 86.3/84.6/77.0 & 98.5/33.0/38.7/90.5 \\
+Dinomaly~\cite{guo2024dinomaly}   & \underline{99.6}/\underline{99.8}/\underline{99.0} & \multicolumn{1}{c|}{\underline{98.4}/\underline{69.3}/\underline{69.2}/\underline{94.8}}                         & \underline{98.7}/\underline{98.9}/\underline{96.2} & \multicolumn{1}{c|}{\underline{98.7}/\textbf{53.2}/\textbf{55.7}/\textbf{94.5}}                         & \underline{89.3}/\underline{86.8}/\underline{80.2} & \underline{98.8}/\underline{42.8}/\underline{47.1}/\underline{93.9} \\ \midrule
+\rowcolor{Light}
+\textbf{INP-Former} & \textbf{99.7}/\textbf{99.9}/\textbf{99.2} & \multicolumn{1}{c|}{\cellcolor{Light}\textbf{98.5}/\textbf{71.0}/\textbf{69.7}/\textbf{94.9}} & \textbf{98.9}/\textbf{99.0}/\textbf{96.6} & \multicolumn{1}{c|}{\cellcolor{Light}\textbf{98.9}/\underline{51.2}/\underline{54.7}/\underline{94.4}} & \textbf{90.5}/\textbf{88.1}/\textbf{81.5} & \textbf{99.0}/\textbf{47.5}/\textbf{50.3}/\textbf{95.0} \\ \bottomrule[1.5pt]
+\end{tabular}}}
+\vspace{-3mm}
+\end{table*}
+
+\begin{table*}[!ht]
+\centering
+\caption{\textbf{Few-shot (4-shot)} anomaly detection performance on different AD datasets. The best in \textbf{bold}, the
+second-highest is \underline{underlined}. $\dagger$ indicates the results we reproduced using publicly available code.}
+\label{table:few-shot-main-performance}
+\fontsize{10}{14}\selectfont{
+\resizebox{\textwidth}{!}{
+\begin{tabular}{c|cc|cc|cc}
+\toprule[1.5pt]
+Dataset~$\rightarrow$    & \multicolumn{2}{c|}{MVTec-AD~\cite{MVTec-AD}}        & \multicolumn{2}{c|}{VisA~\cite{VisA}}              & \multicolumn{2}{c}{Real-IAD~\cite{real-iad}}                                                      \\ \midrule
+% Metric~$\rightarrow$     & \multicolumn{6}{c}{Image-level(I-AUROC/I-AP/I-F1\_max)\hspace{10mm}Pixel-level(P-AUROC/P-AP/P-F1\_max/AUPRO)}                                                                                                                        \\  \cmidrule{2-7}
+Method~$\downarrow$     & Image-level    & Pixel-level         & Image-level    & Pixel-level           & \multicolumn{1}{c|}{Image-level}                            & Pixel-level         \\ \midrule
+SPADE~\cite{SPADE}      & 84.8/92.5/91.5 & 92.7/-/46.2/87.0    & 81.7/83.4/82.1 & 96.6/-/43.6/87.3      & \multicolumn{1}{c|}{50.8$^{\dagger}$/45.8$^{\dagger}$/61.2$^{\dagger}$}                            & 59.5$^{\dagger}$/0.2$^{\dagger}$/0.5$^{\dagger}$/19.2$^{\dagger}$         \\
+PaDiM~\cite{defard2021padim}      & 80.4/90.5/90.2 & 92.6/-/46.1/81.3    & 72.8/75.6/78.0 & 93.2/-/24.6/72.6      & \multicolumn{1}{c|}{60.3$^{\dagger}$/53.5$^{\dagger}$/64.0$^{\dagger}$}                            & 90.9$^{\dagger}$/2.1$^{\dagger}$/5.1$^{\dagger}$/67.6$^{\dagger}$         \\
+PatchCore~\cite{Patchcore}  & 88.8/94.5/92.6 & 94.3/-/55.0/84.3    & 85.3/87.5/\underline{84.3} & 96.8/-/43.9/84.9      & \multicolumn{1}{c|}{66.0$^{\dagger}$/\underline{62.2}$^{\dagger}$/\underline{65.2}$^{\dagger}$}                            & 92.9$^{\dagger}$/9.8$^{\dagger}$/16.1$^{\dagger}$/68.6$^{\dagger}$         \\
+WinCLIP~\cite{WinClip}    & 95.2/\underline{97.3}/\underline{94.7} & 96.2/-/\underline{59.5}/89.0    & 87.3/\underline{88.8}/84.2 & 97.2/-/\underline{47.0}/\underline{87.6}      & \multicolumn{1}{c|}{\underline{73.0}$^{\dagger}$/61.8$^{\dagger}$/61.0$^{\dagger}$}                         & \underline{93.8}$^{\dagger}$/\underline{13.3}$^{\dagger}$/\underline{21.0}$^{\dagger}$/\underline{76.4}$^{\dagger}$ \\
+PromptAD~\cite{PromptAD}   & \underline{96.6}/-/-       & \underline{96.5}/-/-/\underline{90.5}       & \underline{89.1}/-/-       & \underline{97.4}/-/-/86.2         & \multicolumn{1}{c|}{59.7$^{\dagger}$/43.5$^{\dagger}$/52.9$^{\dagger}$}                         & 86.9$^{\dagger}$/8.7$^{\dagger}$/16.1$^{\dagger}$/61.9$^{\dagger}$  \\ \midrule
+\rowcolor{Light} 
+\textbf{INP-Former} & \textbf{97.6}/\textbf{98.6}/\textbf{97.0} & \textbf{97.0}/\textbf{65.9}/\textbf{65.6}/\textbf{92.9}& \textbf{96.4}/\textbf{96.0}/\textbf{93.0} & \textbf{97.7}/\textbf{49.3}/\textbf{54.3}/\textbf{93.1} & \multicolumn{1}{c|}{\cellcolor{Light}\textbf{76.7}/\textbf{72.3}/\textbf{71.7}} & \textbf{97.3}/\textbf{32.2}/\textbf{36.7}/\textbf{89.0} \\ \bottomrule[1.5pt]
+\end{tabular}}}
+\vspace{-3mm}
+\end{table*}
+
+\begin{table*}[!ht]
+\centering
+\caption{\textbf{Single class} anomaly detection performance on different AD datasets. The best in \textbf{bold}, the
+second-highest is \underline{underlined}.}
+\label{table:single-class-main-performance}
+\fontsize{11.5}{14}\selectfont{
+\resizebox{.825\textwidth}{!}{
+\begin{tabular}{c|ccc|ccc|ccc}
+\toprule[1.5pt]
+Dataset~$\rightarrow$     & \multicolumn{3}{c|}{MVTec-AD~\cite{MVTec-AD}} & \multicolumn{3}{c|}{VisA~\cite{VisA}} & \multicolumn{3}{c}{Real-IAD~\cite{real-iad}} \\ \midrule
+Method~$\downarrow$      & I-AUROC    & P-AP   & AUPRO   & I-AUROC  & P-AP  & AUPRO  & I-AUROC   & P-AP   & AUPRO   \\ \midrule
+% EfficientAD~\cite{EfficientAD} & 99.1       & 63.8   & 93.5    & 98.1     & 40.8  & \underline{94.0}     & -         & -      & -       \\
+PatchCore~\cite{Patchcore}   & 99.1       & 56.1   & 93.5    & 95.1     & 40.1  & 91.2   & 89.4      & -      & 91.5    \\
+RD4AD~\cite{RD4AD}       & 98.5       & 58.0     & 93.9    & 96.0       & 27.7  & 70.9   & 87.1      & -      & 93.8    \\
+SimpleNet~\cite{liu2023simplenet}   & \underline{99.6}       & 54.8   & 90.0      & 96.8     & 36.3  & 88.7   & 88.5      & -      & 84.6    \\
+Dinomaly~\cite{guo2024dinomaly}    & \textbf{99.7}       & \underline{68.9}   & \underline{95.0}      & \textbf{98.9}     & \textbf{50.7}  & \textbf{95.1}   & \underline{92.0}        & \underline{45.2}   & \underline{95.1}    \\ \midrule
+\rowcolor{Light} 
+\textbf{INP-Former}  & \textbf{99.7}       & \textbf{70.2}   & \textbf{95.4}    & \underline{98.5}        & \underline{49.2}     & \underline{93.8}      & \textbf{92.1}      & \textbf{48.1}   & \textbf{95.6}    \\ \bottomrule[1.5pt]
+\end{tabular}}
+}
+\vspace{-3mm}
+\end{table*}
+\begin{table*}[!t]
+\centering
+\caption{\textbf{Overall ablation} on MVTec-AD~\cite{MVTec-AD} and VisA~\cite{VisA} datasets. \textbf{\textit{``INP''}} refers to the use of INP Extractor and INP-Guided Decoder.}
+\label{table:ablation}
+\fontsize{10}{14}\selectfont{
+\resizebox{0.91\linewidth}{!}{
+\begin{tabular}{c|ccc|cc|cc}
+\toprule[1.5pt]
+                    & \multicolumn{3}{c|}{Dataset~$\rightarrow$ }                                                      & \multicolumn{2}{c|}{MVTec-AD~\cite{MVTec-AD}}                                                               & \multicolumn{2}{c}{VisA~\cite{VisA}}                                                                    \\ \midrule
+                   & \textbf{\textit{``INP''}}                        & $\mathcal{L}_c$                        & $\mathcal{L}_{sm}$                        & Image-level                               & Pixel-level                                     & Image-level                               & Pixel-level                                     \\ \midrule
+                    & \textcolor{gray}{\xmark}                         & \textcolor{gray}{\xmark}                         & \textcolor{gray}{\xmark}                         & 98.59/99.18/97.63                         & 97.19/61.73/62.94/92.73                         & 96.58/97.18/92.89                         & 97.50/47.24/51.90/82.85                         \\
+                    & \cmark                         & \textcolor{gray}{\xmark}                         & \textcolor{gray}{\xmark}                         & 99.53/99.80/98.81                         & 98.32/69.82/69.38/94.69                         & 98.11/98.23/95.22                         & 98.41/50.34/54.23/93.63                         \\
+                    & \cmark                         & \cmark                         & \textcolor{gray}{\xmark}                        & 99.61/99.83/99.02                         & 98.39/70.01/69.53/\textbf{95.10}                         & 98.16/98.30/95.47                         & 98.46/51.09/54.46/93.71                         \\
+\multirow{-4}{*}{\rotatebox{90}{\textbf{Module}}} & \cellcolor{Light}\cmark & \cellcolor{Light}\cmark & \cellcolor{Light}\cmark & \cellcolor{Light}\textbf{99.67}/\textbf{99.88}/\textbf{99.20} & \cellcolor{Light}\textbf{98.48}/\textbf{71.02}/\textbf{69.65}/94.87 & \cellcolor{Light}\textbf{98.90}/\textbf{99.02}/\textbf{96.57} & \cellcolor{Light}\textbf{98.90}/\textbf{51.22}/\textbf{54.74}/\textbf{94.36} \\ \bottomrule[1.5pt]
+\end{tabular}}}
+\vspace{-3mm}
+\end{table*}
+
+\begin{table}[!t]
+\centering
+\caption{\textbf{Comparison of computational efficiency among SOTA methods}. mAD represents the average value of seven metrics on the Real-IAD~\cite{real-iad} dataset. The \textbf{INP-Former-S} denotes a model variant based on the ViT-Small architecture, while \textbf{INP-Former-S$^*$} refers to a model variant using the ViT-Small architexture with an image size of R256$^2$-C224$^2$.}
+\label{table:complexity}
+\fontsize{10}{14}\selectfont{
+\resizebox{0.9\linewidth}{!}{
+\begin{tabular}{c|ccc}
+\toprule[1.5pt]
+Method              & Params(M)     & FLOPs(G)     & mAD           \\ \midrule
+RD4AD~\cite{RD4AD}               & 150.6          & 38.9         & 68.6          \\
+UniAD~\cite{uniad}               & \textbf{24.5} & \textbf{3.6} & 67.5          \\
+SimpleNet~\cite{liu2023simplenet}           & 72.8          & 16.1         & 42.3          \\
+DeSTSeg~\cite{zhang2023destseg}             & 35.2          & 122.7        & 64.2          \\
+DiAD~\cite{diad}                & 1331.3        & 451.5        & 52.6          \\
+MambaAD~\cite{he2024mambaad}             & \underline{25.7}          & 8.3          & 72.7          \\
+Dinomaly~\cite{guo2024dinomaly}            & 132.8         & 104.7        & 77.0            \\ \midrule
+\rowcolor{Light} 
+\textbf{INP-Former} & 139.8         & 98.0           & \textbf{78.8} \\ 
+\textbf{INP-Former-S} & 35.1         & 24.6           & \underline{78.4} \\ 
+\textbf{INP-Former-S$^{*}$} & 35.1        & \underline{8.1}           & 73.8 \\ 
+\bottomrule[1.5pt]
+\end{tabular}}}
+\end{table}
+
+
+
+\begin{table*}[!ht]
+\centering
+\caption{Influence of the \textbf{Image Size} on model performance for the MVTec-AD~\cite{MVTec-AD} dataset. R256$^2$-C224$^2$ denotes resizing the image to 256$\times$256, followed by a center crop to 224$\times$224.}
+\label{table:image_size}
+\fontsize{11.5}{14}\selectfont{
+\resizebox{0.85\linewidth}{!}{
+\begin{tabular}{c|ccc|cccc|cc}
+\toprule[1.5pt]
+Metric~$\rightarrow$     & \multicolumn{3}{c|}{Image-level} & \multicolumn{4}{c|}{Pixel-level} & \multicolumn{2}{c}{Efficiency} \\ \cmidrule{2-10} 
+Image Size~$\downarrow$ & AUROC     & AP      & F1\_max    & AUROC  & AP    & F1\_max & AUPRO & Params(M)      & FLOPs(G)      \\ \midrule
+R224$^2$       & 99.3      & 99.8    & 98.8       & 98.2   & 60.8  & 61.9    & 93.6  & 139.8          & \textbf{32.3}          \\
+R256$^2$-C224$^2$  & 99.3      & 99.8    & 99.0       & 98.1   & 64.2  & 64.4    & 92.7  & 139.8          & \textbf{32.3}          \\
+R280$^2$       & 99.5      & \textbf{99.9}    & \textbf{99.2}       & 98.4   & 64.9  & 64.8    & 94.6  & 139.8          & 50.2          \\
+R320$^2$-C280$^2$  & 99.6      & \textbf{99.9}    & 99.1       & 98.3   & 67.5  & 67.1    & 93.9  & 139.8          & 50.2          \\
+R392$^2$       & 99.6      & 99.8    & 99.1       & \textbf{98.6}   & 69.1  & 68.5    & \textbf{95.6}  & 139.8          & 98.0          \\
+\rowcolor{Light} 
+R448$^2$-C392$^2$  & \textbf{99.7}      & \textbf{99.9}    & \textbf{99.2}       & 98.5   & \textbf{71.0}  & \textbf{69.7}    & 94.9  & 139.8          & 98.0          \\ \bottomrule[1.5pt]
+\end{tabular}}}
+\end{table*}
+\begin{table}[]
+\centering
+\caption{Influence of the \textbf{Image Size} on the performance of other methods on MVTec-AD~\cite{MVTec-AD} dataset.}
+\label{table:image_size_other}
+\fontsize{11.5}{14}\selectfont{
+\resizebox{\linewidth}{!}{
+\begin{tabular}{c|c|cc}
+\toprule[1.5pt]
+Method                     & Input Size & Image-level    & Pixel-level         \\ \midrule
+\multirow{3}{*}{RD4AD~\cite{RD4AD}}     & R256$^2$        & 94.6/96.5/96.1 & 96.1/48.6/53.8/91.1 \\
+                           & R384$^2$         & 91.9/96.2/95.0 & 94.0/47.8/50.9/88.6 \\ \cmidrule{2-4} 
+                           & $\triangle$          & \textcolor{purple}{-2.7/0.3/1.1}   & \textcolor{purple}{-2.1/0.8/2.9/2.5}    \\ \midrule
+\multirow{3}{*}{SimpleNet~\cite{liu2023simplenet}} & R256$^2$         & 95.3/98.4/95.8 & 96.9/45.9/49.7/86.5 \\
+                           & R384$^2$         & 86.1/93.6/90.9 & 89.5/36.0/40.5/76.4 \\ \cmidrule{2-4} 
+                           & $\triangle$          & \textcolor{purple}{-9.2/4.8/4.9}   & \textcolor{purple}{-7.4/9.9/9.2/10.1}   \\ \midrule
+\multirow{3}{*}{PatchCore~\cite{Patchcore}} & R256$^2$         & 97.2/99.1/97.2 & 97.9/53.8/56.3/91.3 \\
+                           & R384$^2$         & 98.9/99.6/98.3 & 98.0/58.4/59.8/93.2 \\ \cmidrule{2-4} 
+                           & $\triangle$          & \textcolor{purple}{+1.7/0.5/1.1}   & \textcolor{purple}{+0.1/4.6/3.5/1.9}    \\ \bottomrule[1.5pt]
+\end{tabular}}}
+\end{table}
+\begin{table*}[!h]
+\centering
+\caption{Influence of the \textbf{ViT Architecture} on model performance for the MVTec-AD~\cite{MVTec-AD} dataset.}
+\label{table:vit_architecture}
+\fontsize{11.5}{14}\selectfont{
+\resizebox{0.85\linewidth}{!}{
+\begin{tabular}{c|ccc|cccc|cc}
+\toprule[1.5pt]
+Metric~$\rightarrow$       & \multicolumn{3}{c|}{Image-level} & \multicolumn{4}{c|}{Pixel-level} & \multicolumn{2}{c}{Efficiency} \\ \cmidrule{2-10} 
+Architecture~$\downarrow$ & AUROC     & AP      & F1\_max    & AUROC  & AP    & F1\_max & AUPRO & Params(M)      & FLOPs(G)      \\ \midrule
+ViT-Small    & 99.2      & 99.7    & 98.6       & 98.2   & 69.1  & 68.5    & 94.3  & \textbf{35.1}           & \textbf{24.6}          \\
+\rowcolor{Light} 
+ViT-Base     & 99.7      & \textbf{99.9}    & 99.2       & 98.5   & 71.0  & 69.7    & 94.9  & 139.8          & 98.0          \\
+ViT-Large    & \textbf{99.8}      & \textbf{99.9}    & \textbf{99.4}       & \textbf{98.6}   & \textbf{72.1}  & \textbf{70.5}    & \textbf{95.6}  & 361.7          & 263.4         \\ \bottomrule[1.5pt]
+\end{tabular}}}
+\end{table*}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\linewidth]{figures/ablation_weight.pdf}
+    \caption{\textbf{Influence of the weight of loss function} $\lambda$ \textbf{on model performance for the MVTec-AD}~\cite{MVTec-AD} \textbf{dataset}. Pixel-
+level AP and F1\_max use the \textcolor{blue}{right vertical axis}, while the other
+metrics share the \textcolor{red}{left vertical axis}.}
+    \label{fig:loss-weight}
+\end{figure}
+
+\begin{table*}[]
+\centering
+\caption{\textbf{Super-multi-class} anomaly detection performance on different AD datasets. $\Delta$ represents the performance change of INP-Former in the super-multi-class setting relative to the multi-class setting.}
+\label{table:super-multi-class}
+\fontsize{11.5}{14}\selectfont{
+\resizebox{\linewidth}{!}{
+\begin{tabular}{c|cccccc}
+\toprule[1.5pt]
+Dataset~$\rightarrow$           & \multicolumn{2}{c|}{MVTec-AD~\cite{MVTec-AD}}                             & \multicolumn{2}{c|}{VisA~\cite{VisA}}                                 & \multicolumn{2}{c}{Real-IAD~\cite{real-iad}}         \\ \midrule
+Metric~$\rightarrow$            & \multicolumn{6}{c}{Image-level(I-AUROC/I-AP/I-F1\_max)\hspace{10mm} Pixel-level(P-AUROC/P-AP/P-F1\_max/AUPRO)}                                                                                                                  \\ \cmidrule{2-7} 
+Setting~$\downarrow$           & Image-level    & \multicolumn{1}{c|}{Pixel-level}         & Image-level    & \multicolumn{1}{c|}{Pixel-level}         & Image-level    & Pixel-level         \\ \midrule
+Multi-Class       & 99.7/99.9/99.2 & \multicolumn{1}{c|}{98.5/71.0/69.7/94.9} & 98.9/99.0/96.6 & \multicolumn{1}{c|}{98.9/51.2/54.7/94.4} & 90.5/88.1/81.5 & 99.0/47.5/50.3/95.0 \\
+Super-Multi-Class & 99.5/99.8/98.9 & \multicolumn{1}{c|}{98.1/69.2/68.1/94.2} & 97.3/97.8/94.1 & \multicolumn{1}{c|}{98.4/51.4/54.7/92.4} & 89.8/87.4/80.5 & 98.9/45.2/48.6/94.4 \\ \midrule
+$\Delta$                 & \textcolor{purple}{0.2$\downarrow$/0.1$\downarrow$/0.3$\downarrow$}    & \multicolumn{1}{c|}{\textcolor{purple}{0.4$\downarrow$/1.8$\downarrow$/1.6$\downarrow$/0.7$\downarrow$}}     & \textcolor{purple}{1.6$\downarrow$/1.2$\downarrow$/2.5$\downarrow$}    & \multicolumn{1}{c|}{\textcolor{purple}{0.5$\downarrow$/0.2$\uparrow$/0.0/2.0$\downarrow$}}   & \textcolor{purple}{0.7$\downarrow$/0.7$\downarrow$/1.0$\downarrow$}    & \textcolor{purple}{0.1$\downarrow$/2.3$\downarrow$/1.7$\downarrow$/0.6$\downarrow$}     \\ \bottomrule[1.5pt]
+\end{tabular}}}
+\end{table*}
+
+\begin{table*}[]
+\centering
+\caption{\textbf{Few-shot (1-shot)} anomaly detection performance on different AD datasets. The best in \textbf{bold}, the
+second-highest is \underline{underlined}. $\dagger$ indicates the results we reproduced using publicly available code.}
+\label{table:1-shot-performance}
+\fontsize{11}{14}\selectfont{
+\resizebox{\linewidth}{!}{
+\begin{tabular}{c|cccccc}
+\toprule[1.5pt]
+Dataset~$\rightarrow$             & \multicolumn{2}{c|}{MVTec-AD~\cite{MVTec-AD}}                                                     & \multicolumn{2}{c|}{VisA~\cite{VisA}}                                                         & \multicolumn{2}{c}{Real-IAD~\cite{real-iad}}         \\ \midrule
+Metric~$\rightarrow$              & \multicolumn{6}{c}{Image-level(I-AUROC/I-AP/I-F1\_max)\hspace{10mm}Pixel-level(P-AUROC/P-AP/P-F1\_max/AUPRO)}                                                                                                                                                                  \\ \cmidrule{2-7} 
+Method~$\downarrow$              & Image-level    & \multicolumn{1}{c|}{Pixel-level}                                 & Image-level    & \multicolumn{1}{c|}{Pixel-level}                                 & Image-level    & Pixel-level         \\ \midrule
+SPADE~\cite{SPADE}               & 82.9/91.7/91.1 & \multicolumn{1}{c|}{92.0/-/44.5/85.7}                            & 79.5/82.0/80.7 & \multicolumn{1}{c|}{95.6/-/35.5/84.1}                            & 51.2$^\dagger$/45.6$^\dagger$/61.4$^\dagger$ & 59.5$^\dagger$/0.2$^\dagger$/0.5$^\dagger$/19.3$^\dagger$   \\
+PaDiM~\cite{defard2021padim}               & 78.9/89.3/89.2 & \multicolumn{1}{c|}{91.3/-/43.7/78.2}                            & 62.8/68.3/75.3 & \multicolumn{1}{c|}{89.9/-/17.4/64.3}                            & 52.9$^\dagger$/47.4$^\dagger$/62.0$^\dagger$    & 84.9$^\dagger$/0.8$^\dagger$/2.3$^\dagger$/52.7$^\dagger$         \\
+PatchCore~\cite{Patchcore}           & 86.3/93.8/92.0 & \multicolumn{1}{c|}{93.3/-/53.0/82.3}                            & 79.9/82.8/81.7 & \multicolumn{1}{c|}{95.4/-/38.0/80.5}                            & 59.3$^\dagger$/55.8$^\dagger$/\underline{62.3}$^\dagger$ & 89.6$^\dagger$/6.6$^\dagger$/12.3$^\dagger$/60.5$^\dagger$  \\
+WinCLIP~\cite{WinClip}             & 93.1/\underline{96.5}/\underline{93.7} & \multicolumn{1}{c|}{95.2/-/\underline{55.9}/87.1}                            & 83.8/\underline{85.1}/\underline{83.1} & \multicolumn{1}{c|}{\underline{96.4}/-/\underline{41.3}/85.1}                            & \textbf{69.4}$^\dagger$/\underline{56.8}$^\dagger$/58.8$^\dagger$ & \underline{91.9}$^\dagger$/\underline{9.0}$^\dagger$/\underline{15.3}$^\dagger$/\underline{71.0}$^\dagger$  \\
+PromptAD~\cite{PromptAD}            & \underline{94.6}/-/-       & \multicolumn{1}{c|}{\underline{95.9}/-/-/\underline{87.9}}                               & \underline{86.9}/-/-       & \multicolumn{1}{c|}{\textbf{96.7}/-/-/\underline{85.8}}                               & 52.2$^\dagger$/41.6$^\dagger$/52.2$^\dagger$ & 84.9$^\dagger$/7.6$^\dagger$/14.6$^\dagger$/58.4$^\dagger$  \\ \midrule
+\rowcolor{Light} 
+\textbf{INP-Former} & \textbf{96.6}/\textbf{98.2}/\textbf{96.4} & \multicolumn{1}{c|}{\cellcolor{Light}\textbf{97.0}/\textbf{64.2}/\textbf{64.0}/\textbf{92.6}} & \textbf{91.4}/\textbf{92.2}/\textbf{88.6} & \multicolumn{1}{c|}{\cellcolor{Light}96.3/\textbf{42.5}/\textbf{47.3}/\textbf{89.5}} & \underline{67.5}/\textbf{63.1}/\textbf{66.1} & \textbf{94.9}/\textbf{20.0}/\textbf{25.8}/\textbf{81.8} \\ \bottomrule[1.5pt]
+\end{tabular}}}
+\end{table*}
+
+\begin{table*}[]
+\centering
+\caption{\textbf{Few-shot (2-shot)} anomaly detection performance on different AD datasets. The best in \textbf{bold}, the
+second-highest is \underline{underlined}. $\dagger$ indicates the results we reproduced using publicly available code.}
+\label{table:2-shot-performance}
+\fontsize{11}{14}\selectfont{
+\resizebox{\linewidth}{!}{
+\begin{tabular}{c|cccccc}
+\toprule[1.5pt]
+Dataset~$\rightarrow$             & \multicolumn{2}{c|}{MVTec-AD~\cite{MVTec-AD}}                                                     & \multicolumn{2}{c|}{VisA~\cite{VisA}}                                                         & \multicolumn{2}{c}{Real-IAD~\cite{real-iad}}         \\ \midrule
+Metric~$\rightarrow$              & \multicolumn{6}{c}{Image-level(I-AUROC/I-AP/I-F1\_max)\hspace{10mm}Pixel-level(P-AUROC/P-AP/P-F1\_max/AUPRO)}                                                                                                                                                                  \\ \cmidrule{2-7} 
+Method~$\downarrow$              & Image-level    & \multicolumn{1}{c|}{Pixel-level}                                 & Image-level    & \multicolumn{1}{c|}{Pixel-level}                                 & Image-level    & Pixel-level         \\ \midrule
+SPADE~\cite{SPADE}               & 81.0/90.6/90.3 & \multicolumn{1}{c|}{91.2/-/42.4/83.9}                            & 81.7/83.4/82.1 & \multicolumn{1}{c|}{96.2/-/40.5/85.7}                            & 50.9$^{\dagger}$/45.5$^{\dagger}$/61.2$^{\dagger}$ & 59.5$^{\dagger}$/0.2$^{\dagger}$/0.5$^{\dagger}$/19.2$^{\dagger}$   \\
+PaDiM~\cite{defard2021padim}               & 76.6/88.1/88.2 & \multicolumn{1}{c|}{89.3/-/40.2/73.3}                            & 67.4/71.6/75.7 & \multicolumn{1}{c|}{92.0/-/21.1/70.1}                            & 55.9$^{\dagger}$/49.6$^{\dagger}$/62.9$^{\dagger}$ & 88.5$^{\dagger}$/1.5$^{\dagger}$/3.8$^{\dagger}$/61.6$^{\dagger}$   \\
+PatchCore~\cite{Patchcore}           & 83.4/92.2/90.5 & \multicolumn{1}{c|}{92.0/-/\underline{58.4}/79.7}                            & 81.6/84.8/82.5 & \multicolumn{1}{c|}{96.1/-/41.0/82.6}                            & 63.3$^{\dagger}$/\underline{59.7}$^{\dagger}$/\underline{64.2}$^{\dagger}$ & 92.0$^{\dagger}$/9.4$^{\dagger}$/14.1$^{\dagger}$/66.1$^{\dagger}$  \\
+WinCLIP~\cite{WinClip}             & 94.4/\underline{97.0}/\underline{94.4} & \multicolumn{1}{c|}{96.0/-/\underline{58.4}/88.4}                            & 84.6/\underline{85.8}/\underline{83.0} & \multicolumn{1}{c|}{96.8/-/\underline{43.5}/\underline{86.2}}                            & \textbf{70.9}$^{\dagger}$/58.7$^{\dagger}$/60.3$^{\dagger}$ & \underline{93.2}$^{\dagger}$/\underline{11.7}$^{\dagger}$/\underline{18.3}$^{\dagger}$/\underline{74.7}$^{\dagger}$ \\
+PromptAD~\cite{PromptAD}            & \underline{95.7}/-/-       & \multicolumn{1}{c|}{\underline{96.2}/-/-/\underline{88.5}}                               & \underline{88.3}/-/-       & \multicolumn{1}{c|}{\underline{97.1}/-/-/85.8}                               & 57.7$^{\dagger}$/41.1$^{\dagger}$/52.9$^{\dagger}$ & 86.4$^{\dagger}$/8.5$^{\dagger}$/16.2$^{\dagger}$/61.0$^{\dagger}$  \\ \midrule
+\rowcolor{Light} 
+\textbf{INP-Former} & \textbf{97.0}/\textbf{98.2}/\textbf{96.7} & \multicolumn{1}{c|}{\cellcolor{Light}\textbf{97.2}/\textbf{66.0}/\textbf{65.6}/\textbf{93.1}} & \textbf{94.6}/\textbf{94.9}/\textbf{90.8} & \multicolumn{1}{c|}{\cellcolor{Light}\textbf{97.2}/\textbf{45.0}/\textbf{50.4}/\textbf{91.8}} & \underline{70.6}/\textbf{66.1}/\textbf{69.3} & \textbf{96.0}/\textbf{23.8}/\textbf{28.3}/\textbf{83.8} \\ \bottomrule[1.5pt]
+\end{tabular}}}
+\end{table*}
+
+
+
+\begin{table*}[]
+\centering
+\caption{\textbf{Zero-shot} anomaly detection performance on different AD datasets. The best in \textbf{bold}.}
+\label{table:zero-shot-performance}
+\fontsize{10}{14}\selectfont{
+\resizebox{0.85\linewidth}{!}{
+\begin{tabular}{c|cccc}
+\toprule[1.5pt]
+Dataset~$\rightarrow$    & \multicolumn{2}{c|}{MVTec-AD~\cite{MVTec-AD}}                                                     & \multicolumn{2}{c}{VisA~\cite{VisA}}            \\ \midrule
+Metric~$\rightarrow$     & \multicolumn{4}{c}{Image-level(I-AUROC/I-AP/I-F1\_max) Pixel-level(P-AUROC/P-AP/P-F1\_max/AUPRO)}                                                                             \\ \cmidrule{2-5} 
+Method~$\downarrow$     & Image-level    & \multicolumn{1}{c|}{Pixel-level}                                 & Image-level    & Pixel-level        \\ \midrule
+WinCLIP~\cite{WinClip}    & \textbf{91.8}/\textbf{96.5}/\textbf{92.9} & \multicolumn{1}{c|}{85.1/-/31.7/64.6}                            & \textbf{78.1}/\textbf{81.2}/\textbf{79.0} & 79.6/-/\textbf{14.8}/56.8   \\ 
+\rowcolor{Light} 
+\textbf{INP-Former} & 80.8/90.7/89.1 & \multicolumn{1}{c|}{\cellcolor{Light}\textbf{88.0}/\textbf{36.1}/\textbf{39.5}/\textbf{76.9}} & 67.5/71.6/75.0 & \textbf{88.7}/\textbf{7.8}/11.8/\textbf{67.2} \\ \bottomrule[1.5pt]
+\end{tabular}}}
+\end{table*}
+\end{document}

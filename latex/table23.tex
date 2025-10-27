@@ -1,0 +1,367 @@
+\documentclass[letterpaper]{article} % DO NOT CHANGE THIS
+\usepackage[submission]{aaai2026}  % DO NOT CHANGE THIS
+\usepackage{times}  % DO NOT CHANGE THIS
+\usepackage{helvet}  % DO NOT CHANGE THIS
+\usepackage{courier}  % DO NOT CHANGE THIS
+\usepackage[hyphens]{url}  % DO NOT CHANGE THIS
+\usepackage{graphicx} % DO NOT CHANGE THIS
+\urlstyle{rm} % DO NOT CHANGE THIS
+\def\UrlFont{\rm}  % DO NOT CHANGE THIS
+\usepackage{natbib}  % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\usepackage{caption} % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\frenchspacing  % DO NOT CHANGE THIS
+\setlength{\pdfpagewidth}{8.5in} % DO NOT CHANGE THIS
+\setlength{\pdfpageheight}{11in} % DO NOT CHANGE THIS
+%
+% These are recommended to typeset algorithms but not required. See the subsubsection on algorithms. Remove them if you don't have algorithms in your paper.
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\usepackage{pifont} %182/183/184
+\usepackage{subcaption}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{booktabs}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{verbatim}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{colortbl}
+\usepackage{booktabs,makecell, multirow, tabularx}
+\usepackage{adjustbox}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{amsmath}
+
+\usepackage{booktabs}
+\usepackage{amssymb}
+\usepackage{bbding}
+\usepackage{pifont}
+\usepackage{wasysym}
+\usepackage{utfsym}
+\usepackage{fontawesome}
+
+\usepackage{mdframed}
+
+% \definecolor{darkblue}{HTML}{00008B}
+% \definecolor{lightblue}{HTML}{ADD8E6}
+% %\geometry{a4paper, margin=1in}
+% \usetikzlibrary{arrows.meta}
+% \usepackage{ifthen}
+% \usepackage{xcolor-patch, xcolor}
+% \usepackage{color}
+% \newcommand{\gzh}[1]{{\color{red} [\textbf{gzh:} #1]}}
+% \newcommand{\yhn}[1]{{\color{brown} [\textbf{yhn:} #1]}}
+% \newcommand{\blue}[1]{{\color{blue} #1}}
+% \definecolor{rred}{HTML}{d43e4f}
+% \definecolor{ppurple}{HTML}{5e4fa2}
+% \definecolor{ccyan}{HTML}{67c1a5}
+% \definecolor{ggreen}{HTML}{acdda5}
+% \definecolor{llime}{HTML}{e6f598}
+% \definecolor{yyellow}{HTML}{ffffbf}
+% \definecolor{llightorange}{HTML}{fdae61}
+% \definecolor{bblue}{HTML}{3287bd}
+% \definecolor{oorange}{HTML}{f46e43}
+% \definecolor{rrred}{HTML}{e27884}
+% \definecolor{pppurple}{HTML}{8f84be}
+% \definecolor{cccyan}{HTML}{94d3be}
+% \definecolor{gggreen}{HTML}{c3e6be}
+% \definecolor{lllime}{HTML}{edf8b6}
+% \definecolor{yyyellow}{HTML}{ffffd3}
+% \definecolor{lllightorange}{HTML}{fec590}
+% \definecolor{bbblue}{HTML}{a8cce2}
+% \definecolor{ooorange}{HTML}{f7997d}
+% \definecolor{hard}{HTML}{A9A9A9}
+% \definecolor{simple}{HTML}{D3D3D3}
+
+\usepackage{arydshln}
+% \newcommand{\cdashlinelr}[1]{%
+%   \noalign{\vskip\aboverulesep
+%            \global\let\@dashdrawstore\adl@draw
+%            \global\let\adl@draw\adl@drawiv}
+%   \cdashline{#1}
+%   \noalign{\global\let\adl@draw\@dashdrawstore
+%            \vskip\belowrulesep}}
+\begin{document}
+
+% %%%%%%%%%%%%%%%%%%%   MVTec 3D-AD (I-AUROC)
+%\checkmark  \Checkmark
+%\XSolidBrush
+% \cmidrule{1-8} 横线
+
+% \usepackage{arydshln}虚线宏包  
+%\hdashline
+%\cdashline{2-3} % 第二、三列虚线
+
+%左 $\leftarrow$，右 $\rightarrow$，上 $\uparrow$，下 $\downarrow$
+
+%整行填充颜色
+%\usepackage[table]{xcolor}
+%\usepackage{colortbl}
+%\rowcolor{blue!20}
+
+%合并行和列
+%\multicolumn{2}{c|}{\multirow{2}{*}{Method}}
+%\multicolumn{2}{c|}{Method}
+
+%定义颜色
+% \definecolor{color1}{RGB}{229,229,229}
+% \cellcolor{color1} 
+%定义字体
+% \newcommand{\zzz}[1]{{\color{color1} #1}}
+
+\definecolor{lightblue}{RGB}{173, 216, 230}
+\definecolor{lightgreen}{RGB}{144, 238, 144}
+\definecolor{lightyellow}{RGB}{255, 255, 224}
+\definecolor{lightred}{RGB}{255, 182, 193}
+\definecolor{lightpurple}{RGB}{216, 191, 216}
+\definecolor{darkblue}{RGB}{123, 166, 180}   
+\definecolor{darkgreen}{RGB}{94, 188, 94}    
+\definecolor{darkyellow}{RGB}{245, 245, 184} 
+\definecolor{darkred}{RGB}{205, 132, 143}    
+\definecolor{darkpurple}{RGB}{166, 141, 166} 
+
+\begin{table*}[t]
+\centering
+{\fontsize{6.8pt}{8.6pt}\selectfont
+\setlength{\tabcolsep}{2.6pt} % 可以根据需要调整这个值
+\begin{tabular}{llccccccccccccccccc}
+\toprule
+\multirow{2}{*}{\textbf{Model}}&
+\multirow{2}{*}{\textbf{Prompt}} &
+\multicolumn{8}{c}{\textbf{Languages}} &
+\multicolumn{8}{c}{\textbf{Tasks}} &
+\multirow{2}{*}{\textbf{all}}\\
+\cline{3-10}
+ \cdashline{11-18} 
+ && \textbf{JSON} & \textbf{LaTeX} & \textbf{Md.} & \textbf{ORG} & \textbf{CSV} & \textbf{Tree} & \textbf{XML} & \textbf{YAML}
+ & \textbf{PC} & \textbf{PW} & \textbf{SY} & \textbf{TR} & \textbf{JO} & \textbf{ST} & \textbf{ND} & \textbf{TH} &  \\ 
+\midrule
+\multirow{4}{*}{Qwen2-7B} & \cellcolor{darkblue!25}Naive & \cellcolor{lightblue!25}70.4 & \cellcolor{lightblue!25}68.8 & \cellcolor{lightblue!25}68.0 & \cellcolor{lightblue!25}54.5 & \cellcolor{lightblue!25}83.5 & \cellcolor{lightblue!25}68.9 & \cellcolor{lightblue!25}57.6 & \cellcolor{lightblue!25}68.5 & \cellcolor{lightblue!25}48.5 & \cellcolor{lightblue!25}74.2 & \cellcolor{lightblue!25}49.2 & \cellcolor{lightblue!25}72.4 & \cellcolor{lightblue!25}79.5 & \cellcolor{lightblue!25}78.4 & \cellcolor{lightblue!25}47.7 & \cellcolor{lightblue!25}93.2 & \cellcolor{darkblue!25}30.0\\
+ & \cellcolor{darkblue!25}Self-CoT & \cellcolor{lightblue!25}12.8 & \cellcolor{lightblue!25}1.5 & \cellcolor{lightblue!25}1.5 & \cellcolor{lightblue!25}9.1 & \cellcolor{lightblue!25}29.0 & \cellcolor{lightblue!25}4.5 & \cellcolor{lightblue!25}3.6 & \cellcolor{lightblue!25}3.5 & \cellcolor{lightblue!25}4.5 & \cellcolor{lightblue!25}6.4 & \cellcolor{lightblue!25}6.1 & \cellcolor{lightblue!25}8.1 & \cellcolor{lightblue!25}27.3 & \cellcolor{lightblue!25}26.1 & \cellcolor{lightblue!25}2.3 & \cellcolor{lightblue!25}6.8 & \cellcolor{darkblue!25}17.2\\
+ & \cellcolor{darkblue!25}PS-CoT & \cellcolor{lightblue!25}31.7 & \cellcolor{lightblue!25}31.7 & \cellcolor{lightblue!25}19.4 & \cellcolor{lightblue!25}20.1 & \cellcolor{lightblue!25}67.0 & \cellcolor{lightblue!25}36.4 & \cellcolor{lightblue!25}25.8 & \cellcolor{lightblue!25}24.9 & \cellcolor{lightblue!25}9.8 & \cellcolor{lightblue!25}19.8 & \cellcolor{lightblue!25}32.6 & \cellcolor{lightblue!25}34.1 & \cellcolor{lightblue!25}63.6 & \cellcolor{lightblue!25}60.2 & \cellcolor{lightblue!25}25.0 & \cellcolor{lightblue!25}72.7 & \cellcolor{darkblue!25}29.1\\
+\cdashline{2-19}
+ & \cellcolor{darkblue!25}w/ Hint & \cellcolor{lightblue!25}70.8 & \cellcolor{lightblue!25}66.1 & \cellcolor{lightblue!25}66.5 & \cellcolor{lightblue!25}58.1 & \cellcolor{lightblue!25}85.2 & \cellcolor{lightblue!25}56.8 & \cellcolor{lightblue!25}55.2 & \cellcolor{lightblue!25}70.2 & \cellcolor{lightblue!25}43.9 & \cellcolor{lightblue!25}72.3 & \cellcolor{lightblue!25}43.2 & \cellcolor{lightblue!25}75.3 & \cellcolor{lightblue!25}86.4 & \cellcolor{lightblue!25}77.3 & \cellcolor{lightblue!25}45.5 & \cellcolor{lightblue!25}65.9 & \cellcolor{darkblue!25}44.0\\
+\cdashline{1-19}
+\multirow{4}{*}{Qwen2-72B} & \cellcolor{darkpurple!25}Naive & \cellcolor{lightpurple!25}85.8 & \cellcolor{lightpurple!25}73.7 & \cellcolor{lightpurple!25}75.1 & \cellcolor{lightpurple!25}67.1 & \cellcolor{lightpurple!25}92.6 & \cellcolor{lightpurple!25}86.4 & \cellcolor{lightpurple!25}71.2 & \cellcolor{lightpurple!25}82.7 & \cellcolor{lightpurple!25}80.3 & \cellcolor{lightpurple!25}81.5 & \cellcolor{lightpurple!25}62.9 & \cellcolor{lightpurple!25}80.8 & \cellcolor{lightpurple!25}90.9 & \cellcolor{lightpurple!25}90.9 & \cellcolor{lightpurple!25}77.3 & \cellcolor{lightpurple!25}95.5 & \cellcolor{darkpurple!25}42.6\\
+ & \cellcolor{darkpurple!25}Self-CoT & \cellcolor{lightpurple!25}85.4 & \cellcolor{lightpurple!25}69.9 & \cellcolor{lightpurple!25}70.8 & \cellcolor{lightpurple!25}65.2 & \cellcolor{lightpurple!25}95.5 & \cellcolor{lightpurple!25}90.2 & \cellcolor{lightpurple!25}79.5 & \cellcolor{lightpurple!25}89.7 & \cellcolor{lightpurple!25}78.8 & \cellcolor{lightpurple!25}77.1 & \cellcolor{lightpurple!25}81.1 & \cellcolor{lightpurple!25}81.7 & \cellcolor{lightpurple!25}90.9 & \cellcolor{lightpurple!25}95.5 & \cellcolor{lightpurple!25}84.1 & \cellcolor{lightpurple!25}95.5 & \cellcolor{darkpurple!25}51.0\\
+ & \cellcolor{darkpurple!25}PS-CoT & \cellcolor{lightpurple!25}89.5 & \cellcolor{lightpurple!25}70.1 & \cellcolor{lightpurple!25}68.9 & \cellcolor{lightpurple!25}61.7 & \cellcolor{lightpurple!25}92.0 & \cellcolor{lightpurple!25}84.8 & \cellcolor{lightpurple!25}81.1 & \cellcolor{lightpurple!25}93.4 & \cellcolor{lightpurple!25}76.5 & \cellcolor{lightpurple!25}77.6 & \cellcolor{lightpurple!25}87.9 & \cellcolor{lightpurple!25}80.8 & \cellcolor{lightpurple!25}81.8 & \cellcolor{lightpurple!25}93.2 & \cellcolor{lightpurple!25}86.4 & \cellcolor{lightpurple!25}97.7 & \cellcolor{darkpurple!25}65.3\\
+\cdashline{2-19}
+ & \cellcolor{darkpurple!25}w/ Hint & \cellcolor{lightpurple!25}90.0 & \cellcolor{lightpurple!25}72.5 & \cellcolor{lightpurple!25}79.1 & \cellcolor{lightpurple!25}68.6 & \cellcolor{lightpurple!25}94.9 & \cellcolor{lightpurple!25}81.1 & \cellcolor{lightpurple!25}72.7 & \cellcolor{lightpurple!25}90.8 & \cellcolor{lightpurple!25}81.1 & \cellcolor{lightpurple!25}84.0 & \cellcolor{lightpurple!25}77.3 & \cellcolor{lightpurple!25}82.4 & \cellcolor{lightpurple!25}95.5 & \cellcolor{lightpurple!25}92.0 & \cellcolor{lightpurple!25}72.7 & \cellcolor{lightpurple!25}86.4 & \cellcolor{darkpurple!25}49.4\\
+\cdashline{1-19}
+\multirow{4}{*}{Llama-3.1-8B} & \cellcolor{darkgray!25}Naive & \cellcolor{lightgray!25}43.9 & \cellcolor{lightgray!25}64.6 & \cellcolor{lightgray!25}49.3 & \cellcolor{lightgray!25}48.3 & \cellcolor{lightgray!25}42.6 & \cellcolor{lightgray!25}50.0 & \cellcolor{lightgray!25}26.5 & \cellcolor{lightgray!25}46.9 & \cellcolor{lightgray!25}30.3 & \cellcolor{lightgray!25}49.4 & \cellcolor{lightgray!25}1.5 & \cellcolor{lightgray!25}61.0 & \cellcolor{lightgray!25}11.4 & \cellcolor{lightgray!25}45.5 & \cellcolor{lightgray!25}22.7 & \cellcolor{lightgray!25}79.5 & \cellcolor{darkgray!25}21.3\\
+ & \cellcolor{darkgray!25}Self-CoT & \cellcolor{lightgray!25}52.2 & \cellcolor{lightgray!25}40.6 & \cellcolor{lightgray!25}49.2 & \cellcolor{lightgray!25}39.0 & \cellcolor{lightgray!25}66.5 & \cellcolor{lightgray!25}43.2 & \cellcolor{lightgray!25}36.6 & \cellcolor{lightgray!25}55.2 & \cellcolor{lightgray!25}40.9 & \cellcolor{lightgray!25}40.2 & \cellcolor{lightgray!25}39.7 & \cellcolor{lightgray!25}53.0 & \cellcolor{lightgray!25}77.3 & \cellcolor{lightgray!25}65.9 & \cellcolor{lightgray!25}52.3 & \cellcolor{lightgray!25}36.4 & \cellcolor{darkgray!25}48.5\\
+ & \cellcolor{darkgray!25}PS-CoT & \cellcolor{lightgray!25}45.8 & \cellcolor{lightgray!25}18.7 & \cellcolor{lightgray!25}34.0 & \cellcolor{lightgray!25}32.8 & \cellcolor{lightgray!25}64.0 & \cellcolor{lightgray!25}63.1 & \cellcolor{lightgray!25}44.6 & \cellcolor{lightgray!25}41.3 & \cellcolor{lightgray!25}48.8 & \cellcolor{lightgray!25}50.5 & \cellcolor{lightgray!25}44.7 & \cellcolor{lightgray!25}32.8 & \cellcolor{lightgray!25}69.8 & \cellcolor{lightgray!25}56.8 & \cellcolor{lightgray!25}64.3 & \cellcolor{lightgray!25}62.8 & \cellcolor{darkgray!25}55.9\\
+\cdashline{2-19}
+ & \cellcolor{darkgray!25}w/ Hint & \cellcolor{lightgray!25}44.9 & \cellcolor{lightgray!25}62.2 & \cellcolor{lightgray!25}55.9 & \cellcolor{lightgray!25}48.1 & \cellcolor{lightgray!25}29.0 & \cellcolor{lightgray!25}54.5 & \cellcolor{lightgray!25}30.5 & \cellcolor{lightgray!25}51.4 & \cellcolor{lightgray!25}31.8 & \cellcolor{lightgray!25}45.4 & \cellcolor{lightgray!25}9.1 & \cellcolor{lightgray!25}63.4 & \cellcolor{lightgray!25}2.3 & \cellcolor{lightgray!25}22.7 & \cellcolor{lightgray!25}38.6 & \cellcolor{lightgray!25}90.9 & \cellcolor{darkgray!25}26.9\\
+\cdashline{1-19}
+\multirow{4}{*}{Llama-3.1-70B} & \cellcolor{darkgreen!25}Naive & \cellcolor{lightgreen!25}93.8 & \cellcolor{lightgreen!25}70.9 & \cellcolor{lightgreen!25}69.8 & \cellcolor{lightgreen!25}62.8 & \cellcolor{lightgreen!25}72.7 & \cellcolor{lightgreen!25}51.5 & \cellcolor{lightgreen!25}78.7 & \cellcolor{lightgreen!25}88.8 & \cellcolor{lightgreen!25}81.8 & \cellcolor{lightgreen!25}75.4 & \cellcolor{lightgreen!25}82.6 & \cellcolor{lightgreen!25}81.0 & \cellcolor{lightgreen!25}72.7 & \cellcolor{lightgreen!25}59.1 & \cellcolor{lightgreen!25}47.7 & \cellcolor{lightgreen!25}43.2 & \cellcolor{darkgreen!25}50.8\\
+ & \cellcolor{darkgreen!25}Self-CoT & \cellcolor{lightgreen!25}93.6 & \cellcolor{lightgreen!25}71.4 & \cellcolor{lightgreen!25}69.7 & \cellcolor{lightgreen!25}54.8 & \cellcolor{lightgreen!25}96.0 & \cellcolor{lightgreen!25}84.1 & \cellcolor{lightgreen!25}87.1 & \cellcolor{lightgreen!25}95.9 & \cellcolor{lightgreen!25}88.6 & \cellcolor{lightgreen!25}67.9 & \cellcolor{lightgreen!25}86.4 & \cellcolor{lightgreen!25}85.7 & \cellcolor{lightgreen!25}97.7 & \cellcolor{lightgreen!25}93.2 & \cellcolor{lightgreen!25}77.3 & \cellcolor{lightgreen!25}97.7 & \cellcolor{darkgreen!25}76.7\\
+ & \cellcolor{darkgreen!25}PS-CoT & \cellcolor{lightgreen!25}94.5 & \cellcolor{lightgreen!25}68.7 & \cellcolor{lightgreen!25}72.7 & \cellcolor{lightgreen!25}61.7 & \cellcolor{lightgreen!25}93.7 & \cellcolor{lightgreen!25}83.2 & \cellcolor{lightgreen!25}93.9 & \cellcolor{lightgreen!25}98.5 & \cellcolor{lightgreen!25}90.8 & \cellcolor{lightgreen!25}77.0 & \cellcolor{lightgreen!25}93.9 & \cellcolor{lightgreen!25}84.2 & \cellcolor{lightgreen!25}93.2 & \cellcolor{lightgreen!25}90.9 & \cellcolor{lightgreen!25}81.8 & \cellcolor{lightgreen!25}90.9 & \cellcolor{darkgreen!25}72.9\\
+\cdashline{2-19}
+ & \cellcolor{darkgreen!25}w/ Hint & \cellcolor{lightgreen!25}93.6 & \cellcolor{lightgreen!25}73.9 & \cellcolor{lightgreen!25}77.4 & \cellcolor{lightgreen!25}71.6 & \cellcolor{lightgreen!25}72.7 & \cellcolor{lightgreen!25}74.2 & \cellcolor{lightgreen!25}80.4 & \cellcolor{lightgreen!25}93.6 & \cellcolor{lightgreen!25}88.6 & \cellcolor{lightgreen!25}84.9 & \cellcolor{lightgreen!25}84.1 & \cellcolor{lightgreen!25}83.5 & \cellcolor{lightgreen!25}70.5 & \cellcolor{lightgreen!25}60.2 & \cellcolor{lightgreen!25}65.9 & \cellcolor{lightgreen!25}75.0 & \cellcolor{darkgreen!25}58.4\\
+\cdashline{1-19}
+\multirow{4}{*}{Llama-3.1-405B} & \cellcolor{darkyellow!25}Naive & \cellcolor{lightyellow!25}82.0 & \cellcolor{lightyellow!25}62.9 & \cellcolor{lightyellow!25}70.0 & \cellcolor{lightyellow!25}60.9 & \cellcolor{lightyellow!25}96.6 & \cellcolor{lightyellow!25}65.9 & \cellcolor{lightyellow!25}61.5 & \cellcolor{lightyellow!25}78.1 & \cellcolor{lightyellow!25}74.2 & \cellcolor{lightyellow!25}69.4 & \cellcolor{lightyellow!25}32.6 & \cellcolor{lightyellow!25}82.4 & \cellcolor{lightyellow!25}97.7 & \cellcolor{lightyellow!25}94.3 & \cellcolor{lightyellow!25}45.5 & \cellcolor{lightyellow!25}79.5 & \cellcolor{darkyellow!25}38.3\\
+ & \cellcolor{darkyellow!25}Self-CoT & \cellcolor{lightyellow!25}87.7 & \cellcolor{lightyellow!25}62.2 & \cellcolor{lightyellow!25}74.2 & \cellcolor{lightyellow!25}62.2 & \cellcolor{lightyellow!25}95.5 & \cellcolor{lightyellow!25}75.8 & \cellcolor{lightyellow!25}78.5 & \cellcolor{lightyellow!25}90.8 & \cellcolor{lightyellow!25}87.9 & \cellcolor{lightyellow!25}73.2 & \cellcolor{lightyellow!25}63.6 & \cellcolor{lightyellow!25}83.4 & \cellcolor{lightyellow!25}100.0 & \cellcolor{lightyellow!25}90.9 & \cellcolor{lightyellow!25}59.1 & \cellcolor{lightyellow!25}88.6 & \cellcolor{darkyellow!25}67.1\\
+ & \cellcolor{darkyellow!25}PS-CoT & \cellcolor{lightyellow!25}84.5 & \cellcolor{lightyellow!25}67.4 & \cellcolor{lightyellow!25}76.0 & \cellcolor{lightyellow!25}66.7 & \cellcolor{lightyellow!25}92.0 & \cellcolor{lightyellow!25}86.7 & \cellcolor{lightyellow!25}94.7 & \cellcolor{lightyellow!25}94.7 & \cellcolor{lightyellow!25}88.3 & \cellcolor{lightyellow!25}79.1 & \cellcolor{lightyellow!25}93.2 & \cellcolor{lightyellow!25}81.1 & \cellcolor{lightyellow!25}97.7 & \cellcolor{lightyellow!25}85.2 & \cellcolor{lightyellow!25}90.9 & \cellcolor{lightyellow!25}88.6 & \cellcolor{darkyellow!25}74.9\\
+\cdashline{2-19}
+ & \cellcolor{darkyellow!25}w/ Hint & \cellcolor{lightyellow!25}85.4 & \cellcolor{lightyellow!25}68.3 & \cellcolor{lightyellow!25}75.1 & \cellcolor{lightyellow!25}66.7 & \cellcolor{lightyellow!25}98.3 & \cellcolor{lightyellow!25}70.5 & \cellcolor{lightyellow!25}74.5 & \cellcolor{lightyellow!25}87.2 & \cellcolor{lightyellow!25}74.2 & \cellcolor{lightyellow!25}78.0 & \cellcolor{lightyellow!25}59.1 & \cellcolor{lightyellow!25}84.9 & \cellcolor{lightyellow!25}97.7 & \cellcolor{lightyellow!25}97.7 & \cellcolor{lightyellow!25}50.0 & \cellcolor{lightyellow!25}84.1 & \cellcolor{darkyellow!25}46.5\\
+\cdashline{1-19}
+\multirow{4}{*}{Mistral-7B} & \cellcolor{darkred!25}Naive & \cellcolor{lightred!25}32.5 & \cellcolor{lightred!25}42.1 & \cellcolor{lightred!25}44.9 & \cellcolor{lightred!25}40.2 & \cellcolor{lightred!25}9.1 & \cellcolor{lightred!25}4.5 & \cellcolor{lightred!25}14.8 & \cellcolor{lightred!25}33.5 & \cellcolor{lightred!25}6.1 & \cellcolor{lightred!25}30.8 & \cellcolor{lightred!25}0.0 & \cellcolor{lightred!25}47.7 & \cellcolor{lightred!25}0.0 & \cellcolor{lightred!25}6.8 & \cellcolor{lightred!25}0.0 & \cellcolor{lightred!25}0.0 & \cellcolor{darkred!25}11.3\\
+ & \cellcolor{darkred!25}Self-CoT & \cellcolor{lightred!25}56.5 & \cellcolor{lightred!25}35.1 & \cellcolor{lightred!25}40.3 & \cellcolor{lightred!25}36.6 & \cellcolor{lightred!25}34.7 & \cellcolor{lightred!25}15.9 & \cellcolor{lightred!25}33.7 & \cellcolor{lightred!25}54.3 & \cellcolor{lightred!25}28.8 & \cellcolor{lightred!25}49.2 & \cellcolor{lightred!25}64.4 & \cellcolor{lightred!25}43.9 & \cellcolor{lightred!25}6.8 & \cellcolor{lightred!25}23.9 & \cellcolor{lightred!25}13.6 & \cellcolor{lightred!25}13.6 & \cellcolor{darkred!25}8.1\\
+ & \cellcolor{darkred!25}PS-CoT & \cellcolor{lightred!25}43.9 & \cellcolor{lightred!25}19.7 & \cellcolor{lightred!25}22.9 & \cellcolor{lightred!25}15.6 & \cellcolor{lightred!25}14.8 & \cellcolor{lightred!25}18.2 & \cellcolor{lightred!25}34.6 & \cellcolor{lightred!25}44.1 & \cellcolor{lightred!25}18.9 & \cellcolor{lightred!25}30.6 & \cellcolor{lightred!25}56.8 & \cellcolor{lightred!25}29.1 & \cellcolor{lightred!25}22.7 & \cellcolor{lightred!25}6.8 & \cellcolor{lightred!25}13.6 & \cellcolor{lightred!25}22.7 & \cellcolor{darkred!25}19.5\\
+\cdashline{2-19}
+ & \cellcolor{darkred!25}w/ Hint & \cellcolor{lightred!25}34.6 & \cellcolor{lightred!25}39.4 & \cellcolor{lightred!25}52.7 & \cellcolor{lightred!25}40.5 & \cellcolor{lightred!25}10.2 & \cellcolor{lightred!25}6.8 & \cellcolor{lightred!25}12.7 & \cellcolor{lightred!25}36.5 & \cellcolor{lightred!25}9.8 & \cellcolor{lightred!25}34.3 & \cellcolor{lightred!25}0.0 & \cellcolor{lightred!25}48.9 & \cellcolor{lightred!25}0.0 & \cellcolor{lightred!25}8.0 & \cellcolor{lightred!25}0.0 & \cellcolor{lightred!25}0.0 & \cellcolor{darkred!25}10.6\\
+\bottomrule
+\end{tabular}}
+\caption{RougeL score for open sourced LLMs' performance. Bolded text represent the best performance in the column.}
+\end{table*}
+
+
+
+\begin{table*}[t]
+\centering
+{\fontsize{6.8pt}{8.6pt}\selectfont
+\setlength{\tabcolsep}{2.6pt} % 可以根据需要调整这个值
+\begin{tabular}{lcccccccccccccccccc}
+\toprule
+\multirow{2}{*}{\textbf{Model}}&
+\multirow{2}{*}{\textbf{Prompt}} &
+\multicolumn{8}{c}{\textbf{Languages}} &
+\multicolumn{8}{c}{\textbf{Tasks}} &
+\multirow{2}{*}{\textbf{all}}\\
+\cline{3-10}
+\cdashline{11-18} 
+% \cdashlinelr{3-10} 
+% \cdashlinelr{11-18} 
+ && \textbf{JSON} & \textbf{LaTeX} & \textbf{Md.} & \textbf{ORG} & \textbf{CSV} & \textbf{Tree} & \textbf{XML} & \textbf{YAML}
+ & \textbf{PC} & \textbf{PW} & \textbf{SY} & \textbf{TR} & \textbf{JO} & \textbf{ST} & \textbf{ND} & \textbf{TH} &  \\ 
+\midrule
+\multirow{5}{*}{Ernie-turbo} & \cellcolor{darkblue!25}Base 
+& \cellcolor{lightblue!25}27.4 & \cellcolor{lightblue!25}0.2 & \cellcolor{lightblue!25}0.0 & \cellcolor{lightblue!25}0.0 & \cellcolor{lightblue!25}13.0 & \cellcolor{lightblue!25}2.6 & \cellcolor{lightblue!25}14.3 & \cellcolor{lightblue!25}24.4 
+& \cellcolor{lightblue!25}2.8 & \cellcolor{lightblue!25}22.3 & \cellcolor{lightblue!25}23.2 & \cellcolor{lightblue!25}11.3 & \cellcolor{lightblue!25}0.5 & \cellcolor{lightblue!25}11.1 & \cellcolor{lightblue!25}5.4 & \cellcolor{lightblue!25}1.8 & \cellcolor{darkblue!25}12.5 \\
+ & \cellcolor{darkblue!25}CoT 
+ & \cellcolor{lightblue!25}19.4 & \cellcolor{lightblue!25}0.1 & \cellcolor{lightblue!25}0.1 & \cellcolor{lightblue!25}0.2 & \cellcolor{lightblue!25}10.9 & \cellcolor{lightblue!25}1.5 & \cellcolor{lightblue!25}13.4 & \cellcolor{lightblue!25}19.7 &  \cellcolor{lightblue!25}0.8 & \cellcolor{lightblue!25}6.7 & \cellcolor{lightblue!25}26.6 & \cellcolor{lightblue!25}6.2 & \cellcolor{lightblue!25}1.4 & \cellcolor{lightblue!25}6.2 & \cellcolor{lightblue!25}1.8 & \cellcolor{lightblue!25}0.0 & \cellcolor{darkblue!25}7.2 \\
+ & \cellcolor{darkblue!25}1-shot  & \cellcolor{lightblue!25}25.0 & \cellcolor{lightblue!25}0.0 & \cellcolor{lightblue!25}4.2 & \cellcolor{lightblue!25}8.7 & \cellcolor{lightblue!25}21.9 & \cellcolor{lightblue!25}12.5 & \cellcolor{lightblue!25}8.3 & \cellcolor{lightblue!25}25.0 
+ & \cellcolor{lightblue!25}12.5 & \cellcolor{lightblue!25}20.0 & \cellcolor{lightblue!25}8.3 & \cellcolor{lightblue!25}19.4 & \cellcolor{lightblue!25}0.0 & \cellcolor{lightblue!25}0.0 & \cellcolor{lightblue!25}25.0 & \cellcolor{lightblue!25}0.0 & \cellcolor{darkblue!25}15.2 \\
+ & \cellcolor{darkblue!25}2-shot & \cellcolor{lightblue!25}12.5 & \cellcolor{lightblue!25}12.5 & \cellcolor{lightblue!25}12.5 & \cellcolor{lightblue!25}8.3 & \cellcolor{lightblue!25}21.9 & \cellcolor{lightblue!25}20.8 & \cellcolor{lightblue!25}16.7 & \cellcolor{lightblue!25}5.0 
+ & \cellcolor{lightblue!25}4.2 & \cellcolor{lightblue!25}10.0 & \cellcolor{lightblue!25}4.2 & \cellcolor{lightblue!25}18.3 & \cellcolor{lightblue!25}25.0 & \cellcolor{lightblue!25}0.0 & \cellcolor{lightblue!25}25.0 & \cellcolor{lightblue!25}25.0 & \cellcolor{darkblue!25}13.4 \\
+ & \cellcolor{darkblue!25}Rule Hint & \cellcolor{lightblue!25}32.5 & \cellcolor{lightblue!25}0.0 & \cellcolor{lightblue!25}0.0 & \cellcolor{lightblue!25}0.0 & \cellcolor{lightblue!25}9.4 & \cellcolor{lightblue!25}0.0 & \cellcolor{lightblue!25}12.5 & \cellcolor{lightblue!25}32.5 
+ & \cellcolor{lightblue!25}8.3 & \cellcolor{lightblue!25}20.0 & \cellcolor{lightblue!25}25.0 & \cellcolor{lightblue!25}14.4 & \cellcolor{lightblue!25}0.0 & \cellcolor{lightblue!25}6.2 & \cellcolor{lightblue!25}0.0 & \cellcolor{lightblue!25}0.0 & \cellcolor{darkblue!25}13.8 \\
+\cdashline{1-19}
+\multirow{5}{*}{Minimax} & \cellcolor{darkgreen!25}Base & \cellcolor{lightgreen!25}77.5 & \cellcolor{lightgreen!25}58.3 & \cellcolor{lightgreen!25}41.7 & \cellcolor{lightgreen!25}29.2 & \cellcolor{lightgreen!25}44.2 & \cellcolor{lightgreen!25}20.8 & \cellcolor{lightgreen!25}58.3 & \cellcolor{lightgreen!25}70.0 & \cellcolor{lightgreen!25}25.0 & \cellcolor{lightgreen!25}57.5 & \cellcolor{lightgreen!25}75.0 & \cellcolor{lightgreen!25}84.5 & \cellcolor{lightgreen!25}13.1 & \cellcolor{lightgreen!25}33.0 & \cellcolor{lightgreen!25}37.5 & \cellcolor{lightgreen!25}0.0 & \cellcolor{darkgreen!25}46.6 \\
+& \cellcolor{darkgreen!25}CoT & \cellcolor{lightgreen!25}82.5 & \cellcolor{lightgreen!25}58.3 & \cellcolor{lightgreen!25}43.8 & \cellcolor{lightgreen!25}31.3 & \cellcolor{lightgreen!25}17.3 & \cellcolor{lightgreen!25}16.6 & \cellcolor{lightgreen!25}60.4 & \cellcolor{lightgreen!25}62.5  & \cellcolor{lightgreen!25}29.2 & \cellcolor{lightgreen!25}55.4 & \cellcolor{lightgreen!25}81.6 & \cellcolor{lightgreen!25}67.3 & \cellcolor{lightgreen!25}17.1 & \cellcolor{lightgreen!25}24.2 & \cellcolor{lightgreen!25}12.8 & \cellcolor{lightgreen!25}0.0 & \cellcolor{darkgreen!25}39.1 \\
+ & \cellcolor{darkgreen!25}1-shot & \cellcolor{lightgreen!25}80.0 & \cellcolor{lightgreen!25}50.0 & \cellcolor{lightgreen!25}58.3 & \cellcolor{lightgreen!25}50.0 & \cellcolor{lightgreen!25}37.5 & \cellcolor{lightgreen!25}50.0 & \cellcolor{lightgreen!25}62.5 & \cellcolor{lightgreen!25}85.0 & \cellcolor{lightgreen!25}29.2 & \cellcolor{lightgreen!25}67.5 & \cellcolor{lightgreen!25}91.7 & \cellcolor{lightgreen!25}68.3 & \cellcolor{lightgreen!25}25.0 & \cellcolor{lightgreen!25}18.8 & \cellcolor{lightgreen!25}37.5 & \cellcolor{lightgreen!25}\textbf{98.0} & \cellcolor{darkgreen!25}61.6 \\
+ & \cellcolor{darkgreen!25}2-shot & \cellcolor{lightgreen!25}90.0 & \cellcolor{lightgreen!25}58.3 & \cellcolor{lightgreen!25}54.2 & \cellcolor{lightgreen!25}54.2 & \cellcolor{lightgreen!25}50.0 & \cellcolor{lightgreen!25}45.8 & \cellcolor{lightgreen!25}62.5 & \cellcolor{lightgreen!25}82.5 & \cellcolor{lightgreen!25}41.7 & \cellcolor{lightgreen!25}70.0 & \cellcolor{lightgreen!25}91.7 & \cellcolor{lightgreen!25}70.2 & \cellcolor{lightgreen!25}50.0 & \cellcolor{lightgreen!25}31.2 & \cellcolor{lightgreen!25}12.5 & \cellcolor{lightgreen!25}96.7 & \cellcolor{darkgreen!25}65.1 \\
+ & \cellcolor{darkgreen!25}Rule Hint & \cellcolor{lightgreen!25}77.5 & \cellcolor{lightgreen!25}37.5 & \cellcolor{lightgreen!25}54.2 & \cellcolor{lightgreen!25}50.0 & \cellcolor{lightgreen!25}40.6 & \cellcolor{lightgreen!25}16.7 & \cellcolor{lightgreen!25}66.7 & \cellcolor{lightgreen!25}62.5 
+ & \cellcolor{lightgreen!25}8.3 & \cellcolor{lightgreen!25}55.0 & \cellcolor{lightgreen!25}91.7 & \cellcolor{lightgreen!25}65.4 & \cellcolor{lightgreen!25}12.5 & \cellcolor{lightgreen!25}25.0 & \cellcolor{lightgreen!25}50.0 & \cellcolor{lightgreen!25}0.0 & \cellcolor{darkgreen!25}53.0 \\
+\cdashline{1-19} 
+\multirow{5}{*}{Spark} & \cellcolor{darkyellow}Base & \cellcolor{lightyellow}40.0 & \cellcolor{lightyellow}20.8 & \cellcolor{lightyellow}4.3 & \cellcolor{lightyellow}12.5 & \cellcolor{lightyellow}3.1 & \cellcolor{lightyellow}29.2 & \cellcolor{lightyellow}63.6 & \cellcolor{lightyellow}57.5 & \cellcolor{lightyellow}29.2 & \cellcolor{lightyellow}27.5 & \cellcolor{lightyellow}83.3 & \cellcolor{lightyellow}26.7 & \cellcolor{lightyellow}0.0 & \cellcolor{lightyellow}6.2 & \cellcolor{lightyellow}0.0 & \cellcolor{lightyellow}50.0 & \cellcolor{darkyellow}30.6 \\
+ & \cellcolor{darkyellow}CoT & \cellcolor{lightyellow}52.5 & \cellcolor{lightyellow}20.8 & \cellcolor{lightyellow}4.3 & \cellcolor{lightyellow}16.7 & \cellcolor{lightyellow}6.2 & \cellcolor{lightyellow}24.9 & \cellcolor{lightyellow}65.8 & \cellcolor{lightyellow}66.4 & \cellcolor{lightyellow}41.7 & \cellcolor{lightyellow}45.3 & \cellcolor{lightyellow}83.3 & \cellcolor{lightyellow}36.0 & \cellcolor{lightyellow}0.0 & \cellcolor{lightyellow}12.6 & \cellcolor{lightyellow}0.0 & \cellcolor{lightyellow}54.1 & \cellcolor{darkyellow}39.8 \\
+ & \cellcolor{darkyellow}1-shot & \cellcolor{lightyellow}27.5 & \cellcolor{lightyellow}8.3 & \cellcolor{lightyellow}4.2 & \cellcolor{lightyellow}4.2 & \cellcolor{lightyellow}3.1 & \cellcolor{lightyellow}4.2 & \cellcolor{lightyellow}33.3 & \cellcolor{lightyellow}37.5 & \cellcolor{lightyellow}0.0 & \cellcolor{lightyellow}12.5 & \cellcolor{lightyellow}62.5 & \cellcolor{lightyellow}18.3 & \cellcolor{lightyellow}0.0 & \cellcolor{lightyellow}0.0 & \cellcolor{lightyellow}0.0 & \cellcolor{lightyellow}12.5 & \cellcolor{darkyellow}17.2 \\
+ & \cellcolor{darkyellow}2-shot  & \cellcolor{lightyellow}30.0 & \cellcolor{lightyellow}25.0 & \cellcolor{lightyellow}41.7 & \cellcolor{lightyellow}12.5 & \cellcolor{lightyellow}0.0 & \cellcolor{lightyellow}\textbf{66.7} & \cellcolor{lightyellow}66.7 & \cellcolor{lightyellow}62.5 & \cellcolor{lightyellow}37.5 & \cellcolor{lightyellow}22.5 & \cellcolor{lightyellow}91.7 & \cellcolor{lightyellow}36.5 & \cellcolor{lightyellow}0.0 & \cellcolor{lightyellow}0.0 & \cellcolor{lightyellow}50.0 & \cellcolor{lightyellow}75.0 & \cellcolor{darkyellow}37.9 \\
+ & \cellcolor{darkyellow}Rule Hint & \cellcolor{lightyellow}42.5 & \cellcolor{lightyellow}4.2 & \cellcolor{lightyellow}8.3 & \cellcolor{lightyellow}0.0 & \cellcolor{lightyellow}0.0 & \cellcolor{lightyellow}8.3 & \cellcolor{lightyellow}41.7 & \cellcolor{lightyellow}7.5 & \cellcolor{lightyellow}8.3 & \cellcolor{lightyellow}5.0 & \cellcolor{lightyellow}70.8 & \cellcolor{lightyellow}13.5 & \cellcolor{lightyellow}0.0 & \cellcolor{lightyellow}0.0 & \cellcolor{lightyellow}0.0 & \cellcolor{lightyellow}0.0 & \cellcolor{darkyellow}15.1 \\
+\cdashline{1-19} 
+\multirow{5}{*}{GPT4} & \cellcolor{darkred!25}Base  & \cellcolor{lightred!25}97.0 & \cellcolor{lightred!25}83.3 & \cellcolor{lightred!25}\textbf{70.8} & \cellcolor{lightred!25}43.5 & \cellcolor{lightred!25}78.1 & \cellcolor{lightred!25}41.7 & \cellcolor{lightred!25}\textbf{91.7} & \cellcolor{lightred!25}92.5& \cellcolor{lightred!25}79.2 & \cellcolor{lightred!25}79.5 & \cellcolor{lightred!25}91.7 & \cellcolor{lightred!25}82.7 & \cellcolor{lightred!25}75.0 & \cellcolor{lightred!25}75.0 & \cellcolor{lightred!25}25.0 & \cellcolor{lightred!25}37.5 & \cellcolor{darkred!25}78.4 \\ 
+& \cellcolor{darkred!25}CoT & \cellcolor{lightred!25}\textbf{98.4} & \cellcolor{lightred!25}66.7 & \cellcolor{lightred!25}67.8 & \cellcolor{lightred!25}56.5 & \cellcolor{lightred!25}71.9 & \cellcolor{lightred!25}37.5 & \cellcolor{lightred!25}87.5 & \cellcolor{lightred!25}87.5 & \cellcolor{lightred!25}75.0 & \cellcolor{lightred!25}\textbf{84.6} & \cellcolor{lightred!25}87.5 & \cellcolor{lightred!25}76.9 & \cellcolor{lightred!25}62.5 & \cellcolor{lightred!25}68.8 & \cellcolor{lightred!25}37.1 & \cellcolor{lightred!25}25.8 & \cellcolor{darkred!25}74.9 \\
+ & \cellcolor{darkred!25}1-shot & \cellcolor{lightred!25}95.0 & \cellcolor{lightred!25}66.7 & \cellcolor{lightred!25}\textbf{70.8} & \cellcolor{lightred!25}\textbf{78.3} & \cellcolor{lightred!25}68.8 & \cellcolor{lightred!25}54.2 & \cellcolor{lightred!25}79.2& \cellcolor{lightred!25}\textbf{97.5} & \cellcolor{lightred!25}\textbf{87.5} & \cellcolor{lightred!25}80.0 & \cellcolor{lightred!25}91.7 & \cellcolor{lightred!25}84.0 & \cellcolor{lightred!25}75.0 & \cellcolor{lightred!25}50.0 & \cellcolor{lightred!25}37.5 & \cellcolor{lightred!25}50.0 & \cellcolor{darkred!25}78.9 \\
+ & \cellcolor{darkred!25}2-shot & \cellcolor{lightred!25}95.0 & \cellcolor{lightred!25}\textbf{79.2} & \cellcolor{lightred!25}65.2 & \cellcolor{lightred!25}75.0 & \cellcolor{lightred!25}\textbf{87.5} & \cellcolor{lightred!25}54.2 & \cellcolor{lightred!25}87.5 & \cellcolor{lightred!25}\textbf{97.5} & \cellcolor{lightred!25}79.2 & \cellcolor{lightred!25}82.1 & \cellcolor{lightred!25}95.8 & \cellcolor{lightred!25}84.6 & \cellcolor{lightred!25}\textbf{96.0} & \cellcolor{lightred!25}75.0 & \cellcolor{lightred!25}50.0 & \cellcolor{lightred!25}62.5 & \cellcolor{darkred!25}\textbf{82.7} \\
+ & \cellcolor{darkred!25}Rule Hint & \cellcolor{lightred!25}97.5 & \cellcolor{lightred!25}66.7 & \cellcolor{lightred!25}65.2 & \cellcolor{lightred!25}50.0 & \cellcolor{lightred!25}65.6 & \cellcolor{lightred!25}45.8 & \cellcolor{lightred!25}83.3 & \cellcolor{lightred!25}95.0 & \cellcolor{lightred!25}83.3 & \cellcolor{lightred!25}80.0 & \cellcolor{lightred!25}91.7 & \cellcolor{lightred!25}75.7 & \cellcolor{lightred!25}50.0 & \cellcolor{lightred!25}56.2 & \cellcolor{lightred!25}\textbf{75.0} & \cellcolor{lightred!25}12.5 & \cellcolor{darkred!25}74.5 \\
+\cdashline{1-19} 
+\multirow{5}{*}{GPT4-turbo} & \cellcolor{darkpurple!25}Base & \cellcolor{lightpurple!25}87.6 & \cellcolor{lightpurple!25}61.3 & \cellcolor{lightpurple!25}56.9 & \cellcolor{lightpurple!25}51.8 & \cellcolor{lightpurple!25}64.9 & \cellcolor{lightpurple!25}50.8 & \cellcolor{lightpurple!25}80.4 & \cellcolor{lightpurple!25}82.4 &\cellcolor{lightpurple!25}71.2 & \cellcolor{lightpurple!25}69.8 & \cellcolor{lightpurple!25}77.8 & \cellcolor{lightpurple!25}74.5 & \cellcolor{lightpurple!25}45.7 & \cellcolor{lightpurple!25}59.1 & \cellcolor{lightpurple!25}71.4 & \cellcolor{lightpurple!25}18.5 & \cellcolor{darkpurple!25}69.3 \\
+ & \cellcolor{darkpurple!25}CoT & \cellcolor{lightpurple!25}81.6 & \cellcolor{lightpurple!25}57.4 & \cellcolor{lightpurple!25}52.0 & \cellcolor{lightpurple!25}45.2 & \cellcolor{lightpurple!25}63.6 & \cellcolor{lightpurple!25}43.8 & \cellcolor{lightpurple!25}78.8 & \cellcolor{lightpurple!25}79.2 & \cellcolor{lightpurple!25}61.1 & \cellcolor{lightpurple!25}63.8 & \cellcolor{lightpurple!25}76.2 & \cellcolor{lightpurple!25}62.8 & \cellcolor{lightpurple!25}52.7 & \cellcolor{lightpurple!25}74.6 & \cellcolor{lightpurple!25}58.3 & \cellcolor{lightpurple!25}7.1 & \cellcolor{darkpurple!25}62.6 \\
+ & \cellcolor{darkpurple!25}1-shot & \cellcolor{lightpurple!25}92.5 & \cellcolor{lightpurple!25}66.7 & \cellcolor{lightpurple!25}62.5 & \cellcolor{lightpurple!25}62.5 & \cellcolor{lightpurple!25}59.4 & \cellcolor{lightpurple!25}58.3 & \cellcolor{lightpurple!25}70.8 & \cellcolor{lightpurple!25}82.5 & \cellcolor{lightpurple!25}66.7 & \cellcolor{lightpurple!25}77.5 & \cellcolor{lightpurple!25}70.8 & \cellcolor{lightpurple!25}78.8 & \cellcolor{lightpurple!25}37.5 & \cellcolor{lightpurple!25}50.0 & \cellcolor{lightpurple!25}\textbf{75.0} & \cellcolor{lightpurple!25}37.5 & \cellcolor{darkpurple!25}71.6 \\
+ & \cellcolor{darkpurple!25}2-shot & \cellcolor{lightpurple!25}87.5 & \cellcolor{lightpurple!25}62.5 & \cellcolor{lightpurple!25}66.7 & \cellcolor{lightpurple!25}75.0 & \cellcolor{lightpurple!25}68.8 & \cellcolor{lightpurple!25}54.2 & \cellcolor{lightpurple!25}75.0 & \cellcolor{lightpurple!25}92.5 & \cellcolor{lightpurple!25}83.3 & \cellcolor{lightpurple!25}75.0 & \cellcolor{lightpurple!25}75.0 & \cellcolor{lightpurple!25}80.8 & \cellcolor{lightpurple!25}50.0 & \cellcolor{lightpurple!25}68.8 & \cellcolor{lightpurple!25}50.0 & \cellcolor{lightpurple!25}37.5 & \cellcolor{darkpurple!25}75.0 \\
+ & \cellcolor{darkpurple!25}Rule Hint & \cellcolor{lightpurple!25}82.5 & \cellcolor{lightpurple!25}62.5 & \cellcolor{lightpurple!25}62.5 & \cellcolor{lightpurple!25}50.0 & \cellcolor{lightpurple!25}78.1 & \cellcolor{lightpurple!25}29.2 & \cellcolor{lightpurple!25}70.8 & \cellcolor{lightpurple!25}87.5 & \cellcolor{lightpurple!25}66.7 & \cellcolor{lightpurple!25}60.0 & \cellcolor{lightpurple!25}70.8 & \cellcolor{lightpurple!25}76.9 & \cellcolor{lightpurple!25}25.0 & \cellcolor{lightpurple!25}\textbf{93.8} & \cellcolor{lightpurple!25}50.0 & \cellcolor{lightpurple!25}12.5 & \cellcolor{darkpurple!25}68.5 \\
+\bottomrule
+\end{tabular}}
+\caption{GPT-Judge Score for close-sourced LLMs' performance. Bolded text represent the best performance in the column.}
+\label{tab:api_overall}
+% \vspace{-5mm}
+\end{table*}
+
+
+
+
+
+\begin{table*}[t]
+\centering
+% \tiny
+{\fontsize{8pt}{9.6pt}\selectfont
+% \resizebox{\textwidth}{!}{
+\begin{tabular}{lcccccccccc}
+\toprule
+\multicolumn{1}{c}{\textbf{Model}} & \textbf{Prompt} & \textbf{JSON} & \textbf{LaTeX} & \textbf{Md.} & \textbf{ORG} & \textbf{Tab.} & \textbf{Tree} & \textbf{XML} & \textbf{YAML} & \textbf{all} \\ 
+\midrule
+\multirow{4}{*}{Ernie-turbo} & \cellcolor{darkblue!25}Base & \cellcolor{lightblue!25}27.4 & \cellcolor{lightblue!25}0.2 & \cellcolor{lightblue!25}0.0 & \cellcolor{lightblue!25}0.0 & \cellcolor{lightblue!25}13.0 & \cellcolor{lightblue!25}2.6 & \cellcolor{lightblue!25}14.3 & \cellcolor{lightblue!25}24.4 & \cellcolor{darkblue!25}12.5 \\
+& \cellcolor{darkblue!25}CoT & \cellcolor{lightblue!25}19.4 & \cellcolor{lightblue!25}0.1 & \cellcolor{lightblue!25}0.1 & \cellcolor{lightblue!25}0.2 & \cellcolor{lightblue!25}10.9 & \cellcolor{lightblue!25}1.5 & \cellcolor{lightblue!25}13.4 & \cellcolor{lightblue!25}19.7 & \cellcolor{darkblue!25}9.9 \\
+ & \cellcolor{darkblue!25}1-shot & \cellcolor{lightblue!25}25.0 & \cellcolor{lightblue!25}0.0 & \cellcolor{lightblue!25}4.2 & \cellcolor{lightblue!25}8.7 & \cellcolor{lightblue!25}21.9 & \cellcolor{lightblue!25}12.5 & \cellcolor{lightblue!25}8.3 & \cellcolor{lightblue!25}25.0 & \cellcolor{darkblue!25}15.2 \\
+ & \cellcolor{darkblue!25}2-shot & \cellcolor{lightblue!25}12.5 & \cellcolor{lightblue!25}12.5 & \cellcolor{lightblue!25}12.5 & \cellcolor{lightblue!25}8.3 & \cellcolor{lightblue!25}21.9 & \cellcolor{lightblue!25}20.8 & \cellcolor{lightblue!25}16.7 & \cellcolor{lightblue!25}5.0 & \cellcolor{darkblue!25}13.4 \\
+ & \cellcolor{darkblue!25}Rule Hint & \cellcolor{lightblue!25}32.5 & \cellcolor{lightblue!25}0.0 & \cellcolor{lightblue!25}0.0 & \cellcolor{lightblue!25}0.0 & \cellcolor{lightblue!25}9.4 & \cellcolor{lightblue!25}0.0 & \cellcolor{lightblue!25}12.5 & \cellcolor{lightblue!25}32.5 & \cellcolor{darkblue!25}13.8 \\
+\cdashline{1-11}
+\multirow{4}{*}{Minimax} & \cellcolor{darkgreen!25}Base & \cellcolor{lightgreen!25}77.5 & \cellcolor{lightgreen!25}58.3 & \cellcolor{lightgreen!25}41.7 & \cellcolor{lightgreen!25}29.2 & \cellcolor{lightgreen!25}44.2 & \cellcolor{lightgreen!25}20.8 & \cellcolor{lightgreen!25}58.3 & \cellcolor{lightgreen!25}70.0 & \cellcolor{darkgreen!25}46.6 \\
+ & \cellcolor{darkgreen!25}CoT & \cellcolor{lightgreen!25}82.5 & \cellcolor{lightgreen!25}58.3 & \cellcolor{lightgreen!25}43.8 & \cellcolor{lightgreen!25}31.3 & \cellcolor{lightgreen!25}17.3 & \cellcolor{lightgreen!25}16.6 & \cellcolor{lightgreen!25}60.4 & \cellcolor{lightgreen!25}62.5 & \cellcolor{darkgreen!25}28.2 \\
+ & \cellcolor{darkgreen!25}1-shot & \cellcolor{lightgreen!25}80.0 & \cellcolor{lightgreen!25}50.0 & \cellcolor{lightgreen!25}58.3 & \cellcolor{lightgreen!25}50.0 & \cellcolor{lightgreen!25}37.5 & \cellcolor{lightgreen!25}50.0 & \cellcolor{lightgreen!25}62.5 & \cellcolor{lightgreen!25}85.0 & \cellcolor{darkgreen!25}61.6 \\
+ & \cellcolor{darkgreen!25}2-shot & \cellcolor{lightgreen!25}90.0 & \cellcolor{lightgreen!25}58.3 & \cellcolor{lightgreen!25}54.2 & \cellcolor{lightgreen!25}54.2 & \cellcolor{lightgreen!25}50.0 & \cellcolor{lightgreen!25}45.8 & \cellcolor{lightgreen!25}62.5 & \cellcolor{lightgreen!25}82.5 & \cellcolor{darkgreen!25}65.1 \\
+ & \cellcolor{darkgreen!25}Rule Hint & \cellcolor{lightgreen!25}77.5 & \cellcolor{lightgreen!25}37.5 & \cellcolor{lightgreen!25}54.2 & \cellcolor{lightgreen!25}50.0 & \cellcolor{lightgreen!25}40.6 & \cellcolor{lightgreen!25}16.7 & \cellcolor{lightgreen!25}66.7 & \cellcolor{lightgreen!25}62.5 & \cellcolor{darkgreen!25}53.0 \\
+\cdashline{1-11}
+\multirow{4}{*}{Spark} & \cellcolor{darkyellow}Base & \cellcolor{lightyellow}40.0 & \cellcolor{lightyellow}20.8 & \cellcolor{lightyellow}4.3 & \cellcolor{lightyellow}12.5 & \cellcolor{lightyellow}3.1 & \cellcolor{lightyellow}29.2 & \cellcolor{lightyellow}63.6 & \cellcolor{lightyellow}57.5 & \cellcolor{darkyellow}30.6 \\
+& \cellcolor{darkyellow}CoT & \cellcolor{lightyellow}52.5 & \cellcolor{lightyellow}20.8 & \cellcolor{lightyellow}4.3 & \cellcolor{lightyellow}16.7 & \cellcolor{lightyellow}6.2 & \cellcolor{lightyellow}24.9 & \cellcolor{lightyellow}65.8 & \cellcolor{lightyellow}66.4 & \cellcolor{darkyellow}35.0 \\
+ & \cellcolor{darkyellow}1-shot & \cellcolor{lightyellow}27.5 & \cellcolor{lightyellow}8.3 & \cellcolor{lightyellow}4.2 & \cellcolor{lightyellow}4.2 & \cellcolor{lightyellow}3.1 & \cellcolor{lightyellow}4.2 & \cellcolor{lightyellow}33.3 & \cellcolor{lightyellow}37.5 & \cellcolor{darkyellow}17.2 \\
+ & \cellcolor{darkyellow}2-shot & \cellcolor{lightyellow}30.0 & \cellcolor{lightyellow}25.0 & \cellcolor{lightyellow}41.7 & \cellcolor{lightyellow}12.5 & \cellcolor{lightyellow}0.0 & \cellcolor{lightyellow}66.7 & \cellcolor{lightyellow}66.7 & \cellcolor{lightyellow}62.5 & \cellcolor{darkyellow}37.9 \\
+ & \cellcolor{darkyellow}Rule Hint & \cellcolor{lightyellow}42.5 & \cellcolor{lightyellow}4.2 & \cellcolor{lightyellow}8.3 & \cellcolor{lightyellow}0.0 & \cellcolor{lightyellow}0.0 & \cellcolor{lightyellow}8.3 & \cellcolor{lightyellow}41.7 & \cellcolor{lightyellow}7.5 & \cellcolor{darkyellow}15.1 \\
+\cdashline{1-11}
+\multirow{4}{*}{GPT4} & \cellcolor{darkred!25}Base & \cellcolor{lightred!25}97.0 & \cellcolor{lightred!25}83.3 & \cellcolor{lightred!25}70.8 & \cellcolor{lightred!25}43.5 & \cellcolor{lightred!25}78.1 & \cellcolor{lightred!25}41.7 & \cellcolor{lightred!25}91.7 & \cellcolor{lightred!25}92.5 & \cellcolor{darkred!25}78.4 \\
+& \cellcolor{darkred!25}CoT & \cellcolor{lightred!25}98.4 & \cellcolor{lightred!25}66.7 & \cellcolor{lightred!25}67.8 & \cellcolor{lightred!25}56.5 & \cellcolor{lightred!25}71.9 & \cellcolor{lightred!25}37.5 & \cellcolor{lightred!25}87.5 & \cellcolor{lightred!25}87.5 & \cellcolor{darkred!25}74.9 \\
+ & \cellcolor{darkred!25}1-shot & \cellcolor{lightred!25}95.0 & \cellcolor{lightred!25}66.7 & \cellcolor{lightred!25}70.8 & \cellcolor{lightred!25}78.3 & \cellcolor{lightred!25}68.8 & \cellcolor{lightred!25}54.2 & \cellcolor{lightred!25}79.2 & \cellcolor{lightred!25}97.5 & \cellcolor{darkred!25}78.9 \\
+ & \cellcolor{darkred!25}2-shot & \cellcolor{lightred!25}95.0 & \cellcolor{lightred!25}79.2 & \cellcolor{lightred!25}65.2 & \cellcolor{lightred!25}75.0 & \cellcolor{lightred!25}87.5 & \cellcolor{lightred!25}54.2 & \cellcolor{lightred!25}87.5 & \cellcolor{lightred!25}97.5 & \cellcolor{darkred!25}82.7 \\
+ & \cellcolor{darkred!25}Rule Hint & \cellcolor{lightred!25}97.5 & \cellcolor{lightred!25}66.7 & \cellcolor{lightred!25}65.2 & \cellcolor{lightred!25}50.0 & \cellcolor{lightred!25}65.6 & \cellcolor{lightred!25}45.8 & \cellcolor{lightred!25}83.3 & \cellcolor{lightred!25}95.0 & \cellcolor{darkred!25}74.5 \\
+\cdashline{1-11}
+\multirow{4}{*}{GPT4-turbo} & \cellcolor{darkpurple!25}Base & \cellcolor{lightpurple!25}87.6 & \cellcolor{lightpurple!25}61.3 & \cellcolor{lightpurple!25}56.9 & \cellcolor{lightpurple!25}51.8 & \cellcolor{lightpurple!25}64.9 & \cellcolor{lightpurple!25}50.8 & \cellcolor{lightpurple!25}80.4 & \cellcolor{lightpurple!25}82.4 & \cellcolor{darkpurple!25}69.3 \\
+ & \cellcolor{darkpurple!25}CoT & \cellcolor{lightpurple!25}81.6 & \cellcolor{lightpurple!25}57.4 & \cellcolor{lightpurple!25}52.0 & \cellcolor{lightpurple!25}45.2 & \cellcolor{lightpurple!25}63.6 & \cellcolor{lightpurple!25}43.8 & \cellcolor{lightpurple!25}78.8 & \cellcolor{lightpurple!25}79.2 & \cellcolor{darkpurple!25}65.1 \\
+ & \cellcolor{darkpurple!25}1-shot & \cellcolor{lightpurple!25}92.5 & \cellcolor{lightpurple!25}66.7 & \cellcolor{lightpurple!25}62.5 & \cellcolor{lightpurple!25}62.5 & \cellcolor{lightpurple!25}59.4 & \cellcolor{lightpurple!25}58.3 & \cellcolor{lightpurple!25}70.8 & \cellcolor{lightpurple!25}82.5 & \cellcolor{darkpurple!25}71.6 \\
+ & \cellcolor{darkpurple!25}2-shot & \cellcolor{lightpurple!25}87.5 & \cellcolor{lightpurple!25}62.5 & \cellcolor{lightpurple!25}66.7 & \cellcolor{lightpurple!25}75.0 & \cellcolor{lightpurple!25}68.8 & \cellcolor{lightpurple!25}54.2 & \cellcolor{lightpurple!25}75.0 & \cellcolor{lightpurple!25}92.5 & \cellcolor{darkpurple!25}75.0 \\
+ & \cellcolor{darkpurple!25}Rule Hint & \cellcolor{lightpurple!25}82.5 & \cellcolor{lightpurple!25}62.5 & \cellcolor{lightpurple!25}62.5 & \cellcolor{lightpurple!25}50.0 & \cellcolor{lightpurple!25}78.1 & \cellcolor{lightpurple!25}29.2 & \cellcolor{lightpurple!25}70.8 & \cellcolor{lightpurple!25}87.5 & \cellcolor{darkpurple!25}68.5 \\
+\bottomrule
+\end{tabular}}
+\caption{GPT-Judge Score for close-sourced LLMs' performance on different languages.}
+\label{tab:api_on_language}
+\vspace{-5mm}
+\end{table*}
+
+
+
+
+
+
+% \begin{table*}[h!]
+% \centering
+% \resizebox{\textwidth}{!}{
+% \begin{tabular}{c|c|cccccccc|c}
+% \hline
+% \textbf{Model} & \textbf{Prompt} & \textbf{PC} & \textbf{PW} & \textbf{SY} & \textbf{TR} & \textbf{SJ} & \textbf{ST} & \textbf{TD} & \textbf{TH} & \textbf{all} \\ \hline
+% \multirow{8}{*}{erniebot\_turbo} & \cellcolor{lightblue}Base & \cellcolor{lightblue}0.028 & \cellcolor{lightblue}0.223 & \cellcolor{lightblue}0.232 & \cellcolor{lightblue}0.113 & \cellcolor{lightblue}0.005 & \cellcolor{lightblue}0.111 & \cellcolor{lightblue}0.054 & \cellcolor{lightblue}0.018 & \cellcolor{lightblue}0.125 \\
+%  & \cellcolor{darkblue!8}+CoT & \cellcolor{darkblue!8}+0.008 & \cellcolor{darkblue!8}+0.067 & \cellcolor{darkblue!8}+0.266 & \cellcolor{darkblue!8}+0.062 & \cellcolor{darkblue!8}+0.014 & \cellcolor{darkblue!8}+0.062 & \cellcolor{darkblue!8}+0.018 & \cellcolor{darkblue!8}+0.000 & \cellcolor{darkblue!8}+0.072 \\
+%  & \cellcolor{lightblue}1-shot & \cellcolor{lightblue}0.125 & \cellcolor{lightblue}0.200 & \cellcolor{lightblue}0.083 & \cellcolor{lightblue}0.194 & \cellcolor{lightblue}0.000 & \cellcolor{lightblue}0.000 & \cellcolor{lightblue}0.250 & \cellcolor{lightblue}0.000 & \cellcolor{lightblue}0.152 \\
+%  & \cellcolor{darkblue!8}+CoT & \cellcolor{darkblue!8}+0.000 & \cellcolor{darkblue!8}+0.125 & \cellcolor{darkblue!8}+0.167 & \cellcolor{darkblue!8}+0.173 & \cellcolor{darkblue!8}+0.000 & \cellcolor{darkblue!8}+0.125 & \cellcolor{darkblue!8}+0.250 & \cellcolor{darkblue!8}+0.000 & \cellcolor{darkblue!8}0.134 \\
+%  & \cellcolor{lightblue}2-shot & \cellcolor{lightblue}0.042 & \cellcolor{lightblue}0.100 & \cellcolor{lightblue}0.042 & \cellcolor{lightblue}0.183 & \cellcolor{lightblue}0.250 & \cellcolor{lightblue}0.000 & \cellcolor{lightblue}0.250 & \cellcolor{lightblue}0.250 & \cellcolor{lightblue}0.134 \\
+%  & \cellcolor{darkblue!8}+CoT & \cellcolor{darkblue!8}+0.000 & \cellcolor{darkblue!8}+0.100 & \cellcolor{darkblue!8}+0.375 & \cellcolor{darkblue!8}+0.106 & \cellcolor{darkblue!8}+0.250 & \cellcolor{darkblue!8}+0.000 & \cellcolor{darkblue!8}+0.000 & \cellcolor{darkblue!8}+0.250 & \cellcolor{darkblue!8}+0.121 \\
+%  & \cellcolor{lightblue}Rule Hint & \cellcolor{lightblue}0.083 & \cellcolor{lightblue}0.200 & \cellcolor{lightblue}0.250 & \cellcolor{lightblue}0.144 & \cellcolor{lightblue}0.000 & \cellcolor{lightblue}0.062 & \cellcolor{lightblue}0.000 & \cellcolor{lightblue}0.000 & \cellcolor{lightblue}0.138 \\
+%  & \cellcolor{darkblue!8}+CoT & \cellcolor{darkblue!8}+0.000 & \cellcolor{darkblue!8}+0.075 & \cellcolor{darkblue!8}+0.167 & \cellcolor{darkblue!8}+0.096 & \cellcolor{darkblue!8}+0.000 & \cellcolor{darkblue!8}+0.000 & \cellcolor{darkblue!8}+0.000 & \cellcolor{darkblue!8}+0.000 & \cellcolor{darkblue!8}+0.073 \\ \hline
+% \multirow{8}{*}{minimax} & \cellcolor{lightblue}Base & \cellcolor{lightblue}0.250 & \cellcolor{lightblue}0.575 & \cellcolor{lightblue}0.750 & \cellcolor{lightblue}0.845 & \cellcolor{lightblue}0.131 & \cellcolor{lightblue}0.330 & \cellcolor{lightblue}0.375 & \cellcolor{lightblue}0.000 & \cellcolor{lightblue}0.466 \\
+%  & \cellcolor{darkblue!8}+CoT & \cellcolor{darkblue!8}+0.292 & \cellcolor{darkblue!8}+0.550 & \cellcolor{darkblue!8}+0.833 & \cellcolor{darkblue!8}+0.673 & \cellcolor{darkblue!8}+0.170 & \cellcolor{darkblue!8}+0.242 & \cellcolor{darkblue!8}+0.125 & \cellcolor{darkblue!8}+0.000 & \cellcolor{darkblue!8}+0.390 \\
+%  & \cellcolor{lightblue}1-shot & \cellcolor{lightblue}0.292 & \cellcolor{lightblue}0.675 & \cellcolor{lightblue}0.917 & \cellcolor{lightblue}0.683 & \cellcolor{lightblue}0.250 & \cellcolor{lightblue}0.188 & \cellcolor{lightblue}0.375 & \cellcolor{lightblue}1.000 & \cellcolor{lightblue}0.616 \\
+%  & \cellcolor{darkblue!8}+CoT & \cellcolor{darkblue!8}+0.167 & \cellcolor{darkblue!8}+0.500 & \cellcolor{darkblue!8}+0.750 & \cellcolor{darkblue!8}+0.692 & \cellcolor{darkblue!8}+0.250 & \cellcolor{darkblue!8}+0.125 & \cellcolor{darkblue!8}+0.500 & \cellcolor{darkblue!8}+1.000 & \cellcolor{darkblue!8}+0.560 \\
+%  & \cellcolor{lightblue}2-shot & \cellcolor{lightblue}0.417 & \cellcolor{lightblue}0.700 & \cellcolor{lightblue}0.917 & \cellcolor{lightblue}0.702 & \cellcolor{lightblue}0.500 & \cellcolor{lightblue}0.312 & \cellcolor{lightblue}0.125 & \cellcolor{lightblue}1.000 & \cellcolor{lightblue}0.651 \\
+%  & \cellcolor{darkblue!8}+CoT & \cellcolor{darkblue!8}+0.292 & \cellcolor{darkblue!8}+0.500 & \cellcolor{darkblue!8}+0.875 & \cellcolor{darkblue!8}+0.577 & \cellcolor{darkblue!8}+0.375 & \cellcolor{darkblue!8}+0.188 & \cellcolor{darkblue!8}+0.125 & \cellcolor{darkblue!8}+1.000 & \cellcolor{darkblue!8}+0.530 \\
+%  & \cellcolor{lightblue}Rule Hint & \cellcolor{lightblue}0.083 & \cellcolor{lightblue}0.550 & \cellcolor{lightblue}0.917 & \cellcolor{lightblue}0.654 & \cellcolor{lightblue}0.125 & \cellcolor{lightblue}0.250 & \cellcolor{lightblue}0.500 & \cellcolor{lightblue}0.000 & \cellcolor{lightblue}0.530 \\
+%  & \cellcolor{darkblue!8}+CoT & \cellcolor{darkblue!8}+0.083 & \cellcolor{darkblue!8}+0.500 & \cellcolor{darkblue!8}+0.958 & \cellcolor{darkblue!8}+0.712 & \cellcolor{darkblue!8}+0.125 & \cellcolor{darkblue!8}+0.188 & \cellcolor{darkblue!8}+0.375 & \cellcolor{darkblue!8}+0.000 & \cellcolor{darkblue!8}+0.543 \\ \hline
+% \multirow{8}{*}{spark} & \cellcolor{lightblue}Base & \cellcolor{lightblue}0.292 & \cellcolor{lightblue}0.275 & \cellcolor{lightblue}0.833 & \cellcolor{lightblue}0.267 & \cellcolor{lightblue}0.000 & \cellcolor{lightblue}0.062 & \cellcolor{lightblue}0.000 & \cellcolor{lightblue}0.500 & \cellcolor{lightblue}0.306 \\
+%  & \cellcolor{darkblue!8}+CoT & \cellcolor{darkblue!8}+0.417 & \cellcolor{darkblue!8}+0.450 & \cellcolor{darkblue!8}+0.833 & \cellcolor{darkblue!8}+0.360 & \cellcolor{darkblue!8}+0.000 & \cellcolor{darkblue!8}+0.125 & \cellcolor{darkblue!8}+0.000 & \cellcolor{darkblue!8}+0.500 & \cellcolor{darkblue!8}+0.398 \\
+%  & \cellcolor{lightblue}1-shot & \cellcolor{lightblue}0.000 & \cellcolor{lightblue}0.125 & \cellcolor{lightblue}0.625 & \cellcolor{lightblue}0.183 & \cellcolor{lightblue}0.000 & \cellcolor{lightblue}0.000 & \cellcolor{lightblue}0.000 & \cellcolor{lightblue}0.125 & \cellcolor{lightblue}0.172 \\
+%  & \cellcolor{darkblue!8}+CoT & \cellcolor{darkblue!8}+0.125 & \cellcolor{darkblue!8}+0.075 & \cellcolor{darkblue!8}+0.625 & \cellcolor{darkblue!8}+0.231 & \cellcolor{darkblue!8}+0.000 & \cellcolor{darkblue!8}+0.000 & \cellcolor{darkblue!8}+0.500 & \cellcolor{darkblue!8}+0.375 & \cellcolor{darkblue!8}+0.224 \\
+%  & \cellcolor{lightblue}2-shot & \cellcolor{lightblue}0.375 & \cellcolor{lightblue}0.225 & \cellcolor{lightblue}0.917 & \cellcolor{lightblue}0.365 & \cellcolor{lightblue}0.000 & \cellcolor{lightblue}0.000 & \cellcolor{lightblue}0.500 & \cellcolor{lightblue}0.750 & \cellcolor{lightblue}0.379 \\
+%  & \cellcolor{darkblue!8}+CoT & \cellcolor{darkblue!8}+0.458 & \cellcolor{darkblue!8}+0.200 & \cellcolor{darkblue!8}+0.875 & \cellcolor{darkblue!8}+0.369 & \cellcolor{darkblue!8}+0.125 & \cellcolor{darkblue!8}+0.000 & \cellcolor{darkblue!8}+0.500 & \cellcolor{darkblue!8}+0.625 & \cellcolor{darkblue!8}+0.381 \\
+%  & \cellcolor{lightblue}Rule Hint & \cellcolor{lightblue}0.083 & \cellcolor{lightblue}0.050 & \cellcolor{lightblue}0.708 & \cellcolor{lightblue}0.135 & \cellcolor{lightblue}0.000 & \cellcolor{lightblue}0.000 & \cellcolor{lightblue}0.000 & \cellcolor{lightblue}0.000 & \cellcolor{lightblue}0.151 \\
+%  & \cellcolor{darkblue!8}+CoT & \cellcolor{darkblue!8}+0.000 & \cellcolor{darkblue!8}+0.250 & \cellcolor{darkblue!8}+1.000 & \cellcolor{darkblue!8}+0.212 & \cellcolor{darkblue!8}+0.125 & \cellcolor{darkblue!8}+0.125 & \cellcolor{darkblue!8}+0.125 & \cellcolor{darkblue!8}+0.250 & \cellcolor{darkblue!8}+0.267 \\ \hline
+% \multirow{8}{*}{gpt4} & \cellcolor{lightblue}Base & \cellcolor{lightblue}0.792 & \cellcolor{lightblue}0.795 & \cellcolor{lightblue}0.917 & \cellcolor{lightblue}0.827 & \cellcolor{lightblue}0.750 & \cellcolor{lightblue}0.750 & \cellcolor{lightblue}0.250 & \cellcolor{lightblue}0.375 & \cellcolor{lightblue}0.784 \\
+%  & \cellcolor{darkblue!8}+CoT & \cellcolor{darkblue!8}+0.750 & \cellcolor{darkblue!8}+0.846 & \cellcolor{darkblue!8}+0.875 & \cellcolor{darkblue!8}+0.769 & \cellcolor{darkblue!8}+0.625 & \cellcolor{darkblue!8}+0.688 & \cellcolor{darkblue!8}+0.375 & \cellcolor{darkblue!8}+0.250 & \cellcolor{darkblue!8}+0.749 \\
+%  & \cellcolor{lightblue}1-shot & \cellcolor{lightblue}0.875 & \cellcolor{lightblue}0.800 & \cellcolor{lightblue}0.917 & \cellcolor{lightblue}0.840 & \cellcolor{lightblue}0.750 & \cellcolor{lightblue}0.500 & \cellcolor{lightblue}0.375 & \cellcolor{lightblue}0.500 & \cellcolor{lightblue}0.789 \\
+%  & \cellcolor{darkblue!8}+CoT & \cellcolor{darkblue!8}+0.708 & \cellcolor{darkblue!8}+0.800 & \cellcolor{darkblue!8}+0.958 & \cellcolor{darkblue!8}+0.802 & \cellcolor{darkblue!8}+0.625 & \cellcolor{darkblue!8}+0.500 & \cellcolor{darkblue!8}+0.375 & \cellcolor{darkblue!8}+0.375 & \cellcolor{darkblue!8}+0.751 \\
+%  & \cellcolor{lightblue}2-shot & \cellcolor{lightblue}0.792 & \cellcolor{lightblue}0.821 & \cellcolor{lightblue}0.958 & \cellcolor{lightblue}0.846 & \cellcolor{lightblue}1.000 & \cellcolor{lightblue}0.750 & \cellcolor{lightblue}0.500 & \cellcolor{lightblue}0.625 & \cellcolor{lightblue}0.827 \\
+%  & \cellcolor{darkblue!8}+CoT & \cellcolor{darkblue!8}+0.708 & \cellcolor{darkblue!8}+0.795 & \cellcolor{darkblue!8}+1.000 & \cellcolor{darkblue!8}+0.856 & \cellcolor{darkblue!8}+0.625 & \cellcolor{darkblue!8}+0.688 & \cellcolor{darkblue!8}+0.375 & \cellcolor{darkblue!8}+0.875 & \cellcolor{darkblue!8}+0.810 \\
+%  & \cellcolor{lightblue}Rule Hint & \cellcolor{lightblue}0.833 & \cellcolor{lightblue}0.800 & \cellcolor{lightblue}0.917 & \cellcolor{lightblue}0.757 & \cellcolor{lightblue}0.500 & \cellcolor{lightblue}0.562 & \cellcolor{lightblue}0.750 & \cellcolor{lightblue}0.125 & \cellcolor{lightblue}0.745 \\
+%  & \cellcolor{darkblue!8}+CoT & \cellcolor{darkblue!8}+0.708 & \cellcolor{darkblue!8}+0.750 & \cellcolor{darkblue!8}+0.875 & \cellcolor{darkblue!8}+0.779 & \cellcolor{darkblue!8}+0.000 & \cellcolor{darkblue!8}+0.500 & \cellcolor{darkblue!8}+0.500 & \cellcolor{darkblue!8}+0.125 & \cellcolor{darkblue!8}+0.698 \\ \hline
+% \multirow{8}{*}{gpt4\_turbo} & \cellcolor{lightblue}Base & \cellcolor{lightblue}0.712 & \cellcolor{lightblue}0.698 & \cellcolor{lightblue}0.778 & \cellcolor{lightblue}0.745 & \cellcolor{lightblue}0.457 & \cellcolor{lightblue}0.591 & \cellcolor{lightblue}0.714 & \cellcolor{lightblue}0.185 & \cellcolor{lightblue}0.693 \\
+%  & \cellcolor{darkblue!8}+CoT & \cellcolor{darkblue!8}+0.611 & \cellcolor{darkblue!8}+0.638 & \cellcolor{darkblue!8}+0.762 & \cellcolor{darkblue!8}+0.628 & \cellcolor{darkblue!8}+0.527 & \cellcolor{darkblue!8}+0.746 & \cellcolor{darkblue!8}+0.583 & \cellcolor{darkblue!8}+0.071 & \cellcolor{darkblue!8}+0.626 \\
+%  & \cellcolor{lightblue}1-shot & \cellcolor{lightblue}0.667 & \cellcolor{lightblue}0.775 & \cellcolor{lightblue}0.708 & \cellcolor{lightblue}0.788 & \cellcolor{lightblue}0.375 & \cellcolor{lightblue}0.500 & \cellcolor{lightblue}0.750 & \cellcolor{lightblue}0.375 & \cellcolor{lightblue}0.716 \\
+%  & \cellcolor{darkblue!8}+CoT & \cellcolor{darkblue!8}+0.625 & \cellcolor{darkblue!8}+0.750 & \cellcolor{darkblue!8}+0.708 & \cellcolor{darkblue!8}+0.827 & \cellcolor{darkblue!8}+0.375 & \cellcolor{darkblue!8}+0.375 & \cellcolor{darkblue!8}+0.750 & \cellcolor{darkblue!8}+0.500 & \cellcolor{darkblue!8}+0.720 \\
+%  & \cellcolor{lightblue}2-shot & \cellcolor{lightblue}0.833 & \cellcolor{lightblue}0.750 & \cellcolor{lightblue}0.750 & \cellcolor{lightblue}0.808 & \cellcolor{lightblue}0.500 & \cellcolor{lightblue}0.688 & \cellcolor{lightblue}0.500 & \cellcolor{lightblue}0.375 & \cellcolor{lightblue}0.750 \\
+%  & \cellcolor{darkblue!8}+CoT & \cellcolor{darkblue!8}+0.750 & \cellcolor{darkblue!8}+0.800 & \cellcolor{darkblue!8}+0.667 & \cellcolor{darkblue!8}+0.788 & \cellcolor{darkblue!8}+0.625 & \cellcolor{darkblue!8}+0.625 & \cellcolor{darkblue!8}+0.375 & \cellcolor{darkblue!8}+0.250 & \cellcolor{darkblue!8}+0.724 \\
+%  & \cellcolor{lightblue}Rule Hint & \cellcolor{lightblue}0.667 & \cellcolor{lightblue}0.600 & \cellcolor{lightblue}0.708 & \cellcolor{lightblue}0.769 & \cellcolor{lightblue}0.250 & \cellcolor{lightblue}0.938 & \cellcolor{lightblue}0.500 & \cellcolor{lightblue}0.125 & \cellcolor{lightblue}0.685 \\
+%  & \cellcolor{darkblue!8}+CoT & \cellcolor{darkblue!8}+0.625 & \cellcolor{darkblue!8}+0.675 & \cellcolor{darkblue!8}+0.875 & \cellcolor{darkblue!8}+0.721 & \cellcolor{darkblue!8}+0.250 & \cellcolor{darkblue!8}+0.812 & \cellcolor{darkblue!8}+0.500 & \cellcolor{darkblue!8}+0.000 & \cellcolor{darkblue!8}+0.677 \\ \hline
+% \end{tabular}}
+% \caption{Close-sourced LLMs' performance on different tasks.}
+% \label{tab:api_on_task}
+% \end{table*}
+
+\end{document}

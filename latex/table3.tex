@@ -1,0 +1,201 @@
+\documentclass[letterpaper]{article} % DO NOT CHANGE THIS
+\usepackage[submission]{aaai2026}  % DO NOT CHANGE THIS
+\usepackage{times}  % DO NOT CHANGE THIS
+\usepackage{helvet}  % DO NOT CHANGE THIS
+\usepackage{courier}  % DO NOT CHANGE THIS
+\usepackage[hyphens]{url}  % DO NOT CHANGE THIS
+\usepackage{graphicx} % DO NOT CHANGE THIS
+\urlstyle{rm} % DO NOT CHANGE THIS
+\def\UrlFont{\rm}  % DO NOT CHANGE THIS
+\usepackage{natbib}  % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\usepackage{caption} % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\frenchspacing  % DO NOT CHANGE THIS
+\setlength{\pdfpagewidth}{8.5in} % DO NOT CHANGE THIS
+\setlength{\pdfpageheight}{11in} % DO NOT CHANGE THIS
+%
+% These are recommended to typeset algorithms but not required. See the subsubsection on algorithms. Remove them if you don't have algorithms in your paper.
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\usepackage{pifont} %182/183/184
+\usepackage{subcaption}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{booktabs}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{verbatim}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{colortbl}
+\usepackage{booktabs,makecell, multirow, tabularx}
+\usepackage{adjustbox}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{amsmath}
+
+\usepackage{booktabs}
+\usepackage{amssymb}
+\usepackage{bbding}
+\usepackage{pifont}
+\usepackage{wasysym}
+\usepackage{utfsym}
+\usepackage{fontawesome}
+
+\usepackage{mdframed}
+\begin{document}
+
+\definecolor{color_gray}{RGB}{229,229,229}
+\definecolor{color_blue}{RGB}{252,182,165}
+\definecolor{color_pink}{RGB}{255,217,178}
+\definecolor{color_yellow}{RGB}{255,255,204}
+\definecolor{color_blue1}{RGB}{135, 206, 235}
+\cellcolor{color_blue} 
+\cellcolor{color_pink} \cellcolor{color_yellow} 
+\cellcolor{blue!8}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     表1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table*}[t]%\normalsize
+    \centering
+    % \vspace{-.15cm}
+    %\renewcommand{\arraystretch}{1}
+    \renewcommand\arraystretch{1.2} %4.2
+    \setlength{\tabcolsep}{1.5mm}{
+    \resizebox{\linewidth}{!}{
+    	{\begin{tabular}{l|cc|cc|cc|cc}
+    		\toprule[1.0pt]
+    	\multirow{2}{*}{Method}  &\multicolumn{2}{c|}{14-1 with 1 step} &\multicolumn{2}{c|}{14-1 with 1 step} &\multicolumn{2}{c|}{14-1 with 1 step}&\multicolumn{2}{c}{14-1 with 1 step}\\ \cmidrule(lr){2-9}&A-AUROC($\uparrow$)   &FM ($\downarrow$)  &A-AUROC($\uparrow$)   &FM ($\downarrow$) &A-AUROC($\uparrow$)    &FM ($\downarrow$)
+        &A-AUROC($\uparrow$)    &FM ($\downarrow$)\\ 
+            % \midrule[0.5pt]
+            % \multicolumn{16}{c}{mvtec-3dad} \\
+            \midrule[0.5pt]
+            
+            Method1  &\underline{00.0} &-- / -- &00.0 & 1.1 / 1.1 &00.0 &3.3 / 3.3  &00.0&11.1 / 3.3\\
+            Method2 &\underline{00.0} &-- / -- &00.0 & 1.1 / 1.1 &00.0 &3.3 / 3.3  &00.0&11.1 / 3.3\\
+            Method1  &\underline{00.0} &-- / -- &00.0 & 1.1 / 1.1 &00.0 &3.3 / 3.3  &00.0&11.1 / 3.3\\
+            Method2 &00.0 &-- / -- &00.0 & 1.1 / 1.1 &00.0 &3.3 / 3.3  &00.0&11.1 / 3.3\\
+            Method1  &\underline{00.0} &-- / -- &00.0 & 1.1 / 1.1 &00.0 &3.3 / 3.3  &00.0&11.1 / 3.3\\
+            Method2 &00.0 &-- / -- &00.0 & 1.1 / 1.1 &00.0 &3.3 / 3.3  &00.0&11.1 / 3.3\\
+            \midrule[0.5pt]
+            Method2 &00.0 &-- / -- &00.0 & 1.1 / 1.1 &00.0 &3.3 / 3.3  &00.0&11.1 / 3.3\\
+            Method2 &00.0 &-- / -- &00.0 & 1.1 / 1.1 &00.0 &3.3 / 3.3  &00.0&11.1 / 3.3\\
+            \midrule[0.5pt]
+            \cellcolor{gray!20}Ours   &\cellcolor{gray!20}\textbf{00.0} &\cellcolor{gray!20}-- / --
+             &\cellcolor{gray!20}\textbf{00.0} &\cellcolor{gray!20}\textbf{1.1} / \textbf{1.1}  
+            &\cellcolor{gray!20}\textbf{00.0} &\cellcolor{gray!20}\textbf{1.1} / \textbf{11.1}  &\cellcolor{gray!20}\textbf{00.0}
+            &\cellcolor{gray!20}1.1 / \textbf{1.1}\\
+
+            \midrule[0.5pt]
+    \end{tabular}}}}
+    \caption{I-AUROC/AUPRO results of our approach on MVTec AD under four incremental unified anomaly detection settings.}
+\end{table*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     表1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table*}[t]%\normalsize
+    \centering
+    % \vspace{-.15cm}
+    %\renewcommand{\arraystretch}{1}
+    \renewcommand\arraystretch{1.2} %4.2
+    \setlength{\tabcolsep}{1.5mm}{
+    \resizebox{\linewidth}{!}{
+    	{\begin{tabular}{lcc|cc|cc|cc}
+    		\toprule[1.0pt]
+    	\multirow{2}{*}{}  &\multicolumn{2}{c|}{14-1 with 1 step} &\multicolumn{2}{c|}{14-1 with 1 step} &\multicolumn{2}{c|}{14-1 with 1 step}&\multicolumn{2}{c}{14-1 with 1 step}\\ \cmidrule(lr){2-9}&ACC($\uparrow$)   &FM ($\downarrow$)  &ACC($\uparrow$)   &FM ($\downarrow$) &ACC($\uparrow$)    &FM ($\downarrow$)
+        &ACC($\uparrow$)    &FM ($\downarrow$)\\ 
+            % \midrule[0.5pt]
+            % \multicolumn{16}{c}{mvtec-3dad} \\
+            \midrule[0.5pt]
+            
+            Method1\_Uniad  &\underline{00.0/00.0} &-- / -- &00.0/00.0 & 1.1 / 1.1 &00.0/00.0 &3.3 / 3.3  &00.0/00.0&11.1 / 3.3\\
+            Method1\_Uniad  &\underline{00.0/00.0} &-- / -- &00.0/00.0 & 1.1 / 1.1 &00.0/00.0 &3.3 / 3.3  &00.0/00.0&11.1 / 3.3\\
+            Method1\_Uniad  &\underline{00.0/00.0} &-- / -- &00.0/00.0 & 1.1 / 1.1 &00.0/00.0 &3.3 / 3.3  &00.0/00.0&11.1 / 3.3\\
+            Method1  &\underline{00.0/00.0} &-- / -- &00.0/00.0 & 1.1 / 1.1 &00.0/00.0 &3.3 / 3.3  &00.0/00.0&11.1 / 3.3\\
+           Method1\_Uniad  &\underline{00.0/00.0} &-- / -- &00.0/00.0 & 1.1 / 1.1 &00.0/00.0 &3.3 / 3.3  &00.0/00.0&11.1 / 3.3\\
+            Method1  &\underline{00.0/00.0} &-- / -- &00.0/00.0 & 1.1 / 1.1 &00.0/00.0 &3.3 / 3.3  &00.0/00.0&11.1 / 3.3\\
+            \midrule[0.5pt]
+            Method2 &00.0 &-- / -- &00.0 & 1.1 / 1.1 &00.0 &3.3 / 3.3  &00.0&11.1 / 3.3\\
+            Method2 &00.0 &-- / -- &00.0 & 1.1 / 1.1 &00.0 &3.3 / 3.3  &00.0&11.1 / 3.3\\
+            \midrule[0.5pt]
+            \cellcolor{gray!20}Ours   &\cellcolor{gray!20}\textbf{00.0} &\cellcolor{gray!20}-- / --
+             &\cellcolor{gray!20}\textbf{00.0} &\cellcolor{gray!20}\textbf{1.1} / \textbf{1.1}  
+            &\cellcolor{gray!20}\textbf{00.0} &\cellcolor{gray!20}\textbf{1.1} / \textbf{11.1}  &\cellcolor{gray!20}\textbf{00.0}
+            &\cellcolor{gray!20}1.1 / \textbf{1.1}\\
+
+            \midrule[0.5pt]
+    \end{tabular}}}}
+    \caption{I-AUROC/AUPRO results of our approach on MVTec AD under four incremental unified anomaly detection settings.}
+\end{table*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     表1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table*}[t]%\normalsize
+    \centering
+    % \vspace{-.15cm}
+    %\renewcommand{\arraystretch}{1}
+    \renewcommand\arraystretch{1.2} %4.2
+    \setlength{\tabcolsep}{1.5mm}{
+    \resizebox{\linewidth}{!}{
+    	{\begin{tabular}{c|l|ccc|ccc|ccc|ccc}
+    		\toprule[1.0pt]
+    	&\multirow{2}{*}{Method}  &\multicolumn{3}{c|}{\cellcolor{color_blue}14-1 with 4 step} &\multicolumn{3}{c|}{\cellcolor{color_pink}10-4 with 1 step } &\multicolumn{3}{c|}{\cellcolor{color_yellow}14-1 with 4 step }&\multicolumn{3}{c}{\cellcolor{blue!8}14-1 with 4 steps}\\ &&\cellcolor{color_blue}I-AUROC   &\cellcolor{color_blue}AUPRO &\cellcolor{color_blue}FM ($\downarrow$)  &\cellcolor{color_pink}I-AUROC   &\cellcolor{color_pink}AUPRO &\cellcolor{color_pink}FM ($\downarrow$) &\cellcolor{color_yellow}I-AUROC   &\cellcolor{color_yellow}AUPRO &\cellcolor{color_yellow}FM ($\downarrow$)
+        &\cellcolor{blue!8}I-AUROC    &\cellcolor{blue!8}AUPRO &\cellcolor{blue!8}FM ($\downarrow$)\\ 
+            % \midrule[0.5pt]
+            % \multicolumn{16}{c}{mvtec-3dad} \\
+            \midrule[0.5pt]
+            \multirow{3}{*} 
+            %%%%%RGB
+            {\rotatebox{90}{RGB}}
+            &Method1 &00.0 &00.0 &-- / -- &00.0&00.0 & 1.1 / 1.1 &00.0&00.0 &3.3 / 3.3 &00.0 &00.0&11.1 / 3.3\\
+            &Method2 &00.0 &00.0 &-- / -- &00.0&00.0 & 1.1 / 1.1 &00.0&00.0 &3.3 / 3.3 &00.0 &00.0&11.1 / 3.3\\
+            &\cellcolor{gray!20}Ours &\cellcolor{gray!20}\textbf{00.0}  &\cellcolor{gray!20}\textbf{00.0} &\cellcolor{gray!20}-- / --
+            &\cellcolor{gray!20}\textbf{00.0} &\cellcolor{gray!20}\textbf{00.0} &\cellcolor{gray!20}\textbf{1.1} / \textbf{1.1}  &\cellcolor{gray!20}\textbf{00.0}
+            &\cellcolor{gray!20}\textbf{00.0} &\cellcolor{gray!20}\textbf{1.1} / \textbf{11.1} &\cellcolor{gray!20}\textbf{00.0} &\cellcolor{gray!20}\textbf{00.0}
+            &\cellcolor{gray!20}1.1 / \textbf{1.1}\\
+            \midrule[0.5pt]
+            \multirow{3}{*}
+            %%%%%3D
+            {\rotatebox{90}{3D}}
+            &Method1 &00.0 &00.0 &-- / -- &00.0&00.0 & 1.1 / 1.1 &00.0&00.0 &3.3 / 3.3 &00.0 &00.0&11.1 / 3.3\\
+            &Method2 &00.0 &00.0 &-- / -- &00.0&00.0 & 1.1 / 1.1 &00.0&00.0 &3.3 / 3.3 &00.0 &00.0&11.1 / 3.3\\
+            &\cellcolor{gray!20}Ours &\cellcolor{gray!20}\textbf{00.0}  &\cellcolor{gray!20}\textbf{00.0} &\cellcolor{gray!20}-- / --
+            &\cellcolor{gray!20}\textbf{00.0} &\cellcolor{gray!20}\textbf{00.0} &\cellcolor{gray!20}\textbf{1.1} / \textbf{1.1}  &\cellcolor{gray!20}\textbf{00.0}
+            &\cellcolor{gray!20}\textbf{00.0} &\cellcolor{gray!20}\textbf{1.1} / \textbf{11.1} &\cellcolor{gray!20}\textbf{00.0} &\cellcolor{gray!20}\textbf{00.0}
+            &\cellcolor{gray!20}1.1 / \textbf{1.1}\\
+            \midrule[0.5pt]
+            \multirow{3}{*}
+            %%%%%RGB+3D
+            {\rotatebox{90}{RGB+3D}}
+            &Method1 &00.0 &00.0 &-- / -- &00.0&00.0 & 1.1 / 1.1 &00.0&00.0 &3.3 / 3.3 &00.0 &00.0&11.1 / 3.3\\
+            &Method2 &00.0 &00.0 &-- / -- &00.0&00.0 & 1.1 / 1.1 &00.0&00.0 &3.3 / 3.3 &00.0 &00.0&11.1 / 3.3\\
+            &\cellcolor{gray!20}Ours &\cellcolor{gray!20}\textbf{00.0}  &\cellcolor{gray!20}\textbf{00.0} &\cellcolor{gray!20}-- / --
+            &\cellcolor{gray!20}\textbf{00.0} &\cellcolor{gray!20}\textbf{00.0} &\cellcolor{gray!20}\textbf{1.1} / \textbf{1.1}  &\cellcolor{gray!20}\textbf{00.0}
+            &\cellcolor{gray!20}\textbf{00.0} &\cellcolor{gray!20}\textbf{1.1} / \textbf{11.1} &\cellcolor{gray!20}\textbf{00.0} &\cellcolor{gray!20}\textbf{00.0}
+            &\cellcolor{gray!20}1.1 / \textbf{1.1}\\
+            \midrule[0.5pt]
+    \end{tabular}}}}
+    \caption{I-AUROC/AUPRO results of our approach on MVTec AD under four incremental unified anomaly detection settings.}
+\end{table*}
+
+\end{document}
