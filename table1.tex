@@ -1,0 +1,281 @@
+\documentclass[letterpaper]{article} % DO NOT CHANGE THIS
+\usepackage[submission]{aaai2026}  % DO NOT CHANGE THIS
+\usepackage{times}  % DO NOT CHANGE THIS
+\usepackage{helvet}  % DO NOT CHANGE THIS
+\usepackage{courier}  % DO NOT CHANGE THIS
+\usepackage[hyphens]{url}  % DO NOT CHANGE THIS
+\usepackage{graphicx} % DO NOT CHANGE THIS
+\urlstyle{rm} % DO NOT CHANGE THIS
+\def\UrlFont{\rm}  % DO NOT CHANGE THIS
+\usepackage{natbib}  % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\usepackage{caption} % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\frenchspacing  % DO NOT CHANGE THIS
+\setlength{\pdfpagewidth}{8.5in} % DO NOT CHANGE THIS
+\setlength{\pdfpageheight}{11in} % DO NOT CHANGE THIS
+%
+% These are recommended to typeset algorithms but not required. See the subsubsection on algorithms. Remove them if you don't have algorithms in your paper.
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\usepackage{pifont} %182/183/184
+\usepackage{subcaption}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{booktabs}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{verbatim}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{colortbl}
+\usepackage{booktabs,makecell, multirow, tabularx}
+\usepackage{adjustbox}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{amsmath}
+
+\usepackage{booktabs}
+\usepackage{amssymb}
+\usepackage{bbding}
+\usepackage{pifont}
+\usepackage{wasysym}
+\usepackage{utfsym}
+\usepackage{fontawesome}
+
+\usepackage{mdframed}
+\begin{document}
+
+% %%%%%%%%%%%%%%%%%%%   MVTec 3D-AD (I-AUROC)
+\begin{table*}[ht!]
+\centering
+%\footnotesize
+%\tiny
+%\Large
+\setlength{\tabcolsep}{2.8mm} %2.2mm
+\renewcommand{\arraystretch}{1}
+\adjustbox{width=1\linewidth}{
+   \begin{tabular}{c|l|c|c ccc ccc ccc |c}
+       \toprule
+                 \multirow{2}{*}{}
+                 & \multirow{2}{*}{Method}
+                 & \multirow{2}{*}{Year}
+                &\multirow{2}{*}{Bagel}
+                &\multirow{2}{*}{Cable Gland} 
+                &\multirow{2}{*}{Carrot} 
+                &\multirow{2}{*}{Cookie} 
+                &\multirow{2}{*}{Dowel} 
+                &\multirow{2}{*}{Foam} 
+                &\multirow{2}{*}{Peach} 
+                &\multirow{2}{*}{Potato} 
+                &\multirow{2}{*}{Rope} 
+                &\multirow{2}{*}{Tire}
+                 &\multirow{2}{*}{Mean} \\
+%%%%%%%%%%                 
+                & &&  &  &  &  &  &  &  &   &  &  \\
+%%%%%%%%%%%%%% RGB数据
+\midrule[0.5pt]  
+\multirow{4}{*}{\rotatebox{90}{RGB}}     
+           &method1  &CVPR25 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            &method2  &CVPR25 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            &method3  &CVPR25 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+%%%%%%%%%%%%%%%%%  Ours
+            & \cellcolor{gray!20}ours &\cellcolor{gray!20}- & \cellcolor{gray!20}\color{blue}{00.0} & \cellcolor{gray!20}\color{red}{00.0} & \cellcolor{gray!20}00.0& \cellcolor{gray!20}\color{red}{00.0}& \cellcolor{gray!20}00.0& \cellcolor{gray!20}00.0& \cellcolor{gray!20}\color{red}{00.0}& \cellcolor{gray!20}\color{red}{00.0}& \cellcolor{gray!20}\color{red}{00.0}& \cellcolor{gray!20}\color{red}{00.0} & \cellcolor{gray!20}\color{red}{00.0}\\
+%%%%%%%%%%%%%% Depth数据           
+\midrule[0.5pt]
+\multirow{4}{*}{\rotatebox{90}{3D}}
+           &method1  &CVPR25 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            &method2  &CVPR25 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            &method3  &CVPR25 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+%%%%%%%%%%%%%%%%%  Ours
+            & \cellcolor{gray!20}ours &\cellcolor{gray!20}- & \cellcolor{gray!20}\color{blue}{00.0} & \cellcolor{gray!20}\color{red}{00.0} & \cellcolor{gray!20}00.0& \cellcolor{gray!20}\color{red}{00.0}& \cellcolor{gray!20}00.0& \cellcolor{gray!20}00.0& \cellcolor{gray!20}\color{red}{00.0}& \cellcolor{gray!20}\color{red}{00.0}& \cellcolor{gray!20}\color{red}{00.0}& \cellcolor{gray!20}\color{red}{00.0} & \cellcolor{gray!20}\color{red}{00.0}\\
+%%%%%%%%%%%%%% RGB+Depth数据
+\midrule[0.5pt]
+\multirow{4}{*}{\rotatebox{90}{RGB + 3D}}
+           &method1  &CVPR25 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            &method2  &CVPR25 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            &method3  &CVPR25 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+%%%%%%%%%%%%%%%%%  Ours
+            & \cellcolor{gray!20}ours &\cellcolor{gray!20}- & \cellcolor{gray!20}\color{blue}{00.0} & \cellcolor{gray!20}\color{red}{00.0} & \cellcolor{gray!20}00.0& \cellcolor{gray!20}\color{red}{00.0}& \cellcolor{gray!20}00.0& \cellcolor{gray!20}00.0& \cellcolor{gray!20}\color{red}{00.0}& \cellcolor{gray!20}\color{red}{00.0}& \cellcolor{gray!20}\color{red}{00.0}& \cellcolor{gray!20}\color{red}{00.0} & \cellcolor{gray!20}\color{red}{00.0}\\
+             \bottomrule
+       \end{tabular}
+   }
+   \caption{The red/blue indicates the best/second-best results.}
+\end{table*}
+
+% %%%%%%%%%%%%%%%%%%%   Eyecandies (I-AUROC)
+\begin{table*}[ht!]
+\centering
+%\footnotesize
+%\tiny
+%\Large
+\setlength{\tabcolsep}{2.8mm} %2.2mm
+\renewcommand{\arraystretch}{1}
+\adjustbox{width=1\linewidth}{
+   \begin{tabular}{c|l|c|c ccc ccc ccc |c}
+       \toprule
+                 \multirow{1}{*}{}
+                & \multirow{2}{*}{Method}
+                &\multirow{1}{*}{Candy}
+                &\multirow{1}{*}{Chocolate} 
+                &\multirow{1}{*}{Chocolate} 
+                &\multirow{2}{*}{Confetto} 
+                &\multirow{1}{*}{Gummy} 
+                &\multirow{1}{*}{Hazelnut} 
+                &\multirow{1}{*}{Licorice} 
+                &\multirow{2}{*}{Lollipop} 
+                &\multirow{1}{*}{Marsh-} 
+                &\multirow{1}{*}{Peppermint}
+                 &\multirow{2}{*}{Mean} \\
+%%%%%%%%%%                 
+                && &Cane  &Cookie  &Praline  &  &Bear  &Truffle  &Sandwish  &   &mallow  &Candy  \\
+%%%%%%%%%%%%%% RGB数据
+\midrule[0.5pt]  
+\multirow{4}{*}{\rotatebox{90}{RGB}}     
+           &method1  &CVPR25 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            &method2  &CVPR25 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            &method3  &CVPR25 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+%%%%%%%%%%%%%%%%%  Ours
+            & \cellcolor{gray!20}ours &\cellcolor{gray!20}- & \cellcolor{gray!20}\color{blue}{00.0} & \cellcolor{gray!20}\color{red}{00.0} & \cellcolor{gray!20}00.0& \cellcolor{gray!20}\color{red}{00.0}& \cellcolor{gray!20}00.0& \cellcolor{gray!20}00.0& \cellcolor{gray!20}\color{red}{00.0}& \cellcolor{gray!20}\color{red}{00.0}& \cellcolor{gray!20}\color{red}{00.0}& \cellcolor{gray!20}\color{red}{00.0} & \cellcolor{gray!20}\color{red}{00.0}\\
+%%%%%%%%%%%%%% Depth数据           
+\midrule[0.5pt]
+\multirow{4}{*}{\rotatebox{90}{3D}}
+           &method1  &CVPR25 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            &method2  &CVPR25 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            &method3  &CVPR25 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+%%%%%%%%%%%%%%%%%  Ours
+            & \cellcolor{gray!20}ours &\cellcolor{gray!20}- & \cellcolor{gray!20}\color{blue}{00.0} & \cellcolor{gray!20}\color{red}{00.0} & \cellcolor{gray!20}00.0& \cellcolor{gray!20}\color{red}{00.0}& \cellcolor{gray!20}00.0& \cellcolor{gray!20}00.0& \cellcolor{gray!20}\color{red}{00.0}& \cellcolor{gray!20}\color{red}{00.0}& \cellcolor{gray!20}\color{red}{00.0}& \cellcolor{gray!20}\color{red}{00.0} & \cellcolor{gray!20}\color{red}{00.0}\\
+%%%%%%%%%%%%%% RGB+Depth数据
+\midrule[0.5pt]
+\multirow{4}{*}{\rotatebox{90}{RGB + 3D}}
+           &method1  &CVPR25 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            &method2  &CVPR25 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            &method3  &CVPR25 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+%%%%%%%%%%%%%%%%%  Ours
+            & \cellcolor{gray!20}ours &\cellcolor{gray!20}- & \cellcolor{gray!20}\color{blue}{00.0} & \cellcolor{gray!20}\color{red}{00.0} & \cellcolor{gray!20}00.0& \cellcolor{gray!20}\color{red}{00.0}& \cellcolor{gray!20}00.0& \cellcolor{gray!20}00.0& \cellcolor{gray!20}\color{red}{00.0}& \cellcolor{gray!20}\color{red}{00.0}& \cellcolor{gray!20}\color{red}{00.0}& \cellcolor{gray!20}\color{red}{00.0} & \cellcolor{gray!20}\color{red}{00.0}\\
+             \bottomrule
+       \end{tabular}
+   }
+   \caption{The red/blue indicates the best/second-best results.}
+\end{table*}
+
+% %%%%%%%%%%%%%%%%%%%   Eyecandies (I-AUROC)
+\begin{table*}[ht!]
+\centering
+%\footnotesize
+%\tiny
+%\Large
+\setlength{\tabcolsep}{2.8mm} %2.2mm
+\renewcommand{\arraystretch}{1}
+\adjustbox{width=1\linewidth}{
+   \begin{tabular}{cl|cc ccc ccc cc |c|c|c}
+       \toprule
+                 \multirow{1}{*}{}
+                & \multirow{2}{*}{Method}
+                &\multirow{1}{*}{Candy}
+                &\multirow{1}{*}{Chocolate} 
+                &\multirow{1}{*}{Chocolate} 
+                &\multirow{2}{*}{Confetto} 
+                &\multirow{1}{*}{Gummy} 
+                &\multirow{1}{*}{Hazelnut} 
+                &\multirow{1}{*}{Licorice} 
+                &\multirow{2}{*}{Lollipop} 
+                &\multirow{1}{*}{Marsh-} 
+                &\multirow{1}{*}{Peppermint}
+                 &\multirow{2}{*}{Mean}
+                  &\multirow{2}{*}{memory}
+                   &\multirow{2}{*}{pretrain}\\
+%%%%%%%%%%                 
+                & &Cane  &Cookie  &Praline  &  &Bear  &Truffle  &Sandwish  &   &mallow  &Candy && \\
+%%%%%%%%%%%%%% RGB数据
+\midrule[0.5pt]  
+\multirow{3}{*}{\rotatebox{90}{RGB}}     
+           &method1  &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0&\Checkmark&\Checkmark\\
+            &method2  &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0&\Checkmark&\\
+            &method3  &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0&\Checkmark&\\
+%%%%%%%%%%%%%% Depth数据           
+\midrule[0.5pt]
+\multirow{3}{*}{\rotatebox{90}{3D}}
+           &method1   &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0&&\Checkmark\\
+            &method2   &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0&&\Checkmark\\
+            &method3   &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0&&\Checkmark\\
+%%%%%%%%%%%%%% RGB+Depth数据
+\midrule[0.5pt]
+\multirow{3}{*}{\rotatebox{90}{RGB}}
+           &method1   &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0&&\Checkmark\\
+            &method2   &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0&\Checkmark&\\
+            &method3   &\textbf{00.0} &\textbf{00.0} &\textbf{00.0} &0\textbf{0.0} &\underline{00.0} &\underline{00.0} &\underline{00.0} &\underline{00.0} &00.0 &00.0 &00.0&&\Checkmark\\
+             \bottomrule
+       \end{tabular}
+   }
+   \caption{The red/blue indicates the best/second-best results.}
+\end{table*}
+
+% %%%%%%%%%%%%%%%%%%%   Eyecandies (I-AUROC)
+\begin{table*}[ht!]
+\centering
+%\footnotesize
+%\tiny
+%\Large
+\setlength{\tabcolsep}{2.8mm} %2.2mm
+\renewcommand{\arraystretch}{1}
+\adjustbox{width=1\linewidth}{
+   \begin{tabular}{cl|cc ccc ccc cc |c}
+       \toprule
+                 \multirow{1}{*}{}
+                & \multirow{2}{*}{Method}
+                &\multirow{1}{*}{Candy}
+                &\multirow{1}{*}{Chocolate} 
+                &\multirow{1}{*}{Chocolate} 
+                &\multirow{2}{*}{Confetto} 
+                &\multirow{1}{*}{Gummy} 
+                &\multirow{1}{*}{Hazelnut} 
+                &\multirow{1}{*}{Licorice} 
+                &\multirow{2}{*}{Lollipop} 
+                &\multirow{1}{*}{Marsh-} 
+                &\multirow{1}{*}{Peppermint}
+                 &\multirow{2}{*}{Mean} \\
+%%%%%%%%%%                 
+                & &Cane  &Cookie  &Praline  &  &Bear  &Truffle  &Sandwish  &   &mallow  &Candy  \\
+%%%%%%%%%%%%%% RGB数据
+\midrule[0.5pt]  
+\multirow{3}{*}{\rotatebox{90}{RGB}}     
+           &method1  &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            &method2  &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            &method3  &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+%%%%%%%%%%%%%% Depth数据           
+\midrule[0.5pt]
+\multirow{3}{*}{\rotatebox{90}{3D}}
+           &method1   &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            &method2   &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            &method3   &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+%%%%%%%%%%%%%% RGB+Depth数据
+\midrule[0.5pt]
+\multirow{3}{*}{\rotatebox{90}{RGB}}
+           &method1   &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            &method2   &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0 &00.0\\
+            &method3   &\textbf{00.0} &\textbf{00.0} &\textbf{00.0} &0\textbf{0.0} &\underline{00.0} &\underline{00.0} &\underline{00.0} &\underline{00.0} &00.0 &00.0 &00.0\\
+             \bottomrule
+       \end{tabular}
+   }
+   \caption{The red/blue indicates the best/second-best results.}
+\end{table*}
+
+\end{document}
