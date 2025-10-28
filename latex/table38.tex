@@ -1,0 +1,167 @@
+\documentclass[letterpaper]{article} % DO NOT CHANGE THIS
+\usepackage[submission]{aaai2026}  % DO NOT CHANGE THIS
+\usepackage{times}  % DO NOT CHANGE THIS
+\usepackage{helvet}  % DO NOT CHANGE THIS
+\usepackage{courier}  % DO NOT CHANGE THIS
+\usepackage[hyphens]{url}  % DO NOT CHANGE THIS
+\usepackage{graphicx} % DO NOT CHANGE THIS
+\urlstyle{rm} % DO NOT CHANGE THIS
+\def\UrlFont{\rm}  % DO NOT CHANGE THIS
+\usepackage{natbib}  % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\usepackage{caption} % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\frenchspacing  % DO NOT CHANGE THIS
+\setlength{\pdfpagewidth}{8.5in} % DO NOT CHANGE THIS
+\setlength{\pdfpageheight}{11in} % DO NOT CHANGE THIS
+%
+% These are recommended to typeset algorithms but not required. See the subsubsection on algorithms. Remove them if you don't have algorithms in your paper.
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\usepackage{pifont} %182/183/184
+\usepackage{subcaption}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{booktabs}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{verbatim}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{colortbl}
+\usepackage{booktabs,makecell, multirow, tabularx}
+\usepackage{adjustbox}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{amsmath}
+
+\usepackage{booktabs}
+\usepackage{amssymb}
+\usepackage{bbding}
+\usepackage{pifont}
+\usepackage{wasysym}
+\usepackage{utfsym}
+\usepackage{fontawesome}
+\definecolor{grannysmithapple}{rgb}{0.66, 0.89, 0.63}
+\definecolor{goldenyellow}{rgb}{1.0, 0.87, 0.0}
+\definecolor{lemonchiffon}{rgb}{1.0, 0.98, 0.8}
+\definecolor{iccvblue}{rgb}{0.21,0.49,0.74}
+\usepackage{mdframed}
+\begin{document}
+
+\begin{table*}[ht]
+   \small
+    \centering
+   \begin{tabular}{l ccc ccc ccc ccc}
+    \toprule
+   \multirow{3}{*}{\textbf{Method}}   &\multicolumn{3}{c}{\bfseries Classroom}&\multicolumn{3}{c}{\bfseries Complex Room} &\multicolumn{3}{c}{\bfseries Dampened Room}&\multicolumn{3}{c}{\bfseries  Hallway} \\
+     \cmidrule(lr){2-4}
+     \cmidrule(lr){5-7}
+     \cmidrule(lr){8-10}
+     \cmidrule(lr){11-13}
+         & Loud & C50 & T60 & Loud & C50 & T60 & Loud & C50 & T60 & Loud & C50 & T60 \\
+        & (dB) $\downarrow$ & (dB) $\downarrow$ & (\%) $\downarrow$ & (dB) $\downarrow$ & (dB) $\downarrow$ & (\%)$\downarrow$  & (dB) $\downarrow$ & (dB) $\downarrow$ & (\%) $\downarrow$ & (dB) $\downarrow$ & (dB) $\downarrow$ & (\%) $\downarrow$ \\
+        \midrule
+        NAF++ \cite{chen2024RAF,luo2022learning} & 8.27 & 1.62  & 134.0 & 4.43 & 2.25  & 44.8&  3.88 & 4.24 & 306.9 & 8.71 & 1.36 & 21.4 \\  
+        INRAS++ \cite{chen2024RAF,su2022inras} &\cellcolor{lemonchiffon} 1.31 & 1.86 & 60.9 & \cellcolor{lemonchiffon}1.65 & 2.26  & 29.5 & 3.45 & 3.28 & 187.1& 1.55 &  1.87  & 7.4 \\
+        AV-NeRF\cite{liang23avnerf} & 1.51 &  \cellcolor{lemonchiffon}1.43  & 50.0 & 2.01& \cellcolor{lemonchiffon}1.88  & 36.6& 2.40 & 3.05& 107.9 & \cellcolor{lemonchiffon}1.26 & \cellcolor{grannysmithapple} 1.03  &  9.5\\
+        AVR \cite{avr} & 3.26 & 4.18  & 44.3 & 6.47 & 2.55 & 36.7 & 6.65 & 11.11 & 81.4 & 2.48 & 2.69   &  7.0\\
+        Diff-RIR \cite{hearinganythinganywhere2024} & 2.24 & 2.42 & \cellcolor{lemonchiffon}39.7 & 1.75 & 2.23 & \cellcolor{lemonchiffon}18.5& \cellcolor{lemonchiffon}1.87 & \cellcolor{lemonchiffon}1.56  & \cellcolor{lemonchiffon}44.9 &  1.32 &   3.13  & \cellcolor{lemonchiffon}6.8 \\
+        \midrule
+        Ours& \cellcolor{grannysmithapple}0.99 & \cellcolor{grannysmithapple}1.02  & \cellcolor{grannysmithapple}24.3 & \cellcolor{grannysmithapple}0.98 & \cellcolor{grannysmithapple}1.44  & \cellcolor{grannysmithapple}10.8 & \cellcolor{grannysmithapple}1.11  & \cellcolor{grannysmithapple}1.45  & \cellcolor{grannysmithapple}31.9 & \cellcolor{grannysmithapple}0.85 & \cellcolor{lemonchiffon}1.15  & \cellcolor{grannysmithapple}6.3\\
+        \bottomrule
+    \end{tabular}
+    \caption{
+Results on the Hearing Anything Anywhere dataset~\cite{hearinganythinganywhere2024} (2.0\,s segments, 16\,kHz), trained on 12 listener locations. Our method significantly outperforms all baseline methods in these scenes, demonstrating its effectiveness in accurately reconstructing room acoustics in few-shot settings. See Supp. for EDT error results.
+}
+\vspace{0.01in}
+    \label{tab:exp-diffrir1}
+\end{table*}
+
+\begin{table*}[ht]
+    \centering
+    \begin{tabular}{l c cccc cccc}
+    \toprule
+   \multirow{3}{*}{\textbf{Method}}&\multirow{3}{*}{\textbf{Scale}} &\multicolumn{4}{c}{\bfseries RAF-Empty}&\multicolumn{4}{c}{\bfseries RAF-Furnished }\\
+   \cmidrule(lr){3-6} \cmidrule(lr){7-10}
+       &  &Loudness & C50 & EDT & T60 &Loudness & C50 & EDT & T60  \\
+        &   & (dB) $\downarrow$ & (dB) $\downarrow$ & (ms) $\downarrow$ & (\%) $\downarrow$  & (dB) $\downarrow$ & (dB) $\downarrow$ & (ms) $\downarrow$ & (\%) $\downarrow$\\
+         \midrule
+        NAF++ \cite{chen2024RAF, luo2022learning} & 1\%  & 6.05 &2.10&94.5&23.9 & 6.61 &2.10 & 74.9 & 23.0 \\
+        INRAS++ \cite{chen2024RAF, su2022inras} & 1\%   & 3.69 &2.59&100.3&23.5 &2.96 &2.61&92.6 & 25.0\\
+        AV-NeRF \cite{liang23avnerf} & 1\%   & 3.16 & 2.52 & 96.4 &  21.8  & 2.92 & 2.64  & 96.7 & 24.5  \\
+        AVR \cite{avr} & 1\%  & \cellcolor{lemonchiffon}3.00 & 2.19& {87.3} & 24.1& 2.97 &  2.33 & \cellcolor{lemonchiffon}{72.3} & 17.9  \\
+         \midrule
+        Ours & 0.1\%  & 3.14 &\cellcolor{lemonchiffon}1.81&\cellcolor{lemonchiffon}86.6& \cellcolor{lemonchiffon}{16.9} & \cellcolor{lemonchiffon}2.45 &\cellcolor{lemonchiffon}1.98&80.1 &\cellcolor{lemonchiffon}{15.2}\\
+        Ours & 1\%   & \cellcolor{grannysmithapple}2.50 &\cellcolor{grannysmithapple}{1.42}& \cellcolor{grannysmithapple}{56.2} &\cellcolor{grannysmithapple}{10.7}&\cellcolor{grannysmithapple}1.68 & \cellcolor{grannysmithapple}{1.29} & \cellcolor{grannysmithapple}{47.4} & \cellcolor{grannysmithapple}{9.61}   \\
+        \bottomrule
+    \end{tabular}
+    \caption{
+    Results on the Real Acoustic Field dataset~\cite{chen2024RAF} (0.32\,s, 16\,kHz). Cells highlighted in \textcolor{ForestGreen}{green} denote the best performance, and \textcolor{Dandelion}{yellow} indicates the second best. Note that our model trained on only 0.1\% of the data already achieves lower C50 and T60 errors than baseline methods, and significantly outperforms all baselines when using the same amount of training data.
+    }
+    \vspace{-0.1in}
+    \label{tab:exp-raf}
+\end{table*}
+
+\begin{table*}[ht!]
+    \centering
+   \begin{tabular}{l cccc cccc}
+    \toprule
+   \multirow{3}{*}{\textbf{Method}}   &\multicolumn{4}{c}{\bfseries Classroom}&\multicolumn{4}{c}{\bfseries Complex Room} \\
+     \cmidrule(lr){2-5}
+     \cmidrule(lr){6-9}
+    
+         &Loudness & C50 & EDT & T60 &Loudness & C50 & EDT & T60   \\
+        & (dB) $\downarrow$ & (dB) $\downarrow$ & (ms) $\downarrow$ & (\%) $\downarrow$ & (dB) $\downarrow$ & (dB) $\downarrow$ & (ms) $\downarrow$ & (\%) $\downarrow$ \\
+         \midrule
+        NAF++ \cite{luo2022learning} & 8.27 & 1.62 & 162.3 & 134.0 & 4.43 & 2.25 & 203.5 & 44.8 \\  
+        INRAS++ \cite{su2022inras} &\cellcolor{lemonchiffon} 1.31 & 1.86 & 110.0 & 60.9 & \cellcolor{lemonchiffon}1.65 & 2.26 & 150.7 & 29.5 \\
+        AV-NeRF\cite{liang23avnerf} & 1.51 &  \cellcolor{lemonchiffon}1.43 &\cellcolor{lemonchiffon} 77.8 & 50.0 & 2.01& \cellcolor{lemonchiffon}1.88 & \cellcolor{lemonchiffon}107.9 & 36.6\\
+        AVR \cite{avr} & 3.26 & 4.18 & 135.6 & 44.3 & 6.47 & 2.55 & 138.3 & 36.7 \\
+        Diff-RIR \cite{hearinganythinganywhere2024} & 2.24 & 2.42 & 139.7 & \cellcolor{lemonchiffon}39.7 & 1.75 & 2.23 & 129.5 & \cellcolor{lemonchiffon}18.5 \\
+        \midrule
+        Ours& \cellcolor{grannysmithapple}0.99 & \cellcolor{grannysmithapple}1.02 &\cellcolor{grannysmithapple} 55.5 & \cellcolor{grannysmithapple}24.3 & \cellcolor{grannysmithapple}0.98 & \cellcolor{grannysmithapple}1.44 & \cellcolor{grannysmithapple}86.5 & \cellcolor{grannysmithapple}10.8 \\
+        \bottomrule
+    \end{tabular}
+\vspace{0.05in}
+    \begin{tabular}{l cccc cccc}
+    \toprule
+    \multirow{3}{*}{\textbf{Method}} &\multicolumn{4}{c}{\bfseries Dampened Room}&\multicolumn{4}{c}{\bfseries  Hallway} \\
+     \cmidrule(lr){2-5}
+     \cmidrule(lr){6-9}
+    
+         &Loudness & C50 & EDT & T60 &Loudness & C50 & EDT & T60   \\
+         & (dB) $\downarrow$ & (dB) $\downarrow$ & (ms) $\downarrow$ & (\%) $\downarrow$ & (dB) $\downarrow$ & (dB) $\downarrow$ & (ms) $\downarrow$ & (\%) $\downarrow$ \\
+         \midrule
+        NAF++ \cite{luo2022learning}  &  3.88 & 4.24 & 360.0 & 306.9 & 8.71 & 1.36 & 148.3 & 21.4 \\
+        INRAS++ \cite{su2022inras} & 3.45 & 3.28 & 187.1& 382.9 & 1.55 &  1.87 & 157.9 & 7.4\\
+        AV-NeRF \cite{liang23avnerf} & 2.40 & 3.05 &  242.1 & 107.9 & \cellcolor{lemonchiffon}1.26 & \cellcolor{grannysmithapple} 1.03 &  \cellcolor{grannysmithapple} 89.9 &  9.5  \\
+        AVR \cite{avr} & 6.65 & 11.11 & 305.3 & 81.4 & 2.48 & 2.69 & 195.4  &  7.0\\
+        Diff-RIR \cite{hearinganythinganywhere2024} & \cellcolor{lemonchiffon}1.87 & \cellcolor{lemonchiffon}1.56 & \cellcolor{lemonchiffon}153.0 & \cellcolor{lemonchiffon}44.9 &  1.32 &   3.13 & 188.1 & \cellcolor{lemonchiffon}6.8\\
+        \midrule
+        Ours& \cellcolor{grannysmithapple}1.11  & \cellcolor{grannysmithapple}1.45 & \cellcolor{grannysmithapple}139.0 & \cellcolor{grannysmithapple}31.9 & \cellcolor{grannysmithapple}0.85 & \cellcolor{lemonchiffon}1.15 & \cellcolor{lemonchiffon}96.5 & \cellcolor{grannysmithapple}6.3 \\
+        \bottomrule
+    \end{tabular}
+    \caption{{Result on the HAA~\cite{hearinganythinganywhere2024} dataset}, 2.0s, 16K sample rate}
+    \label{tab:exp-diffrir1-supp}
+\end{table*}
+
+
+\end{document}

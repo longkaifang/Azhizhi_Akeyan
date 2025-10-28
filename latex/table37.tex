@@ -1,0 +1,213 @@
+\documentclass[letterpaper]{article} % DO NOT CHANGE THIS
+\usepackage[submission]{aaai2026}  % DO NOT CHANGE THIS
+\usepackage{times}  % DO NOT CHANGE THIS
+\usepackage{helvet}  % DO NOT CHANGE THIS
+\usepackage{courier}  % DO NOT CHANGE THIS
+\usepackage[hyphens]{url}  % DO NOT CHANGE THIS
+\usepackage{graphicx} % DO NOT CHANGE THIS
+\urlstyle{rm} % DO NOT CHANGE THIS
+\def\UrlFont{\rm}  % DO NOT CHANGE THIS
+\usepackage{natbib}  % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\usepackage{caption} % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\frenchspacing  % DO NOT CHANGE THIS
+\setlength{\pdfpagewidth}{8.5in} % DO NOT CHANGE THIS
+\setlength{\pdfpageheight}{11in} % DO NOT CHANGE THIS
+%
+% These are recommended to typeset algorithms but not required. See the subsubsection on algorithms. Remove them if you don't have algorithms in your paper.
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\usepackage{pifont} %182/183/184
+\usepackage{subcaption}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{booktabs}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{verbatim}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{colortbl}
+\usepackage{booktabs,makecell, multirow, tabularx}
+\usepackage{adjustbox}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{amsmath}
+
+\usepackage{booktabs}
+\usepackage{amssymb}
+\usepackage{bbding}
+\usepackage{pifont}
+\usepackage{wasysym}
+\usepackage{utfsym}
+\usepackage{fontawesome}
+
+\usepackage{mdframed}
+
+\newcommand{\cmark}{\ding{51}}  % checkmark symbol
+\newcommand{\xmark}{\ding{55}}  % crossmark symbol
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+\definecolor{Gray}{gray}{0.9}
+\definecolor{lightbrown}{rgb}{0.827,0.784,0.667}
+\definecolor{iccvblue}{rgb}{0.21,0.49,0.74}
+
+\begin{document}
+
+\begin{table}[t]
+    \centering
+    \small
+    \vspace{-1ex}
+    \resizebox{0.85\columnwidth}{!}{%
+    \begin{tabular}{c c cc cc}        \toprule
+         Model & Dist. Func. & \multicolumn{1}{c}{\cellcolor{orange!10} Top-5} & \multicolumn{1}{c}{\cellcolor{orange!20}Top-10} &  \multicolumn{1}{c}{\cellcolor{orange!30} Top-50} & \multicolumn{1}{c}{\cellcolor{orange!40}Top-100 }  \\ \midrule
+        \rowcolor{Gray}\multicolumn{0}{c}{\textbf{Child-to-Parent }} & & & & & \\
+         % \midrule
+         \multirow{1}{*}{CLIP} & Cos Sim. & 2.37 & 2.32 & 2.04 & 1.84 \\
+         \multirow{1}{*}{CLIP-euc$^\dagger$} & Euc Ang.  & 19.36 & 18.64 & 16.14 & 14.52  \\
+         \multirow{1}{*}{\cellcolor{blue!8}
+         CLIP-hyp$^\dagger$} & \cellcolor{blue!8} Hyp Ang. & \cellcolor{blue!8} \textbf{22.33}  & \cellcolor{blue!8} \textbf{21.40} & \cellcolor{blue!8} \textbf{18.50} & \cellcolor{blue!8} \textbf{16.42} \\
+         \midrule       
+        \rowcolor{Gray}{\textbf{Parent-to-Child }}  & & & & &  \\        
+         CLIP & Cos Sim. & 8.57  & 7.77 & 5.70  & 4.64 \\
+         \multirow{1}{*}{CLIP-euc$^\dagger$} & Euc Ang. & 20.24  & 20.03  & 19.30  & 18.68 \\
+         \multirow{1}{*}{\cellcolor{blue!8} CLIP-hyp$^\dagger$} & \cellcolor{blue!8} Hyp Ang.  & \cellcolor{blue!8} \textbf{22.41} & \cellcolor{blue!8} \textbf{22.29} & \cellcolor{blue!8} \textbf{21.70} & \cellcolor{blue!8} \textbf{21.10} \\         
+         \bottomrule \bottomrule
+         \addlinespace[15pt] \toprule
+         Metrics & Model & \multicolumn{1}{c}{Dist. Func.} & \multicolumn{1}{c}{ Top-10k} &  \multicolumn{1}{c}{Top-20k} &  \multicolumn{1}{c}{ Top-30k}  \\
+         \midrule
+          \multirowcell{3}{Recall $\uparrow$} & \multirow{1}{*}{CLIP} & Cos Sim. & 18.30 & 32.42 & 45.42 \\
+         & \multirow{1}{*}{CLIP-euc$^\dagger$} & Euc Ang. & 46.89 & 64.40 & 75.71   \\
+         & \multirow{1}{*}{\cellcolor{blue!8} CLIP-hyp$^\dagger$} & \cellcolor{blue!8} Hyp Ang. & \cellcolor{blue!8} \textbf{47.57} & \cellcolor{blue!8} \textbf{64.71} & \cellcolor{blue!8} \textbf{75.72} \\
+         \midrule
+         \multirowcell{3}{OT Distance $\downarrow$} & \multirow{1}{*}{CLIP} & Cos Sim. & 7.61  & 8.88 & 9.43 \\
+         & \multirow{1}{*}{CLIP-euc$^\dagger$} & Euc Ang. & 5.74 & 7.39  & 8.43  \\
+         & \multirow{1}{*}{\cellcolor{blue!8} CLIP-hyp$^\dagger$} & \cellcolor{blue!8} Hyp Ang. & \cellcolor{blue!8} \textbf{5.74} & \cellcolor{blue!8} \textbf{7.38} & \cellcolor{blue!8} \textbf{8.40} \\
+         \bottomrule
+         
+    \end{tabular}
+    }
+    \caption{
+    \textbf{Out-of-domain part-based image retrieval evaluation on the LVIS dataset:
+    }
+    same-class (top) and part-based hierarchical retrieval (bottom).
+    }
+    \label{tab:unseen data}
+    \vspace{-2ex}
+\end{table}
+
+
+
+\begin{table}[t]
+    \centering
+    \small
+    \resizebox{\columnwidth}{!}{%
+    \begin{tabular}{cc cc cc}
+        \toprule
+         Model & Cross-Image  &  \multicolumn{1}{c}{\cellcolor{orange!10} Top-5} & \multicolumn{1}{c}{\cellcolor{orange!20}Top-10} &  \multicolumn{1}{c}{\cellcolor{orange!30} Top-50} & \multicolumn{1}{c}{\cellcolor{orange!40}Top-100}  \\ \midrule
+        \rowcolor{Gray}\multicolumn{0}{c}{\textbf{Child-to-Parent}} & & & & & \\     
+         CLIP-hyp$^\dagger$ &  \cmark & \textbf{73.37}  & \textbf{72.59} & \textbf{69.84} & \textbf{68.62}  \\
+         CLIP-euc$^\dagger$ & \cmark &  67.83 & 68.37 & 67.12 &  66.04  \\
+         CLIP-hyp$^\dagger$ &  \xmark & \blue{70.47} & \blue{70.29} & \blue{67.89} & \blue{66.38} \\
+         CLIP-euc$^\dagger$ & \xmark  & 64.98 & 64.49 & 63.51 & 63.10 \\
+         CLIP & - & 26.73 & 25.95 & 23.69 & 22.70 \\
+          \rowcolor{Gray}{\textbf{Parent-to-Child}}  & & & & &   \\          
+          CLIP-hyp$^\dagger$ & \cmark  &  \textbf{66.02} & \textbf{66.63} & \textbf{66.50} & \textbf{65.91}  \\
+          CLIP-euc$^\dagger$ & \cmark &  \blue{65.38} & \blue{65.70} & \blue{66.01} & \blue{65.79}  \\
+          CLIP-hyp$^\dagger$ & \xmark &  63.00 & 63.78 & 63.65 & 63.44 \\
+          CLIP-euc$^\dagger$ & \xmark &  60.33 & 60.73 & 61.43 & 61.38 \\
+         CLIP & - & 47.52  & 46.60 & 43.50  & 42.08 \\
+         \bottomrule  
+    \end{tabular}
+    }
+    \caption{\textbf{Part-based same-class image retrieval evaluation.} 
+    Cross-image \cmark indicates models fine-tuned on entailment relationships both within and across images at the category level, while \xmark~represents models fine-tuned without cross-image sampling.
+    The evaluation setup is the same as Table 1 in the main paper.
+    The best results are marked in bold, and the second-best results are in blue.
+    }
+    \label{tab:same-class_1}
+\end{table}
+
+
+\begin{table}[t]
+    \centering
+    \small
+    \vspace{-1ex}
+    \resizebox{0.9\columnwidth}{!}{%
+    \begin{tabular}{cc cc c c}
+
+        \toprule
+          Metrics & Model & \multicolumn{1}{c}{Dist. Func.}  &  \multicolumn{1}{c}{Top-150k} &  \multicolumn{1}{c}{Top-200k} &  \multicolumn{1}{c}{Top-250k} \\ \midrule
+
+        
+          \rowcolor{Gray}{\textbf{CLIP ViT}}  & & & & &  \\
+
+         \multirowcell{3}{Recall $\uparrow$} & \multirow{1}{*}{CLIP} & Cos Sim.  & 51.33 & 64.28  & 77.02 \\
+         & \multirow{1}{*}{CLIP-euc$^\dagger$} & Euc Ang. & 72.96 & 80.98 & 87.97 \\
+         & \multirow{1}{*}{\cellcolor{blue!8} CLIP-hyp$^\dagger$} & \cellcolor{blue!8} Hyp Ang. & \cellcolor{blue!8} \textbf{74.06} & \cellcolor{blue!8} \textbf{82.34} & \cellcolor{blue!8} \textbf{88.79}  \\
+         
+         \midrule
+         
+         
+         \multirowcell{3}{OT Distance $\downarrow$} & \multirow{1}{*}{CLIP} & Cos Sim. & 23.81 & 24.60 & 25.03 \\
+         & \multirow{1}{*}{CLIP-euc$^\dagger$} & Euc Ang. &  17.00 & 20.00 & 22.45\\
+         & \multirow{1}{*}{\cellcolor{blue!8} CLIP-hyp$^\dagger$} & \cellcolor{blue!8} Hyp Ang.  & \cellcolor{blue!8} \textbf{16.36} & \cellcolor{blue!8} \textbf{19.27} & \cellcolor{blue!8} \textbf{22.21} \\
+
+
+         \midrule
+         \rowcolor{Gray}{\textbf{MoCo-v2}}  & & & & &  \\
+
+         
+         
+         \multirowcell{6}{Recall $\uparrow$} 
+         & \multirow{1}{*}{HCL} & Cos Sim.  & 46.05 & 61.24 & 76.44\\
+         & \multirow{1}{*}{HCL} & Hyp Dist.  & 46.06 & 61.14 & 76.16 \\
+         & \multirow{1}{*}{HCL$^\dagger$} & Hyp Dist.  & 45.81 & 60.77 & 75.77\\
+         
+         & \multirow{1}{*}{MoCo} & Cos Sim.  & 48.38 &  63.63 & 77.89 \\
+         & \multirow{1}{*}{MoCo-euc$^\dagger$} & Euc Ang. & 55.81 & \textbf{71.86} & \textbf{83.42} \\
+         & \multirow{1}{*}{\cellcolor{blue!8} MoCo-hyp$^\dagger$} & \cellcolor{blue!8} Hyp Ang.  & \cellcolor{blue!8} \textbf{56.09} & \cellcolor{blue!8} 71.61 & \cellcolor{blue!8} 83.13  \\
+         
+         \midrule
+         
+         
+         \multirowcell{6}{OT Distance $\downarrow$} 
+         & \multirow{1}{*}{HCL} & Cos Sim.  & 24.23 & 24.67 & 25.09 \\
+         & \multirow{1}{*}{HCL} & Hyp Dist. & 25.72 & 25.98 & 26.04 \\
+         & \multirow{1}{*}{HCL$^\dagger$} & Hyp Dist.  & 26.12 & 26.32 & 26.28 \\
+         
+         & \multirow{1}{*}{MoCo} & Cos Sim. & 24.05 & 24.44 & 24.93\\
+         & \multirow{1}{*}{MoCo-euc$^\dagger$} & Euc Ang. & 13.72 & 16.83 & 20.17  \\
+         & \multirow{1}{*}{\cellcolor{blue!8} MoCo-hyp$^\dagger$} & \cellcolor{blue!8} Hyp Ang.  & \cellcolor{blue!8} \textbf{12.41} & \cellcolor{blue!8} \textbf{15.29} & \cellcolor{blue!8} \textbf{19.09} \\
+         \bottomrule
+    \end{tabular}
+    }
+    \caption{\textbf{Part-based hierarchical evaluation of parent-to-child image retrieval on \textit{HierOpenImages}.
+    }
+    Results are evaluated using the ground truth hierarchy tree and the hierarchical distribution of the test set.
+    Smaller OT distance indicates better distribution alignment.
+    }
+    \label{tab:retrieval_2}
+    % \vspace{-0.2cm}
+    \vspace{-2ex}
+\end{table}
+
+
+\end{document}
