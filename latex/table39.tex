@@ -1,0 +1,140 @@
+\documentclass[letterpaper]{article} % DO NOT CHANGE THIS
+\usepackage[submission]{aaai2026}  % DO NOT CHANGE THIS
+\usepackage{times}  % DO NOT CHANGE THIS
+\usepackage{helvet}  % DO NOT CHANGE THIS
+\usepackage{courier}  % DO NOT CHANGE THIS
+\usepackage[hyphens]{url}  % DO NOT CHANGE THIS
+\usepackage{graphicx} % DO NOT CHANGE THIS
+\urlstyle{rm} % DO NOT CHANGE THIS
+\def\UrlFont{\rm}  % DO NOT CHANGE THIS
+\usepackage{natbib}  % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\usepackage{caption} % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\frenchspacing  % DO NOT CHANGE THIS
+\setlength{\pdfpagewidth}{8.5in} % DO NOT CHANGE THIS
+\setlength{\pdfpageheight}{11in} % DO NOT CHANGE THIS
+%
+% These are recommended to typeset algorithms but not required. See the subsubsection on algorithms. Remove them if you don't have algorithms in your paper.
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\usepackage{pifont} %182/183/184
+\usepackage{subcaption}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{booktabs}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{verbatim}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{amsfonts,amssymb} 
+\usepackage{microtype}
+%\usepackage{subfigure}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{soul}
+\usepackage{colortbl}
+\usepackage{booktabs,makecell, multirow, tabularx}
+\usepackage{adjustbox}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{amsmath}
+
+\usepackage{booktabs}
+\usepackage{amssymb}
+\usepackage{bbding}
+\usepackage{pifont}
+\usepackage{wasysym}
+\usepackage{utfsym}
+\usepackage{fontawesome}
+\usepackage{mdframed}
+
+\definecolor{cvprblue}{rgb}{0.21,0.49,0.74}
+
+% \definecolor{lzred}{HTML}{eb3b5a}
+\definecolor{lzgreen}{HTML}{468585}
+\definecolor{lzblue}{HTML}{2C74B3}
+\definecolor{lzred}{HTML}{f78fb3}
+\definecolor{lzgrey}{HTML}{bdb5a6}
+
+% \newcommand{\reds}{\cellcolor{lzred!25} }  % value < 0.25
+% \newcommand{\redm}{\cellcolor{lzred!45} }  % 0.25 < value <0.5
+% \newcommand{\redl}{\cellcolor{lzred!65} }  % 0.5 < value <0.75
+% \newcommand{\redxl}{\cellcolor{lzred!85} } % 0.75 < value <1.00
+
+\newcommand{\red}{\cellcolor{lzred!68} } % < victim 10
+\newcommand{\gret}{\cellcolor{lzred!48} } % >4
+\newcommand{\gres}{\cellcolor{lzred!28} } % <4
+\newcommand{\grem}{\cellcolor{lzgreen!18} } % <2
+
+\newcommand{\grel}{\cellcolor{lzgreen!38} } % >
+\newcommand{\grexl}{\cellcolor{lzgreen!68} } % >
+
+\newcommand{\greyc}{\cellcolor{lzgrey!28} }
+\begin{document}
+
+
+\begin{table*}[t]
+\centering
+\resizebox{0.98\textwidth}{!}{%
+\begin{tabular}{r|rrrrrrrrrr}
+\Xhline{2.5pt}
+             % & \multicolumn{3}{l}{BERTScore} & \multicolumn{4}{l}{BLEU} & \multicolumn{3}{l}{Rouge-L} \\\cline{2-11}
+             % & Pre.     & Rec.     & F1.     & 1    & 2    & 3    & 4   & Pre.     & Rec.    & F1.    \\\hline
+             & \multicolumn{4}{c}{BLEU} & \multicolumn{3}{c}{BERTScore} & \multicolumn{3}{c}{Rouge-L} \\ \cline{2-11}
+            & 1 & 2 & 3 & 4 & Pre. & Rec. & F1.  & Pre. & Rec. & F1. \\ \hline
+\multicolumn{11}{c}{\emph{Text to SQL: WikiSQL~\citep{wikisql} with 64 query samples}}                                                                             \\ \hline
+Victim Model  &\greyc 54.1 & \greyc 41.4 & \greyc 32.1  & \greyc 24.4 & \greyc 86.9 & \greyc 93.5 & \greyc 90.1 & \greyc 58.9 & \greyc 62.1 & \greyc 59.7 \\
+Local Model &\red $20.2\pm 0.2$ &\red  $14.5\pm 0.2$& \red $10.9\pm 0.1$&\red $8.1\pm 0.1$&\gres $82.5\pm 0.0$&$\grem 92.4\pm 0.1$&\gres $87.1\pm 0.0$&\red $22.6\pm 0.3$ & \grexl $66.4\pm 0.4$& \red $33.2\pm 0.3$ \\
++MLE         & \grem $54.0\pm 1.6$ & \gres $37.5\pm 2.1$ & \gres $26.4\pm 2.0$ & \gret $18.8\pm 1.8$ &\gret $83.1\pm 0.2$ &\grem $92.9\pm 0.2$& \grem $87.7\pm 0.2$& \gres  $56.2\pm 1.5$& \gret $56.1\pm 0.9$   &\gret $55.8\pm 1.2$  \\
++LoRD         &\grel  $55.1\pm 2.3$ &\grem  $39.0\pm 3.6$ &\grem  $28.0\pm 4.0$ &\gres  $20.4\pm 3.9$ &\gres $83.4\pm 0.4$ &\grem $92.9\pm 0.3$&\grem  $87.9\pm 0.4$&\gres   $57.7\pm 2.2$& \gret $56.3\pm 2.0$   &\gres $56.7\pm 2.1$  \\\hline
+\multicolumn{11}{c}{\emph{Text to SQL: Spider~\citep{wikisql} with 64 query samples}}                                                                             \\\hline
+Victim Model & \greyc 9.4 & \greyc 3.9 & \greyc 2.1 & \greyc 1.1 & \greyc 77.7& \greyc 84.1 &\greyc 80.6 & \greyc 17.1& \greyc 36.3& \greyc 21.8\\
+Local Model & \gres $6.4\pm 0.2$ & \gres  $2.1\pm 0.1$& \grem  $0.9\pm 0.1$& \grel  $0.5\pm 0.0$& \grexl  $80.0\pm 0.1$&\grem  $82.6\pm 0.1$& \grel  $81.2\pm 0.1$& \gret  $10.0\pm 0.3$&\red  $21.5\pm 0.6$ & \gret  $12.7\pm 0.4$ \\
++MLE         & \gres   $6.2\pm 0.9$ & \gres  $1.3\pm 0.5$ & \grem  $0.6\pm 0.3$ & \grel  $0.2\pm 0.2$ & \grem $76.4\pm 0.7$ & \gres $81.8\pm 0.4$& \grem  $78.9\pm 0.6$& \gres   $12.7\pm 1.6$& \red  $18.3\pm 1.6$   & \gret $14.3\pm 1.6$  \\
++LoRD         & \grel   $9.1\pm 0.9$ & \grem  $2.8\pm 0.5$ & \grel  $1.3\pm 0.4$ & \grel  $0.6\pm 0.2$ & \grel $77.7\pm 0.4$ & \grel $83.1\pm 0.5$& \grel  $80.2\pm 0.3$& \grel   $16.9\pm 0.1$& \gret  $24.1\pm 0.2$   & \gres $18.8\pm 0.1$  \\\hline
+\multicolumn{11}{c}{\emph{Data to Text: E2E NLG~\citep{e2enlg} with 64 query samples}}                                                                             \\\hline
+Victim Model & \greyc 51.8& \greyc 27.0& \greyc 26.8& \greyc 19.1& \greyc 93.9& \greyc 94.6& \greyc 94.2& \greyc 49.6 & \greyc 54.6& \greyc 51.4\\
+Local Model  & \red  $31.1\pm 0.1$& \gret  $20.1\pm 0.2$& \red  $13.5\pm 0.2$& \red  $8.9\pm 0.3$& \gret  $86.1\pm 0.1$& \grem  $92.4\pm 0.1$& \gres  $89.1\pm 0.1$& \red   $29.0\pm 0.3$& \gret  $49.4\pm 0.4$& \gret  $35.9\pm 0.3$\\
++MLE         & \grexl  $53.0\pm 0.9$ & \grel   $38.0\pm 0.6$& \grel $27.5\pm 0.5$ & \grel $19.9\pm 0.4$ & \gres $89.1\pm 0.0$ & \grel $94.5\pm 0.0$ & \gres $91.8\pm 0.0$ & \grem  $48.3\pm 0.5$& \grel $54.2\pm 1.4$ & \grem $50.4\pm 0.9$ \\
++LoRD         & \grexl  $53.1\pm 1.1$ & \grel   $38.2\pm 0.9$& \grel $27.8\pm 0.7$ & \grexl $20.2\pm 0.5$ & \gres $89.1\pm 0.1$ & \grel $94.5\pm 0.1$ & \gres $91.7\pm 0.1$ & \grem  $48.3\pm 0.7$& \grem $53.5\pm 1.4$ & \grem $50.2\pm 0.9$ \\\hline
+\multicolumn{11}{c}{\emph{Data to Text: CommonGen~\citep{commongen} with 64 query samples}}                                                                             \\\hline
+Victim Model & \greyc  33.3& \greyc 18.5 & \greyc 11.1& \greyc 6.9& \greyc 91.3& \greyc 92.1& \greyc 91.7& \greyc 33.6 &\greyc 40.7 & \greyc 36.1\\
+Local Model  &\red  $12.2\pm 0.0$ &\red  $6.5\pm 0.1$ & \gret  $3.8\pm 0.0$ & \gret  $2.3\pm 0.0$ & \gret  $83.0\pm 0.0$ & \gres  $89.7\pm 0.0$ & \gres  $86.2\pm 0.0$ & \red  $14.6\pm 0.1$ & \grexl  $46.2\pm 0.2$ & \red  $21.6\pm 0.0$ \\
++MLE         & \grem $32.4\pm 2.0$ & \grel $18.3\pm 1.3$ & \grel $10.9\pm 1.0$ & \grel $6.6\pm 0.7$ & \gret $84.2\pm 0.1$ & \grel $91.7\pm 0.0$ & \gres $87.8\pm 0.0$ & \grem $31.7\pm 2.4$ & \grel $41.1\pm 0.4$ & \grem $35.1\pm 1.6$ \\
++LoRD         & \grem $32.1\pm 1.3$ & \grel $18.0\pm 0.9$ & \grel $10.7\pm 0.5$ & \grel $6.4\pm 0.3$ & \gret $84.1\pm 0.0$ & \grel $91.6\pm 0.1$ & \gres $87.7\pm 0.0$ & \grem $31.4\pm 1.1$ & \grel $40.3\pm 0.9$ & \grem $34.6\pm 0.9$ \\\hline
+\multicolumn{11}{c}{\emph{Summarization: TLDR~\citep{tldr} with 64 query samples}}                                                                             \\\hline
+Victim Model & \greyc 11.9& \greyc 5.0 & \greyc 2.6 & \greyc 1.5& \greyc 85.9& \greyc 88.4& \greyc 87.1& \greyc 13.4&\greyc 30.9& \greyc 18.4\\
+Local Model  & \red  $6.9\pm 0.0$& \grem  $3.2\pm 0.1$& \grel  $1.7\pm 0.0$& \grel  $1.0\pm 0.0$& \gres  $81.0\pm 0.1$& \grem  $87.6\pm 0.0$& \gres  $84.1\pm 0.0$& \gres  $10.5\pm 0.1$& \grel  $41.1\pm 0.1$& \red  $16.4\pm 0.1$\\
++MLE         & \grel  $10.6\pm 0.5$& \grel $4.8\pm 0.2$ & \grel $2.6\pm 0.1$ & \grel $1.6\pm 1.1$ & \grem $83.6\pm 0.7$ & \grel $88.4\pm 0.2$ & \grem $85.9\pm 0.5$ & \grel $14.3\pm 0.5$ & \grexl $32.7\pm 1.1$& \grel  $18.9\pm 0.4$\\
++LoRD         & \grem  $10.2\pm 0.3$& \grel $4.5\pm 0.1$ & \grel $2.4\pm 0.1$ & \grel $1.4\pm 0.0$ & \grem $84.1\pm 0.1$ & \grel $88.3\pm 0.1$ & \grel $86.2\pm 0.1$ & \grel $12.8\pm 0.3$ & \grexl $33.2\pm 0.9$& \grel  $18.0\pm 0.2$\\\hline
+\multicolumn{11}{c}{\emph{Summarization: CNN Daily Mail~\citep{cnn} with 64 query samples}}                                                                             \\\hline
+Victim Model & \greyc 20.4 & \greyc 10.8& \greyc 6.4& \greyc 4.1&\greyc 86.4 & \greyc 87.8& \greyc 87.1& \greyc 22.4& \greyc 40.8& \greyc 28.2\\
+Local Model  & \red  $4.9\pm 0.0$& \gret  $3.6\pm 0.0$& \gres  $2.7\pm 0.0$& \grem  $2.1\pm 0.0$& \gret $80.5\pm 0.0$& \grel  $88.3\pm 0.0$& \gres   $84.2\pm 0.0$& \red  $10.9\pm 0.0$& \grexl  $79.1\pm 0.1$& \gret  $18.8\pm 0.0$\\
++MLE         & \red  $5.1\pm 0.5$& \gret  $3.7\pm 0.0$& \gres  $2.8\pm 0.0$& \grem  $2.2\pm 0.0$& \gret  $80.6\pm 0.0$& \grexl  $88.3\pm 0.0$& \gres  $84.3\pm 0.0$& \red  $11.3\pm 0.1$& \grexl  $78.6\pm 0.1$  & \red  $19.3\pm 0.1$\\
++LoRD         & \red  $5.3\pm 0.0$& \gret  $3.9\pm 0.0$& \gres  $2.9\pm 0.0$& \grem  $2.3\pm 0.0$& \gret  $80.6\pm 0.0$& \grexl  $88.4\pm 0.0$& \gres  $84.3\pm 0.0$& \red  $11.3\pm 0.1$& \grexl  $78.6\pm 0.2$  & \red   $19.1\pm 0.1$\\\hline
+\multicolumn{11}{c}{\emph{Summarization: Samsum~\citep{samsum} with 64 query samples}}                                                                             \\\hline
+Victim Model & \greyc 20.7& \greyc 11.4& \greyc 6.9& \greyc 4.4& \greyc 88.1& \greyc 91.7& \greyc 89.8& \greyc 24.2& \greyc 50.5& \greyc 31.6\\
+Local Model  & \red  $8.9\pm 0.2$& \gret  $5.2\pm 0.1$& \gres   $3.3\pm 0.1$& \grem  $2.1\pm 0.1$& \gret  $80.9\pm 0.2$& \grem  $90.1\pm 0.1$& \gres  $85.2\pm 0.2$& \gret  $17.0\pm 0.3$& \grexl  $61.8\pm 0.5$& \gret  $25.5\pm 0.4$\\
++MLE         & \gres  $16.9\pm 1.1$& \gres  $9.4\pm 0.7$& \grem  $5.8\pm 0.4$& \grel  $3.7\pm 0.3$& \gret  $83.9\pm 0.9$& \grel  $90.9\pm 0.6$& \grem  $87.3\pm 0.8$& \grel  $25.2\pm 0.8$& \grel  $49.8\pm 2.5$  & \grel   $31.0\pm 1.7$\\
++LoRD        & \grem  $18.4\pm 0.7$& \grem  $10.1\pm 0.3$& \grel  $6.0\pm 0.2$& \grel  $3.7\pm 0.1$& \gres  $84.9\pm 0.1$& \grel  $91.5\pm 0.1$& \grem  $88.1\pm 0.1$& \grel  $23.2\pm 0.8$& \grel  $49.7\pm 1.5$  & \grem   $30.2\pm 0.6$\\
+\Xhline{1.5pt}
+\end{tabular}%
+}
+\caption{MEA comparison on three tasks, including structured text}
+\label{tab:domain-res}
+\end{table*}
+
+\end{document}
